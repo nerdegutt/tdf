@@ -144,7 +144,7 @@ tdf/
 
 Nettstedet er en SPA med hash-basert routing:
 - `#/` → **Oversikt**: Fullskjerm Leaflet-kart med rutepolyline og markører + dag-kort-grid under
-- `#/dag/1` → **Dagvisning**: Ingen kart, full bredde til innhold med sidebar-navigasjon
+- `#/dag/1` → **Dagvisning**: Dagkart (togglebart) + innhold med sidebar-navigasjon
 - `#/dag/2` osv.
 
 ### Dataflyt
@@ -165,13 +165,14 @@ views + components (rendrer til DOM)
 | Tablet 768–1023px | Kart + grid | Dropdown + innhold |
 | Mobil <768px | Kart (lavere) + stablede kort | Dropdown + innhold |
 
-### Kart (kun på oversikten)
+### Kart
 
 - Leaflet med OpenStreetMap-fliser (gratis)
-- Polyline gjennom alle dagenes koordinater (reiseruten)
-- Markører per dag (hoveddestinasjon) med dagnummer som label
-- Markører for større stopp underveis (annen stil/størrelse)
-- Klikk på markør → `window.location.hash = '#/dag/{nr}'`
+- **Oversiktskart**: Polyline gjennom alle dagenes koordinater, markører per dag + stopp, klikk → navigerer til dag
+- **Dagkart**: Viser rute for kjøredager (forrige destinasjon → stopp → dagens destinasjon), zoomer inn på byen for hviledager
+- Dagkartet kan toggles av/på med kartikon i navigasjonsbaren (tilstand lagres i localStorage)
+- Kart-slide-animasjon bruker CSS grid `grid-template-rows: 1fr/0fr` for smooth uten layout-problemer
+- Piltast-navigasjon (venstre/høyre) mellom dager i dagvisningen
 
 ### Seksjonstyper og visuell stil
 
@@ -200,7 +201,16 @@ Dag 3 – Rouen
 
 Mobil: `<select>`-dropdown øverst med samme innhold.
 
-Begge har "← Tilbake til kart"-lenke øverst.
+Mobil (<640px): Dropdown legger seg under logoen i headeren for mer plass.
+
+### Dark/light tema
+
+- **Dark er default**. Brukerens valg lagres i localStorage (`tdf-theme`: `'dark'` | `'light'`).
+- Inline `<script>` i `<head>` fjerner `dark`-klassen synkront ved `light`-preferanse for å unngå flash.
+- Toggle-switch i footer med sol/måne-ikoner.
+- Dark-overrides i `style.css` inverterer stone-paletten (bg-stone-50 → #1c1917, bg-white → #292524, osv.).
+- Header, sidebar, seksjoner, booking-callouts, Leaflet-popups og zoom-kontroller har egne dark-overrides.
+- Kartflisene vises i lys stil uavhengig av tema.
 
 ## Oppdateringsworkflow
 
