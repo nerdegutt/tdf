@@ -173,12 +173,13 @@ views + components (rendrer til DOM)
 - Dagkartet kan toggles av/på med kartikon i navigasjonsbaren (tilstand lagres i localStorage)
 - Kart-slide-animasjon bruker CSS grid `grid-template-rows: 1fr/0fr` for smooth uten layout-problemer
 - Piltast-navigasjon (venstre/høyre) mellom dager i dagvisningen
+- Sveip-navigasjon på mobil (touchstart/touchend) — krever ≥80px horisontal sveip og mer horisontalt enn vertikalt for å unngå konflikt med scrolling
 
 ### Unsplash-bilder
 
 Hver dag har et hero-bilde fra Unsplash. Bildedataen ligger i `dayImages`-objektet på slutten av `days.js` og kobles til dag-objektene via `forEach`. Hvert bilde har:
-- `hero`: Bred crop (1200×400) for dagvisningens hero-seksjon
-- `thumb`: Mindre crop (600×340) for dag-kort på forsiden
+- `hero`: Bred crop (1200×400) for dagvisningens hero-seksjon med gradient-overlay og lenkede credits
+- `thumb`: Mindre crop (600×340) for dag-kort på forsiden med ren tekst-attribusjon (ikke lenker, da kortene selv er `<a>`-tagger)
 - `credit`/`creditUrl`: Fotografens navn og Unsplash-profil
 - `photoUrl`: Lenke til originalbildet på Unsplash
 - UTM-parametere på Unsplash-lenker iht. deres retningslinjer
