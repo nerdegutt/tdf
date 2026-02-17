@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tour de France 2026 – Reiseguide</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>" />
+</head>
+<body class="bg-stone-50 text-stone-800 min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-blue-900 text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="#/" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
+        <span class="text-2xl">🚗</span>
+        <div>
+          <h1 class="text-lg font-bold leading-tight">Tour de France 2026</h1>
+          <p class="text-blue-200 text-sm">13.–30. mai · Erlend & Bjørn Erik</p>
+        </div>
+      </a>
+      <!-- Mobil dag-dropdown (vises kun på dagvisning, kun mobil) -->
+      <div id="mobile-nav" class="hidden lg:hidden">
+        <select id="day-select" class="bg-blue-800 text-white border border-blue-600 rounded px-2 py-1 text-sm">
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hovedinnhold -->
+  <div id="app" class="flex-1">
+    <!-- Oversikt-view -->
+    <div id="view-overview" class="hidden">
+      <div id="map-container" class="w-full h-[50vh] md:h-[60vh]"></div>
+      <div class="max-w-7xl mx-auto px-4 py-8">
+        <h2 class="text-2xl font-bold mb-2">18 dager · ca. 5 500 km · 7 land</h2>
+        <p class="text-stone-500 mb-6">Rakkestad → Tyskland → Belgia → Normandie → Bretagne → Atlanterhavskysten → Baskerland → Languedoc → Provence → Burgund → Alsace → Mosel → Hjem</p>
+        <div id="day-cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+      </div>
+    </div>
+
+    <!-- Dag-view -->
+    <div id="view-day" class="hidden">
+      <div class="max-w-7xl mx-auto flex">
+        <!-- Desktop sidebar -->
+        <aside id="sidebar" class="hidden lg:block w-64 shrink-0 border-r border-stone-200 bg-white min-h-[calc(100vh-72px)] sticky top-0 overflow-y-auto">
+          <nav class="p-4">
+            <a href="#/" class="flex items-center gap-2 text-blue-700 hover:text-blue-900 text-sm font-medium mb-4 pb-3 border-b border-stone-200">
+              ← Tilbake til kart
+            </a>
+            <ul id="sidebar-days" class="space-y-1"></ul>
+          </nav>
+        </aside>
+        <!-- Daginnhold -->
+        <main id="day-content" class="flex-1 min-w-0 px-4 py-6 lg:px-8 max-w-4xl">
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
