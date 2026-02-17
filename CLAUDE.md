@@ -179,6 +179,7 @@ views + components (rendrer til DOM)
 - Kart-slide-animasjon bruker CSS grid `grid-template-rows: 1fr/0fr` for smooth uten layout-problemer
 - Piltast- og sveip-navigasjon gjennom hele sekvensen: Reiseinfo → Dag 1–18 → Topp 10
 - Sveip (touchstart/touchend) krever ≥80px horisontal sveip og mer horisontalt enn vertikalt for å unngå konflikt med scrolling
+- Smart sveip i horisontalt scrollbare elementer (tabeller): navigasjon trigges kun når elementet er scrollet til kanten i sveiperetningen
 
 ### Unsplash-bilder
 

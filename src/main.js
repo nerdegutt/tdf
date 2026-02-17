@@ -183,13 +183,23 @@ window.addEventListener('keydown', (e) => {
   navigateStep(e.key === 'ArrowLeft' ? -1 : 1)
 })
 
-// Sveip-navigasjon mellom dager (mobil)
+// Sveip-navigasjon (mobil) — smart håndtering av horisontalt scrollbare elementer
 let touchStartX = 0
 let touchStartY = 0
+let touchScroller = null
+
+function findHorizontalScroller(el) {
+  while (el && el !== document.body) {
+    if (el.scrollWidth > el.clientWidth) return el
+    el = el.parentElement
+  }
+  return null
+}
 
 window.addEventListener('touchstart', (e) => {
   touchStartX = e.changedTouches[0].screenX
   touchStartY = e.changedTouches[0].screenY
+  touchScroller = findHorizontalScroller(e.target)
 }, { passive: true })
 
 window.addEventListener('touchend', (e) => {
@@ -201,6 +211,16 @@ window.addEventListener('touchend', (e) => {
 
   // Kun horisontal sveip (minst 80px, og mer horisontalt enn vertikalt)
   if (Math.abs(dx) < 80 || Math.abs(dx) < Math.abs(dy) * 1.5) return
+
+  // Inne i horisontal scroller: kun navigér hvis scrollet til kanten i sveiperetningen
+  if (touchScroller) {
+    const atLeft = touchScroller.scrollLeft <= 0
+    const atRight = touchScroller.scrollLeft + touchScroller.clientWidth >= touchScroller.scrollWidth - 1
+    const swipingRight = dx > 0  // sveiper høyre → navigér bakover
+    const swipingLeft = dx < 0   // sveiper venstre → navigér fremover
+    if (swipingRight && !atLeft) return
+    if (swipingLeft && !atRight) return
+  }
 
   navigateStep(dx > 0 ? -1 : 1)
 }, { passive: true })

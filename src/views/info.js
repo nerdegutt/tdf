@@ -109,7 +109,7 @@ export function renderInfo() {
           <span>🎟️</span>
           <span>Booking-oversikt</span>
         </h3>
-        <div class="booking-callout rounded-lg px-4 py-3 mb-4 flex items-start gap-2 !border-l-0">
+        <div class="booking-callout rounded-lg px-4 py-3 mb-4 flex items-start gap-2">
           <span class="text-lg shrink-0">💡</span>
           <div class="text-sm">
             <strong>Mai-tips:</strong> Dere reiser før den store ferierushen (juni), men Bayeux-tapetet, Mont Saint-Michel og Palais des Papes er populære hele året. Bestill disse!
