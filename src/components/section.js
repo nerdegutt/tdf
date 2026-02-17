@@ -21,7 +21,7 @@ export function renderSection(section) {
     : ''
 
   return `
-    <div class="section-${section.type} border-l-4 bg-white rounded-lg shadow-sm mb-4 overflow-hidden">
+    <div class="section-${section.type} border-l-4 rounded-lg shadow-sm mb-4 overflow-hidden">
       <div class="px-5 py-4">
         <h3 class="flex items-center gap-2 text-lg font-semibold mb-3">
           <span>${config.icon}</span>

@@ -80,13 +80,25 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* Seksjon-border-farger */
-.section-sights { border-left-color: var(--color-sights); }
-.section-history { border-left-color: var(--color-history); }
-.section-photo { border-left-color: var(--color-photo); }
-.section-accommodation { border-left-color: var(--color-accommodation); }
-.section-food { border-left-color: var(--color-food); }
-.section-practical { border-left-color: var(--color-practical); }
+/* Seksjon-farger: border + svak bakgrunnstint */
+.section-sights { --section-color: var(--color-sights); }
+.section-history { --section-color: var(--color-history); }
+.section-photo { --section-color: var(--color-photo); }
+.section-accommodation { --section-color: var(--color-accommodation); }
+.section-food { --section-color: var(--color-food); }
+.section-practical { --section-color: var(--color-practical); }
+.section-booking { --section-color: var(--color-booking); }
+
+.section-sights,
+.section-history,
+.section-photo,
+.section-accommodation,
+.section-food,
+.section-practical,
+.section-booking {
+  border-left-color: var(--section-color);
+  background-color: color-mix(in srgb, var(--section-color) 5%, white);
+}
 
 /* Booking-callout */
 .booking-callout {
@@ -188,6 +200,17 @@ html.dark .shadow-sm {
 
 html.dark .hover\:shadow-md:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Section tint (dark) --- */
+html.dark .section-sights,
+html.dark .section-history,
+html.dark .section-photo,
+html.dark .section-accommodation,
+html.dark .section-food,
+html.dark .section-practical,
+html.dark .section-booking {
+  background-color: color-mix(in srgb, var(--section-color) 10%, #292524);
 }
 
 /* --- Section content --- */

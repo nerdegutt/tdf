@@ -1,11 +1,22 @@
 import { days } from '../data/days.js'
 
-export function populateSidebar(activeDayNum) {
+export function populateSidebar(activeRoute) {
   const container = document.getElementById('sidebar-days')
   if (!container) return
 
-  container.innerHTML = days.map(d => {
-    const isActive = d.day === activeDayNum
+  const infoActive = activeRoute.view === 'info'
+  const top10Active = activeRoute.view === 'top10'
+
+  const infoClass = infoActive
+    ? 'bg-blue-50 text-blue-900 border-blue-600 font-semibold'
+    : 'text-stone-600 border-transparent hover:bg-stone-50 hover:text-stone-900'
+
+  const top10Class = top10Active
+    ? 'bg-blue-50 text-blue-900 border-blue-600 font-semibold'
+    : 'text-stone-600 border-transparent hover:bg-stone-50 hover:text-stone-900'
+
+  const dayItems = days.map(d => {
+    const isActive = activeRoute.view === 'day' && d.day === activeRoute.dayNum
     const activeClass = isActive
       ? 'bg-blue-50 text-blue-900 border-blue-600 font-semibold'
       : 'text-stone-600 border-transparent hover:bg-stone-50 hover:text-stone-900'
@@ -21,9 +32,29 @@ export function populateSidebar(activeDayNum) {
       </li>
     `
   }).join('')
+
+  container.innerHTML = `
+    <li>
+      <a href="#/info"
+         class="block px-3 py-2 rounded-lg border-l-3 text-sm transition-colors ${infoClass}">
+        <span>ℹ️</span>
+        <span class="ml-1">Reiseinfo</span>
+      </a>
+    </li>
+    <li class="my-2 border-b border-stone-200"></li>
+    ${dayItems}
+    <li class="my-2 border-b border-stone-200"></li>
+    <li>
+      <a href="#/topp10"
+         class="block px-3 py-2 rounded-lg border-l-3 text-sm transition-colors ${top10Class}">
+        <span>🏆</span>
+        <span class="ml-1">Topp 10</span>
+      </a>
+    </li>
+  `
 }
 
-export function populateMobileNav(activeDayNum) {
+export function populateMobileNav(activeRoute) {
   const select = document.getElementById('day-select')
   if (!select) return
 
@@ -31,8 +62,13 @@ export function populateMobileNav(activeDayNum) {
   if (select.options.length === 0) {
     const overviewOpt = document.createElement('option')
     overviewOpt.value = '#/'
-    overviewOpt.textContent = '← Kartoversikt'
+    overviewOpt.textContent = 'Kartoversikt'
     select.appendChild(overviewOpt)
+
+    const infoOpt = document.createElement('option')
+    infoOpt.value = '#/info'
+    infoOpt.textContent = 'ℹ️ Reiseinfo'
+    select.appendChild(infoOpt)
 
     days.forEach(d => {
       const opt = document.createElement('option')
@@ -41,10 +77,23 @@ export function populateMobileNav(activeDayNum) {
       select.appendChild(opt)
     })
 
+    const top10Opt = document.createElement('option')
+    top10Opt.value = '#/topp10'
+    top10Opt.textContent = '🏆 Topp 10'
+    select.appendChild(top10Opt)
+
     select.addEventListener('change', () => {
       window.location.hash = select.value
     })
   }
 
-  select.value = `#/dag/${activeDayNum}`
+  if (activeRoute.view === 'overview') {
+    select.value = '#/'
+  } else if (activeRoute.view === 'info') {
+    select.value = '#/info'
+  } else if (activeRoute.view === 'top10') {
+    select.value = '#/topp10'
+  } else {
+    select.value = `#/dag/${activeRoute.dayNum}`
+  }
 }

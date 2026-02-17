@@ -129,10 +129,12 @@ tdf/
 │   │   └── days.js         # Strukturert data for alle 18 dager (generert fra tdf.md)
 │   ├── views/
 │   │   ├── overview.js     # Forsiden: kart + dag-kort-grid
-│   │   └── day.js          # Dagvisning: sidebar + seksjoner
+│   │   ├── day.js          # Dagvisning: sidebar + seksjoner
+│   │   ├── info.js         # Reiseinfo: ruteoversikt, Tesla/kjøring, booking-oversikt
+│   │   └── top10.js        # Topp 10-lister: historie, foto, mat
 │   └── components/
 │       ├── map.js          # Leaflet-kart med rute og markører
-│       ├── sidebar.js      # Desktop-sidebar (dagliste) + mobil-dropdown
+│       ├── sidebar.js      # Desktop-sidebar (dagliste) + global dropdown-nav
 │       └── section.js      # Felles seksjon-renderer for alle typer
 └── public/
     └── (evt. statiske assets)
@@ -140,12 +142,15 @@ tdf/
 
 ## Arkitektur
 
-### To visninger, én HTML-fil
+### Fire visninger, én HTML-fil
 
 Nettstedet er en SPA med hash-basert routing:
 - `#/` → **Oversikt**: Fullskjerm Leaflet-kart med rutepolyline og markører + dag-kort-grid under
-- `#/dag/1` → **Dagvisning**: Dagkart (togglebart) + innhold med sidebar-navigasjon
-- `#/dag/2` osv.
+- `#/info` → **Reiseinfo**: Ruteoversikt-tabell, praktisk info (Tesla/kjøring), booking-oversikt
+- `#/dag/1` … `#/dag/18` → **Dagvisning**: Dagkart (togglebart) + innhold med sidebar-navigasjon
+- `#/topp10` → **Topp 10**: Tre personlige topp 10-lister (historie, foto, mat)
+
+Info, dagvisning og topp 10 gjenbruker `#view-day`-containeren (sidebar + innholdsområde). Dagkartet skjules for info og topp 10.
 
 ### Dataflyt
 
@@ -172,8 +177,8 @@ views + components (rendrer til DOM)
 - **Dagkart**: Viser rute for kjøredager (forrige destinasjon → stopp → dagens destinasjon), zoomer inn på byen for hviledager
 - Dagkartet kan toggles av/på med kartikon i navigasjonsbaren (tilstand lagres i localStorage)
 - Kart-slide-animasjon bruker CSS grid `grid-template-rows: 1fr/0fr` for smooth uten layout-problemer
-- Piltast-navigasjon (venstre/høyre) mellom dager i dagvisningen
-- Sveip-navigasjon på mobil (touchstart/touchend) — krever ≥80px horisontal sveip og mer horisontalt enn vertikalt for å unngå konflikt med scrolling
+- Piltast- og sveip-navigasjon gjennom hele sekvensen: Reiseinfo → Dag 1–18 → Topp 10
+- Sveip (touchstart/touchend) krever ≥80px horisontal sveip og mer horisontalt enn vertikalt for å unngå konflikt med scrolling
 
 ### Unsplash-bilder
 
@@ -193,30 +198,39 @@ curl -sL "https://unsplash.com/photos/{PHOTO_ID}" | grep -oE 'https://images\.un
 
 Hver seksjonstype rendres med konsistent styling av `section.js`:
 
-| Type | Ikon | Farge (Tailwind) | Border/badge |
-|------|------|-------------------|--------------|
-| `sights` | 🏛️ | blue-600 | Blå venstre-border |
-| `history` | 🧠 | purple-600 | Lilla venstre-border |
-| `photo` | 📷 | green-600 | Grønn venstre-border |
-| `accommodation` | 🏨 | amber-600 | Oransje venstre-border |
-| `food` | 🍽️ | red-600 | Rød venstre-border |
-| `practical` | 💡 | slate-600 | Grå venstre-border |
+| Type | Ikon | Farge | Border + bakgrunn |
+|------|------|-------|-------------------|
+| `sights` | 🏛️ | blue | Blå venstre-border + svak blå tint |
+| `history` | 🧠 | purple | Lilla venstre-border + svak lilla tint |
+| `photo` | 📷 | green | Grønn venstre-border + svak grønn tint |
+| `accommodation` | 🏨 | amber | Oransje venstre-border + svak oransje tint |
+| `food` | 🍽️ | red | Rød venstre-border + svak rød tint |
+| `practical` | 💡 | slate | Grå venstre-border + svak grå tint |
+| `booking` | 🎟️ | cyan | Cyan venstre-border + svak cyan tint |
+
+Bakgrunnstinten styres via `color-mix()` i CSS (5% light, 10% dark). Fargene defineres som CSS-variabler (`--color-sights` osv.) i `:root`.
 
 Booking-warnings rendres som fremhevet callout-boks med 🎟️-ikon inni den aktuelle seksjonen.
 
-### Sidebar (dagvisning)
+### Sidebar og navigasjon
 
-Desktop: Fast sidebar til venstre med alle dager listet som:
+Desktop: Fast sidebar til venstre med Reiseinfo øverst, alle dager i midten, og Topp 10 nederst:
 ```
+ℹ️ Reiseinfo
+───────────
 Dag 1 – Puttgarden
-Dag 2 – Duisburg       ← aktiv dag uthevet
+Dag 2 – Duisburg       ← aktiv uthevet
 Dag 3 – Rouen
 ...
+───────────
+🏆 Topp 10
 ```
 
-Mobil: `<select>`-dropdown øverst med samme innhold.
+Dropdown (`<select>`) i headeren vises på alle skjermstørrelser, alle visninger. Inneholder Kartoversikt, Reiseinfo, alle dager, og Topp 10.
 
-Mobil (<640px): Dropdown legger seg under logoen i headeren for mer plass.
+Smal mobil (<640px): Dropdown legger seg under logoen i headeren for mer plass.
+
+`populateSidebar(route)` og `populateMobileNav(route)` tar et route-objekt `{ view, dayNum }` for å markere aktiv side.
 
 ### Dark/light tema
 
@@ -243,10 +257,10 @@ Når brukeren sier "har oppdatert tdf.md, oppdater nettstedet":
 
 ## Spesielle elementer i tdf.md
 
-- **Ruteoversikt-tabellen** (øverst): Brukes til oversiktsdata og dag-kort på forsiden
-- **Booking-oversikt-tabellen**: Rendres som egen seksjon på forsiden eller som callouts per dag
-- **Topp 10-listene** (bunnen): Kan bli en egen visning eller seksjon på forsiden
-- **Praktisk-seksjonen** (Tesla & kjøring): Global info, vises på forsiden
+- **Ruteoversikt-tabellen** (øverst): Rendres på Reiseinfo-siden (`#/info`) som klikkbar tabell
+- **Booking-oversikt-tabellen**: Rendres på Reiseinfo-siden + som callouts per dag
+- **Topp 10-listene** (bunnen): Rendres på Topp 10-siden (`#/topp10`) med fargekodede kategorier
+- **Praktisk-seksjonen** (Tesla & kjøring): Rendres på Reiseinfo-siden
 - **Lenker med 🔍**: Google bildesøk-lenker — rendres som diskrete "se bilder"-lenker
 
 ## Git-policy
