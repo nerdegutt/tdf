@@ -22,6 +22,19 @@ export function renderDay(day) {
 
   const sectionsHtml = day.sections.map(s => renderSection(s)).join('')
 
+  const heroImage = day.image
+    ? `<div class="hero-image -mx-4 lg:-mx-8 -mt-6 mb-6">
+         <div class="relative h-48 md:h-64 overflow-hidden">
+           <img src="${day.image.hero}" alt="${day.to}" class="w-full h-full object-cover">
+           <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+           <div class="absolute bottom-3 right-3 text-xs text-white/80">
+             Foto: <a href="${day.image.creditUrl}" target="_blank" rel="noopener" class="underline hover:text-white">${day.image.credit}</a>
+             · <a href="${day.image.photoUrl}" target="_blank" rel="noopener" class="underline hover:text-white">Unsplash</a>
+           </div>
+         </div>
+       </div>`
+    : ''
+
   container.innerHTML = `
     <!-- Navigasjon topp -->
     <div class="flex items-center mb-4 pb-3 border-b border-stone-200">
@@ -31,6 +44,9 @@ export function renderDay(day) {
       </button>
       <div class="flex-1 text-right">${nextLink}</div>
     </div>
+
+    <!-- Hero-bilde -->
+    ${heroImage}
 
     <!-- Dag-header -->
     <div class="mb-6">

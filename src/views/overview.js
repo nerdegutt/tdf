@@ -12,9 +12,15 @@ export function renderOverview() {
   container.innerHTML = days.map(d => {
     const kmText = d.km > 0 ? `${d.km} km` : 'Ingen kjøring'
     const flagEmoji = d.day === 5 ? ' 🇳🇴' : d.day === 18 ? ' 🏠' : ''
+    const thumbImg = d.image
+      ? `<div class="h-36 overflow-hidden">
+           <img src="${d.image.thumb}" alt="${d.to}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+         </div>`
+      : ''
 
     return `
       <a href="#/dag/${d.day}" class="block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-stone-200 overflow-hidden group">
+        ${thumbImg}
         <div class="p-4">
           <div class="flex items-center justify-between mb-2">
             <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-blue-900 text-white text-sm font-bold">${d.day}</span>

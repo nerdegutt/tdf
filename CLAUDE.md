@@ -174,6 +174,20 @@ views + components (rendrer til DOM)
 - Kart-slide-animasjon bruker CSS grid `grid-template-rows: 1fr/0fr` for smooth uten layout-problemer
 - Piltast-navigasjon (venstre/høyre) mellom dager i dagvisningen
 
+### Unsplash-bilder
+
+Hver dag har et hero-bilde fra Unsplash. Bildedataen ligger i `dayImages`-objektet på slutten av `days.js` og kobles til dag-objektene via `forEach`. Hvert bilde har:
+- `hero`: Bred crop (1200×400) for dagvisningens hero-seksjon
+- `thumb`: Mindre crop (600×340) for dag-kort på forsiden
+- `credit`/`creditUrl`: Fotografens navn og Unsplash-profil
+- `photoUrl`: Lenke til originalbildet på Unsplash
+- UTM-parametere på Unsplash-lenker iht. deres retningslinjer
+
+For å bytte bilde: Finn foto-ID og bruk `curl` for å hente CDN-base-URL fra `og:image`-meta-taggen:
+```bash
+curl -sL "https://unsplash.com/photos/{PHOTO_ID}" | grep -oE 'https://images\.unsplash\.com/photo-[^"?]+' | head -1
+```
+
 ### Seksjonstyper og visuell stil
 
 Hver seksjonstype rendres med konsistent styling av `section.js`:
@@ -245,6 +259,7 @@ Når brukeren sier "har oppdatert tdf.md, oppdater nettstedet":
 - Alt UI-tekst på norsk
 - Bruk Tailwind utility-klasser, unngå custom CSS der mulig
 - Ingen tunge avhengigheter utover Leaflet og Tailwind
-- `days.js` eksporterer `export const days = [...]` og `export const tripMeta = {...}`
+- `days.js` eksporterer `export const days = [...]` og `export const tripMeta = {...}`, samt `bookingOverview` og `top10`
+- Hvert dag-objekt har en `image`-property med Unsplash hero/thumb-URL, fotograf-credit og lenker (tilordnes via `dayImages`-map på slutten av days.js)
 - Lenker til eksterne sider åpnes i ny fane (`target="_blank"`)
 - Emojier fra tdf.md beholdes i rendret innhold
