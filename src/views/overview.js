@@ -13,8 +13,9 @@ export function renderOverview() {
     const kmText = d.km > 0 ? `${d.km} km` : 'Ingen kjøring'
     const flagEmoji = d.day === 5 ? ' 🇳🇴' : d.day === 18 ? ' 🏠' : ''
     const thumbImg = d.image
-      ? `<div class="h-36 overflow-hidden">
+      ? `<div class="relative h-36 overflow-hidden">
            <img src="${d.image.thumb}" alt="${d.to}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+           <span class="absolute bottom-1 right-1.5 text-[10px] text-white/70 drop-shadow-sm">${d.image.credit} / Unsplash</span>
          </div>`
       : ''
 
