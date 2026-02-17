@@ -135,6 +135,31 @@ window.addEventListener('keydown', (e) => {
   }
 })
 
+// Sveip-navigasjon mellom dager (mobil)
+let touchStartX = 0
+let touchStartY = 0
+
+window.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX
+  touchStartY = e.changedTouches[0].screenY
+}, { passive: true })
+
+window.addEventListener('touchend', (e) => {
+  const route = getRoute()
+  if (route.view !== 'day') return
+
+  const dx = e.changedTouches[0].screenX - touchStartX
+  const dy = e.changedTouches[0].screenY - touchStartY
+
+  // Kun horisontal sveip (minst 80px, og mer horisontalt enn vertikalt)
+  if (Math.abs(dx) < 80 || Math.abs(dx) < Math.abs(dy) * 1.5) return
+
+  const targetDay = dx > 0 ? route.dayNum - 1 : route.dayNum + 1
+  if (targetDay >= 1 && targetDay <= days.length) {
+    window.location.hash = `#/dag/${targetDay}`
+  }
+}, { passive: true })
+
 // Initialiser
 window.addEventListener('hashchange', render)
 render()
