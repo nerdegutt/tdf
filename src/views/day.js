@@ -25,7 +25,7 @@ export function renderDay(day) {
   const heroImage = day.image
     ? `<div class="hero-image -mx-4 lg:-mx-8 -mt-6 mb-6">
          <div class="relative h-48 md:h-64 overflow-hidden">
-           <img src="${day.image.hero}" alt="${day.to}" class="w-full h-full object-cover">
+           <img src="${day.image.hero}" alt="Dag ${day.day}: ${day.from} til ${day.to}" class="w-full h-full object-cover">
            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
            <div class="absolute bottom-3 right-3 text-xs text-white/80">
              Foto: <a href="${day.image.creditUrl}" target="_blank" rel="noopener" class="underline hover:text-white">${day.image.credit}</a>
@@ -39,8 +39,8 @@ export function renderDay(day) {
     <!-- Navigasjon topp -->
     <div class="flex items-center mb-4 pb-3 border-b border-stone-200">
       <div class="flex-1 text-left">${prevLink}</div>
-      <button id="day-map-toggle" class="shrink-0 p-1.5 rounded-lg text-stone-600 hover:text-stone-900 hover:bg-stone-100 transition-colors" title="Vis/skjul kart">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+      <button id="day-map-toggle" class="shrink-0 p-1.5 rounded-lg text-stone-600 hover:text-stone-900 hover:bg-stone-100 transition-colors" aria-label="Vis eller skjul kartet">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
       </button>
       <div class="flex-1 text-right">${nextLink}</div>
     </div>
@@ -58,7 +58,7 @@ export function renderDay(day) {
         </div>
       </div>
       <div class="flex items-center gap-4 text-sm text-stone-500 mt-2">
-        <span>🚗 ${kmText}</span>
+        <span><span aria-hidden="true">🚗</span> ${kmText}</span>
         <span>· ${day.subtitle}</span>
       </div>
     </div>

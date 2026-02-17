@@ -32,7 +32,7 @@ export function renderTop10() {
     <!-- Header -->
     <div class="mb-8">
       <div class="flex items-center gap-3 mb-2">
-        <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-900 text-white text-xl">🏆</span>
+        <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-900 text-white text-xl" aria-hidden="true">🏆</span>
         <div>
           <p class="text-sm text-stone-400">Personlige favoritter</p>
           <h2 class="text-2xl font-bold text-stone-900">Topp 10</h2>
@@ -45,7 +45,7 @@ export function renderTop10() {
     <div class="section-sights border-l-4 rounded-lg shadow-sm mb-4 overflow-hidden">
       <div class="px-5 py-4">
         <h3 class="flex items-center gap-2 text-lg font-semibold mb-3">
-          <span>🏛️</span>
+          <span aria-hidden="true">🏛️</span>
           <span>For Bjørn Erik – Historie & severdigheter</span>
         </h3>
         <div class="section-content text-stone-700">
@@ -58,7 +58,7 @@ export function renderTop10() {
     <div class="section-photo border-l-4 rounded-lg shadow-sm mb-4 overflow-hidden">
       <div class="px-5 py-4">
         <h3 class="flex items-center gap-2 text-lg font-semibold mb-3">
-          <span>📷</span>
+          <span aria-hidden="true">📷</span>
           <span>For Erlend – Fotomuligheter</span>
         </h3>
         <div class="section-content text-stone-700">
@@ -71,7 +71,7 @@ export function renderTop10() {
     <div class="section-food border-l-4 rounded-lg shadow-sm mb-4 overflow-hidden">
       <div class="px-5 py-4">
         <h3 class="flex items-center gap-2 text-lg font-semibold mb-3">
-          <span>🍽️</span>
+          <span aria-hidden="true">🍽️</span>
           <span>For Erlend & Bjørn Erik – Mat & drikke</span>
         </h3>
         <div class="section-content text-stone-700">

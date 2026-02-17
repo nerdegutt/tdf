@@ -83,6 +83,11 @@ function bindMapToggle() {
   updateDayMapUI(getDayMapVisible())
 }
 
+function announce(message) {
+  const el = document.getElementById('nav-announcement')
+  if (el) el.textContent = message
+}
+
 function render() {
   const route = getRoute()
 
@@ -107,6 +112,7 @@ function render() {
     populateMobileNav(route)
     renderOverview()
     currentView = 'overview'
+    announce('Kartoversikt')
   } else if (route.view === 'day') {
     const day = days.find(d => d.day === route.dayNum)
     if (!day) {
@@ -131,6 +137,7 @@ function render() {
 
     currentView = 'day'
     window.scrollTo(0, 0)
+    announce(`Dag ${day.day}: ${day.from} til ${day.to}`)
   } else if (route.view === 'info') {
     overviewEl.classList.add('hidden')
     dayEl.classList.remove('hidden')
@@ -143,6 +150,7 @@ function render() {
 
     currentView = 'info'
     window.scrollTo(0, 0)
+    announce('Reiseinfo')
   } else if (route.view === 'top10') {
     overviewEl.classList.add('hidden')
     dayEl.classList.remove('hidden')
@@ -155,6 +163,7 @@ function render() {
 
     currentView = 'top10'
     window.scrollTo(0, 0)
+    announce('Topp 10')
   }
 }
 

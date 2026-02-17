@@ -264,6 +264,20 @@ Når brukeren sier "har oppdatert tdf.md, oppdater nettstedet":
 - **Praktisk-seksjonen** (Tesla & kjøring): Rendres på Reiseinfo-siden
 - **Lenker med 🔍**: Google bildesøk-lenker — rendres som diskrete "se bilder"-lenker
 
+## Universell utforming (a11y)
+
+- `<main id="app">` som semantisk landmark for hovedinnhold
+- Skip-lenke ("Gå til hovedinnhold") øverst i body, synlig ved tab-fokus
+- `aria-live="polite"` region (`#nav-announcement`) annonserer sidebytte for skjermlesere
+- `aria-current="page"` på aktiv lenke i sidebar
+- `aria-label` på kart-toggle-knapp, tema-toggle, kart-containere og sidebar
+- `<label>` (sr-only) på navigasjons-dropdown
+- `aria-hidden="true"` på dekorative emojier (seksjonsikoner, bil-emoji, sol/måne)
+- `scope="col"` på alle `<th>` i tabeller
+- `role="separator"` på skillelinjer i sidebar
+- Beskrivende popup-lenketekst i kart ("Se dag X: Sted →")
+- Bedre alt-tekst på bilder ("Dag X: Fra til Til")
+
 ## Git-policy
 
 - **ALDRI** kjør `git commit` eller `git push` uten eksplisitt godkjenning fra brukeren

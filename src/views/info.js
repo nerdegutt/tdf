@@ -41,18 +41,18 @@ export function renderInfo() {
     <!-- Header -->
     <div class="mb-8">
       <div class="flex items-center gap-3 mb-2">
-        <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-900 text-white text-xl">ℹ️</span>
+        <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-900 text-white text-xl" aria-hidden="true">ℹ️</span>
         <div>
           <p class="text-sm text-stone-400">Reiseguide</p>
           <h2 class="text-2xl font-bold text-stone-900">${tripMeta.title}</h2>
         </div>
       </div>
       <div class="flex flex-wrap items-center gap-4 text-sm text-stone-500 mt-3">
-        <span>📅 ${tripMeta.dates}</span>
-        <span>👥 ${tripMeta.travelers}</span>
-        <span>🚗 ca. ${tripMeta.totalKm.toLocaleString('nb-NO')} km</span>
-        <span>📍 ${tripMeta.countries} land</span>
-        <span>🗓️ ${tripMeta.totalDays} dager</span>
+        <span><span aria-hidden="true">📅</span> ${tripMeta.dates}</span>
+        <span><span aria-hidden="true">👥</span> ${tripMeta.travelers}</span>
+        <span><span aria-hidden="true">🚗</span> ca. ${tripMeta.totalKm.toLocaleString('nb-NO')} km</span>
+        <span><span aria-hidden="true">📍</span> ${tripMeta.countries} land</span>
+        <span><span aria-hidden="true">🗓️</span> ${tripMeta.totalDays} dager</span>
       </div>
     </div>
 
@@ -60,19 +60,19 @@ export function renderInfo() {
     <div class="section-sights border-l-4 rounded-lg shadow-sm mb-4 overflow-hidden">
       <div class="px-5 py-4">
         <h3 class="flex items-center gap-2 text-lg font-semibold mb-3">
-          <span>📋</span>
+          <span aria-hidden="true">📋</span>
           <span>Ruteoversikt</span>
         </h3>
         <div class="overflow-x-auto">
           <table class="w-full text-left">
             <thead>
               <tr class="border-b-2 border-stone-200 text-xs uppercase text-stone-400">
-                <th class="py-2 px-3 text-center">Dag</th>
-                <th class="py-2 px-3">Dato</th>
-                <th class="py-2 px-3">Fra</th>
-                <th class="py-2 px-3">Til</th>
-                <th class="py-2 px-3 text-center">Netter</th>
-                <th class="py-2 px-3 text-right">Km</th>
+                <th scope="col" class="py-2 px-3 text-center">Dag</th>
+                <th scope="col" class="py-2 px-3">Dato</th>
+                <th scope="col" class="py-2 px-3">Fra</th>
+                <th scope="col" class="py-2 px-3">Til</th>
+                <th scope="col" class="py-2 px-3 text-center">Netter</th>
+                <th scope="col" class="py-2 px-3 text-right">Km</th>
               </tr>
             </thead>
             <tbody>
@@ -87,7 +87,7 @@ export function renderInfo() {
     <div class="section-practical border-l-4 rounded-lg shadow-sm mb-4 overflow-hidden">
       <div class="px-5 py-4">
         <h3 class="flex items-center gap-2 text-lg font-semibold mb-3">
-          <span>⚡</span>
+          <span aria-hidden="true">⚡</span>
           <span>Praktisk: Tesla & kjøring</span>
         </h3>
         <div class="section-content text-stone-700">
@@ -106,11 +106,11 @@ export function renderInfo() {
     <div class="section-booking border-l-4 rounded-lg shadow-sm mb-4 overflow-hidden">
       <div class="px-5 py-4">
         <h3 class="flex items-center gap-2 text-lg font-semibold mb-3">
-          <span>🎟️</span>
+          <span aria-hidden="true">🎟️</span>
           <span>Booking-oversikt</span>
         </h3>
         <div class="booking-callout rounded-lg px-4 py-3 mb-4 flex items-start gap-2">
-          <span class="text-lg shrink-0">💡</span>
+          <span class="text-lg shrink-0" aria-hidden="true">💡</span>
           <div class="text-sm">
             <strong>Mai-tips:</strong> Dere reiser før den store ferierushen (juni), men Bayeux-tapetet, Mont Saint-Michel og Palais des Papes er populære hele året. Bestill disse!
           </div>
@@ -119,10 +119,10 @@ export function renderInfo() {
           <table class="w-full text-left">
             <thead>
               <tr class="border-b-2 border-stone-200 text-xs uppercase text-stone-400">
-                <th class="py-2 px-3">Hva</th>
-                <th class="py-2 px-3">Hvor</th>
-                <th class="py-2 px-3">Hvorfor</th>
-                <th class="py-2 px-3 text-center">Bestill</th>
+                <th scope="col" class="py-2 px-3">Hva</th>
+                <th scope="col" class="py-2 px-3">Hvor</th>
+                <th scope="col" class="py-2 px-3">Hvorfor</th>
+                <th scope="col" class="py-2 px-3 text-center">Bestill</th>
               </tr>
             </thead>
             <tbody>

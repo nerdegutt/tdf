@@ -23,10 +23,10 @@ export function populateSidebar(activeRoute) {
 
     return `
       <li>
-        <a href="#/dag/${d.day}"
+        <a href="#/dag/${d.day}"${isActive ? ' aria-current="page"' : ''}
            class="block px-3 py-2 rounded-lg border-l-3 text-sm transition-colors ${activeClass}">
           <span class="font-medium">Dag ${d.day}</span>
-          <span class="text-stone-400 mx-1">·</span>
+          <span class="text-stone-400 mx-1" aria-hidden="true">·</span>
           <span>${d.to}</span>
         </a>
       </li>
@@ -35,19 +35,19 @@ export function populateSidebar(activeRoute) {
 
   container.innerHTML = `
     <li>
-      <a href="#/info"
+      <a href="#/info"${infoActive ? ' aria-current="page"' : ''}
          class="block px-3 py-2 rounded-lg border-l-3 text-sm transition-colors ${infoClass}">
-        <span>ℹ️</span>
+        <span aria-hidden="true">ℹ️</span>
         <span class="ml-1">Reiseinfo</span>
       </a>
     </li>
-    <li class="my-2 border-b border-stone-200"></li>
+    <li class="my-2 border-b border-stone-200" role="separator"></li>
     ${dayItems}
-    <li class="my-2 border-b border-stone-200"></li>
+    <li class="my-2 border-b border-stone-200" role="separator"></li>
     <li>
-      <a href="#/topp10"
+      <a href="#/topp10"${top10Active ? ' aria-current="page"' : ''}
          class="block px-3 py-2 rounded-lg border-l-3 text-sm transition-colors ${top10Class}">
-        <span>🏆</span>
+        <span aria-hidden="true">🏆</span>
         <span class="ml-1">Topp 10</span>
       </a>
     </li>

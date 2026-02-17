@@ -12,7 +12,7 @@ export function renderSection(section) {
 
   const bookingHtml = section.bookingWarning
     ? `<div class="booking-callout rounded-lg px-4 py-3 mb-4 flex items-start gap-2">
-        <span class="text-lg shrink-0">🎟️</span>
+        <span class="text-lg shrink-0" aria-hidden="true">🎟️</span>
         <div class="text-sm">
           <strong>Book på forhånd:</strong> ${section.bookingWarning}
           ${section.bookingUrl ? ` <a href="${section.bookingUrl}" target="_blank" rel="noopener" class="text-cyan-700 underline">Bestill her →</a>` : ''}
@@ -24,7 +24,7 @@ export function renderSection(section) {
     <div class="section-${section.type} border-l-4 rounded-lg shadow-sm mb-4 overflow-hidden">
       <div class="px-5 py-4">
         <h3 class="flex items-center gap-2 text-lg font-semibold mb-3">
-          <span>${config.icon}</span>
+          <span aria-hidden="true">${config.icon}</span>
           <span>${section.title}</span>
         </h3>
         ${bookingHtml}
