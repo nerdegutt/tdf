@@ -131,7 +131,6 @@ function render() {
 
     currentView = 'day'
     window.scrollTo(0, 0)
-    applySlideIn()
   } else if (route.view === 'info') {
     overviewEl.classList.add('hidden')
     dayEl.classList.remove('hidden')
@@ -144,7 +143,6 @@ function render() {
 
     currentView = 'info'
     window.scrollTo(0, 0)
-    applySlideIn()
   } else if (route.view === 'top10') {
     overviewEl.classList.add('hidden')
     dayEl.classList.remove('hidden')
@@ -157,59 +155,23 @@ function render() {
 
     currentView = 'top10'
     window.scrollTo(0, 0)
-    applySlideIn()
   }
 }
 
-// Navigasjonsrekkefølge: info → dag 1–18 → topp10, med slide-animasjon
-let navDirection = null
-let isAnimating = false
-
-function getTargetHash(direction) {
-  const route = getRoute()
-  if (route.view === 'info' && direction === 1) return '#/dag/1'
-  if (route.view === 'top10' && direction === -1) return `#/dag/${days.length}`
-  if (route.view === 'day') {
-    const target = route.dayNum + direction
-    if (target < 1) return '#/info'
-    if (target > days.length) return '#/topp10'
-    return `#/dag/${target}`
-  }
-  return null
-}
-
+// Navigasjonsrekkefølge: info → dag 1–18 → topp10
 function navigateStep(direction) {
-  if (isAnimating) return
-  const targetHash = getTargetHash(direction)
-  if (!targetHash) return
+  const route = getRoute()
 
-  const content = document.getElementById('day-content')
-  if (!content) {
-    window.location.hash = targetHash
-    return
+  if (route.view === 'info') {
+    if (direction === 1) window.location.hash = '#/dag/1'
+  } else if (route.view === 'day') {
+    const target = route.dayNum + direction
+    if (target < 1) window.location.hash = '#/info'
+    else if (target > days.length) window.location.hash = '#/topp10'
+    else window.location.hash = `#/dag/${target}`
+  } else if (route.view === 'top10') {
+    if (direction === -1) window.location.hash = `#/dag/${days.length}`
   }
-
-  isAnimating = true
-  navDirection = direction
-  const cls = direction === 1 ? 'nav-out-left' : 'nav-out-right'
-  content.classList.add(cls)
-  content.addEventListener('animationend', () => {
-    content.classList.remove(cls)
-    window.location.hash = targetHash
-  }, { once: true })
-}
-
-function applySlideIn() {
-  if (!navDirection) return
-  const content = document.getElementById('day-content')
-  if (!content) { navDirection = null; isAnimating = false; return }
-  const cls = navDirection === 1 ? 'nav-in-right' : 'nav-in-left'
-  content.classList.add(cls)
-  content.addEventListener('animationend', () => {
-    content.classList.remove(cls)
-    isAnimating = false
-  }, { once: true })
-  navDirection = null
 }
 
 // Piltast-navigasjon
@@ -218,8 +180,7 @@ window.addEventListener('keydown', (e) => {
   const route = getRoute()
   if (route.view === 'overview') return
 
-  const targetHash = getTargetHash(e.key === 'ArrowLeft' ? -1 : 1)
-  if (targetHash) window.location.hash = targetHash
+  navigateStep(e.key === 'ArrowLeft' ? -1 : 1)
 })
 
 // Sveip-navigasjon (mobil) — smart håndtering av horisontalt scrollbare elementer

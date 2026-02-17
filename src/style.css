@@ -36,24 +36,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Slide-navigasjon mellom sider */
-@keyframes nav-out-left {
-  to { transform: translateX(-60px); opacity: 0; }
-}
-@keyframes nav-out-right {
-  to { transform: translateX(60px); opacity: 0; }
-}
-@keyframes nav-in-left {
-  from { transform: translateX(-60px); opacity: 0; }
-}
-@keyframes nav-in-right {
-  from { transform: translateX(60px); opacity: 0; }
-}
-.nav-out-left  { animation: nav-out-left 150ms ease-in forwards; }
-.nav-out-right { animation: nav-out-right 150ms ease-in forwards; }
-.nav-in-left   { animation: nav-in-left 200ms ease-out; }
-.nav-in-right  { animation: nav-in-right 200ms ease-out; }
-
 body {
   font-family: system-ui, -apple-system, sans-serif;
 }
