@@ -6,6 +6,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Statisk nettsted for en 18-dagers biltur gjennom Europa (Tour de France 2026). To reisende (Erlend og Bjørn Erik) kjører fra Rakkestad gjennom Tyskland, Belgia, Frankrike, Spania og tilbake. Alt innhold er norskspråklig.
 
+- **GitHub**: https://github.com/nerdegutt/tdf
+- **Produksjon**: https://tdf.offline.no (Vercel, auto-deploy ved push til `main`)
+
 ## Kildefil: tdf.md
 
 `tdf.md` er den autoritative kilden for alt innhold. Nettstedet skal reflektere dette dokumentet slavisk. Når brukeren sier "har oppdatert tdf.md", betyr det at `src/data/days.js` må oppdateres tilsvarende.
