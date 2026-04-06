@@ -126,14 +126,18 @@ tdf/
 │   ├── main.js             # Entrypoint: router, init, event-koordinering
 │   ├── style.css           # Tailwind-import + custom styles
 │   ├── data/
-│   │   └── days.js         # Strukturert data for alle 18 dager (generert fra tdf.md)
+│   │   ├── days.js         # Aggregator: importerer day1-18.js, kobler på bilder, re-eksporterer meta
+│   │   ├── day1.js … day18.js  # Individuelle dagfiler med strukturert data
+│   │   ├── meta.js         # tripMeta, bookingOverview, top10
+│   │   ├── images.js       # Unsplash-bildedata og attachImages()
+│   │   └── routes.js       # Forhåndsgenererte OSRM-kjøreruter (statisk)
 │   ├── views/
 │   │   ├── overview.js     # Forsiden: kart + dag-kort-grid
 │   │   ├── day.js          # Dagvisning: sidebar + seksjoner
 │   │   ├── info.js         # Reiseinfo: ruteoversikt, Tesla/kjøring, booking-oversikt
 │   │   └── top10.js        # Topp 10-lister: historie, foto, mat
 │   └── components/
-│       ├── map.js          # Leaflet-kart med rute og markører
+│       ├── map.js          # Leaflet-kart med OSRM-ruter og markører
 │       ├── sidebar.js      # Desktop-sidebar (dagliste) + global dropdown-nav
 │       └── section.js      # Felles seksjon-renderer for alle typer
 └── public/
@@ -157,10 +161,14 @@ Info, dagvisning og topp 10 gjenbruker `#view-day`-containeren (sidebar + innhol
 ```
 tdf.md (redigeres manuelt)
     ↓ (Claude Code konverterer)
-src/data/days.js (strukturert JS)
+src/data/day1.js … day18.js (individuelle dagfiler)
+    ↓ (importeres av)
+src/data/days.js (aggregator: samler alle dager, kobler bilder)
     ↓ (importeres av)
 views + components (rendrer til DOM)
 ```
+
+`days.js` er en ren aggregator som importerer fra `day1.js`–`day18.js`, kobler på bilder fra `images.js`, og re-eksporterer `tripMeta`, `bookingOverview` og `top10` fra `meta.js`. Når innhold skal endres, rediger den aktuelle `dayN.js`-filen direkte.
 
 ### Responsiv layout
 
@@ -170,20 +178,31 @@ views + components (rendrer til DOM)
 | Tablet 768–1023px | Kart + grid | Dropdown + innhold |
 | Mobil <768px | Kart (lavere) + stablede kort | Dropdown + innhold |
 
-### Kart
+### Kart og kjøreruter
 
 - Leaflet med OpenStreetMap-fliser (gratis)
-- **Oversiktskart**: Polyline gjennom alle dagenes koordinater, markører per dag + stopp, klikk → navigerer til dag
-- **Dagkart**: Viser rute for kjøredager (forrige destinasjon → stopp → dagens destinasjon), zoomer inn på byen for hviledager
+- **Kjøreruter fra OSRM**: Faktiske veier, ikke luftlinjer. Rutedata er forhåndsgenerert og lagret statisk i `src/data/routes.js` — ingen runtime API-kall
+- **routes.js-format**: `export const routes = {"1":{km:733,points:[[lat,lng],...]}, ...}` — ca. 200 punkter per rute
+- **Ferje-hack (Rødby↔Puttgarden)**: OSRM kan ikke rute over ferjer. Dag 1 og 18 ruter til/fra Rødby (DK), dag 2 og 17 ruter fra/til Puttgarden (DE). Ferjestrekningen vises ikke på kartet
+- **Oversiktskart**: Tegner polyline per dag fra routes.js, markører per dag + stopp, klikk → navigerer til dag
+- **Dagkart**: Bruker routes.js hvis tilgjengelig, fallback til stiplet rett linje. Dag 1 (ingen forrige dag) håndteres spesielt — ruten tegnes uten startpunkt-markør
 - Dagkartet kan toggles av/på med kartikon i navigasjonsbaren (tilstand lagres i localStorage)
 - Kart-slide-animasjon bruker CSS grid `grid-template-rows: 1fr/0fr` for smooth uten layout-problemer
 - Piltast- og sveip-navigasjon gjennom hele sekvensen: Reiseinfo → Dag 1–18 → Topp 10
 - Sveip (touchstart/touchend) krever ≥80px horisontal sveip og mer horisontalt enn vertikalt for å unngå konflikt med scrolling
 - Smart sveip i horisontalt scrollbare elementer (tabeller): navigasjon trigges kun når elementet er scrollet til kanten i sveiperetningen
 
+#### Generere nye ruter
+
+Hvis ruten endres, kan nye OSRM-data hentes med OSRM demo-API:
+```
+GET https://router.project-osrm.org/route/v1/driving/{lng1},{lat1};{lng2},{lat2}?overview=full&geometries=geojson
+```
+Respons inneholder `routes[0].geometry.coordinates` (lng/lat-par — husk å flippe til lat/lng for Leaflet) og `routes[0].distance` (meter). Forenkle til ~200 punkter per rute for å holde filstørrelsen nede.
+
 ### Unsplash-bilder
 
-Hver dag har et hero-bilde fra Unsplash. Bildedataen ligger i `dayImages`-objektet på slutten av `days.js` og kobles til dag-objektene via `forEach`. Hvert bilde har:
+Hver dag har et hero-bilde fra Unsplash. Bildedataen ligger i `src/data/images.js` og kobles til dag-objektene via `attachImages()` i `days.js`. Hvert bilde har:
 - `hero`: Bred crop (1200×400) for dagvisningens hero-seksjon med gradient-overlay og lenkede credits
 - `thumb`: Mindre crop (600×340) for dag-kort på forsiden med ren tekst-attribusjon (ikke lenker, da kortene selv er `<a>`-tagger)
 - `credit`/`creditUrl`: Fotografens navn og Unsplash-profil
@@ -220,7 +239,7 @@ Desktop: Fast sidebar til venstre med Reiseinfo øverst, alle dager i midten, og
 ℹ️ Reiseinfo
 ───────────
 Dag 1 – Puttgarden
-Dag 2 – Duisburg       ← aktiv uthevet
+Dag 2 – Köln            ← aktiv uthevet
 Dag 3 – Rouen
 ...
 ───────────
@@ -247,14 +266,15 @@ Smal mobil (<640px): Dropdown legger seg under logoen i headeren for mer plass.
 Når brukeren sier "har oppdatert tdf.md, oppdater nettstedet":
 
 1. Les `tdf.md` og identifiser endringer (nye dager, endrede seksjoner, nytt innhold)
-2. Oppdater `src/data/days.js` tilsvarende:
-   - Nye dager → legg til nye objekter i `days`-arrayet
+2. Oppdater den aktuelle `src/data/dayN.js`-filen:
    - Endret innhold → oppdater `content`-feltet i riktig seksjon
    - Nye seksjoner → legg til nye objekter i `sections`-arrayet
    - Fjernede seksjoner → fjern fra arrayet
    - Endrede koordinater/steder → oppdater `coords`/`stops`
-3. Sjekk at `section.js` håndterer eventuelle nye seksjonstyper
-4. Verifiser med `npm run dev`
+3. Oppdater `meta.js` hvis totalKm, bookingOverview eller top10 er påvirket
+4. Hvis ruten er endret (ny destinasjon), oppdater `routes.js` med nye OSRM-data
+5. Sjekk at `section.js` håndterer eventuelle nye seksjonstyper
+6. Verifiser med `npm run dev`
 
 ## Spesielle elementer i tdf.md
 
@@ -289,7 +309,8 @@ Når brukeren sier "har oppdatert tdf.md, oppdater nettstedet":
 - Alt UI-tekst på norsk
 - Bruk Tailwind utility-klasser, unngå custom CSS der mulig
 - Ingen tunge avhengigheter utover Leaflet og Tailwind
-- `days.js` eksporterer `export const days = [...]` og `export const tripMeta = {...}`, samt `bookingOverview` og `top10`
-- Hvert dag-objekt har en `image`-property med Unsplash hero/thumb-URL, fotograf-credit og lenker (tilordnes via `dayImages`-map på slutten av days.js)
+- `days.js` er aggregator som re-eksporterer `days`, `tripMeta`, `bookingOverview` og `top10`
+- Dagdata redigeres i individuelle `dayN.js`-filer, metadata i `meta.js`, bilder i `images.js`
+- Hvert dag-objekt får en `image`-property via `attachImages()` i `days.js`
 - Lenker til eksterne sider åpnes i ny fane (`target="_blank"`)
 - Emojier fra tdf.md beholdes i rendret innhold
