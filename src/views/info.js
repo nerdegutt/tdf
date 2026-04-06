@@ -92,7 +92,7 @@ export function renderInfo() {
         </h3>
         <div class="section-content text-stone-700">
           <ul>
-            <li>Total: ca. 5 500 km. Daglig lading på lange kjøredager.</li>
+            <li>Total: ca. ${tripMeta.totalKm.toLocaleString('nb-NO')} km. Daglig lading på lange kjøredager.</li>
             <li><strong>Frankrike:</strong> Supercharger + Ionity. Motorveier har bompenger (ca. 50–80 EUR totalt). <strong>Strenge fartskontroller!</strong></li>
             <li><strong>Spania:</strong> Gratis motorveier i Baskerland.</li>
             <li><strong>Tyskland/Belgia:</strong> Ingen motorveibompenger.</li>
@@ -112,7 +112,7 @@ export function renderInfo() {
         <div class="booking-callout rounded-lg px-4 py-3 mb-4 flex items-start gap-2">
           <span class="text-lg shrink-0" aria-hidden="true">💡</span>
           <div class="text-sm">
-            <strong>Mai-tips:</strong> Dere reiser før den store ferierushen (juni), men Bayeux-tapetet, Mont Saint-Michel og Palais des Papes er populære hele året. Bestill disse!
+            <strong>Mai-tips:</strong> Dere reiser før den store ferierushen (juni), men Mont Saint-Michel og Palais des Papes er populære hele året. Bestill disse!
           </div>
         </div>
         <div class="overflow-x-auto">

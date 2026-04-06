@@ -1,8 +1,11 @@
 import L from 'leaflet'
 import { days } from '../data/days.js'
+import { routes } from '../data/routes.js'
 
 let map = null
 let dayMap = null
+
+// --- Oversiktskart ---
 
 export function initMap(containerId) {
   if (map) {
@@ -20,14 +23,16 @@ export function initMap(containerId) {
     maxZoom: 18,
   }).addTo(map)
 
-  // Rutepolyline
-  const routeCoords = days.map(d => [d.coords.lat, d.coords.lng])
-  L.polyline(routeCoords, {
-    color: '#1e40af',
-    weight: 3,
-    opacity: 0.7,
-    dashArray: '8, 8',
-  }).addTo(map)
+  // Kjøreruter fra OSRM-data
+  for (const day of days) {
+    const route = routes[day.day]
+    if (!route) continue
+    L.polyline(route.points, {
+      color: '#1e40af',
+      weight: 3,
+      opacity: 0.7,
+    }).addTo(map)
+  }
 
   // Dag-markører
   days.forEach(d => {
@@ -54,7 +59,7 @@ export function initMap(containerId) {
       marker.openPopup()
     })
 
-    // Stopp-markører for denne dagen
+    // Stopp-markører
     if (d.stops && d.stops.length > 0) {
       d.stops.forEach(stop => {
         const stopIcon = L.divIcon({
@@ -77,11 +82,10 @@ export function initMap(containerId) {
     }
   })
 
-  // Tilpass visning til alle markører
+  // Tilpass visning
   const allCoords = days.map(d => [d.coords.lat, d.coords.lng])
   map.fitBounds(L.latLngBounds(allCoords).pad(0.1))
 
-  // Leaflet trenger resize-trigger etter DOM-endring
   setTimeout(() => map.invalidateSize(), 100)
 
   return map
@@ -93,6 +97,8 @@ export function destroyMap() {
     map = null
   }
 }
+
+// --- Dagkart ---
 
 export function initDayMap(containerId, day) {
   if (dayMap) {
@@ -111,37 +117,48 @@ export function initDayMap(containerId, day) {
   }).addTo(dayMap)
 
   const allPoints = []
-
-  // Forrige dags destinasjon (startpunkt for kjøredager)
   const prevDay = days.find(d => d.day === day.day - 1)
+  const route = routes[day.day]
 
-  if (day.km > 0 && prevDay) {
-    // Kjøredag: vis rute fra forrige destinasjon → stopp → dagens destinasjon
-    const routePoints = [
-      [prevDay.coords.lat, prevDay.coords.lng],
-      ...day.stops.map(s => [s.lat, s.lng]),
-      [day.coords.lat, day.coords.lng],
-    ]
+  if (day.km > 0) {
+    if (route) {
+      // Bruk lagret kjørerute
+      L.polyline(route.points, {
+        color: '#1e40af',
+        weight: 4,
+        opacity: 0.8,
+      }).addTo(dayMap)
+      // Legg til rutens ytterpunkter for zoom
+      allPoints.push(route.points[0], route.points[route.points.length - 1])
+    } else if (prevDay) {
+      // Fallback til rett linje
+      const waypoints = [
+        [prevDay.coords.lat, prevDay.coords.lng],
+        ...day.stops.map(s => [s.lat, s.lng]),
+        [day.coords.lat, day.coords.lng],
+      ]
+      L.polyline(waypoints, {
+        color: '#1e40af',
+        weight: 4,
+        opacity: 0.8,
+        dashArray: '10, 6',
+      }).addTo(dayMap)
+    }
 
-    L.polyline(routePoints, {
-      color: '#1e40af',
-      weight: 4,
-      opacity: 0.8,
-      dashArray: '10, 6',
-    }).addTo(dayMap)
+    if (prevDay) {
+      // Startpunkt-markør
+      const startIcon = L.divIcon({
+        className: '',
+        html: `<div class="day-marker" style="background:#64748b;width:28px;height:28px;font-size:11px">${prevDay.day}</div>`,
+        iconSize: [28, 28],
+        iconAnchor: [14, 14],
+      })
+      L.marker([prevDay.coords.lat, prevDay.coords.lng], { icon: startIcon })
+        .addTo(dayMap)
+        .bindPopup(`<strong>${prevDay.to}</strong><br><small>Startpunkt dag ${day.day}</small>`)
 
-    // Startpunkt-markør (forrige dag)
-    const startIcon = L.divIcon({
-      className: '',
-      html: `<div class="day-marker" style="background:#64748b;width:28px;height:28px;font-size:11px">${prevDay.day}</div>`,
-      iconSize: [28, 28],
-      iconAnchor: [14, 14],
-    })
-    L.marker([prevDay.coords.lat, prevDay.coords.lng], { icon: startIcon })
-      .addTo(dayMap)
-      .bindPopup(`<strong>${prevDay.to}</strong><br><small>Startpunkt dag ${day.day}</small>`)
-
-    allPoints.push([prevDay.coords.lat, prevDay.coords.lng])
+      allPoints.push([prevDay.coords.lat, prevDay.coords.lng])
+    }
   }
 
   // Dagens destinasjon
@@ -174,7 +191,6 @@ export function initDayMap(containerId, day) {
 
   // Tilpass visning
   if (allPoints.length === 1) {
-    // Hviledager uten stopp: zoom inn på byen
     dayMap.setView(allPoints[0], 13)
   } else {
     dayMap.fitBounds(L.latLngBounds(allPoints).pad(0.15))

@@ -1,0 +1,87 @@
+// DAG 10
+export const day10 = {
+  day: 10,
+  date: "22. mai",
+  weekday: "Torsdag",
+  from: "San Sebastián",
+  to: "Narbonne",
+  km: 492,
+  nights: 1,
+  subtitle: "Lang kjøredag med essensielt stopp",
+  coords: { lat: 43.18, lng: 3.00 },
+  stops: [
+    { name: "Carcassonne", lat: 43.21, lng: 2.35, type: "city" },
+  ],
+  sections: [
+    {
+      type: "sights",
+      title: "Anbefalt stopp: Carcassonne (2–3 timer)",
+      bookingWarning: "Château Comtal og rempartene – tidsluker i høysesong.",
+      bookingUrl: "https://www.remparts-carcassonne.fr/",
+      content: `<ul>
+<li><strong>Europas best bevarte middelalderby.</strong> Doble ringmurer, 52 tårn. UNESCO. Bjørn Erik vil ELSKE dette.</li>
+<li>Restaurert av Viollet-le-Duc på 1800-tallet. Gå rundt på murene.</li>
+<li><strong>Comte-slottet</strong>: Festningen inne i festningen. Museum og utsikt.</li>
+<li><strong>Basilique Saints-Nazaire</strong>: Gotisk/romansk kirke med fantastiske glassmalerier.</li>
+<li><a href="https://www.tourism-carcassonne.co.uk/" target="_blank" rel="noopener">carcassonne-tourisme.com</a></li>
+</ul>`
+    },
+    {
+      type: "history",
+      title: "Historisk trivia for Bjørn Erik",
+      bookingWarning: null,
+      bookingUrl: null,
+      content: `<ul>
+<li><strong>Carcassonne og katarene</strong>: Byen var et senter for katarismen – en kristen «kjettersk» bevegelse på 1100–1200-tallet. Pave Innocens III utlyste det <strong>albigensiske korstoget</strong> (1209) for å utrydde dem. Carcassonne falt i 1209 etter en to ukers beleiring. Lederen Simon de Montfort ble den nye herren.</li>
+<li>Under beleiringen av Carcassonne i 1209 sa pavens legat angivelig de berømte ordene: <em>«Drep dem alle, Gud vil kjenne sine egne»</em> – da han ble spurt hvordan man skulle skille katarer fra katolikker. (Sitatet er muligens apokryft, men det har blitt stående.)</li>
+<li><strong>Viollet-le-Duc</strong> sin restaurering av Carcassonne (1853–79) er kontroversiell blant historikere. Han la til skifertakene med spisse tårn, som gir borgen sitt eventyr-aktige utseende. Opprinnelig hadde tårnene flate terracotta-tak i sørfransk stil. Noen mener han «Disneyfiserte» borgen – men uten ham hadde den trolig blitt revet.</li>
+<li><strong>Narbonne</strong> var den første romerske kolonien i Gallia, grunnlagt <strong>118 f.Kr.</strong> – altså eldre enn både Lyon og Paris som romerske byer. Byen var hovedstad i provinsen Gallia Narbonensis og en av de viktigste byene i det vestlige Romerriket.</li>
+<li><strong>Via Domitia</strong> (synlig på torget i Narbonne) var den aller første romerske veien bygget i Gallia, anlagt av Gnaeus Domitius Ahenobarbus i 118 f.Kr. Den gikk fra Rhône til Spania – og dere kjører omtrent samme rute!</li>
+</ul>`
+    },
+    {
+      type: "photo",
+      title: "Foto",
+      bookingWarning: null,
+      bookingUrl: null,
+      content: `<ul>
+<li>Fra østsiden/Pont Vieux: Hele borgen – ikonisk siluett. <a href="https://www.google.com/search?tbm=isch&q=carcassonne+pont+vieux+photography" target="_blank" rel="noopener" class="photo-search-link">🔍 Bilder</a></li>
+<li>«Listen» mellom de doble murene – tidløst. <a href="https://www.google.com/search?tbm=isch&q=carcassonne+lices+double+walls" target="_blank" rel="noopener" class="photo-search-link">🔍 Bilder</a></li>
+<li>Porte Narbonnaise: Hovedporten med to massive tårn. <a href="https://www.google.com/search?tbm=isch&q=porte+narbonnaise+carcassonne" target="_blank" rel="noopener" class="photo-search-link">🔍 Bilder</a></li>
+</ul>`
+    },
+    {
+      type: "sights",
+      title: "Narbonne",
+      bookingWarning: null,
+      bookingUrl: null,
+      content: `<ul>
+<li><strong>Cathédrale Saint-Just-et-Saint-Pasteur</strong>: Kun koret fullført, men Frankrikes TREDJE HØYESTE gotiske kor (41 m).</li>
+<li><strong>Via Domitia</strong>: Eldste romerske veien i Gallia (118 f.Kr.) synlig på Place de l'Hôtel de Ville.</li>
+<li><strong>Horreum</strong>: Underjordisk romersk kryptoportikus. <a href="https://www.narbonne-tourisme.com/" target="_blank" rel="noopener">narbonne-tourisme.com</a></li>
+</ul>`
+    },
+    {
+      type: "accommodation",
+      title: "Overnatting i Narbonne",
+      bookingWarning: null,
+      bookingUrl: null,
+      content: `<ul>
+<li><strong><a href="https://hoteldumidi.net/eng/" target="_blank" rel="noopener">Hôtel du Midi</a></strong> – Fra 49 EUR/rom/natt! Privat garasje 10 EUR/natt. 36 nyrenoverte rom. 10% rabatt ved direktebooking. <em>Ca. 49–70 EUR/rom/natt.</em></li>
+<li><strong><a href="https://www.hotelnarbonne.com/en/" target="_blank" rel="noopener">Hôtel de France</a></strong> – 9.0/10 Expedia! 14 rom i 1800-tallshus. Frokost med lokale spesialiteter. <em>Ca. 69–89 EUR/rom/natt.</em></li>
+<li><strong><a href="https://www.hotelresidence.fr/" target="_blank" rel="noopener">Hôtel La Résidence</a></strong> – 1800-talls privathus, bar med lokale Corbières-viner. Parkering 12 EUR/natt. <em>Ca. 80–120 EUR/rom/natt.</em></li>
+</ul>`
+    },
+    {
+      type: "food",
+      title: "Middag i Narbonne",
+      bookingWarning: null,
+      bookingUrl: null,
+      content: `<ul>
+<li><strong>Chez Lulu</strong> – 4.7/5, retro-bistro i "Café de la Poste" fra 1932. 100% hjemmelaget cassoulet (and, pølse, bønner). Solide kjøttretter. Billigere enn forventet! Blvd Gambetta 30. <em>Ca. 15–28 EUR/pers.</em></li>
+<li><strong><a href="https://www.petitcomptoir.com/" target="_blank" rel="noopener">Le Petit Comptoir</a></strong> – Institusjon siden 1976. 300+ Languedoc-viner. God kjøttmeny. <em>Ca. 35–50 EUR/pers.</em></li>
+<li><strong><a href="https://www.chezfranck11.fr/" target="_blank" rel="noopener">Chez Franck</a></strong> – Grillrestaurant med kjøtt over vedild, institusjon siden 1968. Drevet av eks-rugbyspiller Franck Tournaire. Entrecôte, côte de bœuf, lam – alt på grill. 4.7/5 Google. Reservasjon per telefon: 04 68 41 59 32. <em>Ca. 40–50 EUR/pers.</em></li>
+</ul>`
+    },
+  ],
+};

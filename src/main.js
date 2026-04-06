@@ -4,7 +4,6 @@ import { renderOverview, destroyOverview } from './views/overview.js'
 import { renderDay, destroyDay } from './views/day.js'
 import { renderInfo, destroyInfo } from './views/info.js'
 import { renderTop10, destroyTop10 } from './views/top10.js'
-import { renderAnbefalinger, destroyAnbefalinger } from './views/anbefalinger.js'
 import { populateMobileNav, populateSidebar } from './components/sidebar.js'
 import { initDayMap, destroyDayMap, invalidateDayMap } from './components/map.js'
 
@@ -39,7 +38,6 @@ function getRoute() {
   const hash = window.location.hash || '#/'
   if (hash === '#/info') return { view: 'info' }
   if (hash === '#/topp10') return { view: 'top10' }
-  if (hash === '#/anbefalinger') return { view: 'anbefalinger' }
   const match = hash.match(/^#\/dag\/(\d+)$/)
   if (match) {
     return { view: 'day', dayNum: parseInt(match[1], 10) }
@@ -101,7 +99,6 @@ function render() {
   }
   if (currentView === 'info') destroyInfo()
   if (currentView === 'top10') destroyTop10()
-  if (currentView === 'anbefalinger') destroyAnbefalinger()
 
   const overviewEl = document.getElementById('view-overview')
   const dayEl = document.getElementById('view-day')
@@ -167,19 +164,6 @@ function render() {
     currentView = 'top10'
     window.scrollTo(0, 0)
     announce('Topp 10')
-  } else if (route.view === 'anbefalinger') {
-    overviewEl.classList.add('hidden')
-    dayEl.classList.remove('hidden')
-    mobileNav.classList.remove('hidden')
-    dayMapWrapper.style.display = 'none'
-
-    populateSidebar(route)
-    populateMobileNav(route)
-    renderAnbefalinger()
-
-    currentView = 'anbefalinger'
-    window.scrollTo(0, 0)
-    announce('Anbefalinger')
   }
 }
 
@@ -196,9 +180,6 @@ function navigateStep(direction) {
     else window.location.hash = `#/dag/${target}`
   } else if (route.view === 'top10') {
     if (direction === -1) window.location.hash = `#/dag/${days.length}`
-    if (direction === 1) window.location.hash = '#/anbefalinger'
-  } else if (route.view === 'anbefalinger') {
-    if (direction === -1) window.location.hash = '#/topp10'
   }
 }
 
