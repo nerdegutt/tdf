@@ -6,12 +6,17 @@ export function populateSidebar(activeRoute) {
 
   const infoActive = activeRoute.view === 'info'
   const top10Active = activeRoute.view === 'top10'
+  const anbefalingerActive = activeRoute.view === 'anbefalinger'
 
   const infoClass = infoActive
     ? 'bg-blue-50 text-blue-900 border-blue-600 font-semibold'
     : 'text-stone-600 border-transparent hover:bg-stone-50 hover:text-stone-900'
 
   const top10Class = top10Active
+    ? 'bg-blue-50 text-blue-900 border-blue-600 font-semibold'
+    : 'text-stone-600 border-transparent hover:bg-stone-50 hover:text-stone-900'
+
+  const anbefalingerClass = anbefalingerActive
     ? 'bg-blue-50 text-blue-900 border-blue-600 font-semibold'
     : 'text-stone-600 border-transparent hover:bg-stone-50 hover:text-stone-900'
 
@@ -51,6 +56,13 @@ export function populateSidebar(activeRoute) {
         <span class="ml-1">Topp 10</span>
       </a>
     </li>
+    <li>
+      <a href="#/anbefalinger"${anbefalingerActive ? ' aria-current="page"' : ''}
+         class="block px-3 py-2 rounded-lg border-l-3 text-sm transition-colors ${anbefalingerClass}">
+        <span aria-hidden="true">🍽️</span>
+        <span class="ml-1">Anbefalinger</span>
+      </a>
+    </li>
   `
 }
 
@@ -82,6 +94,11 @@ export function populateMobileNav(activeRoute) {
     top10Opt.textContent = '🏆 Topp 10'
     select.appendChild(top10Opt)
 
+    const anbefalingerOpt = document.createElement('option')
+    anbefalingerOpt.value = '#/anbefalinger'
+    anbefalingerOpt.textContent = '🍽️ Anbefalinger'
+    select.appendChild(anbefalingerOpt)
+
     select.addEventListener('change', () => {
       window.location.hash = select.value
     })
@@ -93,6 +110,8 @@ export function populateMobileNav(activeRoute) {
     select.value = '#/info'
   } else if (activeRoute.view === 'top10') {
     select.value = '#/topp10'
+  } else if (activeRoute.view === 'anbefalinger') {
+    select.value = '#/anbefalinger'
   } else {
     select.value = `#/dag/${activeRoute.dayNum}`
   }

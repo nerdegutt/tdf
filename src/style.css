@@ -217,6 +217,16 @@ html.dark .section-booking {
 html.dark .section-content { color: #d6d3d1; }
 html.dark .section-content a { color: #60a5fa; }
 
+/* --- Anbefalinger callout --- */
+.anbefalinger-callout {
+  background-color: #fffbeb;
+  color: #44403c;
+}
+html.dark .anbefalinger-callout {
+  background-color: rgba(245, 158, 11, 0.12);
+  color: #d6d3d1;
+}
+
 /* --- Booking callout --- */
 html.dark .booking-callout {
   background: rgba(220, 38, 38, 0.15);
