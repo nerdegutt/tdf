@@ -2,7 +2,7 @@
 export const day13 = {
   day: 13,
   date: "25. mai",
-  weekday: "Søndag",
+  weekday: "Mandag",
   from: "Avignon",
   to: "Dijon",
   km: 422,
@@ -83,10 +83,10 @@ export const day13 = {
       bookingUrl: null,
       content: `<ul>
 <li><strong><a href="https://www.lepreauxclercs.fr/" target="_blank" rel="noopener">Le Pré aux Clercs</a></strong> – Georges Blanc-signert brasserie overfor Hertugens palass. Meny 39 EUR, plat du jour 16 EUR. Åpent 7/7 – sikreste valg! <em>Ca. 25–50 EUR/pers.</em></li>
-<li><strong><a href="https://www.le-coin-cache.fr/" target="_blank" rel="noopener">Le Coin Caché</a></strong> – Intim bistro, 50 plasser. Kveldsmeny 50 EUR. Normalt åpent man–fre – <strong>ring og sjekk for søndag!</strong> <em>Ca. 40–55 EUR/pers.</em></li>
-<li><strong>Parapluie</strong> – Michelin-utvalgt overraskelsesmeny! 4.7/5, 850 anmeldelser. Normalt åpent man–fre – <strong>ring og sjekk for søndag!</strong> Rue Monge 74. <em>Ca. 35–50 EUR/pers.</em></li>
+<li><strong><a href="https://www.le-coin-cache.fr/" target="_blank" rel="noopener">Le Coin Caché</a></strong> – Intim bistro, 50 plasser. Kveldsmeny 50 EUR. Åpent man–fre. <em>Ca. 40–55 EUR/pers.</em></li>
+<li><strong>Parapluie</strong> – Michelin-utvalgt overraskelsesmeny! 4.7/5, 850 anmeldelser. Åpent man–fre. Rue Monge 74. <em>Ca. 35–50 EUR/pers.</em></li>
 </ul>
-<p>⚠️ Dag 13 er søndag. Le Coin Caché og Parapluie er normalt stengt lør–søn. <strong>Le Pré aux Clercs er det eneste sikre valget</strong> (åpent alle dager). Alternativ: L'Édito – åpent 7/7, plat du jour 16–18 EUR.</p>`
+<p>💡 Le Pré aux Clercs er åpent 7/7 (bekreftet på lepreauxclercs.fr). Le Coin Caché og Parapluie er åpne man–fre iht. flere kilder.</p>`
     },
   ],
 };

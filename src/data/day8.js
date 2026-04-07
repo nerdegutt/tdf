@@ -2,7 +2,7 @@
 export const day8 = {
   day: 8,
   date: "20. mai",
-  weekday: "Tirsdag",
+  weekday: "Onsdag",
   from: "La Rochelle",
   to: "San Sebastián",
   km: 431,

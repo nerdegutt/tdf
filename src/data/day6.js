@@ -2,7 +2,7 @@
 export const day6 = {
   day: 6,
   date: "18. mai",
-  weekday: "Søndag",
+  weekday: "Mandag",
   from: "Bayeux",
   to: "Mont Saint-Michel",
   km: 128,

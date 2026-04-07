@@ -2,7 +2,7 @@
 export const day3 = {
   day: 3,
   date: "15. mai",
-  weekday: "Torsdag",
+  weekday: "Fredag",
   from: "Köln",
   to: "Rouen",
   km: 549,
@@ -64,11 +64,11 @@ export const day3 = {
       bookingWarning: null,
       bookingUrl: null,
       content: `<ul>
-<li><strong><a href="https://m-patachon.fr" target="_blank" rel="noopener">M. Patachon</a></strong> – Kåret til Normandies beste burger! To kompiser som åpnet i 2024. Hjemmelagde gourmetburgere med lokale råvarer. Åpent to 19:00–22:30. <em>Ca. 15–20 EUR/pers.</em></li>
-<li><strong>Holy Moly Gourmet Burger</strong> – Biff fra lokale gårder, brød fra bakeriet ved siden av. <strong>Åpent til 23:00 torsdager</strong> – trygt ved sen ankomst! 38 Rue de la République. <em>Ca. 11–20 EUR/pers.</em></li>
-<li><strong><a href="https://www.rotomagus.eu/en/" target="_blank" rel="noopener">Rotomagus</a></strong> – Grillrestaurant med modnet kjøtt i Mibrasa-kullgrill. Terrasse ved Saint-Maclou. Åpent to til 22:00. <em>Ca. 30–50 EUR/pers.</em></li>
+<li><strong><a href="https://m-patachon.fr" target="_blank" rel="noopener">M. Patachon</a></strong> – Kåret til Normandies beste burger! To kompiser som åpnet i 2024. Hjemmelagde gourmetburgere med lokale råvarer. ⚠️ Motstridende info om åpningstider – nettstedet antyder stenging kl. 17, men tredjepartskilder lister middag (19:00–22:30). <strong>Ring og bekreft!</strong> <em>Ca. 15–20 EUR/pers.</em></li>
+<li><strong>Holy Moly Gourmet Burger</strong> – Biff fra lokale gårder, brød fra bakeriet ved siden av. Åpent 7/7 til 23:00 – trygt ved sen ankomst! 38 Rue de la République. <em>Ca. 11–20 EUR/pers.</em></li>
+<li><strong><a href="https://www.rotomagus.eu/en/" target="_blank" rel="noopener">Rotomagus</a></strong> – Grillrestaurant med modnet kjøtt i Mibrasa-kullgrill. Terrasse ved Saint-Maclou. Åpent man–lør, middag til 22:00. <em>Ca. 30–50 EUR/pers.</em></li>
 </ul>
-<p>💡 Holy Moly er tryggest ved sen ankomst (åpent til 23). M. Patachon er best kvalitet. Rotomagus hvis dere rekker det.</p>`
+<p>💡 Dere ankommer fredag kveld. Holy Moly er tryggest ved sen ankomst (åpent til 23). Ring M. Patachon for å bekrefte middagstider.</p>`
     },
   ],
 };

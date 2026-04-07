@@ -2,7 +2,7 @@
 export const day7 = {
   day: 7,
   date: "19. mai",
-  weekday: "Mandag",
+  weekday: "Tirsdag",
   from: "Mont Saint-Michel",
   to: "La Rochelle",
   km: 330,
@@ -77,8 +77,8 @@ export const day7 = {
       bookingWarning: null,
       bookingUrl: null,
       content: `<ul>
-<li><strong><a href="https://www.lafleurdesel-larochelle.com/" target="_blank" rel="noopener">La Fleur de Sel</a></strong> – Bistronomisk, 100% hjemmelaget. 4.4/5, 4010 anmeldelser. Over 100 viner. Åpent mandager! Godt kjøttutvalg. <em>Ca. 30–40 EUR/pers.</em></li>
-<li><strong><a href="https://laboussole-larochelle.fr/" target="_blank" rel="noopener">La Boussole</a></strong> – Asiatisk-fransk fusjon. Wok-retter med lam, curries, burgere. Fast meny 28–32 EUR. Åpent mandager! <em>Ca. 30–40 EUR/pers.</em></li>
+<li><strong><a href="https://www.lafleurdesel-larochelle.com/" target="_blank" rel="noopener">La Fleur de Sel</a></strong> – Bistronomisk, 100% hjemmelaget. 4.4/5, 4010 anmeldelser. Over 100 viner. Godt kjøttutvalg. <em>Ca. 30–40 EUR/pers.</em></li>
+<li><strong><a href="https://laboussole-larochelle.fr/" target="_blank" rel="noopener">La Boussole</a></strong> – Asiatisk-fransk fusjon. Wok-retter med lam, curries, burgere. Fast meny 28–32 EUR. <em>Ca. 30–40 EUR/pers.</em></li>
 <li><strong><a href="https://www.barandre.com/en/" target="_blank" rel="noopener">Bar André</a></strong> – Institusjon siden 1947, MOF-kokk. Best for sjømat. Dyrere enn antatt, delte anmeldelser nylig. <em>Ca. 50–70 EUR/pers.</em></li>
 </ul>
 <p>💡 La Fleur de Sel er det tryggeste og beste valget. La Boussole for noe annerledes.</p>`

@@ -2,7 +2,7 @@
 export const day16 = {
   day: 16,
   date: "28. mai",
-  weekday: "Onsdag",
+  weekday: "Torsdag",
   from: "Trier",
   to: "Hameln",
   km: 481,
@@ -77,8 +77,8 @@ export const day16 = {
       bookingUrl: null,
       content: `<ul>
 <li><strong><a href="https://www.gaststaette-reichsadler.de/" target="_blank" rel="noopener">Gaststätte Reichsadler</a></strong> – Eldste pub i Hameln. Rumpsteak som angivelig slo 80 GBP-steak i London! 4.5/5, 1900 anmeldelser. Litt utenfor sentrum (Klutviertel). <em>Ca. 15–25 EUR/pers.</em></li>
-<li><strong><a href="https://www.rattenfaengerhaus.com/" target="_blank" rel="noopener">Rattenfängerhaus</a></strong> – Det ikoniske bygget fra 1602. ⚠️ <strong>Ring og sjekk!</strong> Kan ha blitt India Haus (indisk) etter 2021. Tysk eller indisk – begge kan være bra. <em>Ca. 20–35 EUR/pers.</em></li>
-<li><strong><a href="https://www.rattenkrug.de/" target="_blank" rel="noopener">Paulaner im Rattenkrug</a></strong> – Hamelns eldste vertshus (200+ år). Schweinshaxe, sprø schnitzel, Paulaner fra fat. Ring for å bekrefte åpningstider. <em>Ca. 20–30 EUR/pers.</em></li>
+<li><strong>India Haus im Rattenfängerhaus</strong> – Det ikoniske bygget fra 1602 er nå indisk restaurant (siden 2021). 4.6/5 med 4800+ anmeldelser. Åpent daglig. Opplevelsen er like mye bygningen som maten! <em>Ca. 15–25 EUR/pers.</em></li>
+<li><strong><a href="https://www.rattenkrug.de/" target="_blank" rel="noopener">Paulaner im Rattenkrug</a></strong> – Hamelns eldste vertshus (200+ år). Schweinshaxe, sprø schnitzel, Paulaner fra fat. Åpent torsdag fra kl. 12. <em>Ca. 20–30 EUR/pers.</em></li>
 </ul>
 <p>🐀 Rattenfängerhaus er like mye opplevelse som middag – uansett om det er tysk eller indisk!</p>`
     },

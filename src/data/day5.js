@@ -2,7 +2,7 @@
 export const day5 = {
   day: 5,
   date: "17. mai",
-  weekday: "Lørdag",
+  weekday: "Søndag",
   from: "Rouen",
   to: "Bayeux",
   km: 220,
@@ -79,14 +79,14 @@ export const day5 = {
     {
       type: "food",
       title: "17. mai-middag i Bayeux 🇳🇴",
-      bookingWarning: null,
+      bookingWarning: "Søndag i Frankrike – ring og bekreft åpningstider!",
       bookingUrl: null,
       content: `<ul>
-<li><strong><a href="https://www.langlesaintlaurent.com/" target="_blank" rel="noopener">L'Angle Saint-Laurent</a></strong> – Bib Gourmand. Lokale råvarer, Bayeux-gris. Åpent lørdag! <em>Ca. 35–50 EUR/pers.</em></li>
-<li><strong><a href="https://www.larapiere.net/" target="_blank" rel="noopener">La Rapière</a></strong> – Bib Gourmand i 1400-tallsbygning. Kalvefilet, viltretter. Åpent lørdag. <em>Ca. 42–55 EUR/pers.</em></li>
-<li><strong>L'Alchimie</strong> – Kreativ bistro, hjemmelaget, andebryst. <em>Ca. 35–45 EUR/pers.</em> (Facebook: L'Alchimie Bayeux)</li>
+<li><strong>Le Pommier</strong> – Raffinert normannisk kjøkken i historisk steinbygning nær katedralen. Sesongmeny, calvados-aperitiff. Åpent søndager (18:30–21:00). Stengt onsdager. Rue des Cuisiniers 38–40. Tlf: 02 31 21 52 10. <em>Ca. 30–45 EUR/pers.</em></li>
+<li><strong><a href="https://lanormande-bayeux.fr/" target="_blank" rel="noopener">La Normande</a></strong> – Tradisjonell normannisk mat, østers, fisk, biff. Åpent søndag kveld april–oktober (18:30–20:45). «Menu La Normande» 36 EUR. Rue Saint-Jean 46. <em>Ca. 30–50 EUR/pers.</em></li>
+<li><strong><a href="https://www.la-table-du-terroir.com/" target="_blank" rel="noopener">La Table du Terroir</a></strong> – Normannisk husmannskost, to terrasser nær katedralen. Åpent søndag kveld (18:00–21:30). Rimeligst alternativ. Rue Saint-Jean 42. <em>Ca. 20–35 EUR/pers.</em></li>
 </ul>
-<p>🇳🇴 17. mai-middag i middelalder-Bayeux! Alle tre bør være åpne lørdag kveld.</p>`
+<p>⚠️ 17. mai er søndag – mange franske restauranter holder stengt. Disse tre er bekreftet søndagsåpne i mai, men <strong>ring og bekreft på forhånd!</strong> Le Pommier er det fineste valget for 17. mai-feiring.</p>`
     },
   ],
 };

@@ -2,7 +2,7 @@
 export const day17 = {
   day: 17,
   date: "29. mai",
-  weekday: "Torsdag",
+  weekday: "Fredag",
   from: "Hameln",
   to: "Puttgarden",
   km: 358,

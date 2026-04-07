@@ -2,7 +2,7 @@
 export const day12 = {
   day: 12,
   date: "24. mai",
-  weekday: "Lørdag",
+  weekday: "Søndag",
   from: "Avignon",
   to: "Gordes/Luberon (dagstur)",
   km: 94,
@@ -70,9 +70,9 @@ export const day12 = {
       bookingWarning: null,
       bookingUrl: null,
       content: `<ul>
-<li><strong>Le Coude à Coude</strong> – #1 TripAdvisor! Ektepar, rutete duker, blomsterterrasse. Meny fra 18 EUR! "Noen av de beste måltidene i 3 uker i Frankrike." Rue de la Saraillerie 37. <em>Ca. 20–30 EUR/pers.</em></li>
-<li><strong><a href="http://www.carredupalais.fr" target="_blank" rel="noopener">Le Carré du Palais</a></strong> – Utsikt mot Pavepalasset! Vinbar i gamle Banque de France. Kalvefilet med sopp, grillet kjøtt. <em>Ca. 40–60 EUR/pers.</em></li>
-<li><strong><a href="https://www.restaurantsevin.fr/" target="_blank" rel="noopener">Restaurant SEVIN</a></strong> – 1 Michelin-stjerne i 1100-tallshus med fresker fra 1300-tallet. Sesongbasert. Åpent lørdag. <em>Ca. 60–145 EUR/pers.</em></li>
+<li><strong><a href="http://www.carredupalais.fr" target="_blank" rel="noopener">Le Carré du Palais</a></strong> – Utsikt mot Pavepalasset! Vinbar i gamle Banque de France. Åpent 7/7, 12:00–22:00. Kalvefilet med sopp, grillet kjøtt. <em>Ca. 40–60 EUR/pers.</em></li>
+<li><strong><a href="https://www.restaurantsevin.fr/" target="_blank" rel="noopener">Restaurant SEVIN</a></strong> – 1 Michelin-stjerne i 1100-tallshus med fresker fra 1300-tallet. Sesongbasert. Åpent søndager i mai (fre–tir). <em>Ca. 60–145 EUR/pers.</em></li>
+<li><strong>Le Coude à Coude</strong> – #1 TripAdvisor! Ektepar, rutete duker, blomsterterrasse. Meny fra 18 EUR! ⚠️ <strong>Stengt søndager</strong> (åpent tir–lør). Kun aktuell for dag 11 (lørdag). Rue de la Saraillerie 37. <em>Ca. 20–30 EUR/pers.</em></li>
 </ul>`
     },
   ],

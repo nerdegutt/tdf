@@ -2,7 +2,7 @@
 export const day9 = {
   day: 9,
   date: "21. mai",
-  weekday: "Onsdag",
+  weekday: "Torsdag",
   from: "San Sebastián",
   to: "San Sebastián",
   km: 0,
@@ -58,7 +58,7 @@ export const day9 = {
       content: `<ul>
 <li><strong><a href="https://www.ganbarajatetxea.com" target="_blank" rel="noopener">Ganbara</a> + Bar Nestor</strong> – Legendarisk pintxos-duo! Ganbaras villsopp med eggeplomme er ikonisk. Bar Nestors txuleta – kun 1 biff/dag, møt opp kl. 13! <em>Ca. 30–50 EUR/pers totalt.</em></li>
 <li><strong>Borda Berri</strong> – Oksekinnet og orzotto-risotto. Anbefalt av nesten alle matblogger. Fermín Calbetón 12, Parte Vieja. <em>Ca. 25–40 EUR/pers.</em></li>
-<li><strong><a href="https://www.arzak.es/en/" target="_blank" rel="noopener">Arzak</a></strong> – 3 Michelin-stjerner siden 1989. Fire generasjoner. Den store splurgen. Åpent onsdag! <em>Ca. 315+ EUR/pers.</em></li>
+<li><strong><a href="https://www.arzak.es/en/" target="_blank" rel="noopener">Arzak</a></strong> – 3 Michelin-stjerner siden 1989. Fire generasjoner. Den store splurgen. Sjekk åpningstider for torsdag! <em>Ca. 315+ EUR/pers.</em></li>
 </ul>`
     },
   ],

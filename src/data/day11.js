@@ -2,7 +2,7 @@
 export const day11 = {
   day: 11,
   date: "23. mai",
-  weekday: "Fredag",
+  weekday: "Lørdag",
   from: "Narbonne",
   to: "Avignon",
   km: 195,
@@ -67,7 +67,7 @@ export const day11 = {
       content: `<ul>
 <li><strong><a href="https://www.restaurantfoudefafa.com" target="_blank" rel="noopener">Fou de Fafa</a></strong> – Intim bistro, kun 10 bord! Alt hjemmelaget. Anka med bringebærsaus, svinekjøtt med ratatouille. 3-retters 43 EUR. 4.7–4.8/5. <strong>Reserver!</strong> <em>Ca. 40–50 EUR/pers.</em></li>
 <li><strong><a href="http://www.restaurant-agape-avignon.com/fr/" target="_blank" rel="noopener">L'Agape</a></strong> – Bib Gourmand. Terrasse på sjarmerende plass med platantrær. Kreativ men jordnær. <em>Ca. 35–50 EUR/pers.</em></li>
-<li><strong>Chez Bodus Le Garçon Boucher</strong> – Burgerbar med ferskmalt kjøtt! Angus-burgere, uformelt og rimelig. Rue Saint-Michel 1. <em>Ca. 15–20 EUR/pers.</em></li>
+<li><strong>Avenio</strong> – Vinbar og bistro i sentrum. Lokale Rhône-viner, tapas og franske småretter. Populær blant lokale. Place des Corps Saints. <em>Ca. 20–35 EUR/pers.</em></li>
 </ul>`
     },
   ],

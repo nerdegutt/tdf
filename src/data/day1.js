@@ -2,7 +2,7 @@
 export const day1 = {
   day: 1,
   date: "13. mai",
-  weekday: "Tirsdag",
+  weekday: "Onsdag",
   from: "Rakkestad",
   to: "Puttgarden-området",
   km: 733,
@@ -56,7 +56,7 @@ export const day1 = {
 <li><strong><a href="https://www.salzspeicher.com/" target="_blank" rel="noopener">Zum Alten Salzspeicher</a></strong> – Steak og pannekaker i historisk saltspeicher fra 1587. Rustikk sjarm. <em>Ca. 20–35 EUR/pers.</em> ⚠️ Rapporter om kvalitetsfall etter mulig eierskifte – ha backup.</li>
 <li><strong>Treffpunkt Fischhalle</strong> – Prisvinnende fisk rett fra havnen. Lokalt favorittsted. <em>Ca. 15–25 EUR/pers.</em></li>
 </ul>
-<p>⚠️ Mange restauranter i Heiligenhafen er stengt tirsdager. Ring og bekreft!</p>`
+<p>💡 Dere ankommer onsdag – de fleste restauranter bør være åpne. NB: Mange stenger tirsdager, så dette hadde vært verre én dag tidligere!</p>`
     },
   ],
 };

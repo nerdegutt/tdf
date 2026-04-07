@@ -2,7 +2,7 @@
 export const day4 = {
   day: 4,
   date: "16. mai",
-  weekday: "Fredag",
+  weekday: "Lørdag",
   from: "Rouen",
   to: "Rouen",
   km: 0,
