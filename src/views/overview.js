@@ -20,7 +20,7 @@ export function renderOverview() {
       : ''
 
     return `
-      <a href="#/dag/${d.day}" class="block bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-stone-200 overflow-hidden group">
+      <a href="#/dag/${d.day}" class="block bg-white rounded-xl overflow-hidden group hover:bg-stone-50 transition-colors">
         ${thumbImg}
         <div class="p-4">
           <div class="flex items-center justify-between mb-2">

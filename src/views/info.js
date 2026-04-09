@@ -57,7 +57,7 @@ export function renderInfo() {
     </div>
 
     <!-- Ruteoversikt -->
-    <div class="section-sights border-l-4 rounded-lg shadow-sm mb-4 overflow-hidden">
+    <div class="section-sights rounded-lg mb-4 overflow-hidden">
       <div class="px-5 py-4">
         <h3 class="flex items-center gap-2 text-lg font-semibold mb-3">
           <span aria-hidden="true">📋</span>
@@ -84,7 +84,7 @@ export function renderInfo() {
     </div>
 
     <!-- Praktisk: Tesla & Kjøring -->
-    <div class="section-practical border-l-4 rounded-lg shadow-sm mb-4 overflow-hidden">
+    <div class="section-practical rounded-lg mb-4 overflow-hidden">
       <div class="px-5 py-4">
         <h3 class="flex items-center gap-2 text-lg font-semibold mb-3">
           <span aria-hidden="true">⚡</span>
@@ -103,7 +103,7 @@ export function renderInfo() {
     </div>
 
     <!-- Booking-oversikt -->
-    <div class="section-booking border-l-4 rounded-lg shadow-sm mb-4 overflow-hidden">
+    <div class="section-booking rounded-lg mb-4 overflow-hidden">
       <div class="px-5 py-4">
         <h3 class="flex items-center gap-2 text-lg font-semibold mb-3">
           <span aria-hidden="true">🎟️</span>

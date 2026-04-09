@@ -1,5 +1,5 @@
 import { days } from '../data/days.js'
-import { renderSection } from '../components/section.js'
+import { renderHighlight, renderCompact, renderTrivia, renderGem } from '../components/section.js'
 
 export function renderDay(day) {
   const container = document.getElementById('day-content')
@@ -20,7 +20,53 @@ export function renderDay(day) {
     ? `<a href="#/dag/${nextDay.day}" class="inline-flex items-center gap-1 text-sm text-blue-700 hover:text-blue-900 transition-colors">Dag ${nextDay.day}: ${nextDay.to} →</a>`
     : `<a href="#/" class="inline-flex items-center gap-1 text-sm text-blue-700 hover:text-blue-900 transition-colors">Tilbake til oversikt →</a>`
 
-  const sectionsHtml = day.sections.map(s => renderSection(s)).join('')
+  // Grupper seksjoner i tre grupper
+  const highlights = []  // sights — fullbredde, ren typografi
+  const fullWidth = []   // history, photo, practical — fullbredde kort
+  const paired = []      // food, accommodation — side om side
+  const gems = []
+
+  for (const s of day.sections) {
+    if (s.type === 'gem') {
+      gems.push(s)
+    } else if (s.highlight || s.type === 'sights') {
+      highlights.push(s)
+    } else if (s.type === 'food' || s.type === 'accommodation') {
+      paired.push(s)
+    } else {
+      fullWidth.push(s)
+    }
+  }
+
+  const triviaHtml = day.trivia
+    ? day.trivia.map(t => renderTrivia(t)).join('')
+    : ''
+
+  let sectionsHtml = ''
+
+  // Høydepunkter (sights + eksplisitt highlight)
+  if (highlights.length > 0) {
+    sectionsHtml += highlights.map(s => renderHighlight(s)).join('')
+  }
+
+  // Fullbredde kort (historie, foto, praktisk)
+  if (fullWidth.length > 0) {
+    sectionsHtml += `<div class="flex flex-col gap-4 mb-6">`
+    sectionsHtml += fullWidth.map(s => renderCompact(s)).join('')
+    sectionsHtml += `</div>`
+  }
+
+  // Mat + overnatting side om side
+  if (paired.length > 0) {
+    sectionsHtml += `<div class="compact-grid grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">`
+    sectionsHtml += paired.map(s => renderCompact(s)).join('')
+    sectionsHtml += `</div>`
+  }
+
+  // Skjulte perler
+  if (gems.length > 0) {
+    sectionsHtml += gems.map(s => renderGem(s)).join('')
+  }
 
   const heroImage = day.image
     ? `<div class="hero-image -mx-4 lg:-mx-8 -mt-6 mb-6">
@@ -37,7 +83,7 @@ export function renderDay(day) {
 
   container.innerHTML = `
     <!-- Navigasjon topp -->
-    <div class="flex items-center mb-4 pb-3 border-b border-stone-200">
+    <div class="flex items-center mb-6 pb-3">
       <div class="flex-1 text-left">${prevLink}</div>
       <button id="day-map-toggle" class="shrink-0 p-1.5 rounded-lg text-stone-600 hover:text-stone-900 hover:bg-stone-100 transition-colors" aria-label="Vis eller skjul kartet">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
@@ -61,13 +107,16 @@ export function renderDay(day) {
         <span><span aria-hidden="true">🚗</span> ${kmText}</span>
         <span>· ${day.subtitle}</span>
       </div>
+      ${day.alert ? (Array.isArray(day.alert) ? day.alert : [day.alert]).map(a => `<div class="day-alert flex items-start gap-2 rounded-lg px-4 py-3 mt-3 text-sm"><span class="shrink-0 text-base" aria-hidden="true">⚠️</span><span>${a}</span></div>`).join('') : ''}
+      ${day.intro ? `<p class="text-base text-stone-600 leading-relaxed mt-4 max-w-prose">${day.intro}</p>` : ''}
+      ${triviaHtml}
     </div>
 
     <!-- Seksjoner -->
     ${sectionsHtml}
 
     <!-- Navigasjon bunn -->
-    <div class="flex items-center justify-between mt-8 pt-6 border-t border-stone-200">
+    <div class="flex items-center justify-between mt-10 pt-6">
       <div>${prevLink}</div>
       <div>${nextLink}</div>
     </div>

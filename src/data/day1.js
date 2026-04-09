@@ -8,9 +8,15 @@ export const day1 = {
   km: 733,
   nights: 1,
   subtitle: "Langkjøring",
+  intro: "Første etappe er en ren transportdag: 733 km fra Rakkestad via Øresundsbroen og tvers gjennom Danmark til Puttgarden-området i Nord-Tyskland. Underveis passerer dere Fehmarn, øya der Jimi Hendrix holdt sin siste konsert, og den historiske Hansabyen Lübeck med sine gotiske teglsteinsspir. Kvelden tilbringes i kystbyen Heiligenhafen ved Østersjøen.",
   coords: { lat: 54.37, lng: 11.00 },
   stops: [
     { name: "Øresundsbroen", lat: 55.57, lng: 12.85, type: "photo" },
+  ],
+  trivia: [
+    "Holstentor i Lübeck sto på den gamle 50-Mark-seddelen — Tysklands nest mest gjenkjennelige byport etter Brandenburger Tor.",
+    "I Marienkirche i Lübeck ligger to knuste kirkeklokker på gulvet — de falt gjennom tårnet under britisk bombing palmesøndag 1942, og er bevisst beholdt som krigsminne der de landet.",
+    "Fehmarnbelt var et av den kalde krigens mest overvåkede havområder — NATO og Warszawapakten overvåket all skipstrafikk mellom Rødby og Puttgarden.",
   ],
   sections: [
     {
@@ -37,23 +43,28 @@ export const day1 = {
     },
     {
       type: "history",
-      title: "Historisk trivia for Bjørn Erik",
+      title: "Historie",
       bookingWarning: null,
       bookingUrl: null,
+      references: [
+        { type: 'book', title: 'Buddenbrooks', author: 'Thomas Mann', relevance: 'Manns mesterverk er satt i nettopp Lübeck — dere går gjennom de samme gatene som familien Buddenbrook.' },
+        { type: 'film', title: 'Nosferatu', year: 1922, relevance: 'Murnaus vampyrklassiker brukte Lübecks Salzspeicher som kulisse — bygningene står der fortsatt.' },
+      ],
       content: `<ul>
 <li><strong>Lübeck</strong> var hovedstaden i Hansaforbundet – middelalderens mektigste handelsnettverk som dominerte Østersjøen og Nordsjøen fra 1200- til 1600-tallet. Byen har hele 5 kirker med gotiske teglsteinsspir synlige i silhuetten.</li>
 <li><strong>Fehmarn</strong> (øya Puttgarden ligger på) var stedet der Jimi Hendrix holdt sin siste konsert, 6. september 1970 – 12 dager før han døde. Det står et minnesmerke på øya.</li>
 <li>Rødby–Puttgarden-ferja er en del av den historiske <strong>Fuglefluktslinjen</strong> (Vogelfluglinie), jernbane- og veiruten mellom Skandinavia og Sentral-Europa som har vært i bruk siden 1963.</li>
+<li><strong>Holstentor</strong> (byporten fra 1464) er et av Tysklands mest ikoniske monumenter. I Lübeck bodde også nobelprisvinnerne Thomas Mann og Günter Grass — byen har Europas høyeste tetthet av nobelprismottakere per innbygger.</li>
 </ul>`
     },
     {
       type: "food",
       title: "Middag i Heiligenhafen",
-      bookingWarning: null,
+      bookingWarning: "Zum Alten Salzspeicher: Rapporter om kvalitetsfall etter mulig eierskifte — ha backup.",
       bookingUrl: null,
       content: `<ul>
 <li><strong><a href="https://www.bretterbude-hhf.de/en/gastro/restaurant-strandschuppen" target="_blank" rel="noopener">Strandschuppen</a></strong> – Casual med havutsikt, internasjonalt kjøkken med kjøtt- og grillretter. Del av Bretterbude-hotellet. <em>Ca. 20–35 EUR/pers.</em></li>
-<li><strong><a href="https://www.salzspeicher.com/" target="_blank" rel="noopener">Zum Alten Salzspeicher</a></strong> – Steak og pannekaker i historisk saltspeicher fra 1587. Rustikk sjarm. <em>Ca. 20–35 EUR/pers.</em> ⚠️ Rapporter om kvalitetsfall etter mulig eierskifte – ha backup.</li>
+<li><strong><a href="https://www.salzspeicher.com/" target="_blank" rel="noopener">Zum Alten Salzspeicher</a></strong> – Steak og pannekaker i historisk saltspeicher fra 1587. Rustikk sjarm. <em>Ca. 20–35 EUR/pers.</em></li>
 <li><strong>Treffpunkt Fischhalle</strong> – Prisvinnende fisk rett fra havnen. Lokalt favorittsted. <em>Ca. 15–25 EUR/pers.</em></li>
 </ul>
 <p>💡 Dere ankommer onsdag – de fleste restauranter bør være åpne. NB: Mange stenger tirsdager, så dette hadde vært verre én dag tidligere!</p>`

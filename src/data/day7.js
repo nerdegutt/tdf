@@ -8,27 +8,45 @@ export const day7 = {
   km: 330,
   nights: 1,
   subtitle: "Sørover langs Atlanterhavskysten",
+  intro: "La Rochelle er en av Atlanterhavskystens vakreste havnebyer, med 75 000 innbyggere og en gammel havn flankert av middelaldertårn. Byen var hugenottenes siste bastion i Frankrike — beleiret og knust av Richelieu i 1628 — og bærer fortsatt preg av sin dramatiske historie i de overdekkede buegangene og de monumentale havneforsvarsverkene.",
   coords: { lat: 46.16, lng: -1.15 },
   stops: [
+    { name: "Fougères", lat: 48.35, lng: -1.20, type: "sight" },
     { name: "Nantes", lat: 47.22, lng: -1.55, type: "city" },
+  ],
+  trivia: [
+    "Nantes-ediktet ble signert i 1598 i den SAMME borgen dere besøker — og hugenottflyktningene havnet helt til Rakkestad i Østfold!",
+    "Richelieus demning over La Rochelles havn var inspirert av Aleksander den Stores beleiring av Tyros i 332 f.Kr.",
+    "Gilles de Rais, Jeanne d'Arcs nærmeste våpenbror fra dag 4, ble henrettet på Place du Bouffay i Nantes i 1440 — anklaget for å ha drept over 100 barn.",
   ],
   sections: [
     {
       type: "sights",
       title: "Anbefalt stopp: Nantes (1–2 timer)",
+      highlight: true,
+      summary: "Borgen der Nantes-ediktet ble signert, Jules Vernes gigantiske mekaniske elefant, og en overdekt handlegate fra 1843.",
       bookingWarning: "Les Machines de l'Île – elefantturen kan selge ut!",
       bookingUrl: "https://www.lesmachines-nantes.fr/",
+      references: [
+        { type: "book", title: "Tjue tusen mil under havet", author: "Jules Verne", relevance: "Verne ble født i Nantes — havnebyen inspirerte eventyrlysten som gjennomsyrer alle bøkene hans. Les Machines-elefanten er en hyllest til ham." },
+        { type: "film", title: "Lola", year: 1961, relevance: "Jacques Demys debutfilm er satt i Nantes, med scener fra Passage Pommeraye som dere besøker." },
+      ],
       content: `<ul>
 <li><strong>Château des Ducs de Bretagne</strong>: Massiv borg fra 1400-tallet. Gratis borggård og voller. <a href="https://www.chateaunantes.fr/" target="_blank" rel="noopener">chateaunantes.fr</a></li>
 <li><strong>Les Machines de l'Île</strong>: Gigantiske mekaniske dyr – bl.a. en 12m høy elefant som GÅR! Inspirert av Jules Verne (født i Nantes). Perfekt fotoobjekt.</li>
-<li><strong>Passage Pommeraye</strong>: Overdekt handlegate fra 1843. Vakker arkitektur.</li>
+<li><strong>Passage Pommeraye</strong>: Overdekt handlegate fra 1843. Vakker arkitektur. Brukt som location i Jacques Demys film <em>Lola</em> (1961).</li>
 </ul>`
     },
     {
       type: "sights",
       title: "La Rochelle",
+      highlight: true,
+      summary: "Ikoniske havnetårn fra 1300-tallet, hugenottenes siste bastion og Richelieus brutale beleiring — dag 7 er hugenottenes dag.",
       bookingWarning: null,
       bookingUrl: null,
+      references: [
+        { type: "book", title: "De tre musketerer", author: "Alexandre Dumas", relevance: "Beleiringen av La Rochelle er et sentralt plottpoeng — d'Artagnan og musketérene kjemper ved de samme havnetårnene dere ser." },
+      ],
       content: `<ul>
 <li><strong>Vieux Port</strong>: De ikoniske havnetårnene Tour Saint-Nicolas og Tour de la Chaîne. 1300-tallet. <a href="https://www.larochelle-tourisme.com/" target="_blank" rel="noopener">larochelle-tourisme.com</a></li>
 <li><strong>Tour de la Lanterne</strong>: Fyrtårn og fengsel fra 1445. Fangegraffiti på veggene.</li>
@@ -38,7 +56,7 @@ export const day7 = {
     },
     {
       type: "history",
-      title: "Historisk trivia for Bjørn Erik",
+      title: "Historie",
       bookingWarning: null,
       bookingUrl: null,
       content: `<ul>
@@ -47,6 +65,9 @@ export const day7 = {
 <li><strong>La Rochelle-beleiringen</strong> (1627–28) er en av historiens mest brutale: Kardinal Richelieu bygde en 1,4 km lang steindemning tvers over havnen for å sulte ut hugenottene. Av byens 27 000 innbyggere overlevde bare ca. 5 000. Alexandre Dumas beskrev beleiringen i «De tre musketerer».</li>
 <li>La Rochelle var en av de viktigste <strong>slavehamnene</strong> i Frankrike. Byen var sentral i trekantshandelen på 1700-tallet. Musée du Nouveau Monde dokumenterer denne historien.</li>
 <li>Havnetårnene i La Rochelle ble koblet sammen med en massiv <strong>kjetting</strong> som kunne strekkes over havneåpningen for å stenge ute fiendtlige skip. Tour de la Chaîne (Kjedetårnet) har navn etter denne.</li>
+<li><strong>Hugenottenes dag</strong>: Dag 7 er en komplett fortelling om religionsfrihet — dere starter ved borgen der Nantes-ediktet ble signert (1598, religionsfrihet gitt) og ender i La Rochelle (1628, religionsfrihet knust). Henrik IV, som signerte ediktet, var selv født protestant og konverterte med ordene <em>«Paris vaut bien une messe»</em> (Paris er verdt en messe).</li>
+<li><strong>Hugenottflyktningene til Østfold</strong>: Da Ludvig XIV opphevet Nantes-ediktet i 1685, flyktet 200 000–400 000 hugenotter fra Frankrike. Noen endte i Norge — det finnes etterkommere av franske hugenotter i Østfold og rundt Fredrikshald (Halden). For to karer fra Rakkestad er dette slektsnær historie!</li>
+<li><strong>Richelieus demning</strong> var inspirert av Aleksander den Stores beleiring av Tyros (332 f.Kr.). En komplett steinmolo med tårnfestninger ble bygget midt i Atlanterhavet på bare fem måneder. England sendte en flåte under hertugen av Buckingham for å bryte beleiringen, men den ble slått tilbake ved Île de Ré — en fiasko som bidro til den engelske borgerkrigen.</li>
 </ul>`
     },
     {
@@ -82,6 +103,14 @@ export const day7 = {
 <li><strong><a href="https://www.barandre.com/en/" target="_blank" rel="noopener">Bar André</a></strong> – Institusjon siden 1947, MOF-kokk. Best for sjømat. Dyrere enn antatt, delte anmeldelser nylig. <em>Ca. 50–70 EUR/pers.</em></li>
 </ul>
 <p>💡 La Fleur de Sel er det tryggeste og beste valget. La Boussole for noe annerledes.</p>`
+    },
+    {
+      type: "gem",
+      title: "Fougères — Frankrikes største middelalderborg",
+      content: `<p>Ca. 45 min fra Mont Saint-Michel, rett på ruten. Festningen ligger uvanlig nok i en dalbunn (de fleste borger er på høyder) fordi den beskytter et vadested over elven Nançon. 13 tårn og tre konsentriske ringmurer. Fougères var grensefestningen mellom Bretagne og Frankrike — den bretonske uavhengighetens siste bastion. Borgen falt til franske styrker i 1488, begynnelsen på slutten for det uavhengige Bretagne. Balzac brukte den som setting i romanen <em>Les Chouans</em>.</p>`,
+      detour: "Rett på ruten",
+      duration: "30–40 min",
+      cost: "Ca. 10 EUR",
     },
   ],
 };

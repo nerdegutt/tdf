@@ -9,86 +9,66 @@ Statisk nettsted for en 18-dagers biltur gjennom Europa (Tour de France 2026). T
 - **GitHub**: https://github.com/nerdegutt/tdf
 - **Produksjon**: https://tdf.offline.no (Vercel, auto-deploy ved push til `main`)
 
-## Kildefil: tdf.md
+## Kildedata: dayN.js-filer
 
-`tdf.md` er den autoritative kilden for alt innhold. Nettstedet skal reflektere dette dokumentet slavisk. Når brukeren sier "har oppdatert tdf.md", betyr det at `src/data/days.js` må oppdateres tilsvarende.
+De individuelle dagfilene (`src/data/day1.js` – `day18.js`) er den autoritative kilden for alt innhold. Hver fil eksporterer et dag-objekt med strukturert data.
 
-### Slik parser du tdf.md → days.js
+### Seksjonstyper i days.js
 
-Dokumentet følger et konsistent mønster:
+| Type | Ikon | Beskrivelse |
+|------|------|-------------|
+| `sights` | 🏛️ | Severdigheter og steder å besøke |
+| `history` | 🧠 | Historisk trivia for Bjørn Erik |
+| `photo` | 📷 | Fotomuligheter og -tips |
+| `accommodation` | 🏨 | Overnattingsforslag |
+| `food` | 🍽️ | Restauranter, mat og drikke |
+| `practical` | 💡 | Praktiske tips, alternativer for dagen |
 
-```
-## DAG {nr} – {ukedag} {dato}: {fra} → {til}
-**Ca. {km} km | {beskrivelse}**
-```
+Booking-callouts er `bookingWarning`/`bookingUrl`-properties på den aktuelle seksjonen, ikke egne seksjoner.
 
-Hver dag har seksjoner markert med overskrifter og emojier:
-| Emoji-prefiks i tdf.md | Section type i days.js | Beskrivelse |
-|-------------------------|----------------------|-------------|
-| 🏛️ | `sights` | Severdigheter og steder å besøke |
-| 🧠 | `history` | Historisk trivia for Bjørn Erik |
-| 📷 | `photo` | Fotomuligheter og -tips |
-| 🏨 | `accommodation` | Overnattingsforslag |
-| 🍽️ | `food` | Restauranter, mat og drikke |
-| 💡 | `practical` | Praktiske tips, alternativer for dagen |
-| 🎟️ | `booking` | Ting som bør forhåndsbestilles (opptrer som callout inni andre seksjoner) |
+### Dag-objekt struktur
 
-Noen dager har underseksjoner (f.eks. "Ettermiddag: D-dagskysten" under dag 5). Disse er del av `sights`-seksjonen for den dagen.
-
-Booking-callouts (linjer som starter med `> 🎟️`) skal bli en `bookingWarning`-property på den aktuelle seksjonen de opptrer i, ikke egne seksjoner.
-
-### Seksjon-mapping eksempel
-
-Gitt denne tdf.md-strukturen:
-```markdown
-## DAG 6 – Søndag 18. mai: Bayeux → Mont Saint-Michel
-**Ca. 130 km | Kort kjøring til et av verdens mest ikoniske steder**
-
-> 🎟️ **BOOK PÅ FORHÅND:** Abbediet – kan bli lange køer.
-
-### 🏛️ Mont Saint-Michel
-- **Abbediet**: Benediktinerabdedi grunnlagt 708 e.Kr. ...
-```
-
-Blir dette i days.js:
 ```js
 {
   day: 6,
   date: "18. mai",
-  weekday: "Søndag",
+  weekday: "Mandag",
   from: "Bayeux",
   to: "Mont Saint-Michel",
   km: 130,
+  nights: 1,
   subtitle: "Kort kjøring til et av verdens mest ikoniske steder",
   coords: { lat: 48.6361, lng: -1.5115 },
-  stops: [],
+  stops: [
+    { name: "Sted", lat: 48.00, lng: -1.00, type: "sight" }
+  ],
   sections: [
     {
       type: "sights",
       title: "Mont Saint-Michel",
       bookingWarning: "Abbediet – kan bli lange køer.",
       bookingUrl: "https://www.abbaye-mont-saint-michel.fr/",
-      content: `<ul><li><strong>Abbediet</strong>: Benediktinerabdedi grunnlagt 708 e.Kr. ...</li></ul>`
+      content: `<ul><li><strong>Abbediet</strong>: ...</li></ul>`
     }
   ]
 }
 ```
 
-### Innholds-konvertering: Markdown → HTML i content-feltet
+### Content-feltet
 
-Konvertér markdown til enkel HTML i `content`-feltet:
-- `**tekst**` → `<strong>tekst</strong>`
-- `- punkt` → `<ul><li>punkt</li></ul>`
-- `[tekst](url)` → `<a href="url" target="_blank" rel="noopener">tekst</a>`
-- `[🔍 Bilder](url)` → `<a href="url" target="_blank" rel="noopener" class="photo-search-link">🔍 Bilder</a>`
-- Behold emojier som de er i HTML-en
-- Avsnitt separert med tomme linjer → `<p>`-tagger
+Content er HTML (ikke markdown):
+- `<strong>tekst</strong>` for uthevet tekst
+- `<ul><li>punkt</li></ul>` for lister
+- `<a href="url" target="_blank" rel="noopener">tekst</a>` for lenker
+- `<a href="url" ... class="photo-search-link">🔍 Bilder</a>` for bildesøk-lenker
+- Emojier beholdes som de er
+- `<p>`-tagger for avsnitt
 
 ### Koordinater
 
-Hver dag trenger GPS-koordinater for kartet. Hoveddestinasjonen (`coords`) og eventuelle mellomtstopp (`stops`). Koordinatene finner du basert på stedsnavn. Alle stopp nevnt med `### 🏛️ ANBEFALT STOPP:` eller tilsvarende i tdf.md skal ha egne stops-entries med koordinater.
+Hver dag har GPS-koordinater for kartet: `coords` for hoveddestinasjonen og `stops[]` for mellomtstopp.
 
-Stopp-typer i `stops[]`:
+Stopp-typer:
 ```js
 { name: "Köln", lat: 50.9375, lng: 6.9603, type: "city" }      // By-stopp
 { name: "Øresundsbroen", lat: 55.57, lng: 12.85, type: "photo" } // Fotostopp
@@ -120,7 +100,7 @@ tdf/
 ├── index.html              # Eneste HTML-fil, alt rendres her
 ├── vite.config.js
 ├── package.json
-├── tdf.md                  # KILDEFIL – autoritativ for alt innhold
+├── (tdf.md slettet – dagfilene er nå autoritativ kilde)
 ├── CLAUDE.md
 ├── src/
 │   ├── main.js             # Entrypoint: router, init, event-koordinering
@@ -159,9 +139,7 @@ Info, dagvisning og topp 10 gjenbruker `#view-day`-containeren (sidebar + innhol
 ### Dataflyt
 
 ```
-tdf.md (redigeres manuelt)
-    ↓ (Claude Code konverterer)
-src/data/day1.js … day18.js (individuelle dagfiler)
+src/data/day1.js … day18.js (individuelle dagfiler — autoritativ kilde)
     ↓ (importeres av)
 src/data/days.js (aggregator: samler alle dager, kobler bilder)
     ↓ (importeres av)
@@ -263,24 +241,21 @@ Smal mobil (<640px): Dropdown legger seg under logoen i headeren for mer plass.
 
 ## Oppdateringsworkflow
 
-Når brukeren sier "har oppdatert tdf.md, oppdater nettstedet":
+Innhold redigeres direkte i `src/data/dayN.js`-filene:
+1. Endret innhold → oppdater `content`-feltet i riktig seksjon
+2. Nye seksjoner → legg til nye objekter i `sections`-arrayet
+3. Fjernede seksjoner → fjern fra arrayet
+4. Endrede koordinater/steder → oppdater `coords`/`stops`
+5. Oppdater `meta.js` hvis totalKm, bookingOverview eller top10 er påvirket
+6. Hvis ruten er endret (ny destinasjon), oppdater `routes.js` med nye OSRM-data
+7. Sjekk at `section.js` håndterer eventuelle nye seksjonstyper
+8. Verifiser med `npm run dev`
 
-1. Les `tdf.md` og identifiser endringer (nye dager, endrede seksjoner, nytt innhold)
-2. Oppdater den aktuelle `src/data/dayN.js`-filen:
-   - Endret innhold → oppdater `content`-feltet i riktig seksjon
-   - Nye seksjoner → legg til nye objekter i `sections`-arrayet
-   - Fjernede seksjoner → fjern fra arrayet
-   - Endrede koordinater/steder → oppdater `coords`/`stops`
-3. Oppdater `meta.js` hvis totalKm, bookingOverview eller top10 er påvirket
-4. Hvis ruten er endret (ny destinasjon), oppdater `routes.js` med nye OSRM-data
-5. Sjekk at `section.js` håndterer eventuelle nye seksjonstyper
-6. Verifiser med `npm run dev`
+## Spesielle elementer
 
-## Spesielle elementer i tdf.md
-
-- **Ruteoversikt-tabellen** (øverst): Rendres på Reiseinfo-siden (`#/info`) som klikkbar tabell
+- **Ruteoversikt-tabellen**: Rendres på Reiseinfo-siden (`#/info`) som klikkbar tabell
 - **Booking-oversikt-tabellen**: Rendres på Reiseinfo-siden + som callouts per dag
-- **Topp 10-listene** (bunnen): Rendres på Topp 10-siden (`#/topp10`) med fargekodede kategorier
+- **Topp 10-listene**: Rendres på Topp 10-siden (`#/topp10`) med fargekodede kategorier
 - **Praktisk-seksjonen** (Tesla & kjøring): Rendres på Reiseinfo-siden
 - **Lenker med 🔍**: Google bildesøk-lenker — rendres som diskrete "se bilder"-lenker
 
@@ -313,4 +288,4 @@ Når brukeren sier "har oppdatert tdf.md, oppdater nettstedet":
 - Dagdata redigeres i individuelle `dayN.js`-filer, metadata i `meta.js`, bilder i `images.js`
 - Hvert dag-objekt får en `image`-property via `attachImages()` i `days.js`
 - Lenker til eksterne sider åpnes i ny fane (`target="_blank"`)
-- Emojier fra tdf.md beholdes i rendret innhold
+- Emojier beholdes i rendret innhold

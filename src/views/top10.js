@@ -42,7 +42,7 @@ export function renderTop10() {
     </div>
 
     <!-- Topp 10: Historie -->
-    <div class="section-sights border-l-4 rounded-lg shadow-sm mb-4 overflow-hidden">
+    <div class="section-sights rounded-lg mb-4 overflow-hidden">
       <div class="px-5 py-4">
         <h3 class="flex items-center gap-2 text-lg font-semibold mb-3">
           <span aria-hidden="true">🏛️</span>
@@ -55,7 +55,7 @@ export function renderTop10() {
     </div>
 
     <!-- Topp 10: Foto -->
-    <div class="section-photo border-l-4 rounded-lg shadow-sm mb-4 overflow-hidden">
+    <div class="section-photo rounded-lg mb-4 overflow-hidden">
       <div class="px-5 py-4">
         <h3 class="flex items-center gap-2 text-lg font-semibold mb-3">
           <span aria-hidden="true">📷</span>
@@ -68,7 +68,7 @@ export function renderTop10() {
     </div>
 
     <!-- Topp 10: Mat -->
-    <div class="section-food border-l-4 rounded-lg shadow-sm mb-4 overflow-hidden">
+    <div class="section-food rounded-lg mb-4 overflow-hidden">
       <div class="px-5 py-4">
         <h3 class="flex items-center gap-2 text-lg font-semibold mb-3">
           <span aria-hidden="true">🍽️</span>

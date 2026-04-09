@@ -234,6 +234,44 @@ window.addEventListener('touchend', (e) => {
   navigateStep(dx > 0 ? -1 : 1)
 }, { passive: true })
 
+// Referanse-tooltip toggle (event delegation)
+document.addEventListener('click', (e) => {
+  const pill = e.target.closest('.ref-pill')
+  if (!pill) {
+    // Klikk utenfor — lukk alle åpne tooltips
+    document.querySelectorAll('.ref-tooltip:not(.hidden)').forEach(t => {
+      t.classList.add('hidden')
+    })
+    document.querySelectorAll('.ref-pill[aria-expanded="true"]').forEach(p => {
+      p.setAttribute('aria-expanded', 'false')
+      p.classList.remove('ref-pill-active')
+    })
+    return
+  }
+
+  const id = pill.getAttribute('aria-controls')
+  const tooltip = document.getElementById(id)
+  if (!tooltip) return
+
+  const wasOpen = !tooltip.classList.contains('hidden')
+
+  // Lukk alle tooltips i samme gruppe
+  const group = pill.closest('.ref-group')
+  if (group) {
+    group.querySelectorAll('.ref-tooltip').forEach(t => t.classList.add('hidden'))
+    group.querySelectorAll('.ref-pill').forEach(p => {
+      p.setAttribute('aria-expanded', 'false')
+      p.classList.remove('ref-pill-active')
+    })
+  }
+
+  if (!wasOpen) {
+    tooltip.classList.remove('hidden')
+    pill.setAttribute('aria-expanded', 'true')
+    pill.classList.add('ref-pill-active')
+  }
+})
+
 // Initialiser
 window.addEventListener('hashchange', render)
 render()

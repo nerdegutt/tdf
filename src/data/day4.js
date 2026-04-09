@@ -8,14 +8,27 @@ export const day4 = {
   km: 0,
   nights: 0,
   subtitle: "Heldagsutforskning",
+  intro: "Rouen er en av Frankrikes best bevarte middelalderbyer, med bindingsverkshus, gotiske kirker og smale gater som har overlevd århundrer. I dag har dere en hel dag til å utforske vikinghovedstaden som ble grunnlagt av Gange-Rolf, gå i Jeanne d'Arcs fotspor og oppdage makabre benhus, astronomiske klokker og en katedral som fascinerte Monet.",
   coords: { lat: 49.44, lng: 1.10 },
   stops: [],
+  trivia: [
+    "Rollo (Gange-Rolf) var ifølge norrøne kilder så stor at ingen hest kunne bære ham — derav navnet «Gange-Rolf» (Rolf som går). Han ble begravet med både et kors og et vikingsverd.",
+    "Gustave Flaubert vokste opp i Rouen med utsikt til obduksjonssalen fra soverommet — faren var sjefkirurg på Hôtel-Dieu.",
+    "Richard Løvehjertes hjerte havnet i Rouen fordi han elsket Normandie mest. Praksisen med å dele opp kongelige lik het «divisio corporis».",
+  ],
   sections: [
     {
       type: "sights",
       title: "Severdigheter i Rouen",
+      highlight: true,
+      summary: "Vikingenes maktsentrum i 300 år — fra Rollos dåp til Richard Løvehjertes hjerte. Monet malte katedralen 30+ ganger, og Jeanne d'Arc ble brent her i 1431.",
       bookingWarning: null,
       bookingUrl: null,
+      references: [
+        { type: 'film', title: 'Jeanne d\'Arcs lidelse og død', year: 1928, relevance: 'Basert på rettsprotokollene fra Rouen 1431 — dere står på plassen der hun ble brent. Filmen ble gjenfunnet i Oslo!' },
+        { type: 'book', title: 'Madame Bovary', author: 'Gustave Flaubert', relevance: 'Satt i Normandie av Rouen-fødte Flaubert — den berømte drosjescenen foregår i gatene dere går i.' },
+        { type: 'book', title: 'Flauberts papegøye', author: 'Julian Barnes', relevance: 'En litterær detektivjakt gjennom Flauberts Rouen — perfekt følgesvenn mens dere utforsker byen hans.' },
+      ],
       content: `<ul>
 <li><strong>Cathédrale Notre-Dame de Rouen</strong>: Monet malte den 30+ ganger. Olav den Hellige ble døpt her (1014). Richard Løvehjertes hjerte er gravlagt her. Bygget 1030–1506. <a href="https://www.cathedrale-rouen.net/" target="_blank" rel="noopener">cathedrale-rouen.net</a></li>
 <li><strong>Place du Vieux-Marché</strong>: Plassen der Jeanne d'Arc ble brent 30. mai 1431. Kors markerer bålplassen.</li>
@@ -28,9 +41,13 @@ export const day4 = {
     },
     {
       type: "history",
-      title: "Historisk trivia for Bjørn Erik",
+      title: "Historie",
       bookingWarning: null,
       bookingUrl: null,
+      references: [
+        { type: 'film', title: 'Jeanne d\'Arcs lidelse og død (Dreyer)', year: 1928, relevance: 'Dreyers nærbilder av Jeanne er filmet som om dere sitter i rettssalen i Rouen — og filmen ble funnet igjen i Oslo.' },
+        { type: 'book', title: 'Madame Bovary', author: 'Gustave Flaubert', relevance: 'Flaubert vokste opp med utsikt til obduksjonssalen fra soverommet — Rouen formet hele hans forfatterskap.' },
+      ],
       content: `<ul>
 <li><strong>Rollo</strong>, vikingen som grunnla Normandie i 911, var sannsynligvis norsk (fra Møre) eller dansk. Han fikk landområdet av den franske kongen Karl den Enfoldige i bytte mot at han sluttet å plyndre Paris. Avtalen ble kjent som <strong>Saint-Clair-sur-Epte-traktaten</strong>. Rollo lot seg døpe, men ifølge sagaen ga han gaver til både kristne og norrøne guder – bare for å være på den sikre siden.</li>
 <li><strong>Jeanne d'Arc</strong> ble brent som kjetter i 1431, bare 19 år gammel. Under rettsaken ble hun bl.a. anklaget for å bære mannsklær – noe som ifølge kirkeretten var en alvorlig synd. Hun ble fullstendig rehabilitert i 1456 og helgenforklart i 1920.</li>
@@ -38,6 +55,9 @@ export const day4 = {
 <li>Claude Monet malte Rouen-katedralen <strong>mer enn 30 ganger</strong> mellom 1892–94, alltid fra samme vinkel men til ulike tider på dagen. Serien er blant hans mest berømte verk og henger spredt på museer verden over.</li>
 <li><strong>Aître Saint-Maclou</strong> ble bygget som massegrav og benhus under Svartedauden (1348), som drepte anslagsvis 75% av Rouens befolkning. Utskjæringene av hodeskaller, korslagte knokler og graveredskap i treverk er uhyggelig detaljerte.</li>
 <li>Rouen var viktig for vikingene: Byen ble først plyndret i 841 og ble Normandies hovedstad. Navnet «Normandie» kommer fra «nordmennene» – dere er på hjemmebane!</li>
+<li><strong>Gange-Rolf i dybden</strong>: Rollo var trolig sønn av Rognvald Eysteinsson, jarl av Møre. Da han lot seg døpe i 911, tok han navnet Robert — men ble begravet i katedralen med både et kors og et vikingsverd. Saint-Clair-sur-Epte-traktaten var et av middelalderens smarteste diplomatiske trekk: Karl den Enfoldige ga Rollo Normandie MOT at vikingene sluttet å plyndre Paris. Det fungerte — men etterkommerne (Vilhelm Erobreren) endte opp med å erobre England i stedet.</li>
+<li><strong>Gustave Flaubert</strong> ble født i Rouen i 1821. «Madame Bovary» (1857) er satt i Normandie, og den berømte drosjescenen — der drosjen kjører rundt og rundt i Rouens gater — var så skandaløs at den førte til rettssak. Flaubert ble frikjent, men Rouens rykte som «kjedelig provinsby» var sementert for alltid.</li>
+<li><strong>Dreyers mesterfilm</strong>: «Jeanne d'Arcs lidelse og død» (1928) er basert på de faktiske rettsprotokollene fra Rouen 1431 — og alle kopier ble antatt tapt til en komplett versjon ble funnet i et sykehus i <strong>Oslo</strong> i 1981. En norsk kobling til Rouens viktigste historie.</li>
 </ul>`
     },
     {

@@ -8,21 +8,28 @@ export const day3 = {
   km: 549,
   nights: 2,
   subtitle: "Lang kjøredag med historisk stopp",
+  intro: "Rouen er Normandies hovedstad med nesten 500 000 innbyggere i storbyregionen, grunnlagt som vikinghovedstad av Rollo (Gange-Rolf) i 911. Byen er uløselig knyttet til Jeanne d'Arc, som ble brent på bålet her i 1431, og til Monet, som malte katedralen over 30 ganger. Underveis stopper dere ved Waterloo — slagmarken der Napoleons skjebne ble beseglet i 1815.",
   coords: { lat: 49.44, lng: 1.10 },
   stops: [
     { name: "Waterloo", lat: 50.71, lng: 4.41, type: "sight" },
+  ],
+  trivia: [
+    "Nathan Rothschild fikk angivelig beskjeden om Napoleons nederlag før alle andre via privat budbringer — og tjente en formue på London-børsen. Historien er trolig overdrevet, men for god til å utelate.",
+    "Etter Waterloo ble tenner trukket fra de falne soldatene og solgt som «Waterloo teeth» til tannprotesemakere i hele Europa — ettertraktet fordi de kom fra unge, friske menn.",
   ],
   sections: [
     {
       type: "sights",
       title: "Anbefalt stopp: Waterloo, Belgia (2–3 timer)",
+      highlight: true,
+      summary: "Her endte Napoleons hundredagersregime 18. juni 1815 — og indirekte ble Norges skjebne beseglet. Wienkongressen som Waterloo bekreftet, ga Norge til Sverige.",
       bookingWarning: "Mémorial de Waterloo – tidsluker anbefales.",
       bookingUrl: "https://www.waterloo1815.be/",
       content: `<ul>
 <li><strong>Butte du Lion</strong> (Løvehøyden): 226 trinn, panoramautsikt over slagmarken. Bygget 1820–26.</li>
 <li><strong>Mémorial de Waterloo</strong>: Moderne interaktivt museum med 4D-kino av slaget.</li>
 <li><strong>Hougoumont Farm</strong>: Den befestede gården – nøkkelen til Wellingtons forsvar. Restaurert.</li>
-<li>For Bjørn Erik: Her endte Napoleons hundredagersregime 18. juni 1815.</li>
+<li>Her endte Napoleons hundredagersregime 18. juni 1815.</li>
 </ul>`
     },
     {
@@ -37,14 +44,22 @@ export const day3 = {
     },
     {
       type: "history",
-      title: "Historisk trivia for Bjørn Erik",
+      title: "Historie",
       bookingWarning: null,
       bookingUrl: null,
+      references: [
+        { type: 'book', title: 'Waterloo', author: 'Bernard Cornwell', relevance: 'Time-for-time-skildring av slaget — les den før dere står på Butte du Lion og ser utover slagmarken.' },
+        { type: 'film', title: 'Waterloo', year: 1970, relevance: 'Gjenskaper slaget med 15 000 statister på nøyaktig det terrenget dere ser fra Løvehøyden.' },
+        { type: 'book', title: 'Les Misérables (Waterloo-kapitlene)', author: 'Victor Hugo', relevance: 'Hugo besøkte slagmarken og skrev 60 sider om den «hule veien» — landskapet han beskriver er rett foran dere.' },
+        { type: 'film', title: 'Napoleon', year: 2023, relevance: 'Ridley Scotts Waterloo-sekvens gir et visuelt inntrykk av kaoset som utspilte seg akkurat her.' },
+      ],
       content: `<ul>
 <li><strong>Waterloo-myter:</strong> Napoleon hadde faktisk hemoroider under slaget, noe som kan ha gjort at han ikke red ut for å rekognosere terrenget personlig om morgenen. Historikere diskuterer fortsatt om dette påvirket utfallet.</li>
 <li><strong>Butte du Lion</strong> ble bygget av Kong Willem I av Nederland for å markere stedet der hans sønn, Prinsen av Oranien, ble såret. Wellington var rasende – han mente haugen ødela terrenget han hadde kjempet på: <em>«They have altered my field of battle!»</em></li>
 <li>Slaget varte bare <strong>én dag</strong> (18. juni 1815) men kostet anslagsvis 50 000 døde og sårede – totalt fra begge sider. Det var et av de blodigste enkeltslagene i europeisk historie til da.</li>
-<li>Etter Waterloo ble enorme mengder tenner trukket fra de falne soldatene og solgt som <strong>«Waterloo teeth»</strong> til tannprotesemaker i hele Europa. De var svært ettertraktet fordi de kom fra unge, friske menn.</li>
+<li><strong>Den norske koblingen</strong>: Wienkongressen (1814–15), som Waterloo bekreftet, var den som «ga» Norge til Sverige. For to nordmenn er Waterloo indirekte grunnen til unionen med Sverige — og dermed også grunnen til at vi feirer 17. mai (dag 5!). Grunnloven av 1814 var Norges svar på å bli en brikke i etterspillet etter Napoleon.</li>
+<li><strong>Blüchers ankomst</strong>: Feltmarskalk Blücher, 72 år gammel, hadde blitt ridd ned av kavaleri to dager før og lå knust under hesten sin. Han kom til Waterloo med kroppen full av smerter, angivelig holdt oppe av snaps og hvitløksomslag. Uten hans ankomst kl. 19:30 hadde Wellington trolig tapt.</li>
+<li><strong>Victor Hugo</strong> besøkte Waterloo-slagmarken i 1861 og brukte hele Bok II av Del 2 i <em>Les Misérables</em> (nesten 60 sider) på å beskrive slaget. Hans beskrivelse av den «hule veien» der fransk kavaleri raste ned i en skjult skrent er blitt ikonisk.</li>
 </ul>`
     },
     {
@@ -61,10 +76,10 @@ export const day3 = {
     {
       type: "food",
       title: "Middag i Rouen (sen ankomst – noe enkelt)",
-      bookingWarning: null,
+      bookingWarning: "M. Patachon: Motstridende info om åpningstider — ring og bekreft!",
       bookingUrl: null,
       content: `<ul>
-<li><strong><a href="https://m-patachon.fr" target="_blank" rel="noopener">M. Patachon</a></strong> – Kåret til Normandies beste burger! To kompiser som åpnet i 2024. Hjemmelagde gourmetburgere med lokale råvarer. ⚠️ Motstridende info om åpningstider – nettstedet antyder stenging kl. 17, men tredjepartskilder lister middag (19:00–22:30). <strong>Ring og bekreft!</strong> <em>Ca. 15–20 EUR/pers.</em></li>
+<li><strong><a href="https://m-patachon.fr" target="_blank" rel="noopener">M. Patachon</a></strong> – Kåret til Normandies beste burger! To kompiser som åpnet i 2024. Hjemmelagde gourmetburgere med lokale råvarer. <em>Ca. 15–20 EUR/pers.</em></li>
 <li><strong>Holy Moly Gourmet Burger</strong> – Biff fra lokale gårder, brød fra bakeriet ved siden av. Åpent 7/7 til 23:00 – trygt ved sen ankomst! 38 Rue de la République. <em>Ca. 11–20 EUR/pers.</em></li>
 <li><strong><a href="https://www.rotomagus.eu/en/" target="_blank" rel="noopener">Rotomagus</a></strong> – Grillrestaurant med modnet kjøtt i Mibrasa-kullgrill. Terrasse ved Saint-Maclou. Åpent man–lør, middag til 22:00. <em>Ca. 30–50 EUR/pers.</em></li>
 </ul>

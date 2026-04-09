@@ -8,12 +8,21 @@ export const day2 = {
   km: 570,
   nights: 1,
   subtitle: "Kjøredag til Köln",
+  alert: "<strong>Kristi himmelfartsdag (14. mai)</strong> — offentlig fridag i Tyskland. Mange butikker og museer har stengt eller redusert åpningstid. Kölnerdomen og brauhausene holder åpent.",
+  intro: "Köln er Tysklands fjerde største by med over en million innbyggere, grunnlagt av romerne som Colonia Agrippina i år 50 e.Kr. Byen er mest kjent for sin massive gotiske katedral — Kölnerdomen — som tok 632 år å fullføre. Med over 30 museer, historiske ølhaller og en levende gamleby langs Rhinen er det mer enn nok å fylle en ettermiddag.",
   coords: { lat: 50.94, lng: 6.96 },
   stops: [],
+  trivia: [
+    "Kölnerdomen finnes bare fordi relikvier ble røvet fra Milano i 1164 — hele katedralen er verdens mest ambisiøse «oppbevaringsboks».",
+    "Under WWII ble Köln bombet 262 ganger og 95 % av sentrum ødelagt, men Kölnerdomen sto — delvis fordi de allierte brukte den som navigasjonspunkt.",
+    "Eau de Cologne (4711) ble oppfunnet i Köln i 1709, og butikken i Glockengasse eksisterer fortsatt.",
+  ],
   sections: [
     {
       type: "sights",
       title: "Severdigheter i Köln",
+      highlight: true,
+      summary: "Kölnerdomen tok 632 år å bygge — alt på grunn av et gullskrin med hellige relikvier røvet fra Milano i 1164.",
       bookingWarning: null,
       bookingUrl: null,
       content: `<ul>
@@ -35,14 +44,18 @@ export const day2 = {
     },
     {
       type: "history",
-      title: "Historisk trivia for Bjørn Erik",
+      title: "Historie",
       bookingWarning: null,
       bookingUrl: null,
+      references: [
+        { type: 'book', title: 'Die verlorene Ehre der Katharina Blum', author: 'Heinrich Böll', relevance: 'Böll er fra Köln og skildrer byens etterkrigsmiljø — dere ser den gjenoppbygde byen han vokste opp i.' },
+        { type: 'film', title: 'Das Wunder von Bern', year: 2003, relevance: 'Fanger tysk etterkrigskultur og 1954-VM-triumfen som ga nasjonen ny selvtillit — kontekst for Köln dere ser i dag.' },
+      ],
       content: `<ul>
 <li><strong>Kölnerdomen</strong> sto ufullført i over 300 år. Da byggingen stoppet rundt 1560, sto det en primitiv kran på det uferdige sørtårnet – den ble stående som en del av byens silhuett helt til byggearbeidet ble gjenopptatt i 1842.</li>
 <li>Köln ble grunnlagt av romerne som <strong>Colonia Claudia Ara Agrippinensium</strong> i år 50 e.Kr. – oppkalt etter keiserinne Agrippina den yngre, som var født her. Bynavnet «Köln» kommer direkte fra «Colonia».</li>
-<li>Under WWII ble Köln bombet <strong>262 ganger</strong>. 95% av sentrum ble ødelagt. Kölnerdomen ble truffet 14 ganger, men sto fortsatt – delvis fordi de allierte brukte den som navigasjonspunkt og unngikk direkte angrep.</li>
-<li><strong>Eau de Cologne</strong> (4711) ble oppfunnet her i 1709 av Giovanni Maria Farina. Butikken eksisterer fortsatt i Glockengasse.</li>
+<li><strong>De Hellige Tre Kongers relikvieskrin</strong> i domen er middelalderens største gullarbeid. Relikviene ble «røvet» fra Milano av keiser Fredrik Barbarossa i 1164 og gitt til Köln. Hele dombyggingen ble igangsatt for å gi skrinet et verdig hjem — uten dette rovet, ingen Kölnerdom.</li>
+<li><strong>Dionysos-mosaikken</strong>: Under bombing i 1941 ble et komplett romergulv på 70 m² oppdaget. Römisch-Germanisches Museum er bygget OVER mosaikken fordi den var for stor til å flytte.</li>
 </ul>`
     },
     {
