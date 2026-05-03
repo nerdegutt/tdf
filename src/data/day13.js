@@ -6,6 +6,7 @@ export const day13 = {
   from: "Avignon",
   to: "Dijon",
   km: 422,
+  hours: 5,
   nights: 1,
   subtitle: "Obligatorisk matstopp i Lyon!",
   alert: "<strong>Andre pinsedag (25. mai)</strong> — offentlig fridag i Frankrike. Les Halles Paul Bocuse stenger kl. 13:00. Mange mindre butikker holder stengt, men de fleste restauranter og severdigheter har åpent.",

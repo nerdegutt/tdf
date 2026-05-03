@@ -6,6 +6,7 @@ export const day2 = {
   from: "Puttgarden",
   to: "Köln",
   km: 570,
+  hours: 6,
   nights: 1,
   subtitle: "Kjøredag til Köln",
   alert: "<strong>Kristi himmelfartsdag (14. mai)</strong> — offentlig fridag i Tyskland. Mange butikker og museer har stengt eller redusert åpningstid. Kölnerdomen og brauhausene holder åpent.",

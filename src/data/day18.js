@@ -6,6 +6,7 @@ export const day18 = {
   from: "Puttgarden",
   to: "Rakkestad 🏠",
   km: 688,
+  hours: 8,
   nights: 0,
   subtitle: "Hjem!",
   intro: "Siste etappe: ferjen over Fehmarnbelt, gjennom Danmark og Sverige, og hjem til Rakkestad. 18 dager, 7 land og over 6000 kilometer med europeisk historie, mat og landskap. Nå gjenstår bare å fordøye inntrykkene — og kanskje allerede begynne å planlegge neste tur.",

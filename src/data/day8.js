@@ -6,6 +6,7 @@ export const day8 = {
   from: "La Rochelle",
   to: "San Sebastián",
   km: 431,
+  hours: 4,
   nights: 2,
   subtitle: "Inn i Baskerland!",
   intro: "San Sebastián — eller Donostia på baskisk — er en kystby med 190 000 innbyggere ved Biscayabukta, omgitt av grønne åser. Byen regnes som et av Europas fremste matdestinasjoner, med flere Michelin-stjerner per innbygger enn noe annet sted i verden. La Concha-stranden er konsekvent rangert blant Europas vakreste.",

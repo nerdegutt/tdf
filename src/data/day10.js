@@ -6,6 +6,7 @@ export const day10 = {
   from: "San Sebastián",
   to: "Narbonne",
   km: 492,
+  hours: 5,
   nights: 1,
   subtitle: "Lang kjøredag med essensielt stopp",
   intro: "Narbonne — eller Narbo Martius — var den aller første romerske kolonien i Gallia, grunnlagt 118 f.Kr. Byen var en supermakt i antikken, viktigere enn både Lyon og Bordeaux, med Via Domitia som hovedpulsåre. I dag er det en rolig sørfransk by med 55 000 innbyggere, en ufullført katedral og 2100 år gamle hjulspor synlige midt på torget.",

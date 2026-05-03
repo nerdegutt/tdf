@@ -6,6 +6,7 @@ export const day12 = {
   from: "Avignon",
   to: "Gordes/Luberon (dagstur)",
   km: 94,
+  hours: 2,
   nights: 0,
   subtitle: "Avignon + Gordes/Luberon",
   intro: "Dag to i Avignon, med dagstur til Luberon — Provences mest maleriske hjørne. Gordes er ofte kalt Frankrikes vakreste landsby, Sénanque-abbediet er et levende cisterciensermunkesamfunn fra 1148, og Roussillon er en landsby bygget på klipper av ren oker i rødt, oransje og gult. Tilbake i Avignon venter Pavepalasset og broen fra barnesangen.",

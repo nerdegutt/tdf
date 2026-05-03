@@ -6,6 +6,7 @@ export const day3 = {
   from: "Köln",
   to: "Rouen",
   km: 549,
+  hours: 6,
   nights: 2,
   subtitle: "Lang kjøredag med historisk stopp",
   intro: "Rouen er Normandies hovedstad med nesten 500 000 innbyggere i storbyregionen, grunnlagt som vikinghovedstad av Rollo (Gange-Rolf) i 911. Byen er uløselig knyttet til Jeanne d'Arc, som ble brent på bålet her i 1431, og til Monet, som malte katedralen over 30 ganger. Underveis stopper dere ved Waterloo — slagmarken der Napoleons skjebne ble beseglet i 1815.",

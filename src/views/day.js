@@ -5,7 +5,9 @@ export function renderDay(day) {
   const container = document.getElementById('day-content')
   if (!container) return
 
-  const kmText = day.km > 0 ? `Ca. ${day.km} km` : 'Ingen kjøring'
+  const kmText = day.km > 0
+    ? `Ca. ${day.km} km${day.hours ? ` · ~${day.hours} t kjøring` : ''}`
+    : 'Ingen kjøring'
   const flagEmoji = day.day === 5 ? ' 🇳🇴' : day.day === 18 ? ' 🏠' : ''
 
   // Prev/next-navigering
@@ -103,7 +105,7 @@ export function renderDay(day) {
           <h2 class="text-2xl font-bold text-stone-900">${day.from} → ${day.to}</h2>
         </div>
       </div>
-      <div class="flex items-center gap-4 text-sm text-stone-500 mt-2">
+      <div class="flex items-center gap-1.5 text-sm text-stone-500 mt-2">
         <span><span aria-hidden="true">🚗</span> ${kmText}</span>
         <span>· ${day.subtitle}</span>
       </div>

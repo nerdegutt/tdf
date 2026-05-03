@@ -10,7 +10,9 @@ export function renderOverview() {
   if (!container) return
 
   container.innerHTML = days.map(d => {
-    const kmText = d.km > 0 ? `${d.km} km` : 'Ingen kjøring'
+    const kmText = d.km > 0
+      ? `${d.km} km${d.hours ? ` · ~${d.hours} t` : ''}`
+      : 'Ingen kjøring'
     const flagEmoji = d.day === 5 ? ' 🇳🇴' : d.day === 18 ? ' 🏠' : ''
     const thumbImg = d.image
       ? `<div class="relative h-36 overflow-hidden">
@@ -31,7 +33,7 @@ export function renderOverview() {
             ${d.to}
           </h3>
           <p class="text-sm text-stone-500">${d.from} → ${d.to}</p>
-          <div class="flex items-center gap-3 mt-3 text-xs text-stone-400">
+          <div class="flex items-center gap-1.5 mt-3 text-xs text-stone-400">
             <span><span aria-hidden="true">🚗</span> ${kmText}</span>
             <span>· ${d.subtitle}</span>
           </div>

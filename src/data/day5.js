@@ -6,6 +6,7 @@ export const day5 = {
   from: "Rouen",
   to: "Bayeux",
   km: 220,
+  hours: 2,
   nights: 1,
   subtitle: "🇳🇴 Gratulerer med dagen!",
   alert: [

@@ -7,6 +7,7 @@ export function renderInfo() {
   const routeRows = days.map(d => {
     const flagEmoji = d.day === 5 ? ' 🇳🇴' : d.day === 18 ? ' 🏠' : ''
     const kmText = d.km > 0 ? `${d.km}` : '0'
+    const hoursText = d.hours ? `~${d.hours} t` : '–'
 
     return `
       <tr class="border-b border-stone-100 hover:bg-stone-50">
@@ -18,6 +19,7 @@ export function renderInfo() {
         <td class="py-2 px-3 text-sm font-medium">${d.to}</td>
         <td class="py-2 px-3 text-sm text-center">${d.nights || '–'}</td>
         <td class="py-2 px-3 text-sm text-right">${kmText}</td>
+        <td class="py-2 px-3 text-sm text-right">${hoursText}</td>
       </tr>
     `
   }).join('')
@@ -73,6 +75,7 @@ export function renderInfo() {
                 <th scope="col" class="py-2 px-3">Til</th>
                 <th scope="col" class="py-2 px-3 text-center">Netter</th>
                 <th scope="col" class="py-2 px-3 text-right">Km</th>
+                <th scope="col" class="py-2 px-3 text-right">Tid</th>
               </tr>
             </thead>
             <tbody>

@@ -6,6 +6,7 @@ export const day7 = {
   from: "Mont Saint-Michel",
   to: "La Rochelle",
   km: 330,
+  hours: 5,
   nights: 1,
   subtitle: "Sørover langs Atlanterhavskysten",
   intro: "La Rochelle er en av Atlanterhavskystens vakreste havnebyer, med 75 000 innbyggere og en gammel havn flankert av middelaldertårn. Byen var hugenottenes siste bastion i Frankrike — beleiret og knust av Richelieu i 1628 — og bærer fortsatt preg av sin dramatiske historie i de overdekkede buegangene og de monumentale havneforsvarsverkene.",

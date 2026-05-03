@@ -6,6 +6,7 @@ export const day1 = {
   from: "Rakkestad",
   to: "Puttgarden-området",
   km: 733,
+  hours: 8,
   nights: 1,
   subtitle: "Langkjøring",
   intro: "Første etappe er en ren transportdag: 733 km fra Rakkestad via Øresundsbroen og tvers gjennom Danmark til Puttgarden-området i Nord-Tyskland. Underveis passerer dere Fehmarn, øya der Jimi Hendrix holdt sin siste konsert, og den historiske Hansabyen Lübeck med sine gotiske teglsteinsspir. Kvelden tilbringes i kystbyen Heiligenhafen ved Østersjøen.",
