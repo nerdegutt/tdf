@@ -1,5 +1,5 @@
 import { createServer } from 'node:http'
-import { readFile, stat, rename, copyFile } from 'node:fs/promises'
+import { readFile, stat, rename, copyFile, writeFile, mkdir, rm } from 'node:fs/promises'
 import { join, extname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { spawnSync } from 'node:child_process'
@@ -88,23 +88,37 @@ async function main() {
       return ids.filter(id => document.getElementById(id))
     })
 
+    // Skriv screenshots til fil og refer til dem via HTTP-serveren —
+    // mer pålitelig enn data: URL-er i Puppeteer's PDF-renderer.
+    const tmpDir = join(DIST, '__print_tmp__')
+    await mkdir(tmpDir, { recursive: true })
+
     for (const id of mapIds) {
       const handle = await page.$(`#${id}`)
       if (!handle) continue
       const buf = await handle.screenshot({ type: 'jpeg', quality: 78 })
-      const dataUrl = `data:image/jpeg;base64,${buf.toString('base64')}`
+      const fileName = `${id}.jpg`
+      await writeFile(join(tmpDir, fileName), buf)
+      console.log(`  ${id}: ${(buf.length / 1024).toFixed(0)} KB`)
       await page.evaluate((id, src) => {
         const el = document.getElementById(id)
         if (!el) return
+        while (el.firstChild) el.removeChild(el.firstChild)
         const img = document.createElement('img')
         img.src = src
         img.style.width = '100%'
         img.style.height = '100%'
         img.style.objectFit = 'cover'
         img.style.display = 'block'
-        el.replaceWith(img)
-      }, id, dataUrl)
+        el.appendChild(img)
+      }, id, `/__print_tmp__/${fileName}`)
     }
+
+    // Vent på at alle de nye img-elementene er ferdig dekodet
+    await page.evaluate(async () => {
+      const imgs = Array.from(document.querySelectorAll('.print-day-map img, .print-overview-map img'))
+      await Promise.all(imgs.map(img => img.decode().catch(() => {})))
+    })
 
     // Vent kort så alle nye img-tags er rendret
     await new Promise(r => setTimeout(r, 500))
@@ -124,7 +138,7 @@ async function main() {
 
     // Komprimer med Ghostscript hvis tilgjengelig (gir typisk 80–90 % reduksjon)
     const which = spawnSync('which', ['gs'])
-    if (which.status === 0) {
+    if (which.status === 0 && process.env.SKIP_GS !== '1') {
       console.log('Komprimerer PDF med Ghostscript...')
       const tmpPdf = distPdf + '.tmp'
       const gs = spawnSync('gs', [
@@ -136,6 +150,7 @@ async function main() {
         '-dBATCH',
         '-dDetectDuplicateImages=true',
         '-dCompressFonts=true',
+        '-dSubsetFonts=true',
         `-sOutputFile=${tmpPdf}`,
         distPdf,
       ])
@@ -149,6 +164,9 @@ async function main() {
     }
 
     await copyFile(distPdf, publicPdf)
+
+    // Rydd opp midlertidige screenshot-filer
+    try { await rm(tmpDir, { recursive: true, force: true }) } catch {}
 
     const finalSize = (await stat(distPdf)).size
     const mb = (n) => (n / 1024 / 1024).toFixed(1)
