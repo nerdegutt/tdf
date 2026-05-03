@@ -173,6 +173,8 @@ async function main() {
       console.log('(Ghostscript ikke installert — hopper over komprimering)')
     }
 
+    // Sørg for at public/ finnes (fjernet fra repo, finnes ikke i CI)
+    await mkdir(join(ROOT, 'public'), { recursive: true })
     await copyFile(distPdf, publicPdf)
 
     // Rydd opp midlertidige screenshot-filer
