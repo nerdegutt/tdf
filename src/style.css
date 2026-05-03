@@ -827,34 +827,43 @@ html.print-mode body {
   box-shadow: none !important;
 }
 
-/* @media print: For nettlesere som faktisk trykker (Cmd+P) */
+/* @media print: Aktiveres kun på /print-ruten via html.print-mode-klassen,
+   slik at Cmd+P på vanlige sider bruker nettleserens standard print. */
+html.print-mode {
+  /* @page-regelen settes via CSS-variabel når print-mode er aktiv */
+}
+
 @media print {
-  html, body {
+  html.print-mode, html.print-mode body {
     background: white !important;
     color: black !important;
   }
 
-  header, footer, #mobile-nav, #day-map-wrapper, #view-overview, #view-day, #sidebar {
+  html.print-mode header,
+  html.print-mode footer,
+  html.print-mode #mobile-nav,
+  html.print-mode #day-map-wrapper,
+  html.print-mode #view-overview,
+  html.print-mode #view-day,
+  html.print-mode #sidebar {
     display: none !important;
   }
 
-  #view-print {
+  html.print-mode #view-print {
     padding: 0;
     max-width: none;
   }
 
-  @page {
-    size: A4 portrait;
-    margin: 12mm;
-  }
-
-  .print-day, .print-info, .print-cover, .print-top10 {
-    page-break-inside: auto;
-  }
-
-  .print-day {
+  html.print-mode .print-day {
     page-break-before: always;
   }
+}
+
+/* @page-regelen er global, men gjelder bare når noe faktisk printes.
+   Den er innenfor html.print-mode for å unngå å påvirke vanlige sider. */
+@page {
+  size: A4 portrait;
+  margin: 12mm;
 }
 
 /* --- Theme toggle switch --- */
