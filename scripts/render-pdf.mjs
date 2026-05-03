@@ -79,17 +79,22 @@ async function main() {
     await new Promise(r => setTimeout(r, 2000))
 
     console.log('Genererer PDF...')
-    const pdfPath = join(DIST, 'tdf-reise.pdf')
+    const distPdf = join(DIST, 'tdf-reise.pdf')
+    const publicPdf = join(ROOT, 'public', 'tdf-reise.pdf')
     await page.pdf({
-      path: pdfPath,
+      path: distPdf,
       format: 'A4',
       printBackground: true,
       preferCSSPageSize: true,
       margin: { top: '12mm', right: '12mm', bottom: '12mm', left: '12mm' },
     })
 
-    const stats = await stat(pdfPath)
-    console.log(`PDF generert: tdf-reise.pdf (${(stats.size / 1024 / 1024).toFixed(1)} MB)`)
+    // Kopier til public/ slik at den følger med på Vercel-bygg (build:fast)
+    const { copyFile } = await import('node:fs/promises')
+    await copyFile(distPdf, publicPdf)
+
+    const stats = await stat(distPdf)
+    console.log(`PDF generert: dist/tdf-reise.pdf og public/tdf-reise.pdf (${(stats.size / 1024 / 1024).toFixed(1)} MB)`)
   } finally {
     await browser.close()
     server.close()
