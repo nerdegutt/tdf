@@ -396,6 +396,9 @@ document.addEventListener('click', (e) => {
   if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return
   if (link.target === '_blank') return
   if (e.button !== undefined && e.button !== 0) return
+  // Last ned-lenker og fil-ressurser skal gå til nettleseren, ikke routeren
+  if (link.hasAttribute('download')) return
+  if (/\.[a-z0-9]{2,5}$/i.test(href)) return
 
   e.preventDefault()
   navigate(href)
