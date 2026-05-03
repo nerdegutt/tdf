@@ -1,7 +1,8 @@
 import { createServer } from 'node:http'
-import { readFile, stat } from 'node:fs/promises'
+import { readFile, stat, rename, copyFile } from 'node:fs/promises'
 import { join, extname } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { spawnSync } from 'node:child_process'
 import puppeteer from 'puppeteer'
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url))
@@ -78,6 +79,36 @@ async function main() {
     // Ekstra buffer for å sikre at alt er rendret
     await new Promise(r => setTimeout(r, 2000))
 
+    // Flat hvert kart til ett enkelt JPEG i stedet for hundrevis av separate tiles.
+    // Det reduserer PDF-størrelsen dramatisk (mange tiles → ett bilde per kart).
+    console.log('Konverterer kart til komprimerte bilder...')
+    const mapIds = await page.evaluate(() => {
+      const ids = ['print-overview-map']
+      for (let i = 1; i <= 18; i++) ids.push(`print-map-day-${i}`)
+      return ids.filter(id => document.getElementById(id))
+    })
+
+    for (const id of mapIds) {
+      const handle = await page.$(`#${id}`)
+      if (!handle) continue
+      const buf = await handle.screenshot({ type: 'jpeg', quality: 78 })
+      const dataUrl = `data:image/jpeg;base64,${buf.toString('base64')}`
+      await page.evaluate((id, src) => {
+        const el = document.getElementById(id)
+        if (!el) return
+        const img = document.createElement('img')
+        img.src = src
+        img.style.width = '100%'
+        img.style.height = '100%'
+        img.style.objectFit = 'cover'
+        img.style.display = 'block'
+        el.replaceWith(img)
+      }, id, dataUrl)
+    }
+
+    // Vent kort så alle nye img-tags er rendret
+    await new Promise(r => setTimeout(r, 500))
+
     console.log('Genererer PDF...')
     const distPdf = join(DIST, 'tdf-reise.pdf')
     const publicPdf = join(ROOT, 'public', 'tdf-reise.pdf')
@@ -89,12 +120,39 @@ async function main() {
       margin: { top: '12mm', right: '12mm', bottom: '12mm', left: '12mm' },
     })
 
-    // Kopier til public/ slik at den følger med på Vercel-bygg (build:fast)
-    const { copyFile } = await import('node:fs/promises')
+    const rawSize = (await stat(distPdf)).size
+
+    // Komprimer med Ghostscript hvis tilgjengelig (gir typisk 80–90 % reduksjon)
+    const which = spawnSync('which', ['gs'])
+    if (which.status === 0) {
+      console.log('Komprimerer PDF med Ghostscript...')
+      const tmpPdf = distPdf + '.tmp'
+      const gs = spawnSync('gs', [
+        '-sDEVICE=pdfwrite',
+        '-dCompatibilityLevel=1.5',
+        '-dPDFSETTINGS=/ebook',
+        '-dNOPAUSE',
+        '-dQUIET',
+        '-dBATCH',
+        '-dDetectDuplicateImages=true',
+        '-dCompressFonts=true',
+        `-sOutputFile=${tmpPdf}`,
+        distPdf,
+      ])
+      if (gs.status === 0) {
+        await rename(tmpPdf, distPdf)
+      } else {
+        console.warn('Ghostscript-komprimering feilet, beholder ukomprimert PDF.')
+      }
+    } else {
+      console.log('(Ghostscript ikke installert — hopper over komprimering)')
+    }
+
     await copyFile(distPdf, publicPdf)
 
-    const stats = await stat(distPdf)
-    console.log(`PDF generert: dist/tdf-reise.pdf og public/tdf-reise.pdf (${(stats.size / 1024 / 1024).toFixed(1)} MB)`)
+    const finalSize = (await stat(distPdf)).size
+    const mb = (n) => (n / 1024 / 1024).toFixed(1)
+    console.log(`PDF generert: ${mb(finalSize)} MB (før komprimering: ${mb(rawSize)} MB)`)
   } finally {
     await browser.close()
     server.close()
