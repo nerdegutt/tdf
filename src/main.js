@@ -4,6 +4,7 @@ import { renderOverview, destroyOverview } from './views/overview.js'
 import { renderDay, destroyDay } from './views/day.js'
 import { renderInfo, destroyInfo } from './views/info.js'
 import { renderTop10, destroyTop10 } from './views/top10.js'
+import { renderPrint, destroyPrint } from './views/print.js'
 import { populateMobileNav, populateSidebar } from './components/sidebar.js'
 import { initDayMap, destroyDayMap, invalidateDayMap } from './components/map.js'
 
@@ -44,6 +45,7 @@ function getRoute() {
   const path = window.location.pathname.replace(/\/$/, '') || '/'
   if (path === '/info') return { view: 'info' }
   if (path === '/topp10') return { view: 'top10' }
+  if (path === '/print') return { view: 'print' }
   const match = path.match(/^\/dag\/(\d+)(?:\/[a-z0-9-]+)?$/)
   if (match) {
     return { view: 'day', dayNum: parseInt(match[1], 10) }
@@ -158,6 +160,7 @@ function render() {
   }
   if (currentView === 'info') destroyInfo()
   if (currentView === 'top10') destroyTop10()
+  if (currentView === 'print') destroyPrint()
 
   const overviewEl = document.getElementById('view-overview')
   const dayEl = document.getElementById('view-day')
@@ -252,6 +255,23 @@ function render() {
       image: DEFAULT_IMAGE,
     })
     announce('Topp 10')
+  } else if (route.view === 'print') {
+    overviewEl.classList.add('hidden')
+    dayEl.classList.add('hidden')
+    mobileNav.classList.add('hidden')
+    dayMapWrapper.style.display = 'none'
+
+    renderPrint()
+
+    currentView = 'print'
+    window.scrollTo(0, 0)
+    setMeta({
+      title: 'Utskriftsversjon · Tour de France 2026',
+      description: 'Utskriftsversjon av hele reiseguiden.',
+      url: `${SITE_URL}/print`,
+      image: DEFAULT_IMAGE,
+    })
+    announce('Utskriftsversjon')
   }
 }
 

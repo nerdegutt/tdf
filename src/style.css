@@ -418,6 +418,445 @@ html.dark .leaflet-control-attribution a {
   color: #60a5fa;
 }
 
+/* ====== Print Mode ====== */
+
+/* Når html.print-mode er satt, oppfører siden seg som lyst tema uavhengig av brukervalg */
+html.print-mode {
+  color-scheme: light;
+}
+
+html.print-mode body {
+  background: white !important;
+  color: #1c1917 !important;
+}
+
+.print-hide {
+  display: none !important;
+}
+
+#view-print {
+  max-width: 180mm;
+  margin: 0 auto;
+  padding: 10mm 0;
+  background: white;
+  color: #1c1917;
+  font-size: 8.5pt;
+  line-height: 1.4;
+}
+
+#view-print h1, #view-print h2, #view-print h3, #view-print h4 {
+  color: #1c1917;
+  font-weight: 700;
+}
+
+#view-print a {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+/* Forside */
+.print-cover {
+  page-break-after: always;
+  break-after: page;
+  text-align: center;
+  padding: 20mm 0;
+}
+
+.print-cover h1 {
+  font-size: 28pt;
+  margin: 0 0 8mm;
+}
+
+.print-cover .print-subtitle {
+  font-size: 12pt;
+  color: #57534e;
+  margin: 0 0 12mm;
+}
+
+.print-cover-meta {
+  font-size: 10pt;
+  color: #57534e;
+  margin: 0 0 10mm;
+  line-height: 1.6;
+}
+
+.print-overview-map {
+  width: 100%;
+  height: 110mm;
+  margin: 8mm 0;
+  border: 1px solid #d6d3d1;
+}
+
+.print-stats {
+  font-size: 12pt;
+  font-weight: 600;
+  margin: 8mm 0 4mm;
+}
+
+.print-route-text {
+  font-size: 8.5pt;
+  color: #57534e;
+  max-width: 150mm;
+  margin: 0 auto;
+  line-height: 1.55;
+}
+
+/* Reiseinfo */
+.print-info {
+  page-break-after: always;
+  break-after: page;
+}
+
+.print-section-header {
+  border-bottom: 2px solid #1c1917;
+  padding-bottom: 4mm;
+  margin-bottom: 6mm;
+}
+
+.print-section-header h2 {
+  font-size: 17pt;
+  margin: 0;
+}
+
+.print-trip-meta {
+  font-size: 9pt;
+  color: #57534e;
+  margin: 2mm 0 0;
+}
+
+#view-print h3 {
+  font-size: 10.5pt;
+  margin: 6mm 0 2mm;
+  border-bottom: 1px solid #d6d3d1;
+  padding-bottom: 1.5mm;
+}
+
+.print-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 7.5pt;
+  margin-bottom: 4mm;
+}
+
+.print-table th {
+  text-align: left;
+  font-size: 6.5pt;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #57534e;
+  padding: 1.8mm 2.5mm;
+  border-bottom: 1.5px solid #1c1917;
+}
+
+.print-table td {
+  padding: 1.5mm 2.5mm;
+  border-bottom: 0.5px solid #e7e5e4;
+  vertical-align: top;
+}
+
+.print-table .text-center { text-align: center; }
+.print-table .text-right { text-align: right; }
+
+#view-print ul, #view-print ol {
+  margin: 2mm 0 4mm;
+  padding-left: 6mm;
+}
+
+#view-print li {
+  margin-bottom: 1.5mm;
+}
+
+/* Dag */
+.print-day {
+  page-break-before: always;
+  break-before: page;
+  page-break-inside: auto;
+}
+
+.print-day:first-of-type {
+  /* Første dag begynner alltid på ny side fordi forrige seksjon (info) page-breaker */
+}
+
+.print-hero {
+  margin: 0 0 6mm;
+  page-break-inside: avoid;
+}
+
+.print-hero img {
+  width: 100%;
+  height: 60mm;
+  object-fit: cover;
+  display: block;
+}
+
+.print-hero-credit {
+  font-size: 8pt;
+  color: #78716c;
+  margin: 1mm 0 0;
+  text-align: right;
+}
+
+.print-day-header {
+  display: flex;
+  align-items: center;
+  gap: 4mm;
+  margin-bottom: 3mm;
+}
+
+.print-day-num {
+  width: 12mm;
+  height: 12mm;
+  border-radius: 50%;
+  background: #1e3a8a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13pt;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.print-day-meta {
+  font-size: 8pt;
+  color: #78716c;
+  margin: 0;
+}
+
+.print-day-title {
+  font-size: 14pt;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.print-day-stats {
+  font-size: 8pt;
+  color: #57534e;
+  margin: 0 0 4mm;
+}
+
+.print-alert {
+  background: color-mix(in srgb, var(--color-accommodation) 12%, white);
+  color: #92400e;
+  padding: 2mm 3mm;
+  border-radius: 2mm;
+  font-size: 8pt;
+  margin: 2.5mm 0;
+  page-break-inside: avoid;
+}
+
+.print-intro {
+  font-size: 8.5pt;
+  color: #44403c;
+  line-height: 1.5;
+  margin: 2.5mm 0 3.5mm;
+}
+
+.print-day-map {
+  width: 100%;
+  height: 75mm;
+  margin: 5mm 0 6mm;
+  border: 1px solid #d6d3d1;
+  page-break-inside: avoid;
+}
+
+/* Seksjoner — komprimerte i print */
+#view-print .section-sights,
+#view-print .section-history,
+#view-print .section-photo,
+#view-print .section-accommodation,
+#view-print .section-food,
+#view-print .section-practical,
+#view-print .section-customs,
+#view-print .section-booking {
+  margin-bottom: 3mm;
+  page-break-inside: avoid;
+  border-radius: 2mm;
+}
+
+#view-print .section-sights .px-4,
+#view-print .section-history .px-4,
+#view-print .section-photo .px-4,
+#view-print .section-accommodation .px-4,
+#view-print .section-food .px-4,
+#view-print .section-practical .px-4,
+#view-print .section-customs .px-4,
+#view-print .section-booking .px-4 {
+  padding: 2.5mm 3.5mm;
+}
+
+/* Overstyrer Tailwind text-base/text-sm/text-xl i print */
+#view-print .section-sights h3,
+#view-print .section-history h3,
+#view-print .section-photo h3,
+#view-print .section-accommodation h3,
+#view-print .section-food h3,
+#view-print .section-practical h3,
+#view-print .section-customs h3,
+#view-print .section-booking h3 {
+  font-size: 9.5pt;
+  margin: 0 0 1.5mm;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+#view-print .section-content {
+  font-size: 8.5pt;
+  line-height: 1.45;
+}
+
+#view-print .section-content ul,
+#view-print .section-content ol {
+  margin: 1.5mm 0;
+  padding-left: 5mm;
+}
+
+#view-print .section-content li {
+  margin-bottom: 0.8mm;
+  line-height: 1.4;
+}
+
+#view-print .section-content p {
+  margin-bottom: 1.5mm;
+  line-height: 1.45;
+}
+
+#view-print .highlight-section {
+  margin-bottom: 4mm;
+}
+
+#view-print .highlight-section h3 {
+  font-size: 10.5pt;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 1mm;
+}
+
+#view-print .highlight-section p,
+#view-print .highlight-section .text-base {
+  font-size: 8.5pt;
+  line-height: 1.45;
+}
+
+#view-print .gem-section {
+  padding: 2.5mm 3.5mm;
+  margin-bottom: 3mm;
+  page-break-inside: avoid;
+}
+
+#view-print .gem-section h3 {
+  font-size: 10pt;
+  margin: 0 0 1.5mm;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Tailwind-text-klasser inne i print — tving riktig størrelse */
+#view-print .text-xl { font-size: 11pt; }
+#view-print .text-lg { font-size: 10pt; }
+#view-print .text-base { font-size: 8.5pt; }
+#view-print .text-sm { font-size: 8pt; }
+#view-print .text-xs { font-size: 7pt; }
+
+#view-print .trivia-bubble {
+  padding: 2mm 3mm;
+  margin: 1.5mm 0;
+  font-size: 7.5pt;
+  page-break-inside: avoid;
+}
+
+#view-print .booking-banner {
+  padding: 2mm 3mm;
+  font-size: 7.5pt;
+  margin-bottom: 2.5mm;
+}
+
+#view-print .ref-pill {
+  font-size: 7pt;
+  pointer-events: none;
+}
+
+/* Vis alltid referanse-tooltips i print */
+#view-print .ref-tooltip {
+  display: block !important;
+  margin-top: 1.5mm;
+  padding: 2mm 2.5mm;
+  background: #f5f5f4;
+  font-size: 7.5pt;
+  border-radius: 2mm;
+}
+
+#view-print .ref-tooltip.hidden {
+  display: block !important;
+}
+
+/* Skjul foto-søk-emojier (de er klikkbare lenker som ikke gir mening på papir) */
+#view-print .photo-search-link {
+  display: none;
+}
+
+.print-photo-link {
+  font-size: 8.5pt;
+  color: #78716c;
+}
+
+/* Topp 10 */
+.print-top10 {
+  page-break-before: always;
+  break-before: page;
+}
+
+/* Kart-kontroller skjult i print */
+#view-print .leaflet-control-container,
+#view-print .leaflet-control-attribution {
+  display: none !important;
+}
+
+/* Fjern grålig bakgrunn fra Leaflets standard divIcon-container */
+#view-print .leaflet-div-icon,
+#view-print .leaflet-marker-icon {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Fjern markør-skygge i print — den ser ut som en kvadratisk halo */
+#view-print .day-marker,
+#view-print .stop-marker {
+  box-shadow: none !important;
+}
+
+/* @media print: For nettlesere som faktisk trykker (Cmd+P) */
+@media print {
+  html, body {
+    background: white !important;
+    color: black !important;
+  }
+
+  header, footer, #mobile-nav, #day-map-wrapper, #view-overview, #view-day, #sidebar {
+    display: none !important;
+  }
+
+  #view-print {
+    padding: 0;
+    max-width: none;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 12mm;
+  }
+
+  .print-day, .print-info, .print-cover, .print-top10 {
+    page-break-inside: auto;
+  }
+
+  .print-day {
+    page-break-before: always;
+  }
+}
+
 /* --- Theme toggle switch --- */
 .theme-switch {
   position: relative;
