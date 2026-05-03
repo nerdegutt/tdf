@@ -9,6 +9,7 @@ export const day11 = {
   hours: 2,
   nights: 2,
   subtitle: "Kort kjøring med et av turens høydepunkter",
+  description: "Narbonne til Avignon — pavebyen med Europas største gotiske palass, komplett bevarte bymurer og porten til Provence.",
   intro: "Avignon er pavebyens by — i 67 år (1309–1377) regjerte pavene herfra i stedet for Roma, og Europas største gotiske palass troner fortsatt over de komplett bevarte bymurene. Byen har 92 000 innbyggere, et pulserende sentrum innenfor murene, og er porten til Provence med Rhône-viner, lavendel og lys som har inspirert kunstnere i århundrer.",
   coords: { lat: 43.95, lng: 4.81 },
   stops: [

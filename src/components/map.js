@@ -51,7 +51,7 @@ export function initMap(containerId) {
         <strong>Dag ${d.day} – ${d.weekday} ${d.date}</strong><br>
         ${d.from} → ${d.to}<br>
         <small>${d.km > 0 ? `Ca. ${d.km} km${d.hours ? ` · ~${d.hours} t` : ''}` : 'Ingen kjøring'} · ${d.subtitle}</small><br>
-        <a href="#/dag/${d.day}" style="color:#1e40af;font-weight:600;text-decoration:underline">Se dag ${d.day}: ${d.to} →</a>
+        <a href="/dag/${d.day}/${d.slug}" style="color:#1e40af;font-weight:600;text-decoration:underline">Se dag ${d.day}: ${d.to} →</a>
       </div>
     `)
 
@@ -75,7 +75,7 @@ export function initMap(containerId) {
             <div>
               <strong>${stop.name}</strong><br>
               <small>Stopp på dag ${d.day}</small><br>
-              <a href="#/dag/${d.day}" style="color:#1e40af;text-decoration:underline">Se dag ${d.day}: ${d.to} →</a>
+              <a href="/dag/${d.day}/${d.slug}" style="color:#1e40af;text-decoration:underline">Se dag ${d.day}: ${d.to} →</a>
             </div>
           `)
       })

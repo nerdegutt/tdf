@@ -9,6 +9,7 @@ export const day17 = {
   hours: 4,
   nights: 1,
   subtitle: "Siste dag på kontinentet",
+  description: "Hameln til Puttgarden via Hamburg — verdens største lagerkompleks Speicherstadt og Elbphilharmonie i Tysklands havnemetropol.",
   intro: "Hamburg er Tysklands nest største by og Europas tredje største havn, med en stolt hansetradisjon som strekker seg tilbake til 1241. Speicherstadt — verdens største sammenhengende lagerkompleks — er UNESCO-listet og vitner om byens rolle som handelsmetropol. Elbphilharmonie, åpnet i 2017, har allerede blitt byens nye landemerke.",
   coords: { lat: 54.37, lng: 11.00 },
   stops: [

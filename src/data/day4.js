@@ -8,6 +8,7 @@ export const day4 = {
   km: 0,
   nights: 0,
   subtitle: "Heldagsutforskning",
+  description: "Heldag i Rouen — bindingsverkshus, Jeanne d'Arc-spor, katedralen som inspirerte Monet og en av Europas best bevarte middelalderbyer.",
   intro: "Rouen er en av Frankrikes best bevarte middelalderbyer, med bindingsverkshus, gotiske kirker og smale gater som har overlevd århundrer. I dag har dere en hel dag til å utforske vikinghovedstaden som ble grunnlagt av Gange-Rolf, gå i Jeanne d'Arcs fotspor og oppdage makabre benhus, astronomiske klokker og en katedral som fascinerte Monet.",
   coords: { lat: 49.44, lng: 1.10 },
   stops: [],

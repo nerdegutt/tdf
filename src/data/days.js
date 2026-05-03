@@ -41,4 +41,20 @@ export const days = [
   day18,
 ];
 
+function slugify(s) {
+  return s
+    .toLowerCase()
+    .replace(/å/g, 'a')
+    .replace(/æ/g, 'ae')
+    .replace(/ø/g, 'o')
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+days.forEach(d => {
+  d.slug = slugify(d.to);
+});
+
 attachImages(days);

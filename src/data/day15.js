@@ -8,6 +8,7 @@ export const day15 = {
   km: 0,
   nights: 0,
   subtitle: "Heldag / Mosel-dagstur",
+  description: "Mosel-dagstur fra Trier — bratte vinmarker, Bernkastel-Kues, Cochem og Riesling fra et av Europas mest pittoreske vinlandskap.",
   intro: "Mosel-dalen er et av Europas mest pittoreske vinlandskap, med bratte vinmarker som stuper ned mot den sakte buktende elven. Romerne plantet de første vinrankene her for nesten 2000 år siden, og Rieslingen fra disse hellingene regnes blant verdens beste. Bernkastel-Kues og Cochem er dalens to perler — bindingsverkshus, eventyrborger og vinsmaking.",
   coords: { lat: 49.75, lng: 6.64 },
   stops: [

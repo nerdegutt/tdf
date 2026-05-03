@@ -9,6 +9,7 @@ export const day2 = {
   hours: 6,
   nights: 1,
   subtitle: "Kjøredag til Köln",
+  description: "Fra Puttgarden til Köln — Tysklands fjerde største by med den ikoniske gotiske domen, ølhaller og 2000 år historie langs Rhinen.",
   alert: "<strong>Kristi himmelfartsdag (14. mai)</strong> — offentlig fridag i Tyskland. Mange butikker og museer har stengt eller redusert åpningstid. Kölnerdomen og brauhausene holder åpent.",
   intro: "Köln er Tysklands fjerde største by med over en million innbyggere, grunnlagt av romerne som Colonia Agrippina i år 50 e.Kr. Byen er mest kjent for sin massive gotiske katedral — Kölnerdomen — som tok 632 år å fullføre. Med over 30 museer, historiske ølhaller og en levende gamleby langs Rhinen er det mer enn nok å fylle en ettermiddag.",
   coords: { lat: 50.94, lng: 6.96 },

@@ -35,14 +35,26 @@ function bindThemeToggle() {
 }
 
 function getRoute() {
-  const hash = window.location.hash || '#/'
-  if (hash === '#/info') return { view: 'info' }
-  if (hash === '#/topp10') return { view: 'top10' }
-  const match = hash.match(/^#\/dag\/(\d+)$/)
+  // Legacy hash-redirect: #/dag/5 → /dag/5
+  if (window.location.hash.startsWith('#/')) {
+    const path = window.location.hash.slice(1)
+    history.replaceState(null, '', path + window.location.search)
+  }
+
+  const path = window.location.pathname.replace(/\/$/, '') || '/'
+  if (path === '/info') return { view: 'info' }
+  if (path === '/topp10') return { view: 'top10' }
+  const match = path.match(/^\/dag\/(\d+)(?:\/[a-z0-9-]+)?$/)
   if (match) {
     return { view: 'day', dayNum: parseInt(match[1], 10) }
   }
   return { view: 'overview' }
+}
+
+function navigate(path) {
+  if (window.location.pathname === path) return
+  history.pushState(null, '', path)
+  render()
 }
 
 function getDayMapVisible() {
@@ -88,6 +100,53 @@ function announce(message) {
   if (el) el.textContent = message
 }
 
+const SITE_URL = 'https://tdf.offline.no'
+const DEFAULT_IMAGE = (() => {
+  const d6 = days.find(d => d.day === 6)
+  return d6?.image ? d6.image.hero.replace(/w=\d+&h=\d+/, 'w=1200&h=630') : null
+})()
+
+function ogImageFor(day) {
+  if (!day?.image) return null
+  return day.image.hero.replace(/w=\d+&h=\d+/, 'w=1200&h=630')
+}
+
+function setMetaAttr(selector, value) {
+  const el = document.head.querySelector(selector)
+  if (el) el.setAttribute('content', value)
+}
+
+function setMeta({ title, description, url, image }) {
+  document.title = title
+  setMetaAttr('meta[name="description"]', description)
+  setMetaAttr('meta[property="og:title"]', title)
+  setMetaAttr('meta[property="og:description"]', description)
+  setMetaAttr('meta[property="og:url"]', url)
+  setMetaAttr('meta[name="twitter:title"]', title)
+  setMetaAttr('meta[name="twitter:description"]', description)
+
+  const canonical = document.head.querySelector('link[rel="canonical"]')
+  if (canonical) canonical.setAttribute('href', url)
+
+  if (image) {
+    let ogImg = document.head.querySelector('meta[property="og:image"]')
+    if (!ogImg) {
+      ogImg = document.createElement('meta')
+      ogImg.setAttribute('property', 'og:image')
+      document.head.appendChild(ogImg)
+    }
+    ogImg.setAttribute('content', image)
+
+    let twImg = document.head.querySelector('meta[name="twitter:image"]')
+    if (!twImg) {
+      twImg = document.createElement('meta')
+      twImg.setAttribute('name', 'twitter:image')
+      document.head.appendChild(twImg)
+    }
+    twImg.setAttribute('content', image)
+  }
+}
+
 function render() {
   const route = getRoute()
 
@@ -112,12 +171,23 @@ function render() {
     populateMobileNav(route)
     renderOverview()
     currentView = 'overview'
+    setMeta({
+      title: 'Tour de France 2026 – Reiseguide',
+      description: 'Reiseguide for en 18-dagers biltur gjennom Europa: Norge → Tyskland → Belgia → Frankrike → Spania og hjem. 7 land, 6200 km, mai 2026.',
+      url: `${SITE_URL}/`,
+      image: DEFAULT_IMAGE,
+    })
     announce('Kartoversikt')
   } else if (route.view === 'day') {
     const day = days.find(d => d.day === route.dayNum)
     if (!day) {
-      window.location.hash = '#/'
+      navigate('/')
       return
+    }
+    // Normaliser URL til /dag/N/slug så delte lenker alltid har slug
+    const expectedPath = `/dag/${day.day}/${day.slug}`
+    if (window.location.pathname !== expectedPath) {
+      history.replaceState(null, '', expectedPath)
     }
     overviewEl.classList.add('hidden')
     dayEl.classList.remove('hidden')
@@ -137,6 +207,12 @@ function render() {
 
     currentView = 'day'
     window.scrollTo(0, 0)
+    setMeta({
+      title: `Dag ${day.day}: ${day.from} → ${day.to} · Tour de France 2026`,
+      description: day.description || `Dag ${day.day} av reisen, ${day.date}: ${day.from} til ${day.to}. ${day.subtitle}.`,
+      url: `${SITE_URL}/dag/${day.day}/${day.slug}`,
+      image: ogImageFor(day),
+    })
     announce(`Dag ${day.day}: ${day.from} til ${day.to}`)
   } else if (route.view === 'info') {
     overviewEl.classList.add('hidden')
@@ -150,6 +226,12 @@ function render() {
 
     currentView = 'info'
     window.scrollTo(0, 0)
+    setMeta({
+      title: 'Reiseinfo · Tour de France 2026',
+      description: 'Komplett ruteoversikt, kjøreinfo for Tesla og booking-oversikt for de viktigste opplevelsene på 18-dagers turen gjennom Europa.',
+      url: `${SITE_URL}/info`,
+      image: DEFAULT_IMAGE,
+    })
     announce('Reiseinfo')
   } else if (route.view === 'top10') {
     overviewEl.classList.add('hidden')
@@ -163,6 +245,12 @@ function render() {
 
     currentView = 'top10'
     window.scrollTo(0, 0)
+    setMeta({
+      title: 'Topp 10 · Tour de France 2026',
+      description: 'Personlige favoritter rangert i tre kategorier: historie og severdigheter, fotomuligheter, og mat og drikke fra hele turen.',
+      url: `${SITE_URL}/topp10`,
+      image: DEFAULT_IMAGE,
+    })
     announce('Topp 10')
   }
 }
@@ -171,15 +259,20 @@ function render() {
 function navigateStep(direction) {
   const route = getRoute()
 
+  const dayPath = (n) => {
+    const d = days.find(x => x.day === n)
+    return d ? `/dag/${d.day}/${d.slug}` : `/dag/${n}`
+  }
+
   if (route.view === 'info') {
-    if (direction === 1) window.location.hash = '#/dag/1'
+    if (direction === 1) navigate(dayPath(1))
   } else if (route.view === 'day') {
     const target = route.dayNum + direction
-    if (target < 1) window.location.hash = '#/info'
-    else if (target > days.length) window.location.hash = '#/topp10'
-    else window.location.hash = `#/dag/${target}`
+    if (target < 1) navigate('/info')
+    else if (target > days.length) navigate('/topp10')
+    else navigate(dayPath(target))
   } else if (route.view === 'top10') {
-    if (direction === -1) window.location.hash = `#/dag/${days.length}`
+    if (direction === -1) navigate(dayPath(days.length))
   }
 }
 
@@ -272,7 +365,23 @@ document.addEventListener('click', (e) => {
   }
 })
 
+// Fang alle interne lenker og bruk pushState
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a[href]')
+  if (!link) return
+  const href = link.getAttribute('href')
+  // Kun interne paths (starter med /, ikke // eller mailto: osv.)
+  if (!href || !href.startsWith('/') || href.startsWith('//')) return
+  // Modifier-keys, target=_blank, midt-klikk osv. skal beholde standard
+  if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return
+  if (link.target === '_blank') return
+  if (e.button !== undefined && e.button !== 0) return
+
+  e.preventDefault()
+  navigate(href)
+})
+
 // Initialiser
-window.addEventListener('hashchange', render)
+window.addEventListener('popstate', render)
 render()
 bindThemeToggle()

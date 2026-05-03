@@ -22,7 +22,7 @@ export function populateSidebar(activeRoute) {
 
     return `
       <li>
-        <a href="#/dag/${d.day}"${isActive ? ' aria-current="page"' : ''}
+        <a href="/dag/${d.day}/${d.slug}"${isActive ? ' aria-current="page"' : ''}
            class="block px-3 py-2 rounded-lg text-sm transition-colors ${activeClass}">
           <span class="font-medium">Dag ${d.day}</span>
           <span class="text-stone-400 mx-1" aria-hidden="true">·</span>
@@ -34,7 +34,7 @@ export function populateSidebar(activeRoute) {
 
   container.innerHTML = `
     <li>
-      <a href="#/info"${infoActive ? ' aria-current="page"' : ''}
+      <a href="/info"${infoActive ? ' aria-current="page"' : ''}
          class="block px-3 py-2 rounded-lg text-sm transition-colors ${infoClass}">
         <span aria-hidden="true">ℹ️</span>
         <span class="ml-1">Reiseinfo</span>
@@ -44,7 +44,7 @@ export function populateSidebar(activeRoute) {
     ${dayItems}
     <li class="my-3" role="separator"></li>
     <li>
-      <a href="#/topp10"${top10Active ? ' aria-current="page"' : ''}
+      <a href="/topp10"${top10Active ? ' aria-current="page"' : ''}
          class="block px-3 py-2 rounded-lg text-sm transition-colors ${top10Class}">
         <span aria-hidden="true">🏆</span>
         <span class="ml-1">Topp 10</span>
@@ -60,39 +60,41 @@ export function populateMobileNav(activeRoute) {
   // Bare populer én gang, oppdater selected etterpå
   if (select.options.length === 0) {
     const overviewOpt = document.createElement('option')
-    overviewOpt.value = '#/'
+    overviewOpt.value = '/'
     overviewOpt.textContent = 'Kartoversikt'
     select.appendChild(overviewOpt)
 
     const infoOpt = document.createElement('option')
-    infoOpt.value = '#/info'
+    infoOpt.value = '/info'
     infoOpt.textContent = 'ℹ️ Reiseinfo'
     select.appendChild(infoOpt)
 
     days.forEach(d => {
       const opt = document.createElement('option')
-      opt.value = `#/dag/${d.day}`
+      opt.value = `/dag/${d.day}/${d.slug}`
       opt.textContent = `Dag ${d.day} – ${d.to}`
       select.appendChild(opt)
     })
 
     const top10Opt = document.createElement('option')
-    top10Opt.value = '#/topp10'
+    top10Opt.value = '/topp10'
     top10Opt.textContent = '🏆 Topp 10'
     select.appendChild(top10Opt)
 
     select.addEventListener('change', () => {
-      window.location.hash = select.value
+      history.pushState(null, '', select.value)
+      window.dispatchEvent(new PopStateEvent('popstate'))
     })
   }
 
   if (activeRoute.view === 'overview') {
-    select.value = '#/'
+    select.value = '/'
   } else if (activeRoute.view === 'info') {
-    select.value = '#/info'
+    select.value = '/info'
   } else if (activeRoute.view === 'top10') {
-    select.value = '#/topp10'
+    select.value = '/topp10'
   } else {
-    select.value = `#/dag/${activeRoute.dayNum}`
+    const day = days.find(d => d.day === activeRoute.dayNum)
+    select.value = day ? `/dag/${day.day}/${day.slug}` : `/dag/${activeRoute.dayNum}`
   }
 }

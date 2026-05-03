@@ -9,6 +9,7 @@ export const day16 = {
   hours: 5,
   nights: 1,
   subtitle: "Langs Mosel- og Rhin-dalene",
+  description: "Trier til Hameln langs Mosel og Rhinen — eventyrbyen til Rottefangeren med Tysklands fineste Weserrenessanse-arkitektur.",
   intro: "Hameln er eventyrbyen der legenden om Rottefangeren har preget gatene siden 1284. Byen har Tysklands fineste samling av Weserrenessanse-arkitektur — overdådige steinfasader fra 1500- og 1600-tallet langs smale brosteinsbelagte gater. Med bare 60 000 innbyggere er den overraskende sjarmerende og perfekt for en kveldsvandring.",
   coords: { lat: 52.10, lng: 9.36 },
   stops: [

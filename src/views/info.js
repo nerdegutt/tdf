@@ -12,7 +12,7 @@ export function renderInfo() {
     return `
       <tr class="border-b border-stone-100 hover:bg-stone-50">
         <td class="py-2 px-3 text-center">
-          <a href="#/dag/${d.day}" class="text-blue-700 hover:text-blue-900 font-medium">${d.day}</a>
+          <a href="/dag/${d.day}/${d.slug}" class="text-blue-700 hover:text-blue-900 font-medium">${d.day}</a>
         </td>
         <td class="py-2 px-3 text-sm">${d.date}${flagEmoji}</td>
         <td class="py-2 px-3 text-sm">${d.from}</td>

@@ -9,6 +9,7 @@ export const day6 = {
   hours: 2,
   nights: 1,
   subtitle: "Kort kjøring til et av verdens mest ikoniske steder",
+  description: "Fra Bayeux til Mont Saint-Michel — UNESCO-listet tidevannsøy med benediktinerabdedi fra 708, et av Frankrikes mest ikoniske steder.",
   intro: "Mont Saint-Michel er en tidevannsøy med et benediktinerabdedi fra 708 e.Kr., reisende seg 80 meter over bukta der Normandie møter Bretagne. Ved høyvann er den omgitt av hav; ved lavvann kan du gå til fots over sanden. UNESCO-listen siden 1979, og et av Frankrikes mest besøkte steder med over 2,5 millioner turister årlig.",
   coords: { lat: 48.64, lng: -1.51 },
   stops: [],

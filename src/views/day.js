@@ -15,12 +15,12 @@ export function renderDay(day) {
   const nextDay = days.find(d => d.day === day.day + 1)
 
   const prevLink = prevDay
-    ? `<a href="#/dag/${prevDay.day}" class="inline-flex items-center gap-1 text-sm text-blue-700 hover:text-blue-900 transition-colors">← Dag ${prevDay.day}: ${prevDay.to}</a>`
-    : `<a href="#/" class="inline-flex items-center gap-1 text-sm text-blue-700 hover:text-blue-900 transition-colors">← Kartoversikt</a>`
+    ? `<a href="/dag/${prevDay.day}/${prevDay.slug}" class="inline-flex items-center gap-1 text-sm text-blue-700 hover:text-blue-900 transition-colors">← Dag ${prevDay.day}: ${prevDay.to}</a>`
+    : `<a href="/" class="inline-flex items-center gap-1 text-sm text-blue-700 hover:text-blue-900 transition-colors">← Kartoversikt</a>`
 
   const nextLink = nextDay
-    ? `<a href="#/dag/${nextDay.day}" class="inline-flex items-center gap-1 text-sm text-blue-700 hover:text-blue-900 transition-colors">Dag ${nextDay.day}: ${nextDay.to} →</a>`
-    : `<a href="#/" class="inline-flex items-center gap-1 text-sm text-blue-700 hover:text-blue-900 transition-colors">Tilbake til oversikt →</a>`
+    ? `<a href="/dag/${nextDay.day}/${nextDay.slug}" class="inline-flex items-center gap-1 text-sm text-blue-700 hover:text-blue-900 transition-colors">Dag ${nextDay.day}: ${nextDay.to} →</a>`
+    : `<a href="/" class="inline-flex items-center gap-1 text-sm text-blue-700 hover:text-blue-900 transition-colors">Tilbake til oversikt →</a>`
 
   // Grupper seksjoner i tre grupper
   const highlights = []  // sights — fullbredde, ren typografi

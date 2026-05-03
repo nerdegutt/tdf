@@ -9,6 +9,7 @@ export const day3 = {
   hours: 6,
   nights: 2,
   subtitle: "Lang kjøredag med historisk stopp",
+  description: "Köln til Rouen via Waterloo-slagmarken. Normandies vikinghovedstad med Jeanne d'Arc-historie og Monets katedral.",
   intro: "Rouen er Normandies hovedstad med nesten 500 000 innbyggere i storbyregionen, grunnlagt som vikinghovedstad av Rollo (Gange-Rolf) i 911. Byen er uløselig knyttet til Jeanne d'Arc, som ble brent på bålet her i 1431, og til Monet, som malte katedralen over 30 ganger. Underveis stopper dere ved Waterloo — slagmarken der Napoleons skjebne ble beseglet i 1815.",
   coords: { lat: 49.44, lng: 1.10 },
   stops: [

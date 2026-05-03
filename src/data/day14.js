@@ -9,6 +9,7 @@ export const day14 = {
   hours: 4,
   nights: 1,
   subtitle: "Gjennom Alsace til Tysklands eldste by",
+  description: "Dijon til Trier gjennom Alsace — Tysklands eldste by med Konstantins romerske monumenter og fødestedet til Karl Marx.",
   intro: "Trier ble grunnlagt av romerne som Augusta Treverorum i 16 f.Kr. og er Tysklands eldste by. Under keiser Konstantin var den hovedstad for hele det nordvestlige Romerriket, og monumentene fra den tiden — Porta Nigra, Konstantinbasilikaen og keiserbadene — gjør byen til en åpen bok i romersk historie. Karl Marx ble født her i 1818.",
   coords: { lat: 49.75, lng: 6.64 },
   stops: [

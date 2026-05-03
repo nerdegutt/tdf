@@ -9,6 +9,7 @@ export const day8 = {
   hours: 4,
   nights: 2,
   subtitle: "Inn i Baskerland!",
+  description: "La Rochelle til San Sebastián — verdens matmekka med La Concha-stranden og flere Michelin-stjerner per innbygger enn noe annet sted.",
   intro: "San Sebastián — eller Donostia på baskisk — er en kystby med 190 000 innbyggere ved Biscayabukta, omgitt av grønne åser. Byen regnes som et av Europas fremste matdestinasjoner, med flere Michelin-stjerner per innbygger enn noe annet sted i verden. La Concha-stranden er konsekvent rangert blant Europas vakreste.",
   coords: { lat: 43.32, lng: -1.98 },
   stops: [

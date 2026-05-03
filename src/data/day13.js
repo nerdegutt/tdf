@@ -9,6 +9,7 @@ export const day13 = {
   hours: 5,
   nights: 1,
   subtitle: "Obligatorisk matstopp i Lyon!",
+  description: "Avignon til Dijon med matstopp i Lyon — Burgunds gamle hovedstad med sennep, vinruter og en av Frankrikes best bevarte middelalderbyer.",
   alert: "<strong>Andre pinsedag (25. mai)</strong> — offentlig fridag i Frankrike. Les Halles Paul Bocuse stenger kl. 13:00. Mange mindre butikker holder stengt, men de fleste restauranter og severdigheter har åpent.",
   intro: "Dijon var hovedstaden i det mektige hertugdømmet Burgund, som på 1400-tallet rivaliserte med Frankrike selv. I dag er byen kjent for sennep, vinruter og en av Frankrikes best bevarte middelalderbyer. Palais des Ducs, der hertugene residerte, huser nå et av landets fineste kunstmuseer.",
   coords: { lat: 47.32, lng: 5.04 },

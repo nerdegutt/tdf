@@ -8,6 +8,7 @@ export const day9 = {
   km: 0,
   nights: 0,
   subtitle: "Turens matmessige høydepunkt!",
+  description: "Fridag i San Sebastián — pintxos-barer, strandpromenader, utsiktsfjell. Torsdag pintxo-pote i Gros-nabolaget. Turens matmessige høydepunkt.",
   intro: "Dag to i San Sebastián — en hel dag til å utforske byen uten bilkjøring. I dag handler det om å vandre strandpromenaden, bestige utsiktsfjellene, og dykke ned i verdens tetteste konsentrasjon av pintxos-barer. Torsdag kveld er pintxo-pote i Gros-nabolaget, da lokalbefolkningen fyller barene.",
   coords: { lat: 43.32, lng: -1.98 },
   stops: [],

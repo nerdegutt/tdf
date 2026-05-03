@@ -9,6 +9,7 @@ export const day5 = {
   hours: 2,
   nights: 1,
   subtitle: "🇳🇴 Gratulerer med dagen!",
+  description: "17. mai i Bayeux og på D-dagskysten. Verdensberømt 1000 år gammelt tapet, Omaha Beach og American Cemetery — på selveste nasjonaldagen.",
   alert: [
     "<strong>Bayeux-tapetet er stengt</strong> for renovering fra sept 2025 til okt 2027. Museet kan ikke besøkes. Resten av Bayeux sentrum og D-dagskysten er upåvirket.",
     "<strong>17. mai er søndag</strong> — mange franske restauranter holder stengt. Restaurantene nedenfor er bekreftet søndagsåpne, men ring og bekreft på forhånd!",
