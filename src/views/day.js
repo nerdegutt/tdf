@@ -26,6 +26,7 @@ export function renderDay(day) {
   const highlights = []  // sights — fullbredde, ren typografi
   const fullWidth = []   // history, photo, practical — fullbredde kort
   const paired = []      // food, accommodation — side om side
+  const customs = []     // lokale skikker — etter mat/overnatting
   const gems = []
 
   for (const s of day.sections) {
@@ -35,6 +36,8 @@ export function renderDay(day) {
       highlights.push(s)
     } else if (s.type === 'food' || s.type === 'accommodation') {
       paired.push(s)
+    } else if (s.type === 'customs') {
+      customs.push(s)
     } else {
       fullWidth.push(s)
     }
@@ -62,6 +65,13 @@ export function renderDay(day) {
   if (paired.length > 0) {
     sectionsHtml += `<div class="compact-grid grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">`
     sectionsHtml += paired.map(s => renderCompact(s)).join('')
+    sectionsHtml += `</div>`
+  }
+
+  // Lokale skikker — fullbredde, etter mat/overnatting
+  if (customs.length > 0) {
+    sectionsHtml += `<div class="flex flex-col gap-4 mb-6">`
+    sectionsHtml += customs.map(s => renderCompact(s)).join('')
     sectionsHtml += `</div>`
   }
 

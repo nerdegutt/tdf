@@ -87,5 +87,28 @@ export const day3 = {
 </ul>
 <p>💡 Dere ankommer fredag kveld. Holy Moly er tryggest ved sen ankomst (åpent til 23). Ring M. Patachon for å bekrefte middagstider.</p>`
     },
+    {
+      type: "customs",
+      title: "Lokale skikker — Belgia (Waterloo) og Frankrike (Rouen)",
+      bookingWarning: null,
+      bookingUrl: null,
+      content: `<p><strong>Belgia (Vallonia, Waterloo)</strong></p>
+<ul>
+<li>Waterloo ligger i fransktalende Vallonia — fransk høflighet gjelder. «Bonjour madame/monsieur» når dere går inn et sted, «Merci, au revoir» når dere går.</li>
+<li>Tipsing: Service er inkludert, men det er vanlig å runde opp eller legge igjen 5 % for god service.</li>
+<li>Engelsk: Bra på Waterloo-museet og turistsentre.</li>
+</ul>
+<p><strong>Frankrike (Rouen og resten av Frankrike-oppholdet)</strong></p>
+<ul>
+<li><strong>«Bonjour» er hellig</strong>: Si «Bonjour madame» eller «Bonjour monsieur» til alle dere møter — kelnere, butikkansatte, hotellresepsjon. Hopper dere over hilsenen, blir dere oppfattet som uhøflige turister. Etter 18:00: «Bonsoir».</li>
+<li><strong>På restaurant</strong>: Vent på å bli vist til bordet — sett dere ikke selv. Si «Bonsoir» til kelneren. «L'addition, s'il vous plaît» = regningen, takk.</li>
+<li><strong>Aldri rop «Garçon!»</strong> — det er gammeldags og nedlatende. Bruk øyekontakt eller «Excusez-moi, monsieur/madame».</li>
+<li><strong>Tipsing</strong>: Service er <em>alltid</em> inkludert i prisen (15 %, lovpålagt). Det er normalt å legge igjen 1–5 EUR ekstra for godt arbeid — ikke 15–20 % som i USA. Bare å runde opp er helt OK.</li>
+<li><strong>Engelsk</strong>: Variert. «Bonjour, parlez-vous anglais?» er den magiske overgangen — å spørre på fransk først endrer hele tonen.</li>
+<li><strong>Fransk-forsøk</strong>: ABSOLUTT verdt det, selv om det er dårlig. «Merci», «S'il vous plaît», «Pardon» er minimum.</li>
+<li><strong>Mattider</strong>: Lunsj 12:00–14:00, middag 19:30–22:00. Kjøkken stenger mellom — ikke regn med varm mat kl. 16.</li>
+<li><strong>Mat tar tid</strong>: Servicen er ikke treg, den er bevisst rolig. Be eksplisitt om regningen — den kommer ikke uoppfordret.</li>
+</ul>`
+    },
   ],
 };

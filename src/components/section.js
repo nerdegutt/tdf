@@ -5,6 +5,7 @@ const SECTION_CONFIG = {
   accommodation: { icon: '🏨', label: 'Overnatting', color: 'amber' },
   food: { icon: '🍽️', label: 'Mat & drikke', color: 'red' },
   practical: { icon: '💡', label: 'Praktisk', color: 'slate' },
+  customs: { icon: '🤝', label: 'Lokale skikker', color: 'teal' },
   gem: { icon: '💎', label: 'Skjult perle', color: 'emerald' },
 }
 

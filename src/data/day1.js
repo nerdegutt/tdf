@@ -71,5 +71,20 @@ export const day1 = {
 </ul>
 <p>💡 Dere ankommer onsdag – de fleste restauranter bør være åpne. NB: Mange stenger tirsdager, så dette hadde vært verre én dag tidligere!</p>`
     },
+    {
+      type: "customs",
+      title: "Lokale skikker — Tyskland",
+      bookingWarning: null,
+      bookingUrl: null,
+      content: `<ul>
+<li><strong>Hilsen</strong>: «Guten Tag» (formell, hele dagen) eller «Hallo» (avslappet). <strong>I Nord-Tyskland brukes «Moin» døgnet rundt</strong> — ja, også om kvelden! «Moin Moin» oppfattes som litt prateete; én «Moin» er normen. Si «Tschüss» eller «Auf Wiedersehen» når dere går.</li>
+<li><strong>På restaurant</strong>: Hils kelneren med «Moin» eller «Guten Tag» når dere kommer inn. Sett dere selv hvis det ikke står «Bitte warten» (vent her). «Die Rechnung, bitte» = regningen, takk.</li>
+<li><strong>Tipsing</strong>: 5–10 %. <strong>Viktig</strong>: Si totalbeløpet inkludert tips når dere betaler («Achtzehn» = 18 EUR), IKKE legg igjen mynt på bordet etterpå.</li>
+<li><strong>Kontant er konge</strong>: Mange tyske restauranter, brauhaus og bakerier tar fortsatt KUN kontant («Nur Bargeld»). Sjekk skiltet før dere setter dere — ha alltid sedler i lomma.</li>
+<li><strong>Engelsk</strong>: De fleste under 50 i byer snakker bra engelsk. På landet og hos eldre kan det variere. «Sprechen Sie Englisch?» er en høflig overgang.</li>
+<li><strong>Tysk-forsøk</strong>: Settes pris på selv når det er dårlig. «Bitte» (vær så snill / vær så god) og «Danke» går langt. Nordtyskere er litt mer reserverte enn sørtyskere — ikke ta direktheten personlig.</li>
+<li><strong>Punktlighet</strong>: Forventes. Kom på tiden til reservasjoner.</li>
+</ul>`
+    },
   ],
 };

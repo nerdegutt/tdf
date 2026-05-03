@@ -79,6 +79,22 @@ export const day17 = {
 <p>💡 Dat ole Aalhus er det klart beste valget – verdt 20 min kjøretur til Fehmarn.</p>`
     },
     {
+      type: "customs",
+      title: "Lokale skikker — Tyskland (Hamburg og Nord-Tyskland)",
+      bookingWarning: null,
+      bookingUrl: null,
+      content: `<ul>
+<li><strong>«Moin» — Nord-Tysklands hilsen</strong>: I Hamburg, Lübeck og Heiligenhafen brukes <strong>«Moin» døgnet rundt</strong> — også om kvelden. Det er hilsen, takk og høflighet i ett. «Moin Moin» kan oppfattes som litt prateete; én «Moin» er normen.</li>
+<li><strong>Hanseatisk reservasjon</strong>: Nordtyskere er mer reserverte enn sørtyskere. Ikke ta korte svar eller direkthet personlig — det er kulturen, ikke uhøflighet. Et «Moin» og et lite nikk er ofte all småprat dere får, og det er vennlig nok.</li>
+<li><strong>På restaurant</strong>: Hils med «Moin» ved ankomst. Sett dere selv hvis ikke det står «Bitte warten». «Die Rechnung, bitte» = regningen.</li>
+<li><strong>Tipsing</strong>: 5–10 %. Si totalbeløpet inkludert tips når dere betaler — ikke legg igjen mynt etterpå.</li>
+<li><strong>Kontant</strong>: Mange Hamburg-bistroer og fiskerestauranter tar bare kontant. Sjekk skiltet.</li>
+<li><strong>Hamburg-spesialiteter</strong>: <strong>Fischbrötchen</strong> (sild, reker eller laks i rundstykke) i havna. <strong>Labskaus</strong> (sjømannsmat: corned beef, potet, rødbete, sild og speilegg). <strong>Franzbrötchen</strong> (kaneltrekantbolle).</li>
+<li><strong>Engelsk</strong>: Bra i Hamburg som internasjonal havneby. På Fehmarn og Heiligenhafen: variabelt blant eldre — bruk gjerne tysk eller la dem peke på menyen.</li>
+<li><strong>Tysk-forsøk</strong>: «Bitte» og «Danke» går langt. Et avslappet «Moin» er det enkleste plusset i bagasjen.</li>
+</ul>`
+    },
+    {
       type: "accommodation",
       title: "Overnatting i Heiligenhafen (15 min fra Puttgarden-fergen, siste natt!)",
       bookingWarning: null,

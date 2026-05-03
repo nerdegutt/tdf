@@ -107,6 +107,22 @@ export const day7 = {
 <p>💡 La Fleur de Sel er det tryggeste og beste valget. La Boussole for noe annerledes.</p>`
     },
     {
+      type: "customs",
+      title: "Lokale skikker — Frankrike (Bretagne og Atlanterhavskysten)",
+      bookingWarning: null,
+      bookingUrl: null,
+      content: `<ul>
+<li><strong>«Bonjour madame/monsieur»</strong> til alle dere møter. Etter 18:00: «Bonsoir». «Au revoir» når dere går.</li>
+<li><strong>På restaurant</strong>: Vent på å bli vist til bordet. «L'addition, s'il vous plaît» — regningen kommer ikke uoppfordret.</li>
+<li><strong>Tipsing</strong>: Service er inkludert. 1–5 EUR ekstra for god service.</li>
+<li><strong>Bretagne (gjennomkjøring)</strong>: Hvis dere stopper på en crêperie, er <strong>cidre brut</strong> standarden — drukket av kopper («bolées»), ikke glass. Galette = saltet pannekake av bokhvete; crêpe = søt versjon.</li>
+<li><strong>La Rochelle / Atlantkysten</strong>: Sjømat-kultur. Østers («huîtres») fra Île de Ré er regionens stolthet — serveres med rugbrød og smør. <strong>Cognac</strong> (laget rett øst for La Rochelle) som digestif. Pineau des Charentes er lokal aperitiff (cognac + druemost).</li>
+<li><strong>Engelsk</strong>: Variabelt. La Rochelle er havneby med en del internasjonal trafikk — bedre enn på landet.</li>
+<li><strong>Fransk-forsøk</strong>: ABSOLUTT verdt det. «Bonjour, parlez-vous anglais?» er den magiske overgangen.</li>
+<li><strong>Mattider</strong>: Lunsj 12:00–14:00, middag fra 19:30. Tirsdag kveld (i dag): mange restauranter holder normalt åpent, men noen har «relâche» (hviledag).</li>
+</ul>`
+    },
+    {
       type: "gem",
       title: "Fougères — Frankrikes største middelalderborg",
       content: `<p>Ca. 45 min fra Mont Saint-Michel, rett på ruten. Festningen ligger uvanlig nok i en dalbunn (de fleste borger er på høyder) fordi den beskytter et vadested over elven Nançon. 13 tårn og tre konsentriske ringmurer. Fougères var grensefestningen mellom Bretagne og Frankrike — den bretonske uavhengighetens siste bastion. Borgen falt til franske styrker i 1488, begynnelsen på slutten for det uavhengige Bretagne. Balzac brukte den som setting i romanen <em>Les Chouans</em>.</p>`,

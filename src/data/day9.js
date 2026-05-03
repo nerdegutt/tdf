@@ -88,5 +88,29 @@ export const day9 = {
 <li><strong>Bretxa-markedet</strong>: Åpent torsdag kl. 08:00–14:00 i Parte Vieja. Kjøp Idiazabal-ost (røkt baskisk saueost) som reisesnack. Her handler kokkene fra trestjernersrestaurantene.</li>
 </ul>`
     },
+    {
+      type: "customs",
+      title: "Lokale skikker — Spania / Baskerland",
+      bookingWarning: null,
+      bookingUrl: null,
+      content: `<ul>
+<li><strong>Hilsen</strong>: «Hola» (alltid trygt) eller «Buenas» (avslappet, hele dagen). På baskisk: <strong>«Kaixo»</strong> (uttales kai-sho). «Adiós» eller <strong>«Agur»</strong> (baskisk) når dere går. Et baskisk hilsningsforsøk gir umiddelbar varme.</li>
+<li><strong>Baskisk identitet</strong>: Folk er stolte av å være basker først. Si gjerne «Vi er i Baskerland» fremfor «Spania» når dere snakker med lokalbefolkningen.</li>
+<li><strong>Pintxo-bar-etikette</strong> (avgjørende på en pintxo-pote-kveld!):
+  <ul>
+    <li><strong>Stå ved baren</strong> — bordene er for store måltider.</li>
+    <li>Bestill <strong>varme pintxos fra tavla</strong> — IKKE ta de kalde fra disken (de er ofte fra morgenen).</li>
+    <li><strong>Behold pinnene/picosene</strong> — kelneren teller dem ved betaling. Aldri kast dem.</li>
+    <li>Bestill én pintxo + drink per bar, så videre til neste. Det er hele poenget med pintxo-pote.</li>
+  </ul>
+</li>
+<li><strong>Drikke</strong>: <strong>Txakoli</strong> (lokal hvitvin, helles fra høyt over glasset for luft) eller <strong>Rioja</strong> (rødvin). I cidersesongen: sider («sagardoa») fra cider-husene rundt byen. <strong>Aldri sangria</strong> — turistedrikke.</li>
+<li><strong>Tipsing</strong>: Lite eller ingenting i pintxo-barer. På restaurant: 5–10 % eller bare runde opp.</li>
+<li><strong>Txuleta</strong>: Spør ALDRI om «well done». Den serveres rosa/rød — det er regelen.</li>
+<li><strong>Engelsk</strong>: Bra i San Sebastián som matby. Yngre = bedre. Eldre kelnere i Parte Vieja: prøv spansk.</li>
+<li><strong>Mattider</strong>: Lunsj 14:00–16:00, middag 21:00–23:00. Spis ikke middag kl. 18 — kjøkkenet er ikke åpent.</li>
+<li><strong>Spansk- og baskisk-forsøk</strong>: «Por favor» (vær så snill), «Gracias» (takk), «La cuenta, por favor» (regningen). <strong>«Eskerrik asko»</strong> når dere får regningen er gullkortet — gir et smil hver gang.</li>
+</ul>`
+    },
   ],
 };

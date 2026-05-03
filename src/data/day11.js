@@ -103,6 +103,23 @@ export const day11 = {
 </ul>`
     },
     {
+      type: "customs",
+      title: "Lokale skikker — Frankrike (Provence)",
+      bookingWarning: null,
+      bookingUrl: null,
+      content: `<ul>
+<li><strong>«Bonjour madame/monsieur»</strong> til alle dere møter. Etter 18:00: «Bonsoir». «Au revoir» når dere går. I Provence går det ofte med et solid håndtrykk i tillegg.</li>
+<li><strong>På restaurant</strong>: Vent på å bli vist til bordet. «L'addition, s'il vous plaît» — regningen kommer ikke uoppfordret.</li>
+<li><strong>Tipsing</strong>: Service er inkludert. 1–5 EUR ekstra eller bare runde opp.</li>
+<li><strong>Provence — pastis og lange lunsjer</strong>: <strong>Pastis</strong> (anisaperitiff) er signaturen. Bestill «un pastis» eller «un Ricard» — serveres med vannmugge og is, du blander selv etter smak (ca. 1:5). Lange lunsjer (12:00–14:30) er normen, og mange butikker stenger 13:00–15:00 i hetten.</li>
+<li><strong>Provençalsk varme</strong>: Sørfranskmenn er mer overbærende med fransk-feil og generelt litt mer prateete enn pariserne. Aksent er bløtere og mer syngende.</li>
+<li><strong>Mat</strong>: Bouillabaisse (fiskestue), tapenade (oliven-pasta), ratatouille — Rhône-vin (Châteauneuf-du-Pape, Côtes-du-Rhône) er regionens stolthet.</li>
+<li><strong>Engelsk</strong>: Variabelt. I Avignon sentrum (turistby): bra. På landet: dårligere.</li>
+<li><strong>Fransk-forsøk</strong>: «Merci beaucoup» med solid sørfransk varme får et stort smil. Provençalere er mer tilgivelige enn pariserne.</li>
+<li><strong>Mattider</strong>: Lunsj 12:00–14:00, middag 19:30–22:00. Lørdag kveld: bra åpent.</li>
+</ul>`
+    },
+    {
       type: "gem",
       title: "Rue des Teinturiers — Avignons bohemkvarter",
       content: `<p>En brosteinsgate langs en kanal (Sorgue) med gamle vannhjul som fortsatt dreier. Platantrær, bohemske barer og kaféer, og restene av et gammelt kloster. Mens alle er på Place de l'Horloge og Pavepalasset, sitter Avignon-boerne her og drikker pastis. Den mest sjarmerende gaten i hele byen — og nesten ingen turister finner den. Fra Place des Corps-Saints, gå sørover. Gaten er ca. 500 meter lang.</p>`,

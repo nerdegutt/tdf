@@ -121,5 +121,21 @@ export const day5 = {
 <li><strong><a href="https://www.la-table-du-terroir.com/" target="_blank" rel="noopener">La Table du Terroir</a></strong> – Normannisk husmannskost, to terrasser nær katedralen. Åpent søndag kveld (18:00–21:30). Rimeligst alternativ. Rue Saint-Jean 42. <em>Ca. 20–35 EUR/pers.</em></li>
 </ul>`
     },
+    {
+      type: "customs",
+      title: "Lokale skikker — Frankrike (Normandie)",
+      bookingWarning: null,
+      bookingUrl: null,
+      content: `<ul>
+<li><strong>«Bonjour madame/monsieur»</strong> til alle dere møter. Etter 18:00: «Bonsoir». «Au revoir» når dere går. Bayeux er en liten by — folk merker når dere er høflige.</li>
+<li><strong>På restaurant</strong>: Vent på å bli vist til bordet. «L'addition, s'il vous plaît» — regningen kommer ikke uoppfordret.</li>
+<li><strong>Tipsing</strong>: Service er inkludert. 1–5 EUR ekstra for god service — eller bare runde opp.</li>
+<li><strong>Normandie-tradisjoner</strong>: <strong>Cidre</strong> serveres med crêpes, fisk og kjøtt — i Normandie er det like vanlig som vin. <strong>Calvados</strong> som digestif etter middag («un calva»). På D-dagskysten serverer mange kafeer kaffe med en liten calva ved siden av — kalt «café-calva».</li>
+<li><strong>Søndagsmiddag (17. mai)</strong>: Søndager stenger mange franske restauranter — derfor er listene over verifisert. Ring og bekreft åpningstider.</li>
+<li><strong>Engelsk</strong>: D-dagskysten er turistsentra med veteraner og pårørende — engelsk er bra. I Bayeux sentrum: variabelt blant eldre.</li>
+<li><strong>Fransk-forsøk</strong>: Selv et dårlig forsøk endrer dynamikken. «C'était très bon, merci» (det var veldig godt, takk) er gull.</li>
+<li><strong>Mattider</strong>: Lunsj 12:00–14:00, middag fra 19:30. Kjøkken stenger ofte 14:00–19:00.</li>
+</ul>`
+    },
   ],
 };

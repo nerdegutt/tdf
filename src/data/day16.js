@@ -111,5 +111,21 @@ export const day16 = {
 </ul>
 <p>🐀 Rattenfängerhaus er like mye opplevelse som middag – uansett om det er tysk eller indisk!</p>`
     },
+    {
+      type: "customs",
+      title: "Lokale skikker — Tyskland (Rhinland og Niedersachsen)",
+      bookingWarning: null,
+      bookingUrl: null,
+      content: `<ul>
+<li><strong>Hilsen</strong>: «Guten Tag» eller «Hallo». I Niedersachsen (Hameln) hører dere ofte «Tach!» — avslappet hverdagstysk. Si «Tschüss» eller «Auf Wiedersehen» når dere går.</li>
+<li><strong>På restaurant</strong>: Hils ved ankomst. Sett dere selv hvis ikke det står «Bitte warten» (vent her). «Die Rechnung, bitte» = regningen.</li>
+<li><strong>Tipsing</strong>: 5–10 %. <strong>Viktig</strong>: Si totalbeløpet inkludert tips når dere betaler («Achtzehn» = 18 EUR), IKKE legg igjen mynt på bordet etterpå.</li>
+<li><strong>Kontant</strong>: Mange tyske restauranter, særlig brauhaus og bistroer, tar fortsatt KUN kontant («Nur Bargeld»). Sjekk skiltet.</li>
+<li><strong>Tysk øl</strong>: Pilsner og hvete (Weißbier) er standardene. Bestill «Ein Pils, bitte» eller «Ein Weizen, bitte». «Prost!» når dere skåler — se i øynene, ikke ned i glasset.</li>
+<li><strong>Engelsk</strong>: De fleste under 50 i byer snakker bra engelsk. Hameln er liten by, og engelsken er litt mer variert blant eldre.</li>
+<li><strong>Tysk-forsøk</strong>: «Bitte» og «Danke» går langt. «Sehr lecker!» (veldig velsmakende!) etter måltid er gull.</li>
+<li><strong>Punktlighet</strong>: Forventes til reservasjoner.</li>
+</ul>`
+    },
   ],
 };

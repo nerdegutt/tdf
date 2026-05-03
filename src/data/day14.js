@@ -132,5 +132,28 @@ export const day14 = {
 <li><strong><a href="https://www.weinwirtschaft-fw.de/" target="_blank" rel="noopener">Weinwirtschaft Friedrich-Wilhelm</a></strong> – Der Karl Marx tok eksamen i 1835! Regional mat med middelhavspreg. Egen Riesling fra 1561. <em>Ca. 25–40 EUR/pers.</em></li>
 </ul>`
     },
+    {
+      type: "customs",
+      title: "Lokale skikker — Frankrike (Alsace) og Tyskland (Trier)",
+      bookingWarning: null,
+      bookingUrl: null,
+      content: `<p><strong>Frankrike — Alsace (Riquewihr, Eguisheim på vei)</strong></p>
+<ul>
+<li>Standard fransk høflighet: «Bonjour madame/monsieur» når dere går inn et sted, «Au revoir» når dere går.</li>
+<li><strong>Alsatisk dobbeltidentitet</strong>: Innbyggerne snakker fransk, men også <strong>alsatisk</strong> (en alemannisk dialekt nær tysk). Mange skilt og menyer er tospråklige. Region byttet hånd fem ganger 1871–1945 — vær forsiktig med å si «tysk» eller «fransk» kategorisk.</li>
+<li><strong>Winstub-kultur</strong>: En «winstub» er Alsaces tradisjonelle vinstue — tre lange bord, lokal Riesling/Gewürztraminer/Pinot Gris, og <strong>tarte flambée</strong> («Flammekueche»). Tarte flambée deles og spises med hendene — ikke kniv og gaffel.</li>
+<li>Tipsing: Service inkludert, 1–5 EUR ekstra eller runde opp.</li>
+</ul>
+<p><strong>Tyskland — Trier og Mosel</strong></p>
+<ul>
+<li><strong>Hilsen</strong>: «Guten Tag» eller «Hallo». I Mosel-regionen kan dere høre «Tach!» (avslappet kølnsk-influert). Si «Tschüss» eller «Auf Wiedersehen» når dere går.</li>
+<li><strong>Vinstube-kultur</strong>: Mosels «Weinstuben» er vingårdsskjenkesteder. Bestill <strong>Riesling</strong> (regional stolthet) — be om «trocken» (tørr), «halbtrocken» (halvtørr) eller «süß» (søt). Smak før dere bestiller flaske.</li>
+<li><strong>På restaurant</strong>: Hils ved ankomst. Sett dere selv hvis ikke det står «Bitte warten». «Die Rechnung, bitte» = regningen.</li>
+<li><strong>Tipsing</strong>: 5–10 %. Si totalbeløpet inkludert tips ved betaling — ikke legg igjen mynt etterpå.</li>
+<li><strong>Kontant</strong>: Mange Weinstuben tar bare kontant. Sjekk på forhånd.</li>
+<li><strong>Engelsk</strong>: Bra blant yngre. Eldre vinbønder: prøv tysk eller la dem peke på menyen.</li>
+<li><strong>Tysk-forsøk</strong>: «Bitte» og «Danke» går langt. Et «Sehr lecker!» (veldig velsmakende!) etter måltidet er gull.</li>
+</ul>`
+    },
   ],
 };

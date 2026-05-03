@@ -94,6 +94,22 @@ export const day6 = {
 <p>🐑 Pré-salé-lam er obligatorisk! Lam som beiter på saltengene i bukta. Unngå La Mère Poulard (overpriset omelettshow).</p>`
     },
     {
+      type: "customs",
+      title: "Lokale skikker — Frankrike (Normandie/Bretagne-grense)",
+      bookingWarning: null,
+      bookingUrl: null,
+      content: `<ul>
+<li><strong>«Bonjour madame/monsieur»</strong> til alle dere møter. Etter 18:00: «Bonsoir». «Au revoir» når dere går.</li>
+<li><strong>På restaurant</strong>: Vent på å bli vist til bordet. «L'addition, s'il vous plaît» — regningen kommer ikke uoppfordret. Aldri «Garçon!».</li>
+<li><strong>Tipsing</strong>: Service er inkludert. 1–5 EUR ekstra for god service — eller bare runde opp.</li>
+<li><strong>Bretagne-grensen</strong>: Mont Saint-Michel ligger på grensen mellom Normandie og Bretagne. <strong>Crêpes (søte) og galettes (saltet bokhvete)</strong> er bretonsk nasjonalrett — bestill det med <strong>cidre brut</strong> (tørr eplecider), som tradisjonelt drikkes av <strong>kopper («bolées»), ikke glass</strong>. Bretonere er stolte av sin keltiske identitet.</li>
+<li><strong>Pré-salé-lam</strong> er regionens spesialitet — ikke bestill det «well done», kokken vil bli skuffet. Rosa kjerne er normen.</li>
+<li><strong>Engelsk</strong>: Mont Saint-Michel er turistmagnet — engelsk er bra. På landet rundt: variabelt.</li>
+<li><strong>Fransk-forsøk</strong>: «Merci, c'était délicieux» får et ekte smil tilbake.</li>
+<li><strong>Mattider</strong>: Lunsj 12:00–14:00, middag fra 19:30. Kjøkken stenger ofte mellom måltidene.</li>
+</ul>`
+    },
+    {
       type: "gem",
       title: "Villedieu-les-Poêles — klokkestøperbyen",
       content: `<p>Halvveis mellom Bayeux og Mont Saint-Michel, rett langs ruten. En middelalderby kjent for kobbersmiing og et <strong>arbeidende klokkestøperi</strong> (Fonderie de Cloches Cornille-Havard) der store kirkeklokker støpes for hele verden. Man kan se hele prosessen. Klokkehåndverket har vart her siden 1100-tallet, grunnlagt av johannitterordenen.</p>`,

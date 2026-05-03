@@ -105,6 +105,22 @@ export const day10 = {
 </ul>`
     },
     {
+      type: "customs",
+      title: "Lokale skikker — Frankrike (Languedoc/Sør-Frankrike)",
+      bookingWarning: null,
+      bookingUrl: null,
+      content: `<ul>
+<li><strong>«Bonjour madame/monsieur»</strong> til alle dere møter. Etter 18:00: «Bonsoir». «Au revoir» når dere går.</li>
+<li><strong>På restaurant</strong>: Vent på å bli vist til bordet. «L'addition, s'il vous plaît» — regningen kommer ikke uoppfordret. Aldri «Garçon!».</li>
+<li><strong>Tipsing</strong>: Service er inkludert. 1–5 EUR ekstra eller bare runde opp.</li>
+<li><strong>Sørfransk avslappethet</strong>: I Languedoc er rytmen langsommere enn i Paris. Lange lunsjer (12:00–14:30) er normen, ettermiddagen er ofte stille (mange butikker stenger 13:00–15:00). Ikke stress — gli inn i tempoet.</li>
+<li><strong>Cassoulet-region</strong>: Dere er i hjertet av cassoulet-landet (and, pølse, hvite bønner). Den serveres treg og tung — IKKE bestill mye annet ved siden av. Et glass lokal Corbières- eller Minervois-rødvin er perfekt makker.</li>
+<li><strong>Engelsk</strong>: Variabelt utenfor turistsenteret. I Carcassonne (turistmagnet): bra. I Narbonne: jevnt over greit.</li>
+<li><strong>Fransk-forsøk</strong>: Sørfranskmenn har en varm aksent og er mer overbærende med fransk-feil enn pariserne. «Bonjour, parlez-vous anglais?» åpner alle dører.</li>
+<li><strong>Mattider</strong>: Lunsj 12:00–14:00, middag 19:30–22:00. Mange kjøkken stenger mellom — fredag kveld er normalt godt åpent.</li>
+</ul>`
+    },
+    {
       type: "gem",
       title: "Espelette — den røde landsbyen",
       content: `<p>Rett etter grensen inn i Frankrike, 30 min fra San Sebastián via D918. Hele landsbyen er dekorert med tråder av tørkende røde peperfrukter (piment d'Espelette) på hvite fasader med røde skodder. Espelette-pepper har AOC-status (som vin!). Selv uten pepper-festivalen i oktober er dette en av de mest fotogene landsbyene i hele Baskerland. Kjøp piment d'Espelette i pulverform — fantastisk krydder å ta med hjem!</p>`,

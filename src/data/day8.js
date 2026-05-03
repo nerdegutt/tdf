@@ -80,6 +80,37 @@ export const day8 = {
 <p>🍷 Start med pintxos-runde i Parte Vieja! Noen biter på hver bar, del opp kvelden.</p>`
     },
     {
+      type: "customs",
+      title: "Lokale skikker — Frankrike (Bordeaux/Biarritz) og Spania/Baskerland (San Sebastián)",
+      bookingWarning: null,
+      bookingUrl: null,
+      content: `<p><strong>Frankrike (Bordeaux, Biarritz, Bayonne — på vei sørover)</strong></p>
+<ul>
+<li>Standard fransk høflighet: «Bonjour madame/monsieur» når dere går inn et sted, «Au revoir» når dere går.</li>
+<li>Stopper dere på lunsj: Bordeaux-vinen er regionens stolthet — selv et lite glass huset er bra. I Bayonne: <strong>jambon de Bayonne</strong> (rå, lufttørket skinke) er obligatorisk.</li>
+<li>Tipsing: Service inkludert, 1–5 EUR ekstra eller runde opp.</li>
+</ul>
+<p><strong>Spania / Baskerland (San Sebastián — kveldens høydepunkt!)</strong></p>
+<ul>
+<li><strong>Dere er i Baskerland (Euskadi)</strong>, ikke bare «Spania». Baskisk identitet er sterk — å si <strong>«Eskerrik asko»</strong> (takk) eller <strong>«Kaixo»</strong> (hei, uttales kai-sho) får varme smil. Ikke vær redde for å prøve.</li>
+<li><strong>Hilsen</strong>: «Hola» (alltid trygt) eller «Buenas» (avslappet, hele dagen). På baskisk: «Kaixo». «Adiós» eller «Agur» (baskisk) når dere går.</li>
+<li><strong>Pintxo-bar-etikette (avgjørende!)</strong>:
+  <ul>
+    <li><strong>Stå ved baren</strong> — bord er for større måltider.</li>
+    <li>De varme pintxoene bestilles fra tavla eller menyen — IKKE ta de kalde fra disken (de er fra morgenen).</li>
+    <li><strong>Behold pinnene/picosene</strong> — kelneren teller dem når dere skal betale.</li>
+    <li>Bestill i runder: én pintxo + drink per bar, så videre til neste.</li>
+  </ul>
+</li>
+<li><strong>Drikke</strong>: Bestill <strong>Txakoli</strong> (lokal lett, syrlig hvitvin — helles ofte fra høyt over glasset for luft), <strong>Rioja</strong> (rødvin) eller <strong>sider</strong> («sagardoa»). <strong>Aldri sangria</strong> — det er turistedrikke i Baskerland.</li>
+<li><strong>Tipsing</strong>: Mye mindre enn andre land. I pintxo-barer: ingenting eller bare småmynter. På restaurant: 5–10 % maks, ofte bare runde opp.</li>
+<li><strong>Txuleta-etikette</strong>: Den baskiske T-bone serveres rare/medium-rare på prinsipp. <strong>Spør IKKE om «well done»</strong> — det er nær fornærmelse for kokken.</li>
+<li><strong>Engelsk</strong>: Greit i San Sebastián som internasjonal matby. Yngre kelnere snakker bra. Eldre i mindre barer: prøv spansk eller baskisk.</li>
+<li><strong>Mattider</strong>: Sent! Lunsj 14:00–16:00, middag 21:00–23:00. Pintxo-barer åpner ca. 19:00. Ikke prøv å spise middag kl. 18 — kjøkkenet er ikke åpent.</li>
+<li><strong>Spansk-forsøk</strong>: «Por favor» (vær så snill), «Gracias» (takk), «La cuenta, por favor» (regningen). Et «Eskerrik asko» når dere får regningen er gull verdt.</li>
+</ul>`
+    },
+    {
       type: "gem",
       title: "Bayonne — Frankrikes sjokoladehovedstad",
       content: `<p>Rett på ruten mellom Bordeaux og San Sebastián. Jødiske sjokolademakere bosatte seg her på 1600-tallet etter å ha blitt fordrevet fra Spania. <strong>Cazenave</strong> (Place du Reduit) har servert varm sjokolade siden 1854 — tykk som pudding. Gamlebyen har karakteristiske rød-og-grønne skodder, gotisk katedral, og <strong>Halles de Bayonne</strong> der dere kan kjøpe fersk-skåret Jambon de Bayonne. Bayonne ga også verden bajonetten — baskiske bønder stakk knivene sine i geværløpene da de gikk tom for ammunisjon.</p>`,

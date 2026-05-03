@@ -83,5 +83,21 @@ export const day2 = {
 </ul>
 <p>💡 Lommerzheim er den ultimate kjøttopplevelsen – gigantiske koteletter! Men ligger i Deutz (andre siden av Rhinen). Malzmühle er best i gamlebyen.</p>`
     },
+    {
+      type: "customs",
+      title: "Lokale skikker — Tyskland (med Köln-brauhaus-kultur)",
+      bookingWarning: null,
+      bookingUrl: null,
+      content: `<ul>
+<li><strong>Hilsen</strong>: «Guten Tag» eller «Hallo». I Köln vil dere også høre «Tach!» — kølnsk dialekt. Si «Tschüss» eller «Auf Wiedersehen» når dere går.</li>
+<li><strong>Brauhaus-kultur (sentralt i Köln!)</strong>: I et ekte Kölsch-brauhaus bestiller dere IKKE en ny øl — kelneren («Köbes») tar tomt glass og setter ned et nytt automatisk. <strong>For å stoppe, legg ølbrikken (Bierdeckel) oppå glasset.</strong> Köbes er kjent for å være rapp i kjeften og frekk — det er sjarmen, ikke uhøflighet. Spill med på humoren!</li>
+<li><strong>Kölsch</strong>: Serveres i 0,2L «Stange»-glass (smale, høye) fordi den skal drikkes kald før den blir flat. Bestill «Ein Kölsch, bitte». Köbes setter en strek på ølbrikken for hver runde.</li>
+<li><strong>På restaurant</strong>: Hils ved ankomst. Sett dere selv hvis ikke det står «Bitte warten». «Die Rechnung, bitte» = regningen.</li>
+<li><strong>Tipsing</strong>: 5–10 %. Si totalbeløpet inkludert tips ved betaling — ikke legg igjen mynt etterpå.</li>
+<li><strong>Kontant</strong>: Mange brauhaus tar bare kontant. Sjekk på forhånd. Lommerzheim er rent kontant!</li>
+<li><strong>Engelsk</strong>: Bra blant yngre i Köln. Köbes snakker ofte engelsk på sin egen frekke måte.</li>
+<li><strong>Tysk-forsøk</strong>: «Bitte» og «Danke» går langt. Tyskere er direkte men sjelden uhøflige.</li>
+</ul>`
+    },
   ],
 };

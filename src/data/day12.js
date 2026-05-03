@@ -99,6 +99,22 @@ export const day12 = {
 </ul>`
     },
     {
+      type: "customs",
+      title: "Lokale skikker — Frankrike (Provence/Luberon)",
+      bookingWarning: null,
+      bookingUrl: null,
+      content: `<ul>
+<li><strong>«Bonjour madame/monsieur»</strong> i hver eneste landsby — Gordes, Roussillon, Sénanque. Provence-folk legger MERKE til hilsenen, særlig i små landsbyer der turister er lette å kjenne igjen.</li>
+<li><strong>I Sénanque-abbediet</strong>: Stillhet er regelen. Munkene følger Benedikts regel — snakk lavt, ikke fotografer munker, kle dere anstendig (dekkede skuldre/knær).</li>
+<li><strong>På restaurant</strong>: Vent på å bli vist til bordet. «L'addition, s'il vous plaît». 1–5 EUR ekstra i tips eller bare runde opp.</li>
+<li><strong>Provence-mat og drikke</strong>: <strong>Pastis</strong> som aperitiff (Ricard er den vanligste merket — blandes med kaldt vann fra mugge, ca. 1:5). <strong>Rosé fra Provence</strong> er nasjonalt drikke om sommeren — bestill den iskald. <strong>Tapenade</strong> (oliven), <strong>aioli</strong> (hvitløksmajones), og <strong>herbes de Provence</strong> finner dere overalt.</li>
+<li><strong>Sørfransk tempo</strong>: Søndag i Provence betyr at mye stenger — men markedene er åpne om morgenen, og turistlandsbyer som Gordes har det meste åpent. Tempoet er bevisst rolig.</li>
+<li><strong>Engelsk</strong>: Bra i turistmagneter (Gordes, Roussillon), variabelt i mindre landsbyer.</li>
+<li><strong>Fransk-forsøk</strong>: «C'est magnifique!» får varme smil overalt i Provence.</li>
+<li><strong>Mattider</strong>: Lunsj 12:00–14:30 (provençalere tar lang lunsj!), middag 19:30–22:00. Søndag kveld: ring og bekreft, mye stengt.</li>
+</ul>`
+    },
+    {
       type: "gem",
       title: "Village des Bories — steinalder-landsby ved Gordes",
       content: `<p>4 km fra Gordes sentrum. En hel restaurert landsby av «bories» — små steinhytter bygget UTEN mørtel (som Pont du Gard!). Brukt fra bronsealderen til 1800-tallet. Direkte kobling til Pont du Gard: tørrmuret stein uten mørtel — romerne perfeksjonerte en teknikk som menneskene i Luberon hadde brukt i tusenvis av år. De runde steinhyttene mot blå himmel og oliventrær er unike fotomotiver — dere er trolig nesten alene.</p>`,

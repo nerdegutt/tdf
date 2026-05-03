@@ -88,5 +88,21 @@ export const day15 = {
 <li><strong><a href="https://www.schlemmereule.com/" target="_blank" rel="noopener">Schlemmereule</a></strong> – Fine dining, 3-retters 69 EUR. #9 i Trier, Travelers' Choice. Splurge-alternativet! <em>Ca. 50–70 EUR/pers.</em></li>
 </ul>`
     },
+    {
+      type: "customs",
+      title: "Lokale skikker — Tyskland (Mosel-vinregion)",
+      bookingWarning: null,
+      bookingUrl: null,
+      content: `<ul>
+<li><strong>Hilsen</strong>: «Guten Tag» eller «Hallo». «Tschüss» eller «Auf Wiedersehen» når dere går.</li>
+<li><strong>Mosel-Riesling-kultur</strong>: Bestill <strong>Riesling</strong> — be om «trocken» (tørr), «halbtrocken» (halvtørr) eller «feinherb»/«lieblich» (søtere). Mosel-Rieslinger er ofte lette og syrlige med lavt alkoholinnhold (8–10 %). Smak før dere bestiller flaske. <strong>«Zum Wohl!»</strong> (skål!) når dere skåler — og se hverandre i øynene, det er like viktig her som i Frankrike.</li>
+<li><strong>Vingårdsbesøk og smaking</strong>: I Bernkastel-Kues og Cochem finnes mange «Weingüter» (vingårder) med smaking. Det er vanlig å betale en liten avgift (5–10 EUR) — refunderes ofte ved kjøp. Spytt eller svelg, men ikke bli full hos vinbonden.</li>
+<li><strong>På restaurant</strong>: Hils ved ankomst. Sett dere selv hvis ikke det står «Bitte warten». «Die Rechnung, bitte» = regningen.</li>
+<li><strong>Tipsing</strong>: 5–10 %. Si totalbeløpet inkludert tips ved betaling — ikke legg igjen mynt etterpå.</li>
+<li><strong>Kontant</strong>: Mange Weinstuben og brauhaus tar bare kontant. Sjekk skiltet.</li>
+<li><strong>Engelsk</strong>: Bra blant yngre. Eldre vinbønder snakker ofte begrenset engelsk — pek på etiketten eller bruk «Sprechen Sie Englisch?».</li>
+<li><strong>Tysk-forsøk</strong>: «Sehr lecker!» (veldig godt!) eller «Sehr gut!» etter et måltid eller en god vin gir et stort smil.</li>
+</ul>`
+    },
   ],
 };

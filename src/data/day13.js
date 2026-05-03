@@ -121,5 +121,22 @@ export const day13 = {
 </ul>
 <p>💡 Le Pré aux Clercs er åpent 7/7 (bekreftet på lepreauxclercs.fr). Le Coin Caché og Parapluie er åpne man–fre iht. flere kilder.</p>`
     },
+    {
+      type: "customs",
+      title: "Lokale skikker — Frankrike (Lyon og Burgund)",
+      bookingWarning: null,
+      bookingUrl: null,
+      content: `<ul>
+<li><strong>«Bonjour madame/monsieur»</strong> til alle dere møter. Etter 18:00: «Bonsoir». «Au revoir» når dere går.</li>
+<li><strong>Bouchon-kultur (Lyon)</strong>: I et ekte «Bouchon Lyonnais» (se «Authentique Bouchon Lyonnais»-merket) er det lange fellesbord, frekt og rapt servicepreg, og maten er enkel og solid: quenelle, andouillette, tablier de sapeur. Bordene er ofte delt — sett dere ned der det er ledig plass og hils «Bonjour» til de andre.</li>
+<li><strong>Burgund — vinkultur er nesten religion</strong>: Når dere skåler, si <strong>«Santé!»</strong> og <strong>se den andre i øynene</strong> — å se ned er overtro for syv års dårlig sex. Smak vinen før dere drikker, og kommenter den (selv et «c'est bon» går bra). Aldri vri vinglasset slik at dråper renner over kanten.</li>
+<li><strong>Sennep og crème de cassis</strong>: Dijon-sennep finnes overalt, men de virkelige stedene er Maille- og Edmond Fallot-butikkene. Aperitiff: <strong>Kir</strong> (hvitvin + crème de cassis) er Dijons signatur — drikk det istedenfor pastis.</li>
+<li><strong>På restaurant</strong>: Vent på å bli vist til bordet. «L'addition, s'il vous plaît» når dere er ferdige.</li>
+<li><strong>Tipsing</strong>: Service er inkludert. 1–5 EUR ekstra eller bare runde opp.</li>
+<li><strong>Engelsk</strong>: Bra i Lyon (storby, gastronomisk turistmål). Greit i Dijon. Variabelt i Bouchons der personalet snakker «sier ting til hverandre på fransk så fort dere ikke skjønner»-fransk.</li>
+<li><strong>Fransk-forsøk</strong>: «C'était délicieux» (det var herlig) eller «Quel régal!» (for en fest!) er gull i Lyon — verdens mathovedstad respekterer mat-entusiasme.</li>
+<li><strong>Mattider</strong>: Lunsj 12:00–14:00, middag 19:30–22:00. Mandag (i dag, andre pinsedag): mange restauranter holder åpent, men ring og bekreft.</li>
+</ul>`
+    },
   ],
 };

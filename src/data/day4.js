@@ -86,5 +86,21 @@ export const day4 = {
 </ul>
 <p>💡 La Couronne er kvelden for å kose seg! Historien er inkludert i prisen. Bestill lokal normandisk cider til maten!</p>`
     },
+    {
+      type: "customs",
+      title: "Lokale skikker — Frankrike (Normandie)",
+      bookingWarning: null,
+      bookingUrl: null,
+      content: `<ul>
+<li><strong>«Bonjour madame/monsieur»</strong> til alle dere møter — kelnere, butikkansatte, hotellresepsjon. Etter 18:00: «Bonsoir». «Au revoir» når dere går.</li>
+<li><strong>På restaurant</strong>: Vent på å bli vist til bordet. Aldri «Garçon!» — bruk øyekontakt eller «Excusez-moi». «L'addition, s'il vous plaît» = regningen — den kommer ikke uoppfordret.</li>
+<li><strong>Tipsing</strong>: Service er inkludert (15 %, lovpålagt). 1–5 EUR ekstra for god service er rikelig — bare å runde opp er greit.</li>
+<li><strong>Normandie-tradisjoner</strong>: <strong>Cidre</strong> er like normalt som vin med måltider — bestill det til crêpes eller fisk. <strong>Calvados</strong> som digestif etter middagen er klassisk («un calva, s'il vous plaît»). «Trou normand» er en gammel skikk: et lite glass calvados midt i måltidet for å «åpne magen» til neste rett.</li>
+<li><strong>Engelsk</strong>: Yngre = bra, eldre = variabelt. Rouen er turistby — greit dekket.</li>
+<li><strong>Fransk-forsøk</strong>: Selv et dårlig «Merci, c'était délicieux» (takk, det var godt) får et ekte smil tilbake.</li>
+<li><strong>Mattider</strong>: Lunsj 12:00–14:00, middag fra 19:30. Mange restauranter stenger mellom måltidene.</li>
+<li><strong>Mat tar tid</strong>: Service er bevisst rolig — det er en kvalitet, ikke et problem.</li>
+</ul>`
+    },
   ],
 };
