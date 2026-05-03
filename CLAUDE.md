@@ -83,15 +83,39 @@ Stopp-typer:
 | Kart | Leaflet med OpenStreetMap-fliser (gratis, ingen API-nøkkel) |
 | JS | Vanilla ES-moduler (ingen React/Vue/Angular) |
 | Hosting | Vercel (importerer git-repo, autodetekterer Vite) |
+| PDF-generering | Puppeteer (lokalt og i GitHub Action) + Ghostscript (kompresjon) |
 
 ## Kommandoer
 
 ```bash
 npm install          # Installer avhengigheter
 npm run dev          # Lokal dev-server med hot-reload
-npm run build        # Produksjonsbygg til dist/
+npm run build        # Produksjonsbygg + komprimert PDF (~3 MB) til dist/ og public/
+npm run build:fast   # Produksjonsbygg uten PDF (det Vercel kjører)
+npm run build:hq     # Produksjonsbygg + høy-kvalitet PDF (~18 MB), uten Ghostscript
 npm run preview      # Forhåndsvis produksjonsbygg lokalt
 ```
+
+## PDF-distribusjon
+
+PDF-en (`tdf-reise.pdf`) er IKKE sjekket inn i repoet. Den genereres på to måter:
+
+- **GitHub Action** (`.github/workflows/pdf.yml`): Kjører ved hver push til `main`. Bygger HQ-versjon på Ubuntu (har Chromium shared libs som Vercel mangler) og laster opp som asset til en GitHub Release med tag `latest-pdf`. Asset-URL er stabil: `https://github.com/nerdegutt/tdf/releases/download/latest-pdf/tdf-reise.pdf`.
+- **Lokalt**: `npm run build` eller `npm run build:hq` produserer PDF i `dist/tdf-reise.pdf` (også kopiert til `public/`, men `public/tdf-reise.pdf` er gitignored).
+
+På produksjon redirecter `/tdf-reise.pdf` til GitHub-release-URL-en (definert i `vercel.json`). Lokalt under `npm run dev` har Vite ingen redirect — lenken serverer fra `public/tdf-reise.pdf` hvis den finnes (kjør `npm run build` først), ellers 404.
+
+### Hvordan PDF-en bygges
+
+1. `src/views/print.js` rendrer alle 18 dager + reiseinfo + topp 10 på én lang side (`/print`-ruten).
+2. `scripts/render-pdf.mjs`:
+   - Starter en lokal HTTP-server på `dist/`.
+   - Puppeteer åpner `/print` (eller `/print?hq=1` i HQ-modus).
+   - Venter på `window.__printReady` som settes av `print.js` når alle kart-tiles og bilder er ferdig lastet.
+   - **Flater kart**: Tar JPEG-screenshot av hvert kart-element, skriver til `dist/__print_tmp__/`, erstatter tile-mosaikken med ett enkelt `<img>` per kart. Dette reduserer PDF-størrelsen dramatisk.
+   - Genererer PDF med A4-stående.
+   - Komprimerer med Ghostscript (`PDFSETTINGS=/ebook`) i standard-modus. HQ-modus hopper over Ghostscript.
+3. Resultatet havner i `dist/tdf-reise.pdf`.
 
 ## Filstruktur
 
