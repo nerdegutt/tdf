@@ -2,6 +2,13 @@
   "buildCommand": "npm run build:fast",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/tdf-reise.pdf",
+      "destination": "https://github.com/nerdegutt/tdf/releases/download/latest-pdf/tdf-reise.pdf",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]

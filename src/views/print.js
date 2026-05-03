@@ -18,11 +18,15 @@ const photoSearchUrls = {
 
 function dayHero(day) {
   if (!day.image) return ''
-  // Print-optimalisert: ca. 800x267 (samme aspekt som hero), lavere kvalitet
+  const hq = new URLSearchParams(location.search).get('hq') === '1'
+  // HQ: 1000x333 q=75 — kompakt: 800x267 q=65
+  const w = hq ? 1000 : 800
+  const h = hq ? 333 : 267
+  const q = hq ? 75 : 65
   const printSrc = day.image.hero
-    .replace(/w=\d+/, 'w=800')
-    .replace(/h=\d+/, 'h=267')
-    .replace(/q=\d+/, 'q=65')
+    .replace(/w=\d+/, `w=${w}`)
+    .replace(/h=\d+/, `h=${h}`)
+    .replace(/q=\d+/, `q=${q}`)
   return `
     <div class="print-hero">
       <img src="${printSrc}" alt="Dag ${day.day}: ${day.from} til ${day.to}" />

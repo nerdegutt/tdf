@@ -57,6 +57,13 @@ async function serveDist() {
 }
 
 async function main() {
+  // Høy kvalitet: 2x screenshots, høyere JPEG-kvalitet, hopp over Ghostscript
+  const HQ = process.env.PDF_HQ === '1'
+  const screenshotQuality = HQ ? 92 : 78
+  const deviceScaleFactor = HQ ? 2 : 1
+  const skipGs = HQ || process.env.SKIP_GS === '1'
+
+  console.log(`Modus: ${HQ ? 'HØY KVALITET (større fil)' : 'KOMPRIMERT (mindre fil)'}`)
   console.log('Starter lokal HTTP-server for PDF-generering...')
   const server = await serveDist()
 
@@ -68,10 +75,11 @@ async function main() {
 
   try {
     const page = await browser.newPage()
-    await page.setViewport({ width: 1200, height: 1600, deviceScaleFactor: 1 })
+    await page.setViewport({ width: 1200, height: 1600, deviceScaleFactor })
 
-    console.log('Laster /print...')
-    await page.goto(`http://localhost:${PORT}/print`, { waitUntil: 'networkidle0', timeout: 60000 })
+    const printUrl = HQ ? `http://localhost:${PORT}/print?hq=1` : `http://localhost:${PORT}/print`
+    console.log(`Laster ${printUrl}...`)
+    await page.goto(printUrl, { waitUntil: 'networkidle0', timeout: 60000 })
 
     console.log('Venter på at alle kart og bilder er ferdig lastet...')
     await page.waitForFunction(() => window.__printReady === true, { timeout: 90000 })
@@ -96,7 +104,7 @@ async function main() {
     for (const id of mapIds) {
       const handle = await page.$(`#${id}`)
       if (!handle) continue
-      const buf = await handle.screenshot({ type: 'jpeg', quality: 78 })
+      const buf = await handle.screenshot({ type: 'jpeg', quality: screenshotQuality })
       const fileName = `${id}.jpg`
       await writeFile(join(tmpDir, fileName), buf)
       console.log(`  ${id}: ${(buf.length / 1024).toFixed(0)} KB`)
@@ -138,7 +146,7 @@ async function main() {
 
     // Komprimer med Ghostscript hvis tilgjengelig (gir typisk 80–90 % reduksjon)
     const which = spawnSync('which', ['gs'])
-    if (which.status === 0 && process.env.SKIP_GS !== '1') {
+    if (which.status === 0 && !skipGs) {
       console.log('Komprimerer PDF med Ghostscript...')
       const tmpPdf = distPdf + '.tmp'
       const gs = spawnSync('gs', [
@@ -159,6 +167,8 @@ async function main() {
       } else {
         console.warn('Ghostscript-komprimering feilet, beholder ukomprimert PDF.')
       }
+    } else if (skipGs) {
+      console.log('(HQ-modus — hopper over Ghostscript-komprimering)')
     } else {
       console.log('(Ghostscript ikke installert — hopper over komprimering)')
     }

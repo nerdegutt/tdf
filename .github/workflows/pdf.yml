@@ -1,0 +1,58 @@
+name: Generer PDF
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Installer system-pakker (Chromium shared libs)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libnspr4 \
+            libnss3 \
+            libxss1 \
+            libasound2t64 \
+            libatk1.0-0 \
+            libatk-bridge2.0-0 \
+            libcups2 \
+            libdrm2 \
+            libgbm1 \
+            libgtk-3-0 \
+            libxcomposite1 \
+            libxdamage1 \
+            libxfixes3 \
+            libxkbcommon0 \
+            libxrandr2 \
+            fonts-liberation
+
+      - name: Installer npm-avhengigheter
+        run: npm ci
+
+      - name: Bygg nettstedet og generer PDF i høy kvalitet
+        run: PDF_HQ=1 npm run build
+
+      - name: Last opp PDF til "latest-pdf"-release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest-pdf
+          name: 'Siste PDF (auto-oppdatert)'
+          body: |
+            Auto-oppdatert PDF, generert ved siste push til main.
+            Tilgjengelig på https://tdf.offline.no/tdf-reise.pdf
+          files: dist/tdf-reise.pdf
+          make_latest: 'false'
