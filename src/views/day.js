@@ -1,5 +1,6 @@
 import { days } from '../data/days.js'
 import { renderHighlight, renderCompact, renderTrivia, renderGem } from '../components/section.js'
+import { mountWeather } from '../components/weather.js'
 
 export function renderDay(day) {
   const container = document.getElementById('day-content')
@@ -120,6 +121,9 @@ export function renderDay(day) {
         <span>· ${day.subtitle}</span>
       </div>
       ${day.alert ? (Array.isArray(day.alert) ? day.alert : [day.alert]).map(a => `<div class="day-alert flex items-start gap-2 rounded-lg px-4 py-3 mt-3 text-sm"><span class="shrink-0 text-base" aria-hidden="true">⚠️</span><span>${a}</span></div>`).join('') : ''}
+      <div id="weather-day" class="weather-widget mt-3 flex items-center gap-x-3 gap-y-1 flex-wrap text-sm" data-state="loading" aria-live="polite">
+        <span class="text-stone-400">Henter værvarsel…</span>
+      </div>
       ${day.intro ? `<p class="text-base text-stone-600 leading-relaxed mt-4 max-w-prose">${day.intro}</p>` : ''}
       ${triviaHtml}
     </div>
@@ -133,6 +137,8 @@ export function renderDay(day) {
       <div>${nextLink}</div>
     </div>
   `
+
+  mountWeather('weather-day', day)
 }
 
 export function destroyDay() {

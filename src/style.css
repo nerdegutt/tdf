@@ -908,3 +908,18 @@ html.print-mode {
 .theme-switch input:checked + .theme-track .theme-thumb {
   transform: translateX(1rem);
 }
+
+/* --- Værvarsel-widget --- */
+.weather-widget .weather-date {
+  background-color: rgba(30, 64, 175, 0.1);
+  color: #1e3a8a;
+}
+
+html.dark .weather-widget .weather-date {
+  background-color: rgba(96, 165, 250, 0.15);
+  color: #bfdbfe;
+}
+
+html.dark .weather-widget .font-semibold.text-stone-900 {
+  color: #fafaf9;
+}
