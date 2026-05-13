@@ -3,14 +3,14 @@ export const day3 = {
   day: 3,
   date: "15. mai",
   weekday: "Fredag",
-  from: "Köln",
+  from: "Leuven",
   to: "Rouen",
-  km: 549,
-  hours: 6,
+  km: 369,
+  hours: 4,
   nights: 2,
-  subtitle: "Lang kjøredag med historisk stopp",
-  description: "Köln til Rouen via Waterloo-slagmarken. Normandies vikinghovedstad med Jeanne d'Arc-historie og Monets katedral.",
-  intro: "Rouen er Normandies hovedstad med nesten 500 000 innbyggere i storbyregionen, grunnlagt som vikinghovedstad av Rollo (Gange-Rolf) i 911. Byen er uløselig knyttet til Jeanne d'Arc, som ble brent på bålet her i 1431, og til Monet, som malte katedralen over 30 ganger. Underveis stopper dere ved Waterloo — slagmarken der Napoleons skjebne ble beseglet i 1815.",
+  subtitle: "Kort kjøredag med Waterloo-stopp",
+  description: "Leuven til Rouen via Waterloo-slagmarken. Bare 35 km til Waterloo om morgenen, deretter videre til Normandies vikinghovedstad med Jeanne d'Arc-historie og Monets katedral.",
+  intro: "Rouen er Normandies hovedstad med nesten 500 000 innbyggere i storbyregionen, grunnlagt som vikinghovedstad av Rollo (Gange-Rolf) i 911. Byen er uløselig knyttet til Jeanne d'Arc, som ble brent på bålet her i 1431, og til Monet, som malte katedralen over 30 ganger. Bare 35 km sør for Leuven ligger Waterloo — slagmarken der Napoleons skjebne ble beseglet i 1815, og dere kan starte dagen der i ro når museet åpner.",
   coords: { lat: 49.44, lng: 1.10 },
   stops: [
     { name: "Waterloo", lat: 50.71, lng: 4.41, type: "sight" },
@@ -89,12 +89,12 @@ export const day3 = {
     },
     {
       type: "customs",
-      title: "Lokale skikker — Belgia (Waterloo) og Frankrike (Rouen)",
+      title: "Lokale skikker — Vallonia (Waterloo) og Frankrike (Rouen)",
       bookingWarning: null,
       bookingUrl: null,
-      content: `<p><strong>Belgia (Vallonia, Waterloo)</strong></p>
+      content: `<p><strong>Vallonia (Waterloo) — språkskifte fra Flandern!</strong></p>
 <ul>
-<li>Waterloo ligger i fransktalende Vallonia — fransk høflighet gjelder. «Bonjour madame/monsieur» når dere går inn et sted, «Merci, au revoir» når dere går.</li>
+<li>Bare 35 km sør for Leuven krysser dere språkgrensen. Waterloo ligger i <strong>fransktalende Vallonia</strong> — nederlandsk forsvinner, fransk høflighet gjelder. «Bonjour madame/monsieur» når dere går inn et sted, «Merci, au revoir» når dere går.</li>
 <li>Tipsing: Service er inkludert, men det er vanlig å runde opp eller legge igjen 5 % for god service.</li>
 <li>Engelsk: Bra på Waterloo-museet og turistsentre.</li>
 </ul>

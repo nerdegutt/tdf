@@ -18,7 +18,7 @@ export const day13 = {
     { name: "Lyon", lat: 45.76, lng: 4.83, type: "city" },
   ],
   trivia: [
-    "Lyon (Lugdunum) var HOVEDSTADEN i romersk Gallia — den nest viktigste byen i det vestlige Romerriket etter Roma selv. Alt det romerske dere har sett på turen (Köln, Narbonne, Pont du Gard, Nîmes) ble administrert herfra.",
+    "Lyon (Lugdunum) var HOVEDSTADEN i romersk Gallia — den nest viktigste byen i det vestlige Romerriket etter Roma selv. Alt det romerske dere har sett på turen (Narbonne, Pont du Gard, Nîmes, Orange) ble administrert herfra.",
     "Lyons silkearbeidere (canutene) gjorde opprør i 1831 under mottoet «Lev av arbeidet eller dø i kamp» — det første store arbeideropprøret i industrihistorien. Det inspirerte direkte Karl Marx, hvis fødehus dere besøker i morgen i Trier.",
     "Hertugene av Burgund i Dijon var på 1400-tallet RIKERE enn den franske kongen. Da Karl den Dristige falt ved Nancy i 1477, ble liket funnet halvspist av ulver — og datteren hans giftet seg inn i Habsburg-familien, som dermed overtok halve Europa.",
   ],

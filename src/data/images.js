@@ -1,7 +1,7 @@
 // Unsplash-bilder for hver dag
 export const dayImages = {
   1:  { cdnBase: 'photo-1720607688322-4bebff5d541e', credit: 'Lars Portjanow', username: 'larsportjanow', photoId: 'BKCoJAU7rfE' },
-  2:  { cdnBase: 'photo-1541791940715-e571aa1c3d32', credit: 'Lucas Carl', username: 'lucas_carl', photoId: '2mqqvfGVK8A' },
+  2:  { cdnBase: 'photo-1684698769392-c6404a6427cb', credit: 'Winston Tjia', username: 'winstontjia', photoId: 'YXnXW6qTqgg' },
   3:  { cdnBase: 'photo-1643193839079-e6ee352d9043', credit: 'Andréa Villiers', username: 'lemondeavecandrea', photoId: '0bOVmBAUogM' },
   4:  { cdnBase: 'photo-1659640860300-d8803c5e1f1f', credit: 'Niels Bosman', username: 'niels_to', photoId: '64spGeJJC3U' },
   5:  { cdnBase: 'photo-1665764630018-fbd45d77b163', credit: 'Datingjungle', username: 'datingjungle', photoId: '8awEqnZDF80' },

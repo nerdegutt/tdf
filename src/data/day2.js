@@ -4,44 +4,44 @@ export const day2 = {
   date: "14. mai",
   weekday: "Torsdag",
   from: "Puttgarden",
-  to: "Köln",
-  km: 570,
-  hours: 6,
+  to: "Leuven",
+  km: 718,
+  hours: 7,
   nights: 1,
-  subtitle: "Kjøredag til Köln",
-  description: "Fra Puttgarden til Köln — Tysklands fjerde største by med den ikoniske gotiske domen, ølhaller og 2000 år historie langs Rhinen.",
-  alert: "<strong>Kristi himmelfartsdag (14. mai)</strong> — offentlig fridag i Tyskland. Mange butikker og museer har stengt eller redusert åpningstid. Kölnerdomen og brauhausene holder åpent.",
-  intro: "Köln er Tysklands fjerde største by med over en million innbyggere, grunnlagt av romerne som Colonia Agrippina i år 50 e.Kr. Byen er mest kjent for sin massive gotiske katedral — Kölnerdomen — som tok 632 år å fullføre. Med over 30 museer, historiske ølhaller og en levende gamleby langs Rhinen er det mer enn nok å fylle en ettermiddag.",
-  coords: { lat: 50.94, lng: 6.96 },
+  subtitle: "Kjøredag til Leuven — ærverdig flamsk universitetsby",
+  description: "Fra Puttgarden til Leuven — en av Europas eldste universitetsbyer (1425), hjemby for Stella Artois, og et av Flanderns vakreste sentrum med et rådhus så pyntet at Victor Hugo kalte det et juvelskrin.",
+  alert: "<strong>Kristi himmelfartsdag (14. mai)</strong> — offentlig fridag i Belgia (Onze-Lieve-Heer-Hemelvaart). Mange butikker stengt, men kafeer og restauranter rundt Oude Markt og Grote Markt holder åpent. Universitetsbiblioteket og kirkene er tilgjengelige med redusert åpningstid.",
+  intro: "Leuven er Flanderns akademiske hjerte: rundt 100 000 innbyggere hvorav 60 000 er studenter ved KU Leuven, Belgias eldste universitet (grunnlagt 1425). Byen er Stella Artois' fødeby — bryggeriet ligger fortsatt midt i sentrum — og rommer Oude Markt, kjent som «den lengste baren i Europa» med 40+ utesteder rygg mot rygg. Et perfekt stopp på vei mot Frankrike: kompakt sentrum, gangavstand til alt, og kort vei til Waterloo morgenen etter.",
+  coords: { lat: 50.8798, lng: 4.7005 },
   stops: [],
   trivia: [
-    "Kölnerdomen finnes bare fordi relikvier ble røvet fra Milano i 1164 — hele katedralen er verdens mest ambisiøse «oppbevaringsboks».",
-    "Under WWII ble Köln bombet 262 ganger og 95 % av sentrum ødelagt, men Kölnerdomen sto — delvis fordi de allierte brukte den som navigasjonspunkt.",
-    "Eau de Cologne (4711) ble oppfunnet i Köln i 1709, og butikken i Glockengasse eksisterer fortsatt.",
+    "Stella Artois har vært brygget i Leuven kontinuerlig siden 1366 — eldre enn både Norge som union og Belgia som stat (1830).",
+    "Universitetsbiblioteket i Leuven er det eneste i verden som er blitt brent ned to ganger av samme land i samme århundre — tyskerne i 1914 og igjen i 1940.",
+    "Oude Markt kalles «Europas lengste bar» fordi rundt 40 puber ligger vegg-i-vegg uten et eneste avbrudd.",
   ],
   sections: [
     {
       type: "sights",
-      title: "Severdigheter i Köln",
+      title: "Severdigheter i Leuven",
       highlight: true,
-      summary: "Kölnerdomen tok 632 år å bygge — alt på grunn av et gullskrin med hellige relikvier røvet fra Milano i 1164.",
+      summary: "Det 600 år gamle rådhuset på Grote Markt er dekket av 236 statuer — en gotisk bløtkake i stein som overlevde to verdenskriger nesten urørt.",
       bookingWarning: null,
       bookingUrl: null,
       content: `<ul>
-<li><strong>Kölnerdomen</strong> (UNESCO): En av verdens største gotiske katedraler. Byggestart 1248, ferdig 1880. De Hellige Tre Kongers relikvieskrin. <a href="https://www.koelner-dom.de/" target="_blank" rel="noopener">koelner-dom.de</a></li>
-<li><strong>Altstadt</strong>: Gamlebyen langs Rhinen. Fargerike fasader og bryggerier.</li>
-<li><strong>Hohenzollernbrücke</strong>: Gangbro med kjærlighetslåser. Flott utsikt til domen.</li>
+<li><strong>Stadhuis (Rådhuset) — fasaden</strong>: Sengotisk mesterverk fra 1448–1469 med 236 statuer i fasaden — en av Europas mest utsmykkede sekulære bygninger. Victor Hugo beskrev det som «un vrai bijou». Statuene ble for øvrig først satt på plass på 1800-tallet; i 400 år sto nisjene tomme. <strong>NB: bygningen er stengt for innvendige besøk under restaurering fra november 2024 til 2029</strong> — men selve fasaden mot Grote Markt er hovedseverdigheten uansett. <a href="https://www.visitleuven.be/en/town-hall" target="_blank" rel="noopener">visitleuven.be/town-hall</a></li>
+<li><strong>KU Leuven Universitetsbibliotek og biblioteket­tårnet</strong>: Bygget med amerikanske donasjoner etter at tyskerne brente det ned i 1914 — og brente det ned igjen i 1940. Klatre 300 trinn opp i tårnet (63-klokkers carillon) for byens beste utsikt. Billett ca. 8 EUR, åpent daglig. <a href="https://www.visitleuven.be/en/university-library" target="_blank" rel="noopener">visitleuven.be/university-library</a></li>
+<li><strong>Groot Begijnhof</strong> (UNESCO): Et helt minisamfunn av 1200-tallets begijnhuis — bedehus for ugifte religiøse kvinner som ikke var nonner. 13 hektar med brostein, broer og hageanlegg, eid av universitetet siden 1962. Gratis å vandre rundt i. <a href="https://www.visitleuven.be/en/great-beguinage" target="_blank" rel="noopener">visitleuven.be/great-beguinage</a></li>
 </ul>`
     },
     {
       type: "photo",
-      title: "Foto i Köln",
+      title: "Foto i Leuven",
       bookingWarning: null,
       bookingUrl: null,
       content: `<ul>
-<li>Domen fra Hohenzollernbrücke – det klassiske motivet. <a href="https://www.google.com/search?tbm=isch&q=k%C3%B6lner+dom+hohenzollernbr%C3%BCcke+photography" target="_blank" rel="noopener" class="photo-search-link">🔍 Bilder</a></li>
-<li>Rhinen med Altstadt-fasadene. <a href="https://www.google.com/search?tbm=isch&q=k%C3%B6ln+altstadt+rhein+colorful+houses" target="_blank" rel="noopener" class="photo-search-link">🔍 Bilder</a></li>
-<li>Triangelturm (høyre Rhin-side): Utsiktsplattform med panorama. <a href="https://www.google.com/search?tbm=isch&q=k%C3%B6ln+triangle+panorama+view" target="_blank" rel="noopener" class="photo-search-link">🔍 Bilder</a></li>
+<li>Stadhuis fra Grote Markt — det klassiske motivet, særlig i lavt kveldslys når statuene kaster lange skygger. <a href="https://www.google.com/search?tbm=isch&q=leuven+stadhuis+town+hall+golden+hour" target="_blank" rel="noopener" class="photo-search-link">🔍 Bilder</a></li>
+<li>Oude Markt om kvelden — «Europas lengste bar», utebord langs hele plassen med gylden belysning og folkeliv. <a href="https://www.google.com/search?tbm=isch&q=leuven+oude+markt+evening+terraces" target="_blank" rel="noopener" class="photo-search-link">🔍 Bilder</a></li>
+<li>Groot Begijnhof — brosteinsgater, små broer over Dijle-elva og rød murstein i kveldslys. <a href="https://www.google.com/search?tbm=isch&q=groot+begijnhof+leuven+cobblestones+bridge" target="_blank" rel="noopener" class="photo-search-link">🔍 Bilder</a></li>
 </ul>`
     },
     {
@@ -50,53 +50,55 @@ export const day2 = {
       bookingWarning: null,
       bookingUrl: null,
       references: [
-        { type: 'book', title: 'Die verlorene Ehre der Katharina Blum', author: 'Heinrich Böll', relevance: 'Böll er fra Köln og skildrer byens etterkrigsmiljø — dere ser den gjenoppbygde byen han vokste opp i.' },
-        { type: 'film', title: 'Das Wunder von Bern', year: 2003, relevance: 'Fanger tysk etterkrigskultur og 1954-VM-triumfen som ga nasjonen ny selvtillit — kontekst for Köln dere ser i dag.' },
+        { type: 'book', title: 'Het verdriet van België (The Sorrow of Belgium)', author: 'Hugo Claus', year: 1983, relevance: 'Flandersk mesterverk om en katolsk familie under nazi-okkupasjonen — gir kontekst for Leuvens kompliserte forhold til både Tyskland og fransk Belgia.' },
+        { type: 'book', title: 'Lof der Zotheid (In Praise of Folly)', author: 'Erasmus', year: 1511, relevance: 'Skrevet av en av Leuvens mest berømte tenkere — Erasmus underviste ved KU Leuven og skrev en del av sine humanistiske verker i byen.' },
+        { type: 'film', title: 'Daens', year: 1992, relevance: 'Oscar-nominert flamsk film om presten Adolf Daens og arbeiderkampen — fanger den katolske og språkpolitiske spenningen som har formet Flandern Leuven ligger midt i.' },
       ],
       content: `<ul>
-<li><strong>Kölnerdomen</strong> sto ufullført i over 300 år. Da byggingen stoppet rundt 1560, sto det en primitiv kran på det uferdige sørtårnet – den ble stående som en del av byens silhuett helt til byggearbeidet ble gjenopptatt i 1842.</li>
-<li>Köln ble grunnlagt av romerne som <strong>Colonia Claudia Ara Agrippinensium</strong> i år 50 e.Kr. – oppkalt etter keiserinne Agrippina den yngre, som var født her. Bynavnet «Köln» kommer direkte fra «Colonia».</li>
-<li><strong>De Hellige Tre Kongers relikvieskrin</strong> i domen er middelalderens største gullarbeid. Relikviene ble «røvet» fra Milano av keiser Fredrik Barbarossa i 1164 og gitt til Köln. Hele dombyggingen ble igangsatt for å gi skrinet et verdig hjem — uten dette rovet, ingen Kölnerdom.</li>
-<li><strong>Dionysos-mosaikken</strong>: Under bombing i 1941 ble et komplett romergulv på 70 m² oppdaget. Römisch-Germanisches Museum er bygget OVER mosaikken fordi den var for stor til å flytte.</li>
+<li><strong>KU Leuven (1425)</strong> er kontinental-Europas eldste fortsatt aktive katolske universitet, grunnlagt med pavebrev fra Martin V. Erasmus av Rotterdam underviste her på 1500-tallet, og Gerardus Mercator (han med kartprojeksjonen) studerte her i 1530-årene. Universitetet ble splittet i 1968 etter en bitter språkstrid — den fransktalende delen ble flyttet ut og fikk en helt ny by, Louvain-la-Neuve, sør for Brussel.</li>
+<li><strong>Bibliotek-tragedien (1914)</strong>: Da tyske styrker okkuperte Leuven i august 1914, brente de ned universitetsbiblioteket med 300 000 bøker og 1000 middelalderske manuskripter — en hendelse som vakte verdensvid forargelse og ble brukt i alliert propaganda om «tyske barbarer». Biblioteket ble bygget opp igjen med amerikanske donasjoner i 1928. I mai 1940 brente tyskerne det ned <em>på nytt</em>, og 900 000 bøker gikk tapt.</li>
+<li><strong>Stella Artois</strong> har røtter tilbake til <em>Den Hoorn</em>-bryggeriet, dokumentert i Leuven i 1366 — eldre enn de fleste europeiske nasjonalstater. «Stella» (stjerne) ble lansert som julebrygg i 1926; «Artois» var etternavnet til mesterbryggeren som kjøpte Den Hoorn i 1717. Bryggeriet ligger fortsatt i sentrum, ved jernbanestasjonen, og er nå hovedkvarter for AB InBev — verdens største ølkonsern.</li>
+<li><strong>Slaget ved Leuven (891)</strong>: Kong Arnulf av Kärnten knuste en vikinghær her i september 891 — et av få store nederlag for nordboerne på 800-tallet. Slaget regnes som starten på vikingtidens tilbakegang i de Lave land. Hyggelig detalj for to nordmenn på rundtur: byen feiret nylig 1100-årsjubileet for da forfedrene fikk juling.</li>
 </ul>`
     },
     {
       type: "accommodation",
-      title: "Overnatting i Köln",
+      title: "Overnatting i Leuven",
       bookingWarning: null,
       bookingUrl: null,
       content: `<ul>
-<li><strong><a href="https://www.premierinn.com/gb/en/hotels/germany/north-rhine-westphalia/cologne/cologne-city-mediapark.html" target="_blank" rel="noopener">Premier Inn Köln City Mediapark</a></strong> – Moderne budsjetthotell i historisk Hansahochhaus (1925). Twinrom. Egen parkering 19 EUR/dag. 15 min gange til Altstadt. <em>Ca. 70–90 EUR/rom/natt.</em></li>
-<li><strong><a href="https://www.stern-am-rathaus.com/" target="_blank" rel="noopener">Stern am Rathaus</a></strong> – Boutique, 9 rom, midt i Altstadt. 5 min til Domen. Parkering 15 EUR/dag (Hohe Strasse). Ingen heis. <em>Ca. 120–170 EUR/rom/natt.</em></li>
-<li><strong><a href="https://www.cityclass.de/en/hotel-alter-markt/" target="_blank" rel="noopener">CityClass Hotel Alter Markt</a></strong> – Direkte i Altstadt ved Alter Markt. Offentlig garasje 350m unna, 19 EUR/dag. <em>Ca. 100–150 EUR/rom/natt.</em></li>
-</ul>`
+<li><strong><a href="https://all.accor.com/hotel/6682/index.en.shtml" target="_blank" rel="noopener">ibis budget Leuven Centrum</a></strong> – Billigst. Rett ved Leuven sentralstasjon, ca. 10 min gange til Grote Markt. Enkle, moderne rom — null fjas, men varmt og rent. Parkering i Q-Park ved stasjonen (samme bygg/like ved), ca. 15–18 EUR/døgn. <em>Ca. 65–90 EUR/rom/natt.</em></li>
+<li><strong><a href="https://all.accor.com/hotel/1457/index.en.shtml" target="_blank" rel="noopener">Ibis Leuven Centrum</a></strong> – Steget over budsjett. Brusselsestraat, ca. 7 min gange til Grote Markt. Standard Ibis-rom, men beliggenheten er gull. Parkering i Q-Park Ladeuze (300 m unna), ca. 18 EUR/døgn. <em>Ca. 95–130 EUR/rom/natt.</em></li>
+<li><strong><a href="https://www.radissonhotels.com/en-us/hotels/park-inn-leuven" target="_blank" rel="noopener">Park Inn by Radisson Leuven</a></strong> – Ved sentralstasjonen, ca. 10–12 min gange til Grote Markt. 3-stjerners kjede, romslige rom, eget treningsrom. Innendørs offentlig parkering rett ved hotellet, ca. 20 EUR/døgn. <em>Ca. 100–140 EUR/rom/natt.</em></li>
+</ul>
+<p>💡 Alle tre ligger nær stasjonen — gangavstand til Grote Markt/Oude Markt er 7–12 min, og dere slipper å lete etter parkering inne i den bilfrie kjernen.</p>`
     },
     {
       type: "food",
-      title: "Middag i Köln",
-      bookingWarning: null,
+      title: "Middag i Leuven",
+      bookingWarning: "Improvisio og Zarza krever reservasjon, særlig på Kristi himmelfartsdag. Domus tar walk-in, men kom før 21:00.",
       bookingUrl: null,
       content: `<ul>
-<li><strong><a href="https://www.lommerzheim.koeln/" target="_blank" rel="noopener">Lommerzheim ("Lommi")</a></strong> – Legendarisk bydels-pub i Deutz. Kjent for Europas beste koteletter (400–500g!). Null fjas, bare enorm mat og Päffgen Kölsch. <strong>Kun kontant!</strong> Ingen reservasjon. <em>Ca. 12–18 EUR/pers.</em></li>
-<li><strong><a href="https://brauereizurmalzmuehle.de/" target="_blank" rel="noopener">Brauerei zur Malzmühle</a></strong> – Familiedrevet brauhaus siden 1858 på Heumarkt. Autentisk, mindre turistpreget. Sauerbraten, Schweinshaxe, Himmel un Ääd. Eget Mühlen Kölsch. <em>Ca. 15–28 EUR/pers.</em></li>
-<li><strong><a href="https://peters-brauhaus.de/" target="_blank" rel="noopener">Peters Brauhaus</a></strong> – 400 år gammelt brauhaus i gamlebyen. Schweinshaxe, Sauerbraten, Schlachtplatte. 350m fra Domen. <em>Ca. 14–22 EUR/pers.</em></li>
+<li><strong><a href="https://www.domusleuven.be/" target="_blank" rel="noopener">Domus</a></strong> – Eget mikrobryggeri midt i sentrum (Tiensestraat 8), hjemmebrygget Nostradomus-øl rett fra tanken og solid flamsk mat: stoofvlees (storfegryte i mørk øl), vol-au-vent, ribbenstek. Klassisk Leuven-stemning, mørke trepaneler, lokalt klientell. Åpent til 23:00 torsdager. <em>Ca. 20–30 EUR/pers.</em></li>
+<li><strong>Brasserie Improvisio</strong> (Brusselsestraat 63b) – Restaurert bygg fra 1735 i gårdsrommet til Romaanse Poort, gammel klosterapotek-bygning. Fransk-belgisk kjøkken: blåskjell, kalvekinn i mørk øl, og en kotelett som av og til er kåret til Belgias beste. <em>Ca. 30–40 EUR/pers.</em></li>
+<li><strong><a href="https://www.zarza.be/" target="_blank" rel="noopener">Zarza</a></strong> – Bondgenotenlaan 92. Belgisk-mediterransk fine-dining-light med renovert byhage som spisestue om sommeren. God vinliste, sesongmeny, listet i både Michelin Guide og Gault&Millau. Roligere alternativ etter en lang kjøredag. <em>Ca. 45–60 EUR/pers à la carte.</em></li>
 </ul>
-<p>💡 Lommerzheim er den ultimate kjøttopplevelsen – gigantiske koteletter! Men ligger i Deutz (andre siden av Rhinen). Malzmühle er best i gamlebyen.</p>`
+<p>💡 Med sen torsdagsankomst på fridag: Domus er tryggeste valg — autentisk, sjelden helt fullt, og dere drikker øl bryggemester laget 30 meter unna. Etterpå: én Stella på Oude Markt.</p>`
     },
     {
       type: "customs",
-      title: "Lokale skikker — Tyskland (med Köln-brauhaus-kultur)",
+      title: "Lokale skikker — Tyskland (på veien) og Flandern (Leuven)",
       bookingWarning: null,
       bookingUrl: null,
       content: `<ul>
-<li><strong>Hilsen</strong>: «Guten Tag» eller «Hallo». I Köln vil dere også høre «Tach!» — kølnsk dialekt. Si «Tschüss» eller «Auf Wiedersehen» når dere går.</li>
-<li><strong>Brauhaus-kultur (sentralt i Köln!)</strong>: I et ekte Kölsch-brauhaus bestiller dere IKKE en ny øl — kelneren («Köbes») tar tomt glass og setter ned et nytt automatisk. <strong>For å stoppe, legg ølbrikken (Bierdeckel) oppå glasset.</strong> Köbes er kjent for å være rapp i kjeften og frekk — det er sjarmen, ikke uhøflighet. Spill med på humoren!</li>
-<li><strong>Kölsch</strong>: Serveres i 0,2L «Stange»-glass (smale, høye) fordi den skal drikkes kald før den blir flat. Bestill «Ein Kölsch, bitte». Köbes setter en strek på ølbrikken for hver runde.</li>
-<li><strong>På restaurant</strong>: Hils ved ankomst. Sett dere selv hvis ikke det står «Bitte warten». «Die Rechnung, bitte» = regningen.</li>
-<li><strong>Tipsing</strong>: 5–10 %. Si totalbeløpet inkludert tips ved betaling — ikke legg igjen mynt etterpå.</li>
-<li><strong>Kontant</strong>: Mange brauhaus tar bare kontant. Sjekk på forhånd. Lommerzheim er rent kontant!</li>
-<li><strong>Engelsk</strong>: Bra blant yngre i Köln. Köbes snakker ofte engelsk på sin egen frekke måte.</li>
-<li><strong>Tysk-forsøk</strong>: «Bitte» og «Danke» går langt. Tyskere er direkte men sjelden uhøflige.</li>
+<li><strong>Hilsen i Tyskland (på veien)</strong>: «Guten Tag», «Hallo», «Tschüss». På bensinstasjoner og raststätter er en kort «Hallo» nok. Tyskerne er direkte, ikke uhøflige.</li>
+<li><strong>Språket i Leuven — VIKTIG</strong>: Leuven ligger i <strong>Flandern</strong> og er <strong>nederlandsktalende</strong>, ikke fransk. Å bestille en øl med «Bonjour, une bière s'il vous plaît» kan oppfattes som direkte uhøflig — det er en gammel språkpolitisk sak. Bruk engelsk, eller bedre: «<strong>Dag</strong>» eller «<strong>Goeiendag</strong>» som hilsen, «<strong>Dank u wel</strong>» for takk, «<strong>Een pintje, alstublieft</strong>» (én pils, takk) på pub.</li>
+<li><strong>«Een pintje»</strong>: I Flandern bestiller man ikke «en øl», man bestiller «en pintje» (uttales <em>pin-sje</em>) — 25 cl pils, alltid. Be om «een Stella» og dere får akkurat det, hjemme på fabrikken.</li>
+<li><strong>Ølkultur</strong>: Belgisk øl er en alvorlig sak. Hver øltype har sitt eget glass — Stella i karaffel-pokal, Leffe i kalk, trappistøl i kjegleglass. Aldri be om «en blond» — vær spesifikk på navn. Trappistøl (Westmalle, Westvleteren, Chimay) er ikke ferieøl; det er 8–11 % og slår hardt.</li>
+<li><strong>Restaurantkultur</strong>: Vent på å bli vist til bord — flamlendere setter seg sjelden selv. Brød kommer ikke automatisk; bestilles ofte separat. Frites serveres med <strong>mayonnaise</strong>, ikke ketchup.</li>
+<li><strong>Tipsing</strong>: 5–10 % er pent, men ikke obligatorisk — service er inkludert. Rund opp eller legg igjen et par euro. Aldri den amerikanske 20 %-en.</li>
+<li><strong>Forskjell fra fransk Belgia</strong>: I Wallonia og Brussel virker fransk; i Flandern ikke. Leuven er like nederlandsk som Amsterdam, kulturelt sett. Si aldri «Belgia snakker fransk» til en flamlender med mindre dere vil ha en 30-minutters forelesning til middag.</li>
+<li><strong>Engelsk</strong>: Veldig bra i Leuven — universitetsby med 60 000 studenter, mange internasjonale. Trygt fallback hvis nederlandsk ikke flyter.</li>
 </ul>`
     },
   ],

@@ -3,7 +3,7 @@ export const tripMeta = {
   subtitle: "Reiseguide",
   dates: "13.–30. mai 2026",
   travelers: "Erlend & Bjørn Erik",
-  totalKm: 6239,
+  totalKm: 6207,
   totalDays: 18,
   countries: 7,
   route: "Rakkestad → Tyskland → Belgia → Normandie → Bretagne → Atlanterhavskysten → Baskerland → Languedoc → Provence → Burgund → Alsace → Mosel → Hjem"
@@ -35,7 +35,7 @@ export const top10 = {
     "Porta Nigra og det romerske Trier",
     "Waterloo",
     "Speicherstadt, Hamburg (UNESCO)",
-    "Kölnerdomen",
+    "KU Leuven og det dobbelt-brente universitetsbiblioteket",
   ],
   photo: [
     "Mont Saint-Michel",

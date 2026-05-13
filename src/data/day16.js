@@ -17,7 +17,7 @@ export const day16 = {
   ],
   trivia: [
     "Klemens von Metternich — arkitekten bak Wienkongressen som «ga» Norge til Sverige i 1814 — ble født i Koblenz i 1773. Dere står altså på fødestedet til mannen som bestemte Norges skjebne.",
-    "I år 9 e.Kr. ble tre romerske legioner (ca. 20 000 soldater) tilintetgjort av germanske styrker under høvding Arminius i Teutoburgerwald, 45 min fra Hameln. Det er DETTE som forklarer hvorfor Köln og Trier ble romerske byer — men Hamburg og Hameln aldri ble det. Keiser Augustus slo hodet mot veggen og ropte: «Varus, gi meg tilbake mine legioner!»",
+    "I år 9 e.Kr. ble tre romerske legioner (ca. 20 000 soldater) tilintetgjort av germanske styrker under høvding Arminius i Teutoburgerwald, 45 min fra Hameln. Det er DETTE som forklarer hvorfor Trier (dag 14–15) ble romersk by — men Hamburg og Hameln aldri ble det. Keiser Augustus slo hodet mot veggen og ropte: «Varus, gi meg tilbake mine legioner!»",
     "I Hameln er det den dag i dag forbudt å spille musikk i Bungelosenstrasse — gaten barna angivelig ble ført gjennom av Rottefangeren i 1284.",
   ],
   sections: [
@@ -76,7 +76,7 @@ export const day16 = {
 <li><strong>Weserrenessansen</strong> (arkitekturstilen i Hameln) er en unik nordtysk variant av renessansearkitekturen fra ca. 1520–1620. Kjennetegnes av overdådige steinornamenterte gavler med volutter og pyramider. Hameln har Tysklands fineste samling.</li>
 <li><strong>Ehrenbreitstein — 3000 år befestning</strong>: Festningen over Koblenz er et av de eldste kontinuerlig befestede stedene i Europa — fra bronsealderen via romersk garnison til prøyssisk superfestning (1817–28, den nest største i Europa etter Gibraltar). Napoleon sprengte den forrige festningen etter at den hadde motstått franskmennene i 10 år. Fra toppen forstår man HVORFOR Koblenz har vært strategisk viktig i 3000 år: to store elver møtes her.</li>
 <li><strong>Metternich — født i Koblenz</strong>: Klemens von Metternich, den mest innflytelsesrike europeiske statsmannen mellom Napoleon og Bismarck, ble født her i 1773. Han var arkitekten bak Wienkongressen (1814–15) som redesignet Europa etter Napoleons fall. For to nordmenn: Metternichs Wienkongress var den som «ga» Norge til Sverige.</li>
-<li><strong>Teutoburgerwald (45 min fra Hameln)</strong>: I år 9 e.Kr. ble tre romerske legioner under general Varus tilintetgjort av germanske styrker. Slaget stoppet romersk ekspansjon østover for godt — Rhinen forble grensen. Det er dette som forklarer hvorfor Köln (dag 2) og Trier (dag 14–15) ble romerske byer mens Hamburg og Hameln aldri ble det. Hermannsdenkmal, en 53 meter høy statue av Arminius, troner på en ås nær Detmold.</li>
+<li><strong>Teutoburgerwald (45 min fra Hameln)</strong>: I år 9 e.Kr. ble tre romerske legioner under general Varus tilintetgjort av germanske styrker. Slaget stoppet romersk ekspansjon østover for godt — Rhinen forble grensen. Det er dette som forklarer hvorfor Trier (dag 14–15) ble romersk by mens Hamburg og Hameln aldri ble det. Hermannsdenkmal, en 53 meter høy statue av Arminius, troner på en ås nær Detmold.</li>
 <li><strong>Loreley-klippen</strong> (mellom Koblenz og Bingen): Den snevre passasjen forsterker elvelyden slik at det høres ut som en stemme. Hundrevis av båter har forlist her. Heinrich Heine udødeliggjorde sagnet om sirenen i 1824 — og diktet ble så populært at nazistene ikke turte forby det, men trykket det som «Forfatter ukjent». Les diktet høyt i bilen!</li>
 </ul>`
     },
