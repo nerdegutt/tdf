@@ -3,14 +3,15 @@ export const tripMeta = {
   subtitle: "Reiseguide",
   dates: "13.–30. mai 2026",
   travelers: "Erlend & Bjørn Erik",
-  totalKm: 6207,
+  totalKm: 5510,
   totalDays: 18,
   countries: 7,
-  route: "Rakkestad → Tyskland → Belgia → Normandie → Bretagne → Atlanterhavskysten → Baskerland → Languedoc → Provence → Burgund → Alsace → Mosel → Hjem"
+  route: "Rakkestad → Tyskland → Belgia → Normandie → Bretagne → Atlanterhavskysten → Baskerland → Languedoc → Provence → Burgund → Alsace → Mosel → Kiel-ferja → Hjem"
 };
 
 export const bookingOverview = [
-  { what: "Ferje Rødby–Puttgarden", where: "Dag 1 + 18", why: "Billigere forhåndsbestilt", url: "https://www.scandlines.com/" },
+  { what: "Ferje Rødby–Puttgarden", where: "Dag 1", why: "Billigere forhåndsbestilt (kun utreise)", url: "https://www.scandlines.com/" },
+  { what: "Color Line Kiel–Oslo", where: "Dag 17", why: "Lugar bør bestilles i god tid — fredager i mai er populært. Avgang kl 14:00.", url: "https://www.colorline.no/" },
   { what: "Mémorial de Waterloo", where: "Dag 3", why: "Tidsluker, slipper kø", url: "https://www.waterloo1815.be/" },
 
   { what: "Mont Saint-Michel abbediet", where: "Dag 6", why: "Kan bli lange køer", url: "https://www.abbaye-mont-saint-michel.fr/" },
@@ -20,8 +21,6 @@ export const bookingOverview = [
   { what: "Pont du Gard", where: "Dag 11", why: "Parkering bør bestilles i høysesong", url: "https://www.pontdugard.fr/" },
   { what: "Palais des Papes (Avignon)", where: "Dag 11–12", why: "Alltid populært", url: "https://www.palais-des-papes.com/" },
   { what: "Sénanque-abbediet", where: "Dag 12", why: "Begrenset kapasitet", url: "https://www.senanque.fr/" },
-  { what: "Miniatur Wunderland (Hamburg)", where: "Dag 17", why: "Selger ofte ut! Tidsluker.", url: "https://www.miniatur-wunderland.com/" },
-  { what: "Elbphilharmonie Plaza", where: "Dag 17", why: "Gratis, men tidsluker", url: "https://www.elbphilharmonie.de/" },
 ];
 
 export const top10 = {
@@ -34,7 +33,7 @@ export const top10 = {
     "Rouen-katedralen (Olav, Richard, Jeanne d'Arc)",
     "Porta Nigra og det romerske Trier",
     "Waterloo",
-    "Speicherstadt, Hamburg (UNESCO)",
+    "Lyon (Lugdunum) — Gallias romerske hovedstad",
     "KU Leuven og det dobbelt-brente universitetsbiblioteket",
   ],
   photo: [
@@ -46,7 +45,7 @@ export const top10 = {
     "American Cemetery, Omaha Beach",
     "Carcassonne",
     "Roussillon",
-    "Speicherstadt, Hamburg",
+    "Beilstein langs Mosel",
     "Rouen by night",
   ],
   food: [

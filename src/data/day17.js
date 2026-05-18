@@ -4,106 +4,88 @@ export const day17 = {
   date: "29. mai",
   weekday: "Fredag",
   from: "Hameln",
-  to: "Puttgarden",
-  km: 358,
-  hours: 4,
-  nights: 1,
-  subtitle: "Siste dag på kontinentet",
-  description: "Hameln til Puttgarden via Hamburg — verdens største lagerkompleks Speicherstadt og Elbphilharmonie i Tysklands havnemetropol.",
-  intro: "Hamburg er Tysklands nest største by og Europas tredje største havn, med en stolt hansetradisjon som strekker seg tilbake til 1241. Speicherstadt — verdens største sammenhengende lagerkompleks — er UNESCO-listet og vitner om byens rolle som handelsmetropol. Elbphilharmonie, åpnet i 2017, har allerede blitt byens nye landemerke.",
-  coords: { lat: 54.37, lng: 11.00 },
-  stops: [
-    { name: "Hamburg", lat: 53.55, lng: 9.99, type: "city" },
-  ],
+  to: "Kiel (Color Line-ferja)",
+  km: 302,
+  hours: 3.5,
+  nights: 0,
+  subtitle: "Til Kiel og om bord på Color Line",
+  description: "Hameln til Kiel for å rekke Color Line-ferja kl 14:00. Overnatting om bord, ankomst Oslo lørdag morgen.",
+  intro: "Siste etappe på kontinentet er en ren transportdag: 300 km opp gjennom Niedersachsen og Schleswig-Holstein til Kiel, der Color Line-ferja Color Magic legger fra kai kl 14:00. Innsjekk kl 13:00 senest. Det betyr avreise fra Hameln senest kl 09:00 — heller før. Underveis kjører dere forbi Hannover og Hamburg, men det er ingen tid til stopp dersom ferja skal rekkes med god margin. Festmiddag og overnatting om bord, ankomst Oslo lørdag kl 10:00.",
+  coords: { lat: 54.3233, lng: 10.1394 },
+  stops: [],
   trivia: [
-    "Hansaforbundet ble dannet da Lübeck og Hamburg inngikk en allianse i 1241. Dere har nå besøkt BEGGE grunnlegger-byene — Lübeck på dag 1, Hamburg i dag. Full sirkel. Bryggen i Bergen — hjemme i Norge — er det fjerde kontoret i dette nettverket.",
-    "«Reeperbahn» betyr bokstavelig «repmakerbanen» — her ble tauet for seilskip laget (man trengte lange, rette gater for å tvinne tau). Taumakerindustrien tiltrakk sjøfolk, sjøfolk tiltrakk kroer og bordeller. Beatles spilte i de SAMME lokalene som sjømenn hadde drukket i siden 1700-tallet.",
-    "Mellom 1850 og 1939 emigrerte ca. 5 millioner europeere via Hamburg til Amerika. Mange norske emigranter tok toget fra Christiania til Hamburg og derfra båten over. Transitt-hallene (BallinStadt) er bevart som museum — 15 min fra Speicherstadt.",
+    "Color Magic er ett av verdens største cruiseferger med 1 250 lugarer, 16 dekk og plass til 2 750 passasjerer. Den ble bygget i Finland i 2007 og var i en periode verdens største ferge.",
+    "Kieler Woche er verdens største seilregatta — over 2 000 båter og 3 millioner besøkende hver juni. Den startet i 1882 som en oppvisning for keiser Wilhelm II.",
+    "Kielerkanalen (Nord-Ostsee-Kanal) er verdens mest trafikkerte kunstige vannvei — flere skip enn Suez og Panama til sammen. 98 km mellom Nordsjøen og Østersjøen, åpnet av keiser Wilhelm II i 1895.",
   ],
   sections: [
     {
+      type: "practical",
+      title: "Kritisk: rekke Color Line-ferja",
+      bookingWarning: "Color Magic legger fra kai presis kl 14:00. Innsjekk senest kl 13:00. Bilkø ved sjekk-inn kan ta tid.",
+      bookingUrl: "https://www.colorline.no/",
+      content: `<ul>
+<li><strong>Avreise fra Hameln senest kl 09:00</strong> — helst tidligere. 300 km via A7/A23/A215, normalt 3,5 t, men køkjøring rundt Hamburg er regelen, ikke unntaket. Regn med 4 t med pauser.</li>
+<li><strong>Innsjekk kl 13:00</strong> (1 time før avgang) på Color Line-terminalen, Norwegenkai 1, Kiel. Hold billett og pass klart.</li>
+<li><strong>Avgang kl 14:00 fredag</strong>, ankomst Oslo (Hjortnes) lørdag kl 10:00.</li>
+<li>Color Line har full restaurant- og barservice om bord. Lugar bør være forhåndsbestilt — fredager i mai er populært.</li>
+<li>Hvis dere er foran skjema: lunsj i Kiel sentrum (15 min fra terminalen) eller en titt på Laboe-monumentet på den andre siden av fjorden.</li>
+</ul>`
+    },
+    {
       type: "sights",
       highlight: true,
-      summary: "Hansaens medgrunnlegger og Norges søsterby — fra Speicherstadt til Elbphilharmonie. Sirkelen fra Lübeck (dag 1) sluttes her.",
-      title: "Anbefalt stopp: Hamburg (2–3 timer)",
-      bookingWarning: "Miniatur Wunderland – selger ofte ut! Elbphilharmonie Plaza – gratis, men tidsluker.",
-      bookingUrl: "https://www.miniatur-wunderland.com/",
-      references: [
-        { type: "book", title: "Blikktromma", author: "Günter Grass", relevance: "Grass er fra Danzig men bodde i Nord-Tyskland — romanen fanger den samme nordtyske mentaliteten dere møter fra Hamburg til Lübeck." },
-        { type: "book", title: "Buddenbrooks", author: "Thomas Mann", relevance: "Mann vokste opp i Lübeck (dag 1) og ferierte i Travemünde nær Hamburg — Hansaens handelsverden som binder dag 1 og 17 sammen." },
-        { type: "film", title: "Backbeat (Beatles i Hamburg)", year: 1994, relevance: "Filmen viser Beatles' tidlige år på Reeperbahn — klubbene der de spilte 800 timer ligger i gatene dere kan besøke." },
-      ],
+      summary: "Tysk marinetradisjon ved Østersjøkysten — Kielerkanalen, Laboe-monumentet og en av Tysklands viktigste havner. Kort opphold før ferja.",
+      title: "Kiel — om dere har tid",
+      bookingWarning: null,
+      bookingUrl: null,
       content: `<ul>
-<li><strong>Speicherstadt</strong> (UNESCO): Verdens største lagerhusdistrikt. Røde mursteinsbygninger langs kanaler. <a href="https://www.hamburg-travel.com/" target="_blank" rel="noopener">hamburg-travel.com</a></li>
-<li><strong>Miniatur Wunderland</strong>: Verdens største modelljernbane. Selv for 55-åringer. I Speicherstadt.</li>
-<li><strong>Elbphilharmonie</strong>: Spektakulært konserthus. Gratis tilgang til utsiktsplattformen (Plaza).</li>
-<li><strong>Landungsbrücken</strong>: Havnepromenaden.</li>
-</ul>`
+<li><strong>Kiellinie</strong>: 3 km lang promenade langs Kielfjorden, fra sentrum mot Düsternbrook. Fin gå- eller sykkeltur hvis dere har en time å avse.</li>
+<li><strong>Laboe Marine-Ehrenmal</strong>: 72 meter høy minnetårn for falne sjømenn. På østsiden av fjorden, 30 min med bil. Inkluderer ubåten <em>U-995</em> som museum — den eneste bevarte Type VII-ubåten i verden.</li>
+<li><strong>Holstenstraße</strong>: Kiels handlegate. Praktisk for en rask lunsj eller kaffe før ferja.</li>
+<li><strong>Schifffahrtsmuseum</strong> ved den gamle fiskehallen i havna — kompakt, fokuserer på Kiels maritime historie.</li>
+</ul>
+<p>💡 Realistisk: dere har tid til en rask lunsj og kanskje en titt mot fjorden. Resten av Kiel får dere kanskje på en annen tur.</p>`
     },
     {
       type: "history",
       title: "Historie",
       bookingWarning: null,
       bookingUrl: null,
+      references: [
+        { type: "book", title: "Das Boot", author: "Lothar-Günther Buchheim", relevance: "Romanen som ble film — basert på forfatterens egne erfaringer på en tysk ubåt under WWII. Ubåtene ble operert ut fra blant annet Kiel." },
+      ],
       content: `<ul>
-<li><strong>Speicherstadt</strong> ble bygget 1885–1927 ved at et helt boligområde med 20 000 innbyggere ble <strong>revet og tvangsfraflyttet</strong> for å bygge lagerhusene. Området lagret kaffe, te, tobakk, krydder og orientalske tepper – og var tollfritt (Freihafen) helt til 2003.</li>
-<li><strong>Hamburg</strong> er teknisk sett en <strong>bystat</strong> (Freie und Hansestadt Hamburg) og har aldri hatt en borg eller et kongelig palass. Byen har vært stolt uavhengig siden middelalderen – en ekte handelsrepublikk.</li>
-<li><strong>The Beatles</strong> spilte over 800 timer i Hamburg-klubber (1960–62) før de ble berømte. John Lennon sa senere: <em>«I might have been born in Liverpool, but I grew up in Hamburg.»</em> Klubbene lå i Reeperbahn-området.</li>
-<li><strong>Hamburgers</strong> har sannsynligvis IKKE opphavet i Hamburg, men det er en populær teori. Det som trolig skjedde var at tyske emigranter fra Hamburg tok med seg «Frikadellen» (kjøttkaker) til Amerika, hvor de ble satt i brød.</li>
-<li><strong>Elbphilharmonie</strong> tok 10 år å bygge (2007–2017) og kostet <strong>866 millioner euro</strong> – nesten 12 ganger det opprinnelige budsjettet på 77 millioner. Bygningen er 110 meter høy og inneholder 10 000 akustikkpaneler som alle er unike.</li>
-<li><strong>Hansaforbundets fulle sirkel</strong>: Lübeck og Hamburg grunnla Hansaforbundet i 1241 for å beskytte handelen mellom Østersjøen og Nordsjøen. Dere sov nær Lübeck dag 1 og besøker Hamburg i dag — dere har bokstavelig talt besøkt begge grunnlegger-byene som første og siste stopp. Speicherstadt er det siste kapittelet i hanseatisk tradisjon: lagerhusene ble bygget for de SAMME varene Hansaen handlet — kaffe, te, krydder, tobakk. Fra Lübecks middelalderske lagerhus til Hamburgs 1800-talls Speicherstadt: 650 år handelshistorie.</li>
-<li><strong>Bergen-kontoret — den norske koblingen</strong>: Hansaforbundets fire «kontorer» var London, Brugge, Novgorod og BERGEN. Bryggen i Bergen — Norges mest ikoniske bygningsrekke — er et hanseatisk handelskontor bygget av og for tyske kjøpmenn. Tørrfisk fra Nord-Norge ble eksportert via Bergen til Hamburg og videre til resten av Europa. Når dere står i Speicherstadt og ser lagerhusene, står dere i Bergens søsterby.</li>
-<li><strong>Operation Gomorrha (1943)</strong>: I juli 1943 gjennomførte RAF og USAAF den mest ødeleggende bombeserien mot noen tysk by under WWII. En ildstorm med temperaturer opp mot 800 grader og vindstyrker opp mot 240 km/t drepte over 37 000 sivile på én natt i bydelen Hammerbrook. Speicherstadt overlevde relativt intakt — det er en av grunnene til at det er UNESCO-listet.</li>
-</ul>`
-    },
-    {
-      type: "photo",
-      title: "Foto",
-      bookingWarning: null,
-      bookingUrl: null,
-      content: `<ul>
-<li>Speicherstadt: Lagerhusene reflektert i kanalene – dag og kveld. <a href="https://www.google.com/search?tbm=isch&q=speicherstadt+hamburg+reflection+canals+photography" target="_blank" rel="noopener" class="photo-search-link">🔍 Bilder</a></li>
-<li>Elbphilharmonie: Dramatisk arkitektur. Fra Plaza: panorama over havna. <a href="https://www.google.com/search?tbm=isch&q=elbphilharmonie+hamburg+photography+architecture" target="_blank" rel="noopener" class="photo-search-link">🔍 Bilder</a></li>
+<li><strong>Kielerkanalen (Nord-Ostsee-Kanal)</strong>: Åpnet i 1895 av keiser Wilhelm II for å gi den tyske marinen en strategisk snarvei mellom Nordsjøen og Østersjøen — uten å måtte runde Danmark. Den er fortsatt verdens mest trafikkerte kunstige vannvei, med over 30 000 skipspasseringer i året.</li>
+<li><strong>Kielerverftet — keiserens marine</strong>: Wilhelm II ville utfordre britisk sjømakt og bygget en av verdens største krigsflåter ut fra blant annet Kiel. Det var det tyske flåteopprøret i Kiel 3. november 1918 som tente novemberrevolusjonen og endte første verdenskrig.</li>
+<li><strong>Kiel og ubåtene</strong>: I begge verdenskriger var Kiel hovedbase for den tyske ubåtflåten. Byen ble derfor bombet hardere enn nesten noen annen tysk by — over 80 % av sentrum ble jevnet med jorda. Det er derfor Kiel i dag ser nokså moderne ut sammenlignet med Lübeck eller Hameln.</li>
+<li><strong>Kieler Woche</strong>: Verdens største seilbåtbegivenhet, hver juni siden 1882. Det startet som en mønstring for keiseren og er i dag en av Europas største folkefester.</li>
+<li><strong>Color Line og norsk-tysk handel</strong>: Linja Kiel–Oslo har gått siden 1961, opprinnelig under navnet Jahre Line. Color Line overtok i 1990. Det er fortsatt den korteste sjøveien mellom Tyskland og Sør-Norge, og en av Europas best trafikkerte ferjelinjer.</li>
 </ul>`
     },
     {
       type: "food",
-      title: "Middag – Siste ordentlige middag!",
-      bookingWarning: "Dat ole Aalhus: Reserver!",
-      bookingUrl: null,
+      title: "Mat: lunsj i Kiel + festmiddag om bord",
+      bookingWarning: "Restaurantene om bord på Color Magic — book i forveien på colorline.no, særlig signaturrestauranten.",
+      bookingUrl: "https://www.colorline.no/",
       content: `<ul>
-<li><strong><a href="https://aalhus.de/" target="_blank" rel="noopener">Dat ole Aalhus</a></strong> – Kåret til et av Tysklands beste fiskrestauranter av Der Feinschmecker! All fisk beinfri. Reetdekt bindingsverkshus på Fehmarn. 20 min fra Heiligenhafen. <strong>Reserver!</strong> <em>Ca. 30–40 EUR/pers.</em></li>
-<li><strong><a href="https://www.seeteufel.eu/" target="_blank" rel="noopener">Seeteufel</a></strong> – Sjømat og regionalt, eierkok med personlig service. Bekreftet åpent fredager fra 17:00. 4.6/5 Google. <em>Ca. 25–40 EUR/pers.</em></li>
-<li><strong><a href="https://www.beachmotel-hhf.de/en/gastro/holyharbour-cafe-grill" target="_blank" rel="noopener">HOLYHARBOUR Café & Grill</a></strong> – Casual grill på strandpromenaden med solnedgang. Spareribs, fisk, burgere. Egne gårdsingredienser. <em>Ca. 20–35 EUR/pers.</em></li>
+<li><strong>Lunsj i Kiel (før innsjekk)</strong>: Bryggepuben <strong>Kiel Brauerei</strong> ved sentrum gjør egne øl og solid tysk pubmat. Rask servering, gangavstand fra havna.</li>
+<li><strong>Fischbrötchen</strong> i havna — det klassiske: sild eller reker i rundstykke. Ta én før dere går om bord; det er Nord-Tyskland i et håndgrep.</li>
+<li><strong>Festmiddag om bord</strong>: Color Magic har flere restauranter. <strong>Grand Buffet</strong> er klassikeren — sjømat, kjøtt, oster — og det er passende avslutning på 17 dager på veien.</li>
+<li><strong>Bar Aqua</strong> eller <strong>Observation Lounge</strong> på øverste dekk: god whisky og utsikt over Kielfjorden mens dere glir ut.</li>
 </ul>
-<p>💡 Dat ole Aalhus er det klart beste valget – verdt 20 min kjøretur til Fehmarn.</p>`
+<p>🍺 Avgang kl 14:00 betyr at dere går ut Kielfjorden på dagen, langs Laboe og marineverftet — sett dere ute på dekk med et glass.</p>`
     },
     {
-      type: "customs",
-      title: "Lokale skikker — Tyskland (Hamburg og Nord-Tyskland)",
+      type: "practical",
+      title: "Om bord på Color Magic",
       bookingWarning: null,
       bookingUrl: null,
       content: `<ul>
-<li><strong>«Moin» — Nord-Tysklands hilsen</strong>: I Hamburg, Lübeck og Heiligenhafen brukes <strong>«Moin» døgnet rundt</strong> — også om kvelden. Det er hilsen, takk og høflighet i ett. «Moin Moin» kan oppfattes som litt prateete; én «Moin» er normen.</li>
-<li><strong>Hanseatisk reservasjon</strong>: Nordtyskere er mer reserverte enn sørtyskere. Ikke ta korte svar eller direkthet personlig — det er kulturen, ikke uhøflighet. Et «Moin» og et lite nikk er ofte all småprat dere får, og det er vennlig nok.</li>
-<li><strong>På restaurant</strong>: Hils med «Moin» ved ankomst. Sett dere selv hvis ikke det står «Bitte warten». «Die Rechnung, bitte» = regningen.</li>
-<li><strong>Tipsing</strong>: 5–10 %. Si totalbeløpet inkludert tips når dere betaler — ikke legg igjen mynt etterpå.</li>
-<li><strong>Kontant</strong>: Mange Hamburg-bistroer og fiskerestauranter tar bare kontant. Sjekk skiltet.</li>
-<li><strong>Hamburg-spesialiteter</strong>: <strong>Fischbrötchen</strong> (sild, reker eller laks i rundstykke) i havna. <strong>Labskaus</strong> (sjømannsmat: corned beef, potet, rødbete, sild og speilegg). <strong>Franzbrötchen</strong> (kaneltrekantbolle).</li>
-<li><strong>Engelsk</strong>: Bra i Hamburg som internasjonal havneby. På Fehmarn og Heiligenhafen: variabelt blant eldre — bruk gjerne tysk eller la dem peke på menyen.</li>
-<li><strong>Tysk-forsøk</strong>: «Bitte» og «Danke» går langt. Et avslappet «Moin» er det enkleste plusset i bagasjen.</li>
-</ul>`
-    },
-    {
-      type: "accommodation",
-      title: "Overnatting i Heiligenhafen (15 min fra Puttgarden-fergen, siste natt!)",
-      bookingWarning: null,
-      bookingUrl: null,
-      content: `<ul>
-<li><strong><a href="https://hotelstadthamburg.net/en/" target="_blank" rel="noopener">Hotel Stadt Hamburg</a></strong> – 8.4/10, #1 B&B, 1850-hotell, gratis parkering, frokost inkl. <em>Ca. 93–140 EUR/rom/natt.</em></li>
-<li><strong><a href="http://deutsches-haus-heiligenhafen.de/" target="_blank" rel="noopener">Hotel Deutsches Haus</a></strong> – Budsjettvalg, frokost inkl., gratis parkering. 7.9/10. <em>Ca. 60–90 EUR/rom/natt.</em></li>
-<li><strong><a href="https://www.bretterbude-hhf.de/en" target="_blank" rel="noopener">Bretterbude</a></strong> – Surferhotell med stil. Strandpromenaden. Frokost 21,90 EUR/pers ekstra. <em>Ca. 90–110 EUR/rom/natt.</em></li>
-<li><strong><a href="https://wissers-hotel.de/" target="_blank" rel="noopener">Wissers Hotel</a></strong> – Burg auf Fehmarn, ca. 10 min fra Puttgarden-fergen. Rimelig og helt greit.</li>
+<li><strong>Lugar</strong>: Bestill innvendig eller utvendig — vinduslugar med havutsikt anbefales på siste kveld.</li>
+<li><strong>Bilen</strong>: Parkeres på bildekk. Husk å notere dekk og rad. Bildekket er stengt under overfart.</li>
+<li><strong>Wi-Fi</strong>: Tilgjengelig, men begrenset hastighet over åpent hav. Tax-free-butikker er åpne første timene.</li>
+<li><strong>Ankomst Oslo</strong>: Hjortnes-terminalen kl 10:00 lørdag. Bilkø ut av båten tar 20–30 min. Deretter kort kjøretur hjem (se dag 18).</li>
 </ul>`
     },
   ],

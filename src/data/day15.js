@@ -45,7 +45,7 @@ export const day15 = {
       bookingUrl: null,
       references: [
         { type: "book", title: "I, Claudius", author: "Robert Graves", relevance: "Keiser Claudius ble født i Lyon (dag 13) og styrte fra Roma — romerne som plantet Mosels vinranker handlet på hans ordre." },
-        { type: "film", title: "Barbarians (Netflix)", year: 2020, relevance: "Skildrer Teutoburgerwald-slaget der Romerrikets ekspansjon stoppet — grensen de trakk forklarer hvorfor Mosel ble romersk men Hamburg aldri ble det." },
+        { type: "film", title: "Barbarians (Netflix)", year: 2020, relevance: "Skildrer Teutoburgerwald-slaget der Romerrikets ekspansjon stoppet — grensen de trakk forklarer hvorfor Mosel ble romersk mens nordtyske områder aldri ble det." },
       ],
       content: `<ul>
 <li><strong>Mosel-vinene</strong> har vært berømt siden romertiden. Den romerske poeten Ausonius skrev diktet «Mosella» (ca. 370 e.Kr.) der han skildrer elvedalen, vinmarkene og det gode livet – det er en av de eldste skriftlige kildene om vinproduksjon i Tyskland.</li>

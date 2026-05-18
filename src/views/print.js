@@ -12,7 +12,7 @@ const photoSearchUrls = {
   'American Cemetery, Omaha Beach': 'https://www.google.com/search?tbm=isch&q=american+cemetery+omaha+beach+photography',
   'Carcassonne': 'https://www.google.com/search?tbm=isch&q=carcassonne+photography',
   'Roussillon': 'https://www.google.com/search?tbm=isch&q=roussillon+provence+photography',
-  'Speicherstadt, Hamburg': 'https://www.google.com/search?tbm=isch&q=speicherstadt+hamburg+photography',
+  'Beilstein langs Mosel': 'https://www.google.com/search?tbm=isch&q=beilstein+mosel+photography',
   'Rouen by night': 'https://www.google.com/search?tbm=isch&q=rouen+night+photography',
 }
 

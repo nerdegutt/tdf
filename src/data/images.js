@@ -16,7 +16,7 @@ export const dayImages = {
   14: { cdnBase: 'photo-1584999534798-5f4dc63b48db', credit: 'Vered Caspi', username: 'veredcc', photoId: 'unwoHpmX8sw' },
   15: { cdnBase: 'photo-1652881052438-2177e94c2f77', credit: 'Alexander Schimmeck', username: 'alschim', photoId: 'JqjS0ZP8TaQ' },
   16: { cdnBase: 'photo-1731742013335-1b2c2a852be4', credit: 'Wolfgang Weiser', username: 'hamburgmeinefreundin', photoId: 'WRerMBRYoyE' },
-  17: { cdnBase: 'photo-1473615695634-d284ec918736', credit: 'Claudio Testa', username: 'claudiotesta', photoId: 'qpemSW6_1Z0' },
+  17: { cdnBase: 'photo-1645031003376-fd68e7baa6ec', credit: 'Katharina Bill', username: 'katharina_bill', photoId: 'VJrDXrnrEKg' },
   18: { cdnBase: 'photo-1430000589629-f04107b5597c', credit: 'Vidar Kristiansen', username: 'vidar', photoId: 'qv5yb436qRI' },
 };
 
