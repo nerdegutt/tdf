@@ -4,13 +4,13 @@ export const day12 = {
   date: "24. mai",
   weekday: "Søndag",
   from: "Avignon",
-  to: "Gordes/Luberon (dagstur)",
+  to: "Avignon (Pavepalasset)",
   km: 94,
   hours: 2,
   nights: 0,
-  subtitle: "Avignon + Gordes/Luberon",
-  description: "Dagstur til Luberon — Gordes, lavendel-abbediet Sénanque og okerlandsbyen Roussillon. Provences mest maleriske hjørne.",
-  intro: "Dag to i Avignon, med dagstur til Luberon — Provences mest maleriske hjørne. Gordes er ofte kalt Frankrikes vakreste landsby, Sénanque-abbediet er et levende cisterciensermunkesamfunn fra 1148, og Roussillon er en landsby bygget på klipper av ren oker i rødt, oransje og gult. Tilbake i Avignon venter Pavepalasset og broen fra barnesangen.",
+  subtitle: "Heldag i pavebyen — med Luberon på toppen om dere orker",
+  description: "Heldag i Avignon med Pavepalasset i førersetet — Europas største gotiske palass og pavelig residens i 67 år. Luberon-løkka (Gordes, Sénanque, Roussillon) som valgfri ettermiddagstur hvis det er overskudd.",
+  intro: "Dag to i Avignon er Pavepalasset-dagen. Europas største gotiske palass tar 2–4 timer hvis dere virkelig vil inn i historikken — og det er det dere skal denne dagen. Etterpå venter Pont Saint-Bénézet, Rocher des Doms, bymurene og solnedgang fra Villeneuve. Hvis dere orker en biltur etter Pavepalasset, ligger Luberon-løkka (Gordes, Sénanque, Roussillon) 40–50 km øst — Provences mest maleriske hjørne. Men ingen skam i å la den ligge.",
   coords: { lat: 43.95, lng: 4.81 },
   stops: [
     { name: "Gordes", lat: 43.91, lng: 5.20, type: "sight" },
@@ -24,40 +24,42 @@ export const day12 = {
   sections: [
     {
       type: "sights",
-      title: "Avignon",
+      title: "Hoveddag: Pavepalasset og Avignon",
       highlight: true,
-      summary: "Europas største gotiske palass, broen fra barnesangen, og byen der pavene regjerte i 67 år — med to (tidvis tre!) paver samtidig.",
-      bookingWarning: "Palais des Papes – alltid populært!",
+      summary: "Europas største gotiske palass, broen fra barnesangen, og byen der pavene regjerte i 67 år — med to (tidvis tre!) paver samtidig. Gi Pavepalasset 2–4 timer for et ordentlig dypdykk.",
+      bookingWarning: "Palais des Papes – alltid populært! Book tidsluke på forhånd.",
       bookingUrl: "https://www.palais-des-papes.com/",
       references: [
-        { type: "book", title: "A Year in Provence", author: "Peter Mayle", relevance: "Mayle bodde i Luberon-området dere besøker — hans skildringer av markedene, vinbøndene og landsbylivet er dagsturen i bokform." },
-        { type: "film", title: "A Good Year", year: 2006, relevance: "Filmet i Provence-vinmarkene rundt Gordes og Bonnieux — landskapet i filmen er det samme dere kjører gjennom." },
+        { type: "book", title: "The Babylonian Captivity of the Church", author: "Yves Renouard", relevance: "Standardverket om de syv pavene i Avignon — bakgrunnen for hver eneste sal dere går gjennom i palasset." },
+        { type: "book", title: "A Year in Provence", author: "Peter Mayle", relevance: "Mayle bodde i Luberon-området — hans skildringer av markedene, vinbøndene og landsbylivet er Luberon-løkka i bokform (hvis dere drar opp på ettermiddagen)." },
+        { type: "film", title: "A Good Year", year: 2006, relevance: "Filmet i Provence-vinmarkene rundt Gordes og Bonnieux — landskapet i filmen er det samme dere ser hvis dere tar Luberon-løkka." },
       ],
       content: `<ul>
-<li><strong>Palais des Papes</strong> (Pavepalasset): Europas største gotiske palass. Pavelig residens 1309–1377. UNESCO. Regn 2 timer. NB: Palasset er nesten TOMT — plyndret under revolusjonen og brukt som kaserne av Napoleon. Men de enorme, nakne hallene gir en kraftigere opplevelse enn forventet. Grand Tinel (festsalen) er 48 meter lang.</li>
+<li><strong>Palais des Papes</strong> (Pavepalasset): Europas største gotiske palass. Pavelig residens 1309–1377. UNESCO. <strong>Regn 2–4 timer hvis dere vil ha tid i hver sal med audioguide</strong>. Palasset er nesten TOMT — plyndret under revolusjonen og brukt som kaserne av Napoleon. Men de enorme, nakne hallene gir en kraftigere opplevelse enn forventet. Grand Tinel (festsalen) er 48 meter lang. Histopad (AR-tablet) gir rommene tilbake møblene digitalt — anbefales sterkt.</li>
 <li><strong>Pont Saint-Bénézet</strong> («Pont d'Avignon»): Broen fra barnesangen. Bygget 1177, 4 av 22 buer igjen. Barnesangen handler egentlig om å danse UNDER broen — på Île de la Barthelasse der det var vertshus og danselokaler.</li>
-<li><strong>Rocher des Doms</strong>: Park på klippen, panorama mot Mont Ventoux og Alpene.</li>
+<li><strong>Rocher des Doms</strong>: Park på klippen rett ved palasset, panorama mot Mont Ventoux og Alpene. Perfekt benk-pause mellom palasset og lunsj.</li>
 <li><strong>Bymurene</strong>: Komplett bevarte fra 1300-tallet. 5 km lange.</li>
+<li><strong>Fort Saint-André i Villeneuve-lès-Avignon</strong>: 10 min over Rhônen. DEN beste utsikten over Avignon — hele skyline med Pavepalasset, broen og bymurene. Best ved solnedgang (ca. 21:00 i mai).</li>
 <li><a href="https://www.avignon-tourisme.com/" target="_blank" rel="noopener">avignon-tourisme.com</a></li>
 </ul>`
     },
     {
       type: "sights",
-      title: "Dagstur: Gordes & Luberon – Anbefales sterkt!",
-      highlight: true,
-      summary: "Frankrikes vakreste landsby, et levende cistercienserabdedi, og en landsby i rødt, oransje og gult midt på eker-klipper.",
-      bookingWarning: "Sénanque-abbediet har begrenset kapasitet.",
+      title: "Valgfritt: Luberon-løkka (Gordes, Sénanque, Roussillon)",
+      summary: "Hvis dere har overskudd etter Pavepalasset: 40 km øst ligger Provences mest maleriske hjørne — Frankrikes vakreste landsby, et levende cistercienserabdedi og okerklippene i Roussillon.",
+      bookingWarning: "Sénanque-abbediet har begrenset kapasitet — book på forhånd hvis dere bestemmer dere tidlig på dagen.",
       bookingUrl: "https://www.senanque.fr/",
       references: [
-        { type: "film", title: "Le Hussard sur le toit", year: 1995, relevance: "Filmet i Gordes-området — de provençalske steinlandsbyene i filmen er de samme dere besøker i dag." },
-        { type: "film", title: "Jean de Florette", year: 1986, relevance: "Ikonisk Provence-film om vann og rural maktkamp — fanger essensen av Luberon-landskapet dere kjører gjennom." },
+        { type: "film", title: "Le Hussard sur le toit", year: 1995, relevance: "Filmet i Gordes-området — de provençalske steinlandsbyene i filmen er de samme dere ser hvis dere tar Luberon-løkka." },
+        { type: "film", title: "Jean de Florette", year: 1986, relevance: "Ikonisk Provence-film om vann og rural maktkamp — fanger essensen av Luberon-landskapet." },
       ],
       content: `<ul>
-<li><strong>Gordes</strong>: Ofte kalt Frankrikes vakreste landsby. Steinbygninger langs bratt åsside med borg på toppen. Tips: Gordes er best UTENFRA — stopp ved Point de Vue på D15 for morgenlys-foto (østvendt åsside). Innsiden er turistifisert. 30–40 min er nok.</li>
+<li><strong>Gordes</strong>: Ofte kalt Frankrikes vakreste landsby. Steinbygninger langs bratt åsside med borg på toppen. Tips: Gordes er best UTENFRA — stopp ved Point de Vue på D15 for fotoet (østvendt åsside). Innsiden er turistifisert. 30–40 min er nok.</li>
 <li><strong>Sénanque-abbediet</strong> (5 min fra Gordes): Cistercienserabdedi fra 1148. Fortsatt i drift — munker lever her etter Benedikts regel og dyrker lavendel. NB: Lavendelen er IKKE i blomst i mai (tidligst slutten av juni), men uten lilla turister er det nesten tomt — dere får abbediet for dere selv!</li>
 <li><strong>Roussillon</strong> (15 min fra Gordes): Landsby på okerfargede klipper. Byen er i rødt, oransje og gult. Helt unikt. «Le Sentier des Ocres» (Okerstien, ca. 3 EUR) er en vandring gjennom okerklippene — som å gå på Mars. Best i ettermiddagslys etter kl. 16:00. OBS: Okerjord flekker klær!</li>
 <li><a href="https://www.gordes-village.com/" target="_blank" rel="noopener">gordes-village.com</a></li>
-</ul>`
+</ul>
+<p>💡 Realistisk: Pavepalasset i 3 timer + lunsj + Pont d'Avignon + Rocher des Doms tar dagen helt fram til kl. 16–17. Roussillon i ettermiddagslys er det lille ekstra hvis dere fortsatt har energi — Gordes/Sénanque er greit å skippe.</p>`
     },
     {
       type: "history",
@@ -124,14 +126,17 @@ export const day12 = {
     },
     {
       type: "practical",
-      title: "Søndag 24. mai — Luberon-dagsturen",
+      title: "Søndag 24. mai — Pavepalasset-dagen",
       bookingWarning: null,
       bookingUrl: null,
       content: `<ul>
-<li><strong>Les Halles Avignon</strong>: Åpent søndager til kl. 14:00 — start gjerne dagen her med frokost.</li>
-<li><strong>Anbefalt rekkefølge</strong>: Gordes Point de Vue i morgenlys (08:00–10:00, østvendt) → Sénanque (forhåndsbestilt) → Gordes sentrum → Roussillon i ettermiddagslys (etter 16:00, okerklippene gløder).</li>
-<li><strong>Lavendel i mai</strong>: Sénanques lavendelmarker er GRØNNE — lavendelen blomstrer først i slutten av juni. Men: uten lilla turister er det nesten tomt, og valmuer + villblomster er overalt i stedet!</li>
+<li><strong>Frokost</strong>: Les Halles Avignon (åpent søndager til kl. 14:00) eller hotellets frokost.</li>
+<li><strong>Pavepalasset kl. 09:30–13:00</strong>: Book tidsluke tidligst mulig. Histopad (AR-tablet) inkludert i billetten — gjør de tomme salene levende. Audioguide eller guided tour for full historikk.</li>
+<li><strong>Lunsj kl. 13:00–14:30</strong>: I Avignon sentrum. Le Carré du Palais har utsikt rett mot palasset.</li>
+<li><strong>Ettermiddag kl. 14:30–18:00</strong>: Pont Saint-Bénézet, Rocher des Doms, gå på bymurene, Rue des Teinturiers.</li>
 <li><strong>Solnedgang</strong>: Fort Saint-André i Villeneuve for den ultimate utsikten over Avignon (ca. 20:00–21:00).</li>
+<li><strong>Hvis dere har overskudd</strong>: Luberon-løkka (Gordes/Sénanque/Roussillon) tar 4–5 timer. Roussillon i ettermiddagslys er det sterkeste enkelt-elementet hvis dere bare gidder ett.</li>
+<li><strong>Lavendel i mai</strong>: Sénanques lavendelmarker er GRØNNE — lavendelen blomstrer først i slutten av juni. Valmuer og villblomster i stedet.</li>
 </ul>`
     },
   ],

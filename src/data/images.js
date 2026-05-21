@@ -11,7 +11,7 @@ export const dayImages = {
   9:  { cdnBase: 'photo-1663845183777-136ef563e46b', credit: 'Hans-Jurgen Weinhardt', username: 'hansjuergen', photoId: '2BlPUNH2g7U' },
   10: { cdnBase: 'photo-1719396727280-1972257abe18', credit: 'Jametlene Reskp', username: 'reskp', photoId: 'HC9sjCsEJ6Q' },
   11: { cdnBase: 'photo-1562687598-40393b4d426b', credit: 'Xuan Nguyen', username: 'darthxuan', photoId: 'ricmOR_T2rM' },
-  12: { cdnBase: 'photo-1722616588626-f1a6c231479f', credit: 'Bo Zhang', username: 'bozh_ntu', photoId: 'aqEV4eBXFDI' },
+  12: { cdnBase: 'photo-1654298900117-57d82e6471a0', credit: 'Piermario Eva', username: 'p1mm1', photoId: 'MNVdx_nOkEs' },
   13: { cdnBase: 'photo-1628316492043-567795b66ef5', credit: 'Peter Herrmann', username: 'tama66', photoId: 'EMNOVf_ITZQ' },
   14: { cdnBase: 'photo-1584999534798-5f4dc63b48db', credit: 'Vered Caspi', username: 'veredcc', photoId: 'unwoHpmX8sw' },
   15: { cdnBase: 'photo-1652881052438-2177e94c2f77', credit: 'Alexander Schimmeck', username: 'alschim', photoId: 'JqjS0ZP8TaQ' },
