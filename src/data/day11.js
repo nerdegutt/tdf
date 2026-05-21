@@ -3,13 +3,13 @@ export const day11 = {
   day: 11,
   date: "23. mai",
   weekday: "Lørdag",
-  from: "Narbonne",
+  from: "Carcassonne",
   to: "Avignon",
-  km: 195,
-  hours: 2,
+  km: 241,
+  hours: 2.5,
   nights: 2,
-  subtitle: "Kort kjøring med et av turens høydepunkter",
-  description: "Narbonne til Avignon — pavebyen med Europas største gotiske palass, komplett bevarte bymurer og porten til Provence.",
+  subtitle: "Romersk teknologi og pavebyen",
+  description: "Carcassonne til Avignon via Pont du Gard og Nîmes — pavebyen med Europas største gotiske palass, komplett bevarte bymurer og porten til Provence.",
   intro: "Avignon er pavebyens by — i 67 år (1309–1377) regjerte pavene herfra i stedet for Roma, og Europas største gotiske palass troner fortsatt over de komplett bevarte bymurene. Byen har 92 000 innbyggere, et pulserende sentrum innenfor murene, og er porten til Provence med Rhône-viner, lavendel og lys som har inspirert kunstnere i århundrer.",
   coords: { lat: 43.95, lng: 4.81 },
   stops: [
@@ -133,10 +133,10 @@ export const day11 = {
       bookingWarning: null,
       bookingUrl: null,
       content: `<ul>
-<li><strong>Les Halles Narbonne</strong>: Start dagen med frokost på markedet (lørdag = best dag!). Kjøp piknik-mat til Pont du Gard: brød, ost, skinke, frukt.</li>
-<li><strong>Pont du Gard</strong>: Ankom tidlig for morgenlys. Book parkering på forhånd (pontdugard.fr, ca. 18 EUR for bil + 2 pers).</li>
-<li><strong>Nîmes</strong>: 15 min fra Pont du Gard. Les Arènes + Maison Carrée tar 1–1,5 time.</li>
-<li><strong>Avignon</strong>: Ankomst tidlig ettermiddag. Sjekk inn, utforsk bymurene og Rue des Teinturiers.</li>
+<li><strong>Avreise Carcassonne ca. kl. 07:30</strong>: ca. 2 t på A61/A9 til Pont du Gard. Stikk innom et bakeri i nedre by for croissant og kaffe før dere ruller.</li>
+<li><strong>Pont du Gard kl. 09:30–12:00</strong>: Morgenlys på den gylne kalksteinen. Book parkering på forhånd (pontdugard.fr, ca. 18 EUR for bil + 2 pers). Regn 2–2,5 timer.</li>
+<li><strong>Nîmes kl. 12:30–15:00</strong>: 15 min fra Pont du Gard. Lunsj i sentrum, deretter Les Arènes + Maison Carrée (1–1,5 time).</li>
+<li><strong>Avignon kl. 16:00</strong>: 45 min fra Nîmes. Sjekk inn, utforsk bymurene og Rue des Teinturiers før middag.</li>
 </ul>`
     },
   ],

@@ -3,7 +3,7 @@ export const tripMeta = {
   subtitle: "Reiseguide",
   dates: "13.–30. mai 2026",
   travelers: "Erlend & Bjørn Erik",
-  totalKm: 5510,
+  totalKm: 5496,
   totalDays: 18,
   countries: 7,
   route: "Rakkestad → Tyskland → Belgia → Normandie → Bretagne → Atlanterhavskysten → Baskerland → Languedoc → Provence → Burgund → Alsace → Mosel → Kiel-ferja → Hjem"
@@ -27,7 +27,7 @@ export const top10 = {
   history: [
     "D-dagskysten og American Cemetery",
     "Mont Saint-Michel",
-    "Narbonne og Via Domitia (Romas første vei i Gallia)",
+    "Carcassonne og det albigensiske korstoget",
     "Pont du Gard",
     "Pavepalasset i Avignon",
     "Rouen-katedralen (Olav, Richard, Jeanne d'Arc)",
@@ -57,7 +57,7 @@ export const top10 = {
     "Tarte flambée i Riquewihr",
     "Pré-salé lamme ved Mont Saint-Michel",
     "Charolais-biff og jambon persillé i Dijon",
-    "Charcuterie-runder på Les Halles-markeder (Lyon, Narbonne, Avignon)",
+    "Charcuterie-runder på Les Halles-markeder (Lyon og Avignon)",
     "Schwarzwälder Schinken og Mosel-Riesling i Trier",
   ],
 };

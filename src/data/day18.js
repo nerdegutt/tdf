@@ -17,7 +17,7 @@ export const day18 = {
   ],
   trivia: [
     "Dere har nå kjørt gjennom landskapene til minst 40 Nobelprisvinnere i litteratur — fra Thomas Mann (Lübeck) via Hemingway (Baskerland) og Camus (Luberon) til Günter Grass (Lübeck igjen). Ikke verst for en 18-dagers biltur.",
-    "Fra Narbonne (118 f.Kr.) til Trier (300-tallet) har dere sporet Romerrikets utbredelse gjennom Gallia. 400 år med romersk historie komprimert til 18 dagers biltur.",
+    "Fra Pont du Gard (akvedukten til Nîmes, ca. år 50 e.Kr.) til Trier (keiserresidensen på 300-tallet) har dere sporet Romerrikets utbredelse gjennom Gallia. 250 år med romersk historie komprimert til 18 dagers biltur.",
   ],
   sections: [
     {
