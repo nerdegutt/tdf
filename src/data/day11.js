@@ -36,7 +36,7 @@ export const day11 = {
 <li><strong>Romersk akvedukt fra ca. år 50 e.Kr.</strong> UNESCO. 49 meter høy, tre nivåer. Ca. 50 000 tonn stein.</li>
 <li>Bygget for å føre vann 50 km fra Uzès til Nîmes. <strong>Helt uten mørtel – steinene er bare stablet!</strong></li>
 <li>2000 år gammel og fortsatt stående. Museum på stedet. Regn 2–3 timer.</li>
-<li><strong>Tips</strong>: Ankom tidlig (før kl. 09:00) for morgenlys — solen lyser opp den gyldne kalksteinen fra øst, og refleksjonene i Gardon-elven er best når vannet er rolig.</li>
+<li><strong>Tips</strong>: Ankom før kl. 10 for å unngå bussgruppene og varmen — kalksteinen lyser fortsatt gyllent i lørdagsformiddagen, og Gardon-elven er roligst før det blir trafikk.</li>
 </ul>`
     },
     {
@@ -134,7 +134,7 @@ export const day11 = {
       bookingUrl: null,
       content: `<ul>
 <li><strong>Avreise Carcassonne ca. kl. 07:30</strong>: ca. 2 t på A61/A9 til Pont du Gard. Stikk innom et bakeri i nedre by for croissant og kaffe før dere ruller.</li>
-<li><strong>Pont du Gard kl. 09:30–12:00</strong>: Morgenlys på den gylne kalksteinen. Book parkering på forhånd (pontdugard.fr, ca. 18 EUR for bil + 2 pers). Regn 2–2,5 timer.</li>
+<li><strong>Pont du Gard kl. 09:30–12:00</strong>: Tidlig nok til å unngå de største bussgruppene (de kommer 10:30–12:00) og varmen midt på dagen. Book parkering på forhånd (pontdugard.fr, ca. 18 EUR for bil + 2 pers). Regn 2–2,5 timer.</li>
 <li><strong>Nîmes kl. 12:30–15:00</strong>: 15 min fra Pont du Gard. Lunsj i sentrum, deretter Les Arènes + Maison Carrée (1–1,5 time).</li>
 <li><strong>Avignon kl. 16:00</strong>: 45 min fra Nîmes. Sjekk inn, utforsk bymurene og Rue des Teinturiers før middag.</li>
 </ul>`
