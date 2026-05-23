@@ -3,128 +3,47 @@ export const day16 = {
   day: 16,
   date: "28. mai",
   weekday: "Torsdag",
-  from: "Trier",
-  to: "Hameln",
-  km: 481,
-  hours: 5,
-  nights: 1,
-  subtitle: "Langs Mosel- og Rhin-dalene",
-  description: "Trier til Hameln langs Mosel og Rhinen — eventyrbyen til Rottefangeren med Tysklands fineste Weserrenessanse-arkitektur.",
-  intro: "Hameln er eventyrbyen der legenden om Rottefangeren har preget gatene siden 1284. Byen har Tysklands fineste samling av Weserrenessanse-arkitektur — overdådige steinfasader fra 1500- og 1600-tallet langs smale brosteinsbelagte gater. Med bare 60 000 innbyggere er den overraskende sjarmerende og perfekt for en kveldsvandring.",
-  coords: { lat: 52.10, lng: 9.36 },
+  from: "Burg auf Fehmarn",
+  to: "Moss 🏠",
+  km: 702,
+  hours: 8,
+  nights: 0,
+  subtitle: "Hjem!",
+  description: "Siste etappe: Puttgarden-ferja tidlig torsdag, deretter gjennom Danmark og Sverige til Rakkestad (Bjørn Erik av) og Moss (Erlend). 16 dager · 7 land · ca. 5 940 km i bagasjen.",
+  intro: "Siste etappe — og den lengste enkeltdagen. Tidlig Puttgarden–Rødby-ferje, gjennom Danmark og Sverige på E20/E6, av i Rakkestad for Bjørn Erik, og videre til Moss for Erlend. Ca. 8 timer ren kjøring pluss ferje og pauser. Hjemme på kvelden.",
+  coords: { lat: 59.4369, lng: 10.6597 },
   stops: [
-    { name: "Koblenz", lat: 50.36, lng: 7.60, type: "city" },
+    { name: "Rakkestad", lat: 59.43, lng: 11.35, type: "city" },
   ],
   trivia: [
-    "Klemens von Metternich — arkitekten bak Wienkongressen som «ga» Norge til Sverige i 1814 — ble født i Koblenz i 1773. Dere står altså på fødestedet til mannen som bestemte Norges skjebne.",
-    "I år 9 e.Kr. ble tre romerske legioner (ca. 20 000 soldater) tilintetgjort av germanske styrker under høvding Arminius i Teutoburgerwald, 45 min fra Hameln. Det er DETTE som forklarer hvorfor Trier (dag 14–15) ble romersk by — men Hameln aldri ble det. Keiser Augustus slo hodet mot veggen og ropte: «Varus, gi meg tilbake mine legioner!»",
-    "I Hameln er det den dag i dag forbudt å spille musikk i Bungelosenstrasse — gaten barna angivelig ble ført gjennom av Rottefangeren i 1284.",
+    "Dere har nå kjørt gjennom landskapene til minst 40 Nobelprisvinnere i litteratur — fra Thomas Mann (Lübeck) via Hemingway (Baskerland) og Camus (Luberon). Ikke verst for en 16-dagers biltur.",
+    "Fra Pont du Gard (akvedukten til Nîmes, ca. år 50 e.Kr.) til Carcassonne (1200-tallets katarbastion) har dere sporet store deler av Europas vestlige historie gjennom 1200 år.",
+    "Øresundsbroen, hvis dere kjører den veien (kortere men dyrere), er 7 845 meter lang og åpnet i 2000. E6 langs vestkysten er gratis og bare litt lenger.",
   ],
   sections: [
     {
-      type: "sights",
-      highlight: true,
-      summary: "Der Mosel møter Rhinen — kabelbane over elven til Europas mest befestede punkt (3000 år!). Kjør Mosel-veien hit, ikke motorveien.",
-      title: "Anbefalt stopp: Koblenz (ca. 2t fra Trier)",
+      type: "practical",
+      title: "Hjemreise",
       bookingWarning: null,
       bookingUrl: null,
-      references: [
-        { type: "book", title: "Loreley (dikt)", author: "Heinrich Heine", relevance: "Heines udødelige dikt om sirenen ved Loreley-klippen — dere kjører forbi den langs Rhinen mellom Koblenz og Bingen." },
-      ],
-      content: `<ul>
-<li><strong>Deutsches Eck</strong>: Landtungen der Mosel møter Rhinen. Keiser Wilhelm I-monument. <a href="https://www.koblenz-touristik.de/" target="_blank" rel="noopener">koblenz-touristik.de</a></li>
-<li><strong>Festung Ehrenbreitstein</strong>: Massiv festning. Kabelbane over Rhinen. Panoramautsikt.</li>
-<li><strong>Rhindalen</strong> herfra og nordover er UNESCO-listet. Borger på begge sider hele veien.</li>
-</ul>`
-    },
-    {
-      type: "photo",
-      title: "Foto",
-      bookingWarning: null,
-      bookingUrl: null,
-      content: `<ul>
-<li>Deutsches Eck ovenifra (Ehrenbreitstein/kabelbanen). <a href="https://www.google.com/search?tbm=isch&q=deutsches+eck+koblenz+aerial+photography" target="_blank" rel="noopener" class="photo-search-link">🔍 Bilder</a></li>
-<li>Kabelbanen over Rhinen – unike perspektiver. <a href="https://www.google.com/search?tbm=isch&q=koblenz+cable+car+rhine+ehrenbreitstein" target="_blank" rel="noopener" class="photo-search-link">🔍 Bilder</a></li>
-</ul>`
-    },
-    {
-      type: "sights",
-      highlight: true,
-      summary: "Rottefangerens by med Europas fineste Weserrenessanse-arkitektur. Perfekt for kveldsvandring etter en lang kjøredag.",
-      title: "Hameln (Hamelin) – Rottefangerbyen",
-      bookingWarning: null,
-      bookingUrl: null,
-      references: [
-        { type: "book", title: "Barnas og hjemmets eventyr", author: "Brødrene Grimm", relevance: "Rottefangeren av Hameln er et av Grimms mest kjente eventyr — dere vandrer i gatene der 130 barn angivelig forsvant i 1284." },
-      ],
-      content: `<ul>
-<li>Legenden om Rottefangeren (1284). Bindingsverkshus fra Weserrenessansen (1500–1600-tallet).</li>
-<li><strong>Rattenfängerhaus</strong>: Bygning fra 1602 med innskrift om legenden.</li>
-<li>Kompakt gammel by – perfekt for kveldsvandring.</li>
-<li><a href="https://www.hameln.de/" target="_blank" rel="noopener">hameln.de</a></li>
+      content: `<p>Tidlig ferje Puttgarden–Rødby, deretter ren transportkjøring oppover.</p>
+<ul>
+<li><strong>Tidlig start</strong>: Ferje 06:30 eller 07:00 fra Puttgarden. Sjekk <a href="https://www.scandlines.com/" target="_blank" rel="noopener">scandlines.com</a>.</li>
+<li><strong>Danmark</strong>: E47/E20 over Storebæltsbroen (bompenger ca. 250 DKK). Pauser ved Aarsleff-rasten eller Skanderborg.</li>
+<li><strong>Sverige</strong>: E20 nordøst mot Göteborg, E6 nordover.</li>
+<li><strong>Norge</strong>: E6 over Svinesund. Rakkestad-avstikker via fylkesvei 22 (Bjørn Erik av), så tilbake på E6 til Moss (Erlend).</li>
+<li><strong>Tid totalt</strong>: 8 timer ren kjøring + ferje + pauser = hjemme sen ettermiddag/tidlig kveld hvis avreise før kl. 07.</li>
 </ul>`
     },
     {
       type: "history",
-      title: "Historie",
+      title: "Refleksjon",
       bookingWarning: null,
       bookingUrl: null,
       content: `<ul>
-<li><strong>Deutsches Eck</strong> i Koblenz: Monumentet for keiser Wilhelm I ble reist i 1897, ødelagt i WWII, og gjenoppbygd først i 1993. I mellomtiden sto bare sokkelen – med et fransk flagg plantet på toppen under okkupasjonen som en spesiell provokasjon.</li>
-<li><strong>Rhindalen</strong> mellom Koblenz og Bingen er fullt av borger fordi Rhin-grevene krevde <strong>bompenger</strong> av alle skip som passerte. Hver borg kontrollerte en del av elven. Loreley-klippen (nær St. Goar) er berømt for sagnet om en sirene som lokket sjømenn i døden med sin sang – Heinrich Heine skrev et berømt dikt om det.</li>
-<li><strong>Rottefangeren av Hameln</strong>: Den eldste skriftlige kilden er fra 1384 – en innskrift i Hameln som sier at 130 barn forsvant 26. juni 1284. Ingen rotter nevnes i de tidligste versjonene! Moderne historikere tror legenden kan referere til unge mennesker som emigrerte til Øst-Europa under den tyske Ostsiedlung-koloniseringen, eller til barn som døde i en epidemi.</li>
-<li><strong>Weserrenessansen</strong> (arkitekturstilen i Hameln) er en unik nordtysk variant av renessansearkitekturen fra ca. 1520–1620. Kjennetegnes av overdådige steinornamenterte gavler med volutter og pyramider. Hameln har Tysklands fineste samling.</li>
-<li><strong>Ehrenbreitstein — 3000 år befestning</strong>: Festningen over Koblenz er et av de eldste kontinuerlig befestede stedene i Europa — fra bronsealderen via romersk garnison til prøyssisk superfestning (1817–28, den nest største i Europa etter Gibraltar). Napoleon sprengte den forrige festningen etter at den hadde motstått franskmennene i 10 år. Fra toppen forstår man HVORFOR Koblenz har vært strategisk viktig i 3000 år: to store elver møtes her.</li>
-<li><strong>Metternich — født i Koblenz</strong>: Klemens von Metternich, den mest innflytelsesrike europeiske statsmannen mellom Napoleon og Bismarck, ble født her i 1773. Han var arkitekten bak Wienkongressen (1814–15) som redesignet Europa etter Napoleons fall. For to nordmenn: Metternichs Wienkongress var den som «ga» Norge til Sverige.</li>
-<li><strong>Teutoburgerwald (45 min fra Hameln)</strong>: I år 9 e.Kr. ble tre romerske legioner under general Varus tilintetgjort av germanske styrker. Slaget stoppet romersk ekspansjon østover for godt — Rhinen forble grensen. Det er dette som forklarer hvorfor Trier (dag 14–15) ble romersk by mens Hameln aldri ble det. Hermannsdenkmal, en 53 meter høy statue av Arminius, troner på en ås nær Detmold.</li>
-<li><strong>Loreley-klippen</strong> (mellom Koblenz og Bingen): Den snevre passasjen forsterker elvelyden slik at det høres ut som en stemme. Hundrevis av båter har forlist her. Heinrich Heine udødeliggjorde sagnet om sirenen i 1824 — og diktet ble så populært at nazistene ikke turte forby det, men trykket det som «Forfatter ukjent». Les diktet høyt i bilen!</li>
-</ul>`
-    },
-    {
-      type: "gem",
-      title: "Beilstein — Mosels Tornerose",
-      content: `<p>Halvveis mellom Cochem og Koblenz langs Mosel-veien. En bitte liten vinlandsby (ca. 140 innbyggere) der tiden stoppet på 1600-tallet. Ruinene av <strong>Burg Metternich</strong> (ja, DEN Metternich-familien) troner over landsbyen. Ingen suvenirbutikker. Ingen turistbusser. Bare stein, vin og stillhet.</p>`,
-      detour: "Rett på Mosel-veien",
-      duration: "15–20 min",
-      cost: "Gratis",
-    },
-    {
-      type: "accommodation",
-      title: "Overnatting i Hameln",
-      bookingWarning: null,
-      bookingUrl: null,
-      content: `<ul>
-<li><strong><a href="https://www.hotel-hameln.de/en/" target="_blank" rel="noopener">Hotel An der Altstadt</a></strong> – 8.6/10, familiedrevet fra 1901. <strong>Gratis parkering + frokost inkludert!</strong> Best value. Service 9.8! <em>Ca. 69–126 EUR/rom/natt.</em></li>
-<li><strong>Altstadtpension Hameln</strong> – 9.0/10 Booking! #1 B&B. Rolig sidegate. Personale 9.7. Sjekk parkeringsmuligheter. <em>Ca. 86–91 EUR/rom/natt.</em></li>
-<li><strong><a href="https://hotel-zur-boerse.de/en/" target="_blank" rel="noopener">Hotel zur Börse</a></strong> – Midt i gamlebyen, 43 rom. Parkeringshus overfor 12,50 EUR/dag. <em>Ca. 82–130 EUR/rom/natt.</em></li>
-</ul>`
-    },
-    {
-      type: "food",
-      title: "Middag i Hameln",
-      bookingWarning: null,
-      bookingUrl: null,
-      content: `<ul>
-<li><strong><a href="https://www.gaststaette-reichsadler.de/" target="_blank" rel="noopener">Gaststätte Reichsadler</a></strong> – Eldste pub i Hameln. Rumpsteak som angivelig slo 80 GBP-steak i London! 4.5/5, 1900 anmeldelser. Litt utenfor sentrum (Klutviertel). <em>Ca. 15–25 EUR/pers.</em></li>
-<li><strong>India Haus im Rattenfängerhaus</strong> – Det ikoniske bygget fra 1602 er nå indisk restaurant (siden 2021). 4.6/5 med 4800+ anmeldelser. Åpent daglig. Opplevelsen er like mye bygningen som maten! <em>Ca. 15–25 EUR/pers.</em></li>
-<li><strong><a href="https://www.rattenkrug.de/" target="_blank" rel="noopener">Paulaner im Rattenkrug</a></strong> – Hamelns eldste vertshus (200+ år). Schweinshaxe, sprø schnitzel, Paulaner fra fat. Åpent torsdag fra kl. 12. <em>Ca. 20–30 EUR/pers.</em></li>
-</ul>
-<p>🐀 Rattenfängerhaus er like mye opplevelse som middag – uansett om det er tysk eller indisk!</p>`
-    },
-    {
-      type: "customs",
-      title: "Lokale skikker — Tyskland (Rhinland og Niedersachsen)",
-      bookingWarning: null,
-      bookingUrl: null,
-      content: `<ul>
-<li><strong>Hilsen</strong>: «Guten Tag» eller «Hallo». I Niedersachsen (Hameln) hører dere ofte «Tach!» — avslappet hverdagstysk. Si «Tschüss» eller «Auf Wiedersehen» når dere går.</li>
-<li><strong>På restaurant</strong>: Hils ved ankomst. Sett dere selv hvis ikke det står «Bitte warten» (vent her). «Die Rechnung, bitte» = regningen.</li>
-<li><strong>Tipsing</strong>: 5–10 %. <strong>Viktig</strong>: Si totalbeløpet inkludert tips når dere betaler («Achtzehn» = 18 EUR), IKKE legg igjen mynt på bordet etterpå.</li>
-<li><strong>Kontant</strong>: Mange tyske restauranter, særlig brauhaus og bistroer, tar fortsatt KUN kontant («Nur Bargeld»). Sjekk skiltet.</li>
-<li><strong>Tysk øl</strong>: Pilsner og hvete (Weißbier) er standardene. Bestill «Ein Pils, bitte» eller «Ein Weizen, bitte». «Prost!» når dere skåler — se i øynene, ikke ned i glasset.</li>
-<li><strong>Engelsk</strong>: De fleste under 50 i byer snakker bra engelsk. Hameln er liten by, og engelsken er litt mer variert blant eldre.</li>
-<li><strong>Tysk-forsøk</strong>: «Bitte» og «Danke» går langt. «Sehr lecker!» (veldig velsmakende!) etter måltid er gull.</li>
-<li><strong>Punktlighet</strong>: Forventes til reservasjoner.</li>
+<li>Dere har kjørt gjennom landområder kontrollert av <strong>romerne, vikingene, frankerne, normannerne, baskerne, katarene, englenderne, burgunderne, habsburgerne, Napoleon, og to verdenskrigene</strong>. Ca. 2000 år med europeisk historie på 16 dager.</li>
+<li><strong>Den norske tråden</strong>: Rollo fra Møre grunnla Normandie (dag 4–5). Hanseatene kontrollerte norsk handel i 400 år (dag 1). Waterloo og Wienkongressen ga oss 17. mai (dag 3). Olav den Hellige ble døpt i Rouen (dag 4). Dere har ikke bare reist gjennom Europa — dere har reist gjennom NORGES historie, bare sett utenfra.</li>
+<li><strong>Hva som overlever</strong>: Romerske veier. Pont du Gard. Vikingetikk som ble normannisk lov. Hanseatisk handel som ble nordeuropeisk økonomi. Cistersiensisk vinkultur. Det som overlever er ikke makt — det er infrastruktur, kunnskap og tradisjon.</li>
 </ul>`
     },
   ],

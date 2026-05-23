@@ -12,12 +12,10 @@ export const dayImages = {
   10: { cdnBase: 'photo-1719396727280-1972257abe18', credit: 'Jametlene Reskp', username: 'reskp', photoId: 'HC9sjCsEJ6Q' },
   11: { cdnBase: 'photo-1562687598-40393b4d426b', credit: 'Xuan Nguyen', username: 'darthxuan', photoId: 'ricmOR_T2rM' },
   12: { cdnBase: 'photo-1654298900117-57d82e6471a0', credit: 'Piermario Eva', username: 'p1mm1', photoId: 'MNVdx_nOkEs' },
-  13: { cdnBase: 'photo-1628316492043-567795b66ef5', credit: 'Peter Herrmann', username: 'tama66', photoId: 'EMNOVf_ITZQ' },
-  14: { cdnBase: 'photo-1584999534798-5f4dc63b48db', credit: 'Vered Caspi', username: 'veredcc', photoId: 'unwoHpmX8sw' },
-  15: { cdnBase: 'photo-1652881052438-2177e94c2f77', credit: 'Alexander Schimmeck', username: 'alschim', photoId: 'JqjS0ZP8TaQ' },
-  16: { cdnBase: 'photo-1731742013335-1b2c2a852be4', credit: 'Wolfgang Weiser', username: 'hamburgmeinefreundin', photoId: 'WRerMBRYoyE' },
-  17: { cdnBase: 'photo-1645031003376-fd68e7baa6ec', credit: 'Katharina Bill', username: 'katharina_bill', photoId: 'VJrDXrnrEKg' },
-  18: { cdnBase: 'photo-1430000589629-f04107b5597c', credit: 'Vidar Kristiansen', username: 'vidar', photoId: 'qv5yb436qRI' },
+  13: { cdnBase: 'photo-1707212216690-bf13dfd7399c', credit: 'Éole Wind', username: 'eolewind', photoId: 'J_vLvj4HOpQ' },
+  14: { cdnBase: 'photo-1546790971-f16f7ebb83af', credit: 'Niklas Hamann', username: 'niklas_hamann', photoId: 'MY4QimVDh2U' },
+  15: { cdnBase: 'photo-1645031003376-fd68e7baa6ec', credit: 'Katharina Bill', username: 'katharina_bill', photoId: 'VJrDXrnrEKg' },
+  16: { cdnBase: 'photo-1430000589629-f04107b5597c', credit: 'Vidar Kristiansen', username: 'vidar', photoId: 'qv5yb436qRI' },
 };
 
 const UTM = '?utm_source=tdf_reiseguide&utm_medium=referral';

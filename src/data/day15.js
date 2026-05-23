@@ -3,105 +3,67 @@ export const day15 = {
   day: 15,
   date: "27. mai",
   weekday: "Onsdag",
-  from: "Trier",
-  to: "Trier",
-  km: 0,
-  nights: 0,
-  subtitle: "Heldag / Mosel-dagstur",
-  description: "Mosel-dagstur fra Trier — bratte vinmarker, Bernkastel-Kues, Cochem og Riesling fra et av Europas mest pittoreske vinlandskap.",
-  intro: "Mosel-dalen er et av Europas mest pittoreske vinlandskap, med bratte vinmarker som stuper ned mot den sakte buktende elven. Romerne plantet de første vinrankene her for nesten 2000 år siden, og Rieslingen fra disse hellingene regnes blant verdens beste. Bernkastel-Kues og Cochem er dalens to perler — bindingsverkshus, eventyrborger og vinsmaking.",
-  coords: { lat: 49.75, lng: 6.64 },
-  stops: [
-    { name: "Bernkastel-Kues", lat: 49.92, lng: 7.07, type: "city" },
-    { name: "Cochem", lat: 50.15, lng: 7.17, type: "city" },
-  ],
+  from: "Glashütten",
+  to: "Burg auf Fehmarn",
+  km: 630,
+  hours: 6.5,
+  nights: 1,
+  subtitle: "Tilbake til Østersjøen og kjent terreng",
+  description: "Glashütten til Burg auf Fehmarn — tilbake til der dere overnattet på vei sørover. Hotel Wissers, kjent grunn, og siste natt på kontinentet.",
+  intro: "Lengste kjøredagen på hjemreisen — 630 km gjennom hele Tyskland, fra Taunus i sør til Fehmarn i nord. Ren A5/A7-tur med to-tre pauser. Burg auf Fehmarn er den lille hovedbyen på øya der dere overnattet på vei sørover (dag 1). Hotel Wissers ligger ~10 minutter fra Puttgarden-ferja, så dere er klare for tidlig ferje neste morgen.",
+  coords: { lat: 54.4264, lng: 11.1903 },
+  stops: [],
   trivia: [
-    "General Patton sendte dette telegrammet da han inntok Trier i mars 1945: «Have taken Trier with two divisions. Do you want me to give it back?» — etter at hovedkvarteret hadde sagt at det ville kreve fire divisjoner.",
-    "Cusanusstiftet i Bernkastel-Kues er en av verdens eldste fungerende stiftelser (grunnlagt 1458) — den har servert vin fra sine egne vinmarker i over 560 år. Å drikke vin i kjelleren er å drikke i en institusjon eldre enn boktrykkerkunsten.",
+    "Fehmarn fikk navnet sitt fra det slaviske «Femer», som betyr «på fast grunn» — øya stikker opp fra grunt vann og var lenge en handelspost mellom slaver og germanere før den ble dansk og senere tysk.",
+    "Den planlagte <strong>Fehmarnbelt-tunnelen</strong> mellom Fehmarn og Lolland (DK) blir verdens lengste senketunnel for både vei og jernbane — 18 km. Etter åpning ca. 2029 forsvinner Puttgarden–Rødby-ferja. Dere tar en av de siste mulighetene til å gjøre denne reisen «på den gamle måten».",
+    "Jimi Hendrix holdt sin siste konsert på Fehmarn 6. september 1970 — 12 dager før han døde. Det står et minnesmerke ved Flügge.",
   ],
   sections: [
     {
       type: "practical",
-      title: "Forslag til dagen",
+      title: "Kjøreetappen og ankomst Fehmarn",
       bookingWarning: null,
       bookingUrl: null,
-      content: `<h4>Alternativ A: Grundig Trier-dag</h4>
-<ul>
-<li>Formiddag: Porta Nigra, Domen, Liebfrauenkirche, Konstantinbasilikaen. Alt gangavstand.</li>
-<li>Lunsj: Hauptmarkt-området.</li>
-<li>Ettermiddag: Kaiserthermen, Amphitheater, evt. Karl Marx-huset.</li>
+      content: `<ul>
+<li><strong>Avreise Glashütten</strong>: A3 nordover til Köln-området, så A1/A7 hele veien opp til Hamburg, deretter A1 mot Lübeck og videre på A1/B207 inn på Fehmarn-broen.</li>
+<li><strong>Pauser</strong>: 6,5 t med kjøring krever minst 2 ordentlige pauser. Naturlige stoppesteder: Aire de Wiehl (Sauerland) eller Hannover-rastene.</li>
+<li><strong>Hamburg-trafikk</strong>: Onsdag ettermiddag rundt Hamburg er rushtrafikk — pass på å treffe det 14–17. Hvis dere er tidlig nok ute, slipper dere det.</li>
+<li><strong>Fehmarn-broen</strong>: Den dramatiske buebroen fra fastlandet til øya er gratis å krysse. Fotografisk fin om dere ankommer i kveldslyset.</li>
+<li><strong>Parkering Hotel Wissers</strong>: Egen parkering på hotellet. Helt uproblematisk.</li>
+</ul>`
+    },
+    {
+      type: "accommodation",
+      title: "Overnatting på Wissers Hotel — der dere startet",
+      bookingWarning: null,
+      bookingUrl: null,
+      content: `<ul>
+<li><strong><a href="https://wissers-hotel.de/" target="_blank" rel="noopener">Wissers Hotel</a></strong> — Burg auf Fehmarn, samme stedet som ble nevnt som alternativ på dag 1. Familiedrevet, enkel komfort, ca. 10 minutter fra Puttgarden-fergeterminalen. Gratis parkering. Restaurant. <em>Ca. 80–110 EUR/rom/natt.</em></li>
 </ul>
-<h4>Alternativ B: Mosel-dalen dagstur (anbefalt! 🍷)</h4>
-<ul>
-<li><strong>Bernkastel-Kues</strong> (50 min): En av Tysklands vakreste vinbyer. Bindingsverkshus, bratte vinmarker, Riesling-smaking. <a href="https://www.bernkastel.de/" target="_blank" rel="noopener">bernkastel.de</a></li>
-<li><strong>Cochem</strong> (1,5t): Eventyrborg <strong>Reichsburg Cochem</strong> på åsrygg over Mosel. Fantastisk foto. <a href="https://www.cochem.de/" target="_blank" rel="noopener">cochem.de</a></li>
-<li>Kjør langs Mosel-elven – noen av verdens bratteste vinmarker.</li>
-</ul>`
-    },
-    {
-      type: "history",
-      title: "Historie",
-      bookingWarning: null,
-      bookingUrl: null,
-      references: [
-        { type: "book", title: "I, Claudius", author: "Robert Graves", relevance: "Keiser Claudius ble født i Lyon (dag 13) og styrte fra Roma — romerne som plantet Mosels vinranker handlet på hans ordre." },
-        { type: "film", title: "Barbarians (Netflix)", year: 2020, relevance: "Skildrer Teutoburgerwald-slaget der Romerrikets ekspansjon stoppet — grensen de trakk forklarer hvorfor Mosel ble romersk mens nordtyske områder aldri ble det." },
-      ],
-      content: `<ul>
-<li><strong>Mosel-vinene</strong> har vært berømt siden romertiden. Den romerske poeten Ausonius skrev diktet «Mosella» (ca. 370 e.Kr.) der han skildrer elvedalen, vinmarkene og det gode livet – det er en av de eldste skriftlige kildene om vinproduksjon i Tyskland.</li>
-<li><strong>Bernkastel-Kues</strong> er fødebyen til <strong>Nikolaus Cusanus</strong> (1401–64), en av senmiddelalderens viktigste filosofer, matematikere og kardinaler. Han foreslo at jorden dreide rundt solen 100 år før Kopernikus. Hospitalet han grunnla (St.-Nikolaus-Hospital/Cusanusstift) fungerer fortsatt og har en historisk vinbar.</li>
-<li>Vinmarkene langs Mosel er blant <strong>verdens bratteste</strong> – med helninger på opptil 65 grader. Alt arbeidet må gjøres for hånd. Calmont-vinmarken mellom Bremm og Eller er den bratteste i Europa.</li>
-<li><strong>Cochem</strong> sin Reichsburg ble fullstendig ødelagt av franske tropper under <strong>Pfälziske arvefølgekrig</strong> (1689) og lå i ruiner i nesten 200 år. Den ble gjenoppbygd i ny-gotisk stil av den berlinske forretningsmannen Louis Ravené i 1868–77.</li>
-<li><strong>Romerne brakte vinen til Mosel</strong>: De første vinrankene ble plantet av romerske legionærer på 100-tallet e.Kr. — trolig brakte de Elbling-druen (en av verdens eldste druesorter, fortsatt dyrket langs Mosel) fra Italia. Ved Neumagen-Dhron (halvveis til Bernkastel) ble det i 1884 funnet en romersk steinskulptur av en vinbåt — det eldste fysiske beviset på vinhandel langs Mosel, fra ca. 220 e.Kr.</li>
-<li><strong>Trier under WWII</strong>: Byen ble bombet gjentatte ganger, men de romerske monumentene overlevde nesten uskadd. Konstantinbasilikaen BRANT (interiøret ble totalskadd i 1944), men de 1700 år gamle murene stod. Under de alliertes innmarsj i mars 1945 sendte general Patton sitt berømte telegram etter å ha tatt byen med bare to divisjoner.</li>
-<li><strong>Burg Eltz</strong> (20 min fra Cochem): En av Tysklands mest spektakulære borger — og en av de FÅ som aldri ble ødelagt. Den har vært i SAMME families eie i over 850 år (33 generasjoner). Tre familiegreiner eide hver sin fløy og levde der samtidig — et middelaldersk «timeshare». Borgen stod på den tyske 500-markseddelen.</li>
-</ul>`
-    },
-    {
-      type: "photo",
-      title: "Foto",
-      bookingWarning: null,
-      bookingUrl: null,
-      content: `<ul>
-<li>Porta Nigra i morgenlys. <a href="https://www.google.com/search?tbm=isch&q=porta+nigra+trier+photography" target="_blank" rel="noopener" class="photo-search-link">🔍 Bilder</a></li>
-<li>Konstantinbasilikaen innenfra: Det enorme rommet. <a href="https://www.google.com/search?tbm=isch&q=konstantinbasilika+trier+interior+photography" target="_blank" rel="noopener" class="photo-search-link">🔍 Bilder</a></li>
-<li>Bernkastel-Kues: Markedsplass med bindingsverkshus, bratte vinmarker. <a href="https://www.google.com/search?tbm=isch&q=bernkastel+kues+marktplatz+photography" target="_blank" rel="noopener" class="photo-search-link">🔍 Bilder</a></li>
-<li>Cochem: Reichsburg fra nede ved elven – postkortmotiv. <a href="https://www.google.com/search?tbm=isch&q=reichsburg+cochem+mosel+photography" target="_blank" rel="noopener" class="photo-search-link">🔍 Bilder</a></li>
-</ul>`
-    },
-    {
-      type: "gem",
-      title: "Burg Eltz — aldri ødelagt, 850 år i samme familie",
-      content: `<p>Gjemt i en dal ved en sideelv til Mosel. En av Tysklands mest autentiske middelalderborger — <strong>aldri erobret eller ødelagt</strong>, hverken av Ludvig XIV (som ødela alt annet i Rhindalen i 1689) eller av WWII-bombingen. Tre tårn, tre familier, én delt borggård. Interiøret er originalt middelalder. Visuelt magisk — borgen ser ut som den stiger opp av skogen. Stod på den gamle 500 D-Mark-seddelen.</p>`,
-      detour: "20 min fra Cochem",
-      duration: "2 timer (inkl. kjøring og guidet tur)",
-      cost: "Ca. 12 EUR",
+<p>🔁 Litt sentimentalt å ende der dere startet — 14 dager og hele Europa siden sist.</p>`
     },
     {
       type: "food",
-      title: "Middag i Trier (kveld 2)",
+      title: "Siste middag på kontinentet",
       bookingWarning: null,
       bookingUrl: null,
       content: `<ul>
-<li><strong><a href="https://www.kistetrier.de/" target="_blank" rel="noopener">Kartoffel Restaurant Kiste</a></strong> – Trier-institusjon! Kreative potettrettet + tyske klassikere. 340 plasser. #15 TripAdvisor. Åpent daglig 11–23. <em>Ca. 15–25 EUR/pers.</em></li>
-<li><strong><a href="https://www.brauhaus-trier.de/" target="_blank" rel="noopener">Altes Brauhaus Trier</a></strong> – Gammelt bryggeri, blodpølse med surkål, svineribbe, Biergarten. Åpent ti–fr fra 17:00. <em>Ca. 18–30 EUR/pers.</em></li>
-<li><strong><a href="https://www.schlemmereule.com/" target="_blank" rel="noopener">Schlemmereule</a></strong> – Fine dining, 3-retters 69 EUR. #9 i Trier, Travelers' Choice. Splurge-alternativet! <em>Ca. 50–70 EUR/pers.</em></li>
-</ul>`
+<li><strong>Wissers Hotel-restauranten</strong> — Solid nord-tysk hjemmelaget mat: Schnitzel, Labskaus, fersk fisk fra Østersjøen. <em>Ca. 20–35 EUR/pers.</em></li>
+<li><strong><a href="https://www.salzspeicher.com/" target="_blank" rel="noopener">Zum Alten Salzspeicher</a></strong> (Heiligenhafen, 15 min) — Hvis dere har overskudd til litt mer drama: historisk saltspeicher fra 1587 med rustikk biffmeny.</li>
+<li><strong>Treffpunkt Fischhalle</strong> (Heiligenhafen) — Prisvinnende fisk rett fra havna. Lokalt favorittsted.</li>
+</ul>
+<p>🐟 <strong>Fischbrötchen</strong> i havna er klassikeren — sild, reker eller laks i rundstykke. Bestill en til frokost neste morgen før ferja!</p>`
     },
     {
-      type: "customs",
-      title: "Lokale skikker — Tyskland (Mosel-vinregion)",
-      bookingWarning: null,
-      bookingUrl: null,
+      type: "practical",
+      title: "Forberedelse til hjemreise (torsdag morgen)",
+      bookingWarning: "Puttgarden–Rødby ferja — book i forveien for trygg plass.",
+      bookingUrl: "https://www.scandlines.com/",
       content: `<ul>
-<li><strong>Hilsen</strong>: «Guten Tag» eller «Hallo». «Tschüss» eller «Auf Wiedersehen» når dere går.</li>
-<li><strong>Mosel-Riesling-kultur</strong>: Bestill <strong>Riesling</strong> — be om «trocken» (tørr), «halbtrocken» (halvtørr) eller «feinherb»/«lieblich» (søtere). Mosel-Rieslinger er ofte lette og syrlige med lavt alkoholinnhold (8–10 %). Smak før dere bestiller flaske. <strong>«Zum Wohl!»</strong> (skål!) når dere skåler — og se hverandre i øynene, det er like viktig her som i Frankrike.</li>
-<li><strong>Vingårdsbesøk og smaking</strong>: I Bernkastel-Kues og Cochem finnes mange «Weingüter» (vingårder) med smaking. Det er vanlig å betale en liten avgift (5–10 EUR) — refunderes ofte ved kjøp. Spytt eller svelg, men ikke bli full hos vinbonden.</li>
-<li><strong>På restaurant</strong>: Hils ved ankomst. Sett dere selv hvis ikke det står «Bitte warten». «Die Rechnung, bitte» = regningen.</li>
-<li><strong>Tipsing</strong>: 5–10 %. Si totalbeløpet inkludert tips ved betaling — ikke legg igjen mynt etterpå.</li>
-<li><strong>Kontant</strong>: Mange Weinstuben og brauhaus tar bare kontant. Sjekk skiltet.</li>
-<li><strong>Engelsk</strong>: Bra blant yngre. Eldre vinbønder snakker ofte begrenset engelsk — pek på etiketten eller bruk «Sprechen Sie Englisch?».</li>
-<li><strong>Tysk-forsøk</strong>: «Sehr lecker!» (veldig godt!) eller «Sehr gut!» etter et måltid eller en god vin gir et stort smil.</li>
+<li><strong>Ferje</strong>: Puttgarden–Rødby går hvert 30. minutt. Ta en tidlig avgang (06:30 eller 07:00) for å komme dere ut av Danmark før formiddagen.</li>
+<li><strong>Innsjekk</strong>: 30–45 min før avgang. Hotellet er 10 min fra terminalen.</li>
+<li><strong>Tax-free</strong>: Hvis dere skal handle om bord — gjør det på utreisen, ikke nå. Hjemveien er tom-bilen-vei.</li>
+<li><strong>Tidlig opp</strong>: Det er en LANG dag fra Rødby til Moss, sett alarmen og spis frokost før dere ruller.</li>
 </ul>`
     },
   ],

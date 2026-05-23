@@ -14,8 +14,6 @@ import { day13 } from './day13.js';
 import { day14 } from './day14.js';
 import { day15 } from './day15.js';
 import { day16 } from './day16.js';
-import { day17 } from './day17.js';
-import { day18 } from './day18.js';
 import { attachImages } from './images.js';
 
 export { tripMeta, bookingOverview, top10 } from './meta.js';
@@ -37,8 +35,6 @@ export const days = [
   day14,
   day15,
   day16,
-  day17,
-  day18,
 ];
 
 function slugify(s) {

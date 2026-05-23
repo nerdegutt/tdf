@@ -5,7 +5,7 @@ export function renderInfo() {
   if (!container) return
 
   const routeRows = days.map(d => {
-    const flagEmoji = d.day === 5 ? ' 🇳🇴' : d.day === 18 ? ' 🏠' : ''
+    const flagEmoji = d.day === 5 ? ' 🇳🇴' : d.day === 16 ? ' 🏠' : ''
     const kmText = d.km > 0 ? `${d.km}` : '0'
     const hoursText = d.hours ? `~${d.hours} t` : '–'
 
@@ -95,11 +95,10 @@ export function renderInfo() {
         </h3>
         <div class="section-content text-stone-700">
           <ul>
-            <li>Total: ca. ${tripMeta.totalKm.toLocaleString('nb-NO')} km. Daglig lading på lange kjøredager.</li>
-            <li><strong>Frankrike:</strong> Supercharger + Ionity. Motorveier har bompenger (ca. 50–80 EUR totalt). <strong>Strenge fartskontroller!</strong></li>
+            <li>Total: ca. ${tripMeta.totalKm.toLocaleString('nb-NO')} km. Lading håndteres av Teslaen — Superchargere langs alle motorveier.</li>
+            <li><strong>Frankrike:</strong> Bompenger på motorveiene (ca. 50–80 EUR totalt). <strong>Strenge fartskontroller!</strong></li>
             <li><strong>Spania:</strong> Gratis motorveier i Baskerland.</li>
             <li><strong>Tyskland/Belgia:</strong> Ingen motorveibompenger.</li>
-            <li>Planlegg lading via Tesla-appen eller <a href="https://abetterrouteplanner.com/" target="_blank" rel="noopener">A Better Route Planner</a>.</li>
           </ul>
         </div>
       </div>

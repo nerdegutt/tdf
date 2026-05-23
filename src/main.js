@@ -176,7 +176,7 @@ function render() {
     currentView = 'overview'
     setMeta({
       title: 'Tour de France 2026 – Reiseguide',
-      description: 'Reiseguide for en 18-dagers biltur gjennom Europa: Norge → Tyskland → Belgia → Frankrike → Spania og hjem. 7 land, 6200 km, mai 2026.',
+      description: 'Reiseguide for en 16-dagers biltur gjennom Europa: Norge → Tyskland → Belgia → Frankrike → Spania og hjem. 7 land, 5940 km, mai 2026.',
       url: `${SITE_URL}/`,
       image: DEFAULT_IMAGE,
     })
@@ -231,7 +231,7 @@ function render() {
     window.scrollTo(0, 0)
     setMeta({
       title: 'Reiseinfo · Tour de France 2026',
-      description: 'Komplett ruteoversikt, kjøreinfo for Tesla og booking-oversikt for de viktigste opplevelsene på 18-dagers turen gjennom Europa.',
+      description: 'Komplett ruteoversikt, kjøreinfo for Tesla og booking-oversikt for de viktigste opplevelsene på 16-dagers turen gjennom Europa.',
       url: `${SITE_URL}/info`,
       image: DEFAULT_IMAGE,
     })
@@ -275,7 +275,7 @@ function render() {
   }
 }
 
-// Navigasjonsrekkefølge: info → dag 1–18 → topp10
+// Navigasjonsrekkefølge: info → dag 1–16 → topp10
 function navigateStep(direction) {
   const route = getRoute()
 

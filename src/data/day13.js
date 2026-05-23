@@ -4,139 +4,65 @@ export const day13 = {
   date: "25. mai",
   weekday: "Mandag",
   from: "Avignon",
-  to: "Dijon",
-  km: 422,
+  to: "Bèze",
+  km: 444,
   hours: 5,
   nights: 1,
-  subtitle: "Obligatorisk matstopp i Lyon!",
-  description: "Avignon til Dijon med matstopp i Lyon — Burgunds gamle hovedstad med sennep, vinruter og en av Frankrikes best bevarte middelalderbyer.",
-  alert: "<strong>Andre pinsedag (25. mai)</strong> — offentlig fridag i Frankrike. Les Halles Paul Bocuse stenger kl. 13:00. Mange mindre butikker holder stengt, men de fleste restauranter og severdigheter har åpent.",
-  intro: "Dijon var hovedstaden i det mektige hertugdømmet Burgund, som på 1400-tallet rivaliserte med Frankrike selv. I dag er byen kjent for sennep, vinruter og en av Frankrikes best bevarte middelalderbyer. Palais des Ducs, der hertugene residerte, huser nå et av landets fineste kunstmuseer.",
-  coords: { lat: 47.32, lng: 5.04 },
-  stops: [
-    { name: "Orange", lat: 44.14, lng: 4.81, type: "sight" },
-    { name: "Lyon", lat: 45.76, lng: 4.83, type: "city" },
-  ],
+  subtitle: "Lang transportetappe nordover",
+  description: "Avignon til Bèze — liten landsby nord for Dijon med Frankrikes nest største karstkilde. Praktisk overnattingsstopp på vei hjem.",
+  intro: "Etter to dager i Avignon settes turen hjemover. Dag 13 er en ren transportetappe nordover via Rhône-dalen og opp til Burgund — 444 km og ca. 5 timer. Overnattingen er i Bèze, en bitte liten landsby (~700 innbyggere) i Côte-d'Or, ca. 30 km nordøst for Dijon. Lite turistert, enkel parkering, et par solide bygdehoteller — perfekt for en rolig kveld etter en lang dag på A7/A6.",
+  coords: { lat: 47.4569, lng: 5.2667 },
+  stops: [],
   trivia: [
-    "Lyon (Lugdunum) var HOVEDSTADEN i romersk Gallia — den nest viktigste byen i det vestlige Romerriket etter Roma selv. Alt det romerske dere har sett på turen (Pont du Gard, Nîmes, Orange) ble administrert herfra.",
-    "Lyons silkearbeidere (canutene) gjorde opprør i 1831 under mottoet «Lev av arbeidet eller dø i kamp» — det første store arbeideropprøret i industrihistorien. Det inspirerte direkte Karl Marx, hvis fødehus dere besøker i morgen i Trier.",
-    "Hertugene av Burgund i Dijon var på 1400-tallet RIKERE enn den franske kongen. Da Karl den Dristige falt ved Nancy i 1477, ble liket funnet halvspist av ulver — og datteren hans giftet seg inn i Habsburg-familien, som dermed overtok halve Europa.",
+    "Bèze gir navn til Frankrikes nest største karstkilde — «Source de la Bèze» — der elven fosser ut av kalksteinen i fullt utviklet bredde. Du kan padle kano gjennom underjordiske grotter rett under landsbyen.",
+    "Underjordiske grotter under Bèze ble brukt som tilfluktsrom under hundreårskrigen og igjen under WWII. De er åpne for guidede turer om sommeren.",
+    "Côte-d'Or-vinmarkene starter rett vest for Bèze — Gevrey-Chambertin er 15 minutter unna. Dere er rett ved et av verdens fineste vindistrikter, om dere har overskudd til en vin etter middag.",
   ],
   sections: [
     {
-      type: "sights",
-      highlight: true,
-      summary: "Gallias gamle hovedstad — traboules, Fourvière-utsikt og galloromanske teatre.",
-      title: "Stopp: Lyon – Frankrikes gastronomiske hovedstad (2–3 timer)",
+      type: "practical",
+      title: "Kjøreetappen og ankomst Bèze",
       bookingWarning: null,
       bookingUrl: null,
-      references: [
-        { type: "film", title: "Lumière!", year: 2017, relevance: "Brødrene Lumière oppfant filmen i Lyon — dokumentaren viser de tidligste opptakene, mange filmet i gatene dere går i." },
-        { type: "film", title: "Hotel Terminus: Klaus Barbie", year: 1988, relevance: "Dokumentar om «Slakteren fra Lyon» som styrte Gestapo herfra — traboule-passasjene dere ser ble brukt av motstandsfolk som flyktet fra ham." },
-      ],
       content: `<ul>
-<li><strong>Vieux Lyon</strong> (UNESCO): Renessansebydel med <strong>traboules</strong> (hemmelige passasjer gjennom bygninger). <a href="https://www.lyon-france.com/" target="_blank" rel="noopener">lyon-france.com</a></li>
-<li><strong>Basilique Notre-Dame de Fourvière</strong>: Toppen av åsen, fantastisk utsikt. Overdreven interiør – gull, mosaikk, marmor.</li>
-<li><strong>Galloromanske teatre</strong>: Romerske ruiner på Fourvière-åsen. Gratis.</li>
-<li><strong>Presqu'île</strong>: Halvøyen med Place Bellecour (Europas største fortausfrie torg).</li>
-</ul>`
-    },
-    {
-      type: "food",
-      title: "Mat i Lyon – VIKTIG!",
-      bookingWarning: null,
-      bookingUrl: null,
-      content: `<p>Dette er verdens mathovedstad!</p>
-<ul>
-<li><strong>Bouchon Lyonnais</strong>: Tradisjonelle lokale restauranter. Se etter «Authentique Bouchon Lyonnais»-merket.</li>
-<li><strong>Daniel et Denise</strong>: Berømt bouchon. Quenelle, tablier de sapeur, biff. <a href="https://www.danieletdenise.fr/" target="_blank" rel="noopener">danieletdenise.fr</a></li>
-<li><strong>Les Halles de Lyon – Paul Bocuse</strong>: Frankrikes mest berømte mathall. Perfekt lunsj. Charcuterie-avdelingene her er i en egen liga – rosette de Lyon (tørket pølse), jambon persillé (skinke i persillégele) og saucisson brioché. <a href="https://www.halles-de-lyon-paulbocuse.com/" target="_blank" rel="noopener">halles-de-lyon-paulbocuse.com</a></li>
-<li>Selv en rask lunsj i Lyon er verdt stoppet.</li>
+<li><strong>Avreise Avignon</strong>: A7 nordover, så A6 mot Dijon. Motorvei hele veien — bompenger ca. 45–55 EUR.</li>
+<li><strong>Lunsjstopp</strong>: Aire de Beaune-Tailly er stort og har restauranter. Naturlig pause ca. 3,5 t fra Avignon.</li>
+<li><strong>Ankomst Bèze</strong>: Sving av A31 ved Til-Châtel eller Mirebeau-sur-Bèze. Landsbyen er liten og oversiktlig — alt ligger innenfor 5 minutters gangavstand.</li>
+<li><strong>Parkering</strong>: Gratis gateparkering. Ingen problem.</li>
 </ul>`
     },
     {
       type: "sights",
-      highlight: true,
-      summary: "Hertugenes palass, uglelykke og Frankrikes sennepshovedstad — der Burgunds mektige rike hadde sitt sete.",
-      title: "Dijon – Sennepsbyen",
-      bookingWarning: null,
-      bookingUrl: null,
-      references: [
-        { type: "book", title: "Wine Myths and Reality", author: "Benjamin Lewin", relevance: "Forklarer terroir-begrepet og burgunderviner — perfekt bakgrunn for vinsmaking i Beaune og langs Côte d\'Or." },
-      ],
-      content: `<ul>
-<li><strong>Palais des Ducs de Bourgogne</strong>: Hertugenes palass. Nå rådhus og kunstmuseum (gratis!).</li>
-<li><strong>Tour Philippe le Bon</strong>: 316 trinn, 360° utsikt.</li>
-<li><strong>Église Notre-Dame</strong>: Chouette-uglen i fasaden – klø den med venstre hånd for lykke.</li>
-<li><strong>Dijons «uglesti»</strong>: Følg metallplatene i fortauet gjennom gamlebyen.</li>
-<li><a href="https://www.destinationdijon.com/" target="_blank" rel="noopener">destinationdijon.com</a></li>
-</ul>`
-    },
-    {
-      type: "history",
-      title: "Historie",
+      title: "Litt å se i Bèze (15–30 min hver)",
       bookingWarning: null,
       bookingUrl: null,
       content: `<ul>
-<li><strong>Lyons traboules</strong>: De hemmelige passasjene gjennom bygninger i Vieux Lyon ble opprinnelig brukt av silkearbeidere for å transportere varer under tak (silke tåler ikke regn). Under WWII brukte den franske motstandsbevegelsen dem til å flykte fra Gestapo – det var umulig for tyskerne å kontrollere det labyrintiske nettverket.</li>
-<li>Lyon var hovedsetet for <strong>Gestapo i Frankrike</strong>. Den beryktede Klaus Barbie («Slakteren fra Lyon») opererte herfra. Han ble først dømt for krigsforbrytelser i 1987 – etter å ha gjemt seg i Bolivia i årevis med CIA-hjelp.</li>
-<li><strong>Paul Bocuse</strong>, Lyons store kokk, drev Restaurant Paul Bocuse med tre Michelin-stjerner i <strong>55 sammenhengende år</strong> (1965–2020) – en verdensrekord. Han regnes som grunnleggeren av «nouvelle cuisine».</li>
-<li><strong>Dijonsennep</strong> ble berømt fordi man i 1856 begynte å bruke <strong>verjuice</strong> (saften fra umodne druer) i stedet for eddik – noe som ga en mildere, mer aromatisk sennep. Maille har laget sennep i Dijon siden 1747.</li>
-<li><strong>Époisses-osten</strong> er så illeluktende at den angivelig er <strong>forbudt på offentlig transport i Frankrike</strong>. Napoleon elsket den.</li>
-<li><strong>Lyon som Gallias hovedstad</strong>: Lugdunum ble grunnlagt i 43 f.Kr. av en av Caesars generaler. Keiser Claudius (født i Lyon i 10 f.Kr.) holdt herfra sin berømte tale der han argumenterte for at gallere burde få sete i det romerske senatet — bronsetavlen med talen er utstilt på Musée de la Civilisation Gallo-Romaine på Fourvière-høyden.</li>
-<li><strong>Jean Moulin og motstandsbevegelsen</strong>: Lyon var HOVEDKVARTERET for hele den franske motstandsbevegelsen. De Gaulles utsending Jean Moulin samlet motstandsgruppene her i 1943, men ble forrådt, arrestert av Barbie i forstaden Caluire, torturert i tre uker uten å gi fra seg et eneste navn, og døde under transport til Tyskland. Han er Frankrikes største motstandshelt.</li>
-<li><strong>Fourvière-basilikaen</strong> ble bygget 1872–96 som takk for at Lyon ble spart under den prøyssisk-franske krigen. Stilen er bevisst overdådig — en triumfalistisk proklamasjon av katolsk tro mot en stadig mer sekulær republikk. Den kostet dobbelt så mye som Paris-operaen.</li>
-<li><strong>Burgunds rike — mektigere enn Frankrike</strong>: Under Filip den Gode og Karl den Dristige kontrollerte hertugdømmet Burgund, Flandern, Brabant, Holland og Luxembourg — dere har allerede kjørt gjennom deres territorium i Belgia (dag 3). Filip den Gode grunnla Den gylne vlies' orden (1430), og hoffet i Dijon var Europas mest raffinerte. Hadde Karl den Dristige overlevd Nancy, ville det kanskje eksistert et «Burgund» i dag i stedet for Belgia og Nederland.</li>
-<li><strong>Cistercienserne og vintradisjonen</strong>: Burgunds verdensberømte viner ble systematisert av cisterciensermunker fra Cîteaux (20 min fra Dijon) — de SAMME cistercienserne som grunnla Sénanque (dag 12). Munkene smakte på jorden, studerte dreneringen og oppfant begrepet <strong>terroir</strong>. I 2015 ble Burgunderveienes «climats» UNESCO-listet. En flaske Romanée-Conti koster typisk 10 000–25 000 EUR.</li>
+<li><strong>Source de la Bèze</strong>: Frankrikes nest største karstkilde — elven kommer ut av fjellet i full bredde, helt klart vann. Kort spasertur fra landsbyen.</li>
+<li><strong>Grottes de Bèze</strong>: Underjordisk elv som kan padles i kano. Guidede turer ca. 9 EUR. Bare aktuelt om dere ankommer i god tid før kveldsmat.</li>
+<li><strong>Église Saint-Rémi</strong>: Romansk landsbykirke fra 1100-tallet. Rolig og lite turistert.</li>
 </ul>`
     },
     {
       type: "accommodation",
-      title: "Overnatting i Dijon",
+      title: "Overnatting i Bèze",
       bookingWarning: null,
       bookingUrl: null,
       content: `<ul>
-<li><strong><a href="https://hoteldeshalles-dijon.com/en/hotel-2/" target="_blank" rel="noopener">Hôtel des Halles</a></strong> – 8.4/10 Booking, 37 rom, 200m fra Les Halles. Parkering 820 fot unna, 11 EUR/dag. 1 frokost kjøpt = 1 gratis! <em>Ca. 75–100 EUR/rom/natt.</em></li>
-<li><strong><a href="https://hotel-lejacquemart.fr/eng/" target="_blank" rel="noopener">Hôtel Le Jacquemart</a></strong> – 1740-bygning, renovert 2024, 8.5/10. Parkering 300m unna (10 EUR/dag). Ingen heis. <em>Ca. 65–100 EUR/rom/natt.</em></li>
-<li><strong><a href="https://www.hotel-bb.com/en/hotel/dijon-centre" target="_blank" rel="noopener">B&B Hotel Dijon Centre</a></strong> – Billigst. Twin-rom. Utsjekk kl. 12. <em>Ca. 60–92 EUR/rom/natt.</em></li>
+<li><strong><a href="https://www.lebourguignon.fr/" target="_blank" rel="noopener">Hôtel-Restaurant Le Bourguignon</a></strong> — Lite bygdehotell midt i landsbyen, restaurant i underetasjen. Solid 7,5–8/10 på Booking. Gratis parkering. <em>Ca. 70–95 EUR/rom/natt.</em></li>
+<li><strong>Chambres d'hôtes Côté Source</strong> — B&B rett ved Bèze-kilden. Familiedrevet, frokost inkludert. <em>Ca. 75–100 EUR/rom/natt.</em></li>
+<li><strong>Hôtel Ibis Dijon Sud</strong> (20 min sør i Marsannay) — Hvis dere foretrekker forutsigbar kjedekomfort. Stor parkering, billigere enn sentrum-Dijon. <em>Ca. 60–80 EUR/rom/natt.</em></li>
 </ul>`
-    },
-    {
-      type: "gem",
-      title: "Orange — det eneste komplette romerske teateret i Europa",
-      content: `<p>25 min nord for Avignon, rett på A7 (0 min omvei). Det romerske teateret har en <strong>komplett scenevegg</strong> — 37 meter høy, den eneste i Europa som fortsatt står intakt. Rommer 9 000 tilskuere. UNESCO. Ludvig XIV sa da han så veggen: «Det er den vakreste muren i mitt kongerike.» Et direkte supplement til Pont du Gard og Nîmes (dag 11).</p>`,
-      detour: "Rett på A7, 0 min omvei",
-      duration: "30 min",
-      cost: "Ca. 11 EUR",
     },
     {
       type: "food",
-      title: "Middag i Dijon",
+      title: "Middag i Bèze",
       bookingWarning: null,
       bookingUrl: null,
       content: `<ul>
-<li><strong><a href="https://www.lepreauxclercs.fr/" target="_blank" rel="noopener">Le Pré aux Clercs</a></strong> – Georges Blanc-signert brasserie overfor Hertugens palass. Meny 39 EUR, plat du jour 16 EUR. Åpent 7/7 – sikreste valg! <em>Ca. 25–50 EUR/pers.</em></li>
-<li><strong><a href="https://www.le-coin-cache.fr/" target="_blank" rel="noopener">Le Coin Caché</a></strong> – Intim bistro, 50 plasser. Kveldsmeny 50 EUR. Åpent man–fre. <em>Ca. 40–55 EUR/pers.</em></li>
-<li><strong>Parapluie</strong> – Michelin-utvalgt overraskelsesmeny! 4.7/5, 850 anmeldelser. Åpent man–fre. Rue Monge 74. <em>Ca. 35–50 EUR/pers.</em></li>
+<li><strong>Le Bourguignon (hotellrestauranten)</strong> — Klassisk burgundermat: bœuf bourguignon, coq au vin, lokale oster. Solid og rimelig. <em>Ca. 25–40 EUR/pers.</em></li>
+<li><strong>Auberge du Plateau</strong> (Mirebeau-sur-Bèze, 5 min unna) — Litt mer ambisjon, fortsatt landlig. <em>Ca. 30–45 EUR/pers.</em></li>
 </ul>
-<p>💡 Le Pré aux Clercs er åpent 7/7 (bekreftet på lepreauxclercs.fr). Le Coin Caché og Parapluie er åpne man–fre iht. flere kilder.</p>`
-    },
-    {
-      type: "customs",
-      title: "Lokale skikker — Frankrike (Lyon og Burgund)",
-      bookingWarning: null,
-      bookingUrl: null,
-      content: `<ul>
-<li><strong>«Bonjour madame/monsieur»</strong> til alle dere møter. Etter 18:00: «Bonsoir». «Au revoir» når dere går.</li>
-<li><strong>Bouchon-kultur (Lyon)</strong>: I et ekte «Bouchon Lyonnais» (se «Authentique Bouchon Lyonnais»-merket) er det lange fellesbord, frekt og rapt servicepreg, og maten er enkel og solid: quenelle, andouillette, tablier de sapeur. Bordene er ofte delt — sett dere ned der det er ledig plass og hils «Bonjour» til de andre.</li>
-<li><strong>Burgund — vinkultur er nesten religion</strong>: Når dere skåler, si <strong>«Santé!»</strong> og <strong>se den andre i øynene</strong> — å se ned er overtro for syv års dårlig sex. Smak vinen før dere drikker, og kommenter den (selv et «c'est bon» går bra). Aldri vri vinglasset slik at dråper renner over kanten.</li>
-<li><strong>Sennep og crème de cassis</strong>: Dijon-sennep finnes overalt, men de virkelige stedene er Maille- og Edmond Fallot-butikkene. Aperitiff: <strong>Kir</strong> (hvitvin + crème de cassis) er Dijons signatur — drikk det istedenfor pastis.</li>
-<li><strong>På restaurant</strong>: Vent på å bli vist til bordet. «L'addition, s'il vous plaît» når dere er ferdige.</li>
-<li><strong>Tipsing</strong>: Service er inkludert. 1–5 EUR ekstra eller bare runde opp.</li>
-<li><strong>Engelsk</strong>: Bra i Lyon (storby, gastronomisk turistmål). Greit i Dijon. Variabelt i Bouchons der personalet snakker «sier ting til hverandre på fransk så fort dere ikke skjønner»-fransk.</li>
-<li><strong>Fransk-forsøk</strong>: «C'était délicieux» (det var herlig) eller «Quel régal!» (for en fest!) er gull i Lyon — verdens mathovedstad respekterer mat-entusiasme.</li>
-<li><strong>Mattider</strong>: Lunsj 12:00–14:00, middag 19:30–22:00. Mandag (i dag, andre pinsedag): mange restauranter holder åpent, men ring og bekreft.</li>
-</ul>`
+<p>🍷 Dere er i Côte-d'Or — bestill et glass <strong>Marsannay</strong> eller <strong>Gevrey-Chambertin</strong> til middag. Lokale viner blir ikke mer autentiske.</p>`
     },
   ],
 };

@@ -13,7 +13,7 @@ export function renderOverview() {
     const kmText = d.km > 0
       ? `${d.km} km${d.hours ? ` · ~${d.hours} t` : ''}`
       : 'Ingen kjøring'
-    const flagEmoji = d.day === 5 ? ' 🇳🇴' : d.day === 18 ? ' 🏠' : ''
+    const flagEmoji = d.day === 5 ? ' 🇳🇴' : d.day === 16 ? ' 🏠' : ''
     const thumbImg = d.image
       ? `<div class="relative h-36 overflow-hidden">
            <img src="${d.image.thumb}" alt="Dag ${d.day}: ${d.from} til ${d.to}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">

@@ -91,7 +91,7 @@ function renderDayContent(day) {
 
 function renderInfoSection() {
   const routeRows = days.map(d => {
-    const flagEmoji = d.day === 5 ? ' 🇳🇴' : d.day === 18 ? ' 🏠' : ''
+    const flagEmoji = d.day === 5 ? ' 🇳🇴' : d.day === 16 ? ' 🏠' : ''
     const kmText = d.km > 0 ? `${d.km}` : '0'
     const hoursText = d.hours ? `~${d.hours} t` : '–'
     return `
@@ -140,11 +140,10 @@ function renderInfoSection() {
 
       <h3>⚡ Praktisk: Tesla & kjøring</h3>
       <ul>
-        <li>Total: ca. ${tripMeta.totalKm.toLocaleString('nb-NO')} km. Daglig lading på lange kjøredager.</li>
-        <li><strong>Frankrike:</strong> Supercharger + Ionity. Motorveier har bompenger (ca. 50–80 EUR totalt). Strenge fartskontroller.</li>
+        <li>Total: ca. ${tripMeta.totalKm.toLocaleString('nb-NO')} km. Lading håndteres av Teslaen — Superchargere langs alle motorveier.</li>
+        <li><strong>Frankrike:</strong> Bompenger på motorveiene (ca. 50–80 EUR totalt). Strenge fartskontroller.</li>
         <li><strong>Spania:</strong> Gratis motorveier i Baskerland.</li>
         <li><strong>Tyskland/Belgia:</strong> Ingen motorveibompenger.</li>
-        <li>Planlegg lading via Tesla-appen eller A Better Route Planner.</li>
       </ul>
 
       <h3>🎟️ Booking-oversikt</h3>
@@ -189,7 +188,7 @@ function renderCover() {
   return `
     <section class="print-cover">
       <h1>Tour de France 2026</h1>
-      <p class="print-subtitle">En reiseguide for 18 dager gjennom Europa</p>
+      <p class="print-subtitle">En reiseguide for 16 dager gjennom Europa</p>
       <p class="print-cover-meta">${tripMeta.dates}<br>${tripMeta.travelers}</p>
       <div class="print-overview-map" id="print-overview-map" role="img" aria-label="Oversiktskart over hele ruten"></div>
       <p class="print-stats">${tripMeta.totalKm.toLocaleString('nb-NO')} km · ${tripMeta.countries} land · ${tripMeta.totalDays} dager</p>

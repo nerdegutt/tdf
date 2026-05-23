@@ -1,26 +1,24 @@
 export const tripMeta = {
   title: "Tour de France 2026",
   subtitle: "Reiseguide",
-  dates: "13.–30. mai 2026",
+  dates: "13.–28. mai 2026",
   travelers: "Erlend & Bjørn Erik",
-  totalKm: 5496,
-  totalDays: 18,
+  totalKm: 5940,
+  totalDays: 16,
   countries: 7,
-  route: "Rakkestad → Tyskland → Belgia → Normandie → Bretagne → Atlanterhavskysten → Baskerland → Languedoc → Provence → Burgund → Alsace → Mosel → Kiel-ferja → Hjem"
+  route: "Rakkestad → Tyskland → Belgia → Normandie → Bretagne → Atlanterhavskysten → Baskerland → Languedoc → Provence → Burgund → Taunus → Fehmarn → Hjem"
 };
 
 export const bookingOverview = [
-  { what: "Ferje Rødby–Puttgarden", where: "Dag 1", why: "Billigere forhåndsbestilt (kun utreise)", url: "https://www.scandlines.com/" },
-  { what: "Color Line Kiel–Oslo", where: "Dag 17", why: "Lugar bør bestilles i god tid — fredager i mai er populært. Avgang kl 14:00.", url: "https://www.colorline.no/" },
+  { what: "Ferje Rødby–Puttgarden", where: "Dag 1 + 16", why: "Billigere forhåndsbestilt", url: "https://www.scandlines.com/" },
   { what: "Mémorial de Waterloo", where: "Dag 3", why: "Tidsluker, slipper kø", url: "https://www.waterloo1815.be/" },
-
   { what: "Mont Saint-Michel abbediet", where: "Dag 6", why: "Kan bli lange køer", url: "https://www.abbaye-mont-saint-michel.fr/" },
   { what: "Les Machines de l'Île (Nantes)", where: "Dag 7", why: "Kan selge ut (elefantturen)", url: "https://www.lesmachines-nantes.fr/" },
   { what: "Bar Nestor txuleta (San Seb.)", where: "Dag 9", why: "Kun 2 biff per dag – bestill kl. 13!", url: null },
   { what: "Cité de Carcassonne + slottet", where: "Dag 10", why: "Tidsluker i høysesong", url: "https://www.remparts-carcassonne.fr/" },
   { what: "Pont du Gard", where: "Dag 11", why: "Parkering bør bestilles i høysesong", url: "https://www.pontdugard.fr/" },
-  { what: "Palais des Papes (Avignon)", where: "Dag 11–12", why: "Alltid populært", url: "https://www.palais-des-papes.com/" },
-  { what: "Sénanque-abbediet", where: "Dag 12", why: "Begrenset kapasitet", url: "https://www.senanque.fr/" },
+  { what: "Palais des Papes (Avignon)", where: "Dag 11–12", why: "Hovedfokus dag 12 — book tidsluke tidlig", url: "https://www.palais-des-papes.com/" },
+  { what: "Sénanque-abbediet", where: "Dag 12", why: "Valgfri Luberon-tur, begrenset kapasitet", url: "https://www.senanque.fr/" },
 ];
 
 export const top10 = {
@@ -31,33 +29,33 @@ export const top10 = {
     "Pont du Gard",
     "Pavepalasset i Avignon",
     "Rouen-katedralen (Olav, Richard, Jeanne d'Arc)",
-    "Porta Nigra og det romerske Trier",
+    "Maison Carrée og Les Arènes i Nîmes",
     "Waterloo",
-    "Lyon (Lugdunum) — Gallias romerske hovedstad",
+    "Lübeck og Hansaens hovedstad",
     "KU Leuven og det dobbelt-brente universitetsbiblioteket",
   ],
   photo: [
     "Mont Saint-Michel",
     "Gordes/Luberon",
     "Pont du Gard",
-    "Riquewihr",
     "San Sebastián fra Monte Igueldo",
     "American Cemetery, Omaha Beach",
     "Carcassonne",
     "Roussillon",
-    "Beilstein langs Mosel",
+    "Pavepalasset fra Villeneuve-lès-Avignon",
+    "La Rochelle havn",
     "Rouen by night",
   ],
   food: [
     "Pintxos-runde i San Sebastián",
-    "Bouchon-lunsj i Lyon",
-    "Bœuf Bourguignon i Dijon",
     "Jamón ibérico de bellota i San Sebastián",
     "Grillet sjømat og biff i La Rochelle",
-    "Tarte flambée i Riquewihr",
     "Pré-salé lamme ved Mont Saint-Michel",
-    "Charolais-biff og jambon persillé i Dijon",
-    "Charcuterie-runder på Les Halles-markeder (Lyon og Avignon)",
-    "Schwarzwälder Schinken og Mosel-Riesling i Trier",
+    "Cassoulet i Carcassonne med Corbières-vin",
+    "Cidre og calvados i Normandie",
+    "Châteauneuf-du-Pape og provençalsk middag i Avignon",
+    "Bœuf bourguignon i Bèze (Côte-d'Or)",
+    "Charcuterie og oster på Les Halles Avignon",
+    "Apfelwein i Hessen (Glashütten/Taunus)",
   ],
 };
