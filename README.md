@@ -28,4 +28,4 @@ npm run preview    # forhåndsvis bygget lokalt
 - **Tailwind CSS v4** — styling
 - **Leaflet** — kart (OpenStreetMap, ingen API-nøkkel)
 - **Vanilla JS** — ingen rammeverk
-- **Vercel** — hosting (auto-deploy ved push til `main`)
+- **Vercel** — hosting i dag (auto-deploy ved push til `main`); flyttes til familiens hjemmeserver (Dokploy, `Dockerfile`)

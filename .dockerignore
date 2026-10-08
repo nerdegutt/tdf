@@ -1,0 +1,6 @@
+# Tailwind leser alle filer i prosjektet (også research/) for å finne klasser, så bare byggeresultater og PDF-en holdes utenfor.
+node_modules
+dist
+.git
+public/tdf-reise.pdf
+.DS_Store

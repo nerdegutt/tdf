@@ -1,0 +1,28 @@
+# Oppfører seg som vercel.json på Vercel: rene adresser (/dag/1 → dag/1/index.html), ingen skråstrek på slutten,
+# /index.html sendes til ren adresse, ukjente adresser gir 404, og PDF-en hentes fra GitHub-releasen.
+{
+	admin off
+	auto_https off
+}
+
+:3000 {
+	root * /srv
+	respond /healthz "ok" 200
+	header -Server
+	header Cache-Control "no-cache"
+
+	redir /tdf-reise.pdf https://github.com/nerdegutt/tdf/releases/download/latest-pdf/tdf-reise.pdf 307
+	redir /index.html / 308
+	@index path_regexp index ^(/.+)/index\.html$
+	redir @index {re.index.1} 308
+	@slash path_regexp slash ^(/.+)/$
+	redir @slash {re.slash.1} 308
+
+	try_files {path} {path}/index.html
+	file_server {
+		disable_canonical_uris
+	}
+	log {
+		output stdout
+	}
+}
