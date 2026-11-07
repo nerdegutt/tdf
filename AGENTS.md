@@ -94,6 +94,9 @@ Stopp-typer:
   `dag/1/index.html`, `/x/` og `/x/index.html` → `/x` (308), ukjente adresser 404, `/tdf-reise.pdf` → GitHub-releasen
   (307). Tailwind leser alle filer i prosjektet, også `research/`, så den mappa må være med i Docker-bygget
   (`.dockerignore`). Lokalt: `docker build -t tdf . && docker run --rm -p 3000:3000 tdf`.
+- **Sikkerhetsheadere:** snippeten `(sikkerhet)` i `Caddyfile` er lik i alle Caddy-appene på hjemmeserveren og
+  importeres både i site-blokken og i `handle_errors`, så også 404 får headerne. Endre den ikke bare her. HSTS settes i
+  Cloudflare, ikke i appen.
 - Endrer du `vercel.json`, gjør tilsvarende i `Caddyfile`. Etter byttet slettes `vercel.json`.
 
 ## Kommandoer
