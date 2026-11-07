@@ -13,9 +13,11 @@
 
 	redir /tdf-reise.pdf https://github.com/nerdegutt/tdf/releases/download/latest-pdf/tdf-reise.pdf 307
 	redir /index.html / 308
-	@index path_regexp index ^(/.+)/index\.html$
+	# Stien er dekodet, og nettlesere leser «\» som «/» og fjerner tab og linjeskift. Uten unntakene ville
+	# /%5Cevil.com/ og /%09/evil.com/ sende til evil.com (åpen videresending), så slike stier får 404.
+	@index path_regexp index ^(/[^/\\[:cntrl:]][^\\[:cntrl:]]*)/index\.html$
 	redir @index {re.index.1} 308
-	@slash path_regexp slash ^(/.+)/$
+	@slash path_regexp slash ^(/[^/\\[:cntrl:]][^\\[:cntrl:]]*)/$
 	redir @slash {re.slash.1} 308
 
 	try_files {path} {path}/index.html
