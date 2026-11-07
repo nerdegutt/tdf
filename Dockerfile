@@ -1,6 +1,6 @@
 # tdf.offline.no: Vite-bygg med forhåndsrendrede sider, servert av Caddy på port 3000, uten root.
 # PDF-en bygges ikke her (GitHub Action legger den i releasen latest-pdf); /tdf-reise.pdf sendes dit.
-FROM node:22.23.3-alpine AS build
+FROM node:22.23.4-alpine AS build
 WORKDIR /app
 ENV PUPPETEER_SKIP_DOWNLOAD=1
 COPY package.json package-lock.json ./
