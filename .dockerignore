@@ -4,3 +4,6 @@ dist
 .git
 public/tdf-reise.pdf
 .DS_Store
+# Dokploy kan skrive miljøvariablene til .env i byggekatalogen: aldri inn i imaget.
+.env
+.env.*
