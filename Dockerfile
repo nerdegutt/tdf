@@ -8,7 +8,7 @@ RUN npm ci
 COPY . .
 RUN npm run build:fast
 
-FROM caddy:2.11.6-alpine
+FROM caddy:2.11.9-alpine
 ENV XDG_DATA_HOME=/tmp/caddy-data XDG_CONFIG_HOME=/tmp/caddy-config
 COPY Caddyfile /etc/caddy/Caddyfile
 COPY --from=build /app/dist/ /srv/
